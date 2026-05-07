@@ -827,8 +827,8 @@ Selected
 2 AND37
 3 AND40
 4 AND51
-5 default 1
-6 default 1
+5 CH(0,1,2)
+6 MAJ(0,3,7)
 7 C0
 
 Applying to 11000011
@@ -847,8 +847,8 @@ Output
 2 AND37 = AND(0,1) = 0
 3 AND40 = AND(0,1) = 0
 4 AND51 = AND(0,1) = 0
-5 default 1 = 1
-6 default 1 = 1
+5 CH(0,1,2) = CH(1,1,0) = 1
+6 MAJ(0,3,7) = MAJ(1,0,1) = 1
 7 C0 = 0
 
 I will now return the answer in \boxed{}

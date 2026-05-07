@@ -815,7 +815,7 @@ Matched
 Selected
 0 AND-NOT25
 1 I3
-2 I4
+2 CH(2,1,4)
 3 I5
 4 I6
 5 I7
@@ -835,7 +835,7 @@ Input
 Output
 0 AND-NOT25 = AND(1,NOT(1)) = 0
 1 I3 = 0
-2 I4 = 1
+2 CH(2,1,4) = CH(1,0,1) = 0
 3 I5 = 1
 4 I6 = 0
 5 I7 = 1
@@ -843,4 +843,4 @@ Output
 7 I1 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00110100}
+The answer in \boxed{–} is \boxed{00010100}

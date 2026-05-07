@@ -171,9 +171,9 @@ Looking at operator 【-】 [29-79 = -5, 01-72 = -71]:
 
 Applying to 85-92:
   reversed operands [85->58, 92->29] and reversed result
-  negated absolute difference f(58, 29) = -|58 - 29| = -29 -rev-> -92
-  Result is negative - we add back the operator prefix 【-】: -92 -> 【-92】
-  Result: 【-92】
+  absolute difference f(58, 29) = |58 - 29| = 29 -rev-> 92
+  Result is non-negative, no prefix needed: 【92】
+  Result: 【92】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-92}
+The answer in \boxed{–} is \boxed{92}

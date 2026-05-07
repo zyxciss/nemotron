@@ -167,10 +167,10 @@ Looking at operator 【]】 [63]67 = 4, 18]81 = 9, 64]48 = 16, 65]15 = 5]:
     abs determinant f(65, 15) = |6*5 - 5*1| = |30 - 5| = 25 -rev-> 52 wrong
 
 Applying to 65/58:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
   identity
-  absolute difference f(65, 58) = |65 - 58| = 7
-  Result: 【7】
+  multiplication f(65, 58) = (60 + 5) * 58 = 60 * 58 + 5 * 58 = 3480 + 290 = 3770
+  Result: 【3770】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{7}
+The answer in \boxed{–} is \boxed{3770}

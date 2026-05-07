@@ -762,7 +762,7 @@ Matched
 7 OR-NOT52
 
 Selected
-0 XOR23
+0 XOR-NOT37
 1 NOT4
 2 OR-NOT05
 3 OR-NOT16
@@ -782,7 +782,7 @@ Input
 6 1
 7 0
 Output
-0 XOR23 = XOR(0,0) = 0
+0 XOR-NOT37 = XOR(0,NOT(0)) = 1
 1 NOT4 = NOT(1) = 0
 2 OR-NOT05 = OR(1,NOT(0)) = 1
 3 OR-NOT16 = OR(1,NOT(1)) = 1
@@ -792,4 +792,4 @@ Output
 7 OR-NOT52 = OR(0,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00111011}
+The answer in \boxed{–} is \boxed{10111011}

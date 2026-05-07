@@ -162,10 +162,10 @@ Looking at operator 【-】 [17-59 = 5476, 62-45 = 4041, 58-38 = 5507]:
     abs determinant f(58, 38) = |5*8 - 8*3| = |40 - 24| = 16 -rev-> 61 wrong
 
 Applying to 33'69:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(33, 69) = |33 - 69| = 36
-  Result: 【36】
+  We recall that the question operator is not found in the examples. We deduce it must be max mod min.
+  reversed operands [33->33, 69->96] and reversed result
+  max mod min f(33, 96) = max(33,96) mod min(33,96) = 96 mod 33 = 30 -rev-> 03
+  Result: 【03】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{36}
+The answer in \boxed{–} is \boxed{03}

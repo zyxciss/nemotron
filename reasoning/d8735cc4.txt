@@ -171,7 +171,7 @@ Looking at operator 【!】 [91!15 = 76, 66!77 = -11, 17!17 = 0]:
 
 Applying to 95!60:
   identity
-  subtraction (a-b) f(95, 60) = 95 - 60 = 35
+  absolute difference f(95, 60) = |95 - 60| = 35
   Result is non-negative, no prefix needed: 【35】
   Result: 【35】
 

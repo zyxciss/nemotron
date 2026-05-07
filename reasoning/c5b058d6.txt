@@ -165,9 +165,9 @@ Looking at operator 【)】 [72)27 = 99]:
     abs determinant f(72, 27) = |7*7 - 2*2| = |49 - 4| = 45 -rev-> 54 wrong
 
 Applying to 94)40:
-  reversed operands [94->49, 40->04] and reversed result
-  addition f(49, 04) = 49 + 04 = 53 -rev-> 35
-  Result: 【35】
+  identity
+  addition f(94, 40) = 94 + 40 = 134
+  Result: 【134】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{35}
+The answer in \boxed{–} is \boxed{134}

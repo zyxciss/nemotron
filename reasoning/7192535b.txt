@@ -800,7 +800,7 @@ Selected
 1 AND26
 2 AND37
 3 AND40
-4 default 1
+4 MAJ(0,1,2)
 5 I6
 6 AND-NOT20
 7 AND-NOT31
@@ -820,10 +820,10 @@ Output
 1 AND26 = AND(1,0) = 0
 2 AND37 = AND(0,1) = 0
 3 AND40 = AND(0,0) = 0
-4 default 1 = 1
+4 MAJ(0,1,2) = MAJ(0,0,1) = 0
 5 I6 = 0
 6 AND-NOT20 = AND(1,NOT(0)) = 1
 7 AND-NOT31 = AND(0,NOT(0)) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00001010}
+The answer in \boxed{–} is \boxed{00000010}

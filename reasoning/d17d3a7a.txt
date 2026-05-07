@@ -164,8 +164,8 @@ Looking at operator 【-】 [29-52 = 76]:
 
 Applying to 66-67:
   reversed operands [66->66, 67->76] and reversed result
-  absolute difference f(66, 76) = |66 - 76| = 10 -rev-> 01
-  Result: 【01】
+  negated absolute difference f(66, 76) = -|66 - 76| = -10 -rev-> -01
+  Result: 【-01】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01}
+The answer in \boxed{–} is \boxed{-01}

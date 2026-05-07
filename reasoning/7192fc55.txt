@@ -767,9 +767,9 @@ Selected
 2 XOR-NOT34
 3 XOR-NOT45
 4 XOR-NOT56
-5 default 1
-6 default 1
-7 OR70
+5 MAJ(0,2,5)
+6 CH(0,1,4)
+7 CH(5,3,2)
 
 Applying to 00111010
 Input
@@ -787,9 +787,9 @@ Output
 2 XOR-NOT34 = XOR(1,NOT(1)) = 1
 3 XOR-NOT45 = XOR(1,NOT(0)) = 0
 4 XOR-NOT56 = XOR(0,NOT(1)) = 0
-5 default 1 = 1
-6 default 1 = 1
-7 OR70 = OR(0,0) = 0
+5 MAJ(0,2,5) = MAJ(0,1,0) = 0
+6 CH(0,1,4) = CH(0,0,1) = 1
+7 CH(5,3,2) = CH(0,1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01100110}
+The answer in \boxed{–} is \boxed{01100011}

@@ -795,8 +795,8 @@ Selected
 2 AND-NOT63
 3 AND-NOT74
 4 AND-NOT05
-5 default 1
-6 default 1
+5 CH(4,0,1)
+6 CH(0,6,1)
 7 I3
 
 Applying to 11011111
@@ -815,8 +815,8 @@ Output
 2 AND-NOT63 = AND(1,NOT(1)) = 0
 3 AND-NOT74 = AND(1,NOT(1)) = 0
 4 AND-NOT05 = AND(1,NOT(1)) = 0
-5 default 1 = 1
-6 default 1 = 1
+5 CH(4,0,1) = CH(1,1,1) = 1
+6 CH(0,6,1) = CH(1,1,1) = 1
 7 I3 = 1
 
 I will now return the answer in \boxed{}

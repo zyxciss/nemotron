@@ -167,8 +167,8 @@ Looking at operator 【-】 [36-03 = 33, 65-07 = -41]:
     abs determinant f(65, 07) = |6*7 - 5*0| = |42 - 0| = 42 -rev-> 24 wrong
 
 Applying to 92-41:
-  reversed operands [92->29, 41->14] and reversed result
-  subtraction (a-b) f(29, 14) = 29 - 14 = 15 -rev-> 51
+  identity
+  absolute difference f(92, 41) = |92 - 41| = 51
   Result is non-negative, no prefix needed: 【51】
   Result: 【51】
 

@@ -799,7 +799,7 @@ Selected
 2 AND-NOT64
 3 AND-NOT75
 4 AND-NOT06
-5 default 1
+5 MAJ(0,1,4)
 6 I2
 7 I3
 
@@ -819,7 +819,7 @@ Output
 2 AND-NOT64 = AND(0,NOT(1)) = 0
 3 AND-NOT75 = AND(0,NOT(1)) = 0
 4 AND-NOT06 = AND(0,NOT(0)) = 0
-5 default 1 = 1
+5 MAJ(0,1,4) = MAJ(0,1,1) = 1
 6 I2 = 0
 7 I3 = 1
 

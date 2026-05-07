@@ -167,8 +167,8 @@ Looking at operator 【>】 [19>36 = 1936, 63>24 = 6324, 36>39 = 3639]:
     abs determinant f(36, 39) = |3*9 - 6*3| = |27 - 18| = 9 -rev-> 9 wrong
 
 Applying to 40>46:
-  reversed operands [40->04, 46->64] and reversed result
-  reverse concatenation f(04, 64) = 64 || 04 = 6404 -rev-> 4046
+  identity
+  concatenation f(40, 46) = 40 || 46 = 4046
   Result: 【4046】
 
 I will now return the answer in \boxed{}

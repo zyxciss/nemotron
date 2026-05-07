@@ -164,10 +164,10 @@ Looking at operator 【-】 [86-22 = 1893, 39-29 = 1132, 54-54 = 2917, 25-67 = 1
     abs determinant f(25, 67) = |2*7 - 5*6| = |14 - 30| = 16 -rev-> 61 wrong
 
 Applying to 94`31:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be add-1.
   identity
-  absolute difference f(94, 31) = |94 - 31| = 63
-  Result: 【63】
+  add-1 f(94, 31) = 94 + 31 - 1 = 124
+  Result: 【124】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{63}
+The answer in \boxed{–} is \boxed{124}

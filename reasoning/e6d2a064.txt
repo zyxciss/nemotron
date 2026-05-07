@@ -768,7 +768,7 @@ Selected
 4 XOR-NOT61
 5 XOR-NOT72
 6 NOT3
-7 I0
+7 MAJ(0,1,5)
 
 Applying to 01100100
 Input
@@ -788,7 +788,7 @@ Output
 4 XOR-NOT61 = XOR(0,NOT(1)) = 0
 5 XOR-NOT72 = XOR(0,NOT(1)) = 0
 6 NOT3 = NOT(0) = 1
-7 I0 = 0
+7 MAJ(0,1,5) = MAJ(0,1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11100010}
+The answer in \boxed{–} is \boxed{11100011}

@@ -800,7 +800,7 @@ Selected
 3 AND14
 4 AND25
 5 AND36
-6 default 1
+6 MAJ(0,3,4)
 7 AND15
 
 Applying to 10011011
@@ -820,7 +820,7 @@ Output
 3 AND14 = AND(0,1) = 0
 4 AND25 = AND(0,0) = 0
 5 AND36 = AND(1,1) = 1
-6 default 1 = 1
+6 MAJ(0,3,4) = MAJ(1,1,1) = 1
 7 AND15 = AND(0,0) = 0
 
 I will now return the answer in \boxed{}

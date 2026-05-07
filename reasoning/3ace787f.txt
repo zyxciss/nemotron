@@ -779,7 +779,7 @@ Selected
 2 XOR-NOT50
 3 XOR-NOT61
 4 XOR-NOT72
-5 OR02
+5 CH(0,1,5)
 6 OR13
 7 OR24
 
@@ -799,9 +799,9 @@ Output
 2 XOR-NOT50 = XOR(0,NOT(0)) = 1
 3 XOR-NOT61 = XOR(1,NOT(1)) = 1
 4 XOR-NOT72 = XOR(1,NOT(1)) = 1
-5 OR02 = OR(0,1) = 1
+5 CH(0,1,5) = CH(0,1,0) = 0
 6 OR13 = OR(1,1) = 1
 7 OR24 = OR(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11111111}
+The answer in \boxed{–} is \boxed{11111011}

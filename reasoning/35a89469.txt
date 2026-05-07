@@ -165,8 +165,8 @@ Looking at operator 【[】 [53[40 = 5340]:
     abs determinant f(53, 40) = |5*0 - 3*4| = |0 - 12| = 12 -rev-> 21 wrong
 
 Applying to 95[25:
-  reversed operands [95->59, 25->52] and reversed result
-  reverse concatenation f(59, 52) = 52 || 59 = 5259 -rev-> 9525
+  identity
+  concatenation f(95, 25) = 95 || 25 = 9525
   Result: 【9525】
 
 I will now return the answer in \boxed{}

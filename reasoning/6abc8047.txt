@@ -789,7 +789,7 @@ Matched
 7 I6
 
 Selected
-0 I7
+0 AND70
 1 I0
 2 I1
 3 I2
@@ -809,7 +809,7 @@ Input
 6 1
 7 1
 Output
-0 I7 = 1
+0 AND70 = AND(1,0) = 0
 1 I0 = 0
 2 I1 = 1
 3 I2 = 0
@@ -819,4 +819,4 @@ Output
 7 I6 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10101001}
+The answer in \boxed{–} is \boxed{00101001}

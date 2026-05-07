@@ -771,7 +771,7 @@ Selected
 4 I7
 5 C0
 6 AND73
-7 AND04
+7 MAJ(0,2,3)
 
 Applying to 11110010
 Input
@@ -791,7 +791,7 @@ Output
 4 I7 = 0
 5 C0 = 0
 6 AND73 = AND(0,1) = 0
-7 AND04 = AND(1,0) = 0
+7 MAJ(0,2,3) = MAJ(1,1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10010000}
+The answer in \boxed{–} is \boxed{10010001}

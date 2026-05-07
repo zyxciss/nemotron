@@ -806,7 +806,7 @@ Selected
 2 C0
 3 C0
 4 AND36
-5 AND47
+5 CH(3,6,7)
 6 AND50
 7 AND61
 
@@ -826,9 +826,9 @@ Output
 2 C0 = 0
 3 C0 = 0
 4 AND36 = AND(1,0) = 0
-5 AND47 = AND(1,1) = 1
+5 CH(3,6,7) = CH(1,0,1) = 0
 6 AND50 = AND(0,1) = 0
 7 AND61 = AND(0,1) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10000100}
+The answer in \boxed{–} is \boxed{10000000}

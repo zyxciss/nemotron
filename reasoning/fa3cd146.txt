@@ -780,11 +780,11 @@ Selected
 0 XOR-NOT14
 1 XOR-NOT25
 2 XOR-NOT36
-3 default 1
+3 CH(7,6,5)
 4 default 1
 5 default 1
 6 default 1
-7 OR67
+7 CH(3,4,0)
 
 Applying to 00111000
 Input
@@ -800,11 +800,11 @@ Output
 0 XOR-NOT14 = XOR(0,NOT(1)) = 0
 1 XOR-NOT25 = XOR(1,NOT(0)) = 0
 2 XOR-NOT36 = XOR(1,NOT(0)) = 0
-3 default 1 = 1
+3 CH(7,6,5) = CH(0,0,0) = 0
 4 default 1 = 1
 5 default 1 = 1
 6 default 1 = 1
-7 OR67 = OR(0,0) = 0
+7 CH(3,4,0) = CH(1,1,0) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00011110}
+The answer in \boxed{–} is \boxed{00001111}

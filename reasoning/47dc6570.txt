@@ -169,10 +169,10 @@ Looking at operator 【#】 [51#03 = -51]:
     abs determinant f(51, 03) = |5*3 - 1*0| = |15 - 0| = 15 -rev-> 51 wrong
 
 Applying to 48#26:
-  reversed operands [48->84, 26->62] and reversed result
-  negated absolute difference f(84, 62) = -|84 - 62| = -22 -rev-> -22
-  Result is negative - we add back the operator prefix 【#】: -22 -> 【#22】
-  Result: 【#22】
+  identity
+  absolute difference f(48, 26) = |48 - 26| = 22
+  Result is non-negative, no prefix needed: 【22】
+  Result: 【22】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{#22}
+The answer in \boxed{–} is \boxed{22}

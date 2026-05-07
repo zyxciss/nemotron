@@ -802,10 +802,10 @@ Matched
 Selected
 0 AND-NOT42
 1 AND-NOT53
-2 default 1
+2 CH(4,1,6)
 3 OR75
 4 AND-NOT06
-5 default 1
+5 CH(2,4,0)
 6 I2
 7 I3
 
@@ -822,10 +822,10 @@ Input
 Output
 0 AND-NOT42 = AND(1,NOT(0)) = 1
 1 AND-NOT53 = AND(0,NOT(0)) = 0
-2 default 1 = 1
+2 CH(4,1,6) = CH(1,1,1) = 1
 3 OR75 = OR(0,0) = 0
 4 AND-NOT06 = AND(1,NOT(1)) = 0
-5 default 1 = 1
+5 CH(2,4,0) = CH(0,1,1) = 1
 6 I2 = 0
 7 I3 = 0
 

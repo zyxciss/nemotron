@@ -793,7 +793,7 @@ Matched
 
 Selected
 0 AND25
-1 I6
+1 CH(0,3,6)
 2 I7
 3 I0
 4 I1
@@ -813,7 +813,7 @@ Input
 7 1
 Output
 0 AND25 = AND(0,0) = 0
-1 I6 = 1
+1 CH(0,3,6) = CH(1,0,1) = 0
 2 I7 = 1
 3 I0 = 1
 4 I1 = 1
@@ -822,4 +822,4 @@ Output
 7 I4 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01111001}
+The answer in \boxed{–} is \boxed{00111001}

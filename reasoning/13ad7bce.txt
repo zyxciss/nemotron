@@ -171,7 +171,7 @@ Looking at operator 【-】 [69-63 = 06, 47-09 = -61]:
 
 Applying to 71-45:
   reversed operands [71->17, 45->54] and reversed result
-  subtraction (a-b) f(17, 54) = 17 - 54 = -37 -rev-> -73
+  negated absolute difference f(17, 54) = -|17 - 54| = -37 -rev-> -73
   Result is negative - we add back the operator prefix 【-】: -73 -> 【-73】
   Result: 【-73】
 

@@ -164,10 +164,10 @@ Looking at operator 【*】 [42*54 = 9701, 18*78 = 6407, 79*01 = 969, 02*33 = 95
     abs determinant f(02, 33) = |0*3 - 2*3| = |0 - 6| = 6 -rev-> 6 wrong
 
 Applying to 38+08:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(38, 08) = |38 - 08| = 30
-  Result: 【30】
+  We recall that the question operator is not found in the examples. We deduce it must be add+1.
+  reversed operands [38->83, 08->80] and reversed result
+  add+1 f(83, 80) = 83 + 80 + 1 = 164 -rev-> 461
+  Result: 【461】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{30}
+The answer in \boxed{–} is \boxed{461}

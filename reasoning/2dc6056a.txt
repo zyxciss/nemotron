@@ -793,7 +793,7 @@ Matched
 
 Selected
 0 AND56
-1 default 1
+1 MAJ(0,6,7)
 2 AND01
 3 AND12
 4 AND23
@@ -813,7 +813,7 @@ Input
 7 1
 Output
 0 AND56 = AND(1,1) = 1
-1 default 1 = 1
+1 MAJ(0,6,7) = MAJ(0,1,1) = 1
 2 AND01 = AND(0,0) = 0
 3 AND12 = AND(0,0) = 0
 4 AND23 = AND(0,1) = 0

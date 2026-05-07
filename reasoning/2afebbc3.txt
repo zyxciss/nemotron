@@ -165,9 +165,9 @@ Looking at operator 【/】 [20/37 = 17]:
     abs determinant f(20, 37) = |2*7 - 0*3| = |14 - 0| = 14 -rev-> 41 wrong
 
 Applying to 18/52:
-  reversed operands [18->81, 52->25] and reversed result
-  absolute difference f(81, 25) = |81 - 25| = 56 -rev-> 65
-  Result: 【65】
+  identity
+  max mod min f(18, 52) = max(18,52) mod min(18,52) = 52 mod 18 = 16
+  Result: 【16】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{65}
+The answer in \boxed{–} is \boxed{16}

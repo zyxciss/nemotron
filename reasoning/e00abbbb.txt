@@ -773,7 +773,7 @@ Selected
 2 AND34
 3 AND45
 4 AND56
-5 default 1
+5 CH(0,2,6)
 6 AND71
 7 AND02
 
@@ -793,9 +793,9 @@ Output
 2 AND34 = AND(1,0) = 0
 3 AND45 = AND(0,1) = 0
 4 AND56 = AND(1,0) = 0
-5 default 1 = 1
+5 CH(0,2,6) = CH(0,0,0) = 0
 6 AND71 = AND(1,1) = 1
 7 AND02 = AND(0,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00000110}
+The answer in \boxed{–} is \boxed{00000010}

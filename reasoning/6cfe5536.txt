@@ -815,8 +815,8 @@ Selected
 2 AND-NOT13
 3 AND-NOT24
 4 AND-NOT35
-5 default 1
-6 default 1
+5 CH(6,0,4)
+6 MAJ(1,5,7)
 7 I6
 
 Applying to 11010100
@@ -835,9 +835,9 @@ Output
 2 AND-NOT13 = AND(1,NOT(1)) = 0
 3 AND-NOT24 = AND(0,NOT(0)) = 0
 4 AND-NOT35 = AND(1,NOT(1)) = 0
-5 default 1 = 1
-6 default 1 = 1
+5 CH(6,0,4) = CH(0,1,0) = 0
+6 MAJ(1,5,7) = MAJ(1,1,0) = 1
 7 I6 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01000110}
+The answer in \boxed{–} is \boxed{01000010}

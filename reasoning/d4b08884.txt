@@ -166,9 +166,9 @@ Looking at operator 【$】 [10$38 = 8]:
     abs determinant f(10, 38) = |1*8 - 0*3| = |8 - 0| = 8 -rev-> 8 match, correct, but skipping
 
 Applying to 80$13:
-  reversed operands [80->08, 13->31] and reversed result
-  cross multiply rev f(08, 31) = 0*1 + 8*3 = 0 + 24 = 24 -rev-> 42
-  Result: 【42】
+  identity
+  max mod min f(80, 13) = max(80,13) mod min(80,13) = 80 mod 13 = 2
+  Result: 【2】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{42}
+The answer in \boxed{–} is \boxed{2}

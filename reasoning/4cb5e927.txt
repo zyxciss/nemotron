@@ -166,10 +166,10 @@ Looking at operator 【-】 [25-97 = -72]:
     abs determinant f(25, 97) = |2*7 - 5*9| = |14 - 45| = 31 -rev-> 13 wrong
 
 Applying to 69-49:
-  reversed operands [69->96, 49->94] and reversed result
-  negated absolute difference f(96, 94) = -|96 - 94| = -2 -rev-> -2
-  Result is negative - we add back the operator prefix 【-】: -2 -> 【-2】
-  Result: 【-2】
+  identity
+  negated absolute difference f(69, 49) = -|69 - 49| = -20
+  Result is negative - we add back the operator prefix 【-】: -20 -> 【-20】
+  Result: 【-20】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-2}
+The answer in \boxed{–} is \boxed{-20}

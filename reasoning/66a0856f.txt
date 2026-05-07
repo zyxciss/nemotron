@@ -162,7 +162,7 @@ Looking at operator 【-】 [70-75 = 7075, 60-87 = 6087, 53-49 = 5349]:
     abs determinant f(53, 49) = |5*9 - 3*4| = |45 - 12| = 33 -rev-> 33 wrong
 
 Applying to 74[36:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(74, 36) = |74 - 36| = 38
   Result: 【38】

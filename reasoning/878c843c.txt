@@ -167,9 +167,9 @@ Looking at operator 【/】 [99/10 = 89, 88/47 = 41]:
     abs determinant f(88, 47) = |8*7 - 8*4| = |56 - 32| = 24 -rev-> 42 wrong
 
 Applying to 80/45:
-  reversed operands [80->08, 45->54] and reversed result
-  absolute difference f(08, 54) = |08 - 54| = 46 -rev-> 64
-  Result: 【64】
+  identity
+  absolute difference f(80, 45) = |80 - 45| = 35
+  Result: 【35】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{64}
+The answer in \boxed{–} is \boxed{35}

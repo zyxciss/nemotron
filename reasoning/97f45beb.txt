@@ -773,7 +773,7 @@ Matched
 
 Selected
 0 XOR-NOT35
-1 default 1
+1 CH(1,2,3)
 2 XOR15
 3 OR-NOT26
 4 OR-NOT37
@@ -793,7 +793,7 @@ Input
 7 1
 Output
 0 XOR-NOT35 = XOR(1,NOT(1)) = 1
-1 default 1 = 1
+1 CH(1,2,3) = CH(1,1,1) = 1
 2 XOR15 = XOR(1,1) = 0
 3 OR-NOT26 = OR(1,NOT(1)) = 1
 4 OR-NOT37 = OR(1,NOT(1)) = 1

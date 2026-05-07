@@ -169,8 +169,8 @@ Looking at operator 【*】 [87*91 = 95, 45*26 = -8, 63*58 = -94]:
     abs determinant f(63, 58) = |6*8 - 3*5| = |48 - 15| = 33 -rev-> 33 wrong
 
 Applying to 94*54:
-  reversed operands [94->49, 54->45] and reversed result
-  subtraction (a-b) f(49, 45) = 49 - 45 = 4 -rev-> 4
+  reversed operands [94->49, 54->45]
+  absolute difference f(49, 45) = |49 - 45| = 4
   Result is non-negative, no prefix needed: 【4】
   Result: 【4】
 

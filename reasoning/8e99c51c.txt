@@ -819,7 +819,7 @@ Selected
 3 AND40
 4 AND51
 5 AND62
-6 default 1
+6 MAJ(0,3,7)
 7 AND14
 
 Applying to 00111100
@@ -839,8 +839,8 @@ Output
 3 AND40 = AND(1,0) = 0
 4 AND51 = AND(1,0) = 0
 5 AND62 = AND(0,1) = 0
-6 default 1 = 1
+6 MAJ(0,3,7) = MAJ(0,1,0) = 0
 7 AND14 = AND(0,1) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00000010}
+The answer in \boxed{–} is \boxed{00000000}

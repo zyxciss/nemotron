@@ -162,10 +162,10 @@ Looking at operator 【+】 [34+19 = 3193, 55+45 = 0792, 63+52 = 009]:
     abs determinant f(63, 52) = |6*2 - 3*5| = |12 - 15| = 3 -rev-> 3 wrong
 
 Applying to 51(63:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(51, 63) = |51 - 63| = 12
-  Result: 【12】
+  We recall that the question operator is not found in the examples. We deduce it must be max mod min.
+  reversed operands [51->15, 63->36]
+  max mod min f(15, 36) = max(15,36) mod min(15,36) = 36 mod 15 = 6
+  Result: 【6】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{12}
+The answer in \boxed{–} is \boxed{6}

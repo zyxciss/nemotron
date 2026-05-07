@@ -163,10 +163,10 @@ Looking at operator 【)】 [25)26 = 650, 58)11 = 638]:
     abs determinant f(58, 11) = |5*1 - 8*1| = |5 - 8| = 3 -rev-> 3 wrong
 
 Applying to 21+84:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be max mod min.
   identity
-  absolute difference f(21, 84) = |21 - 84| = 63
-  Result: 【63】
+  max mod min f(21, 84) = max(21,84) mod min(21,84) = 84 mod 21 = 0
+  Result: 【0】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{63}
+The answer in \boxed{–} is \boxed{0}

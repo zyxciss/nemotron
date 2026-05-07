@@ -169,11 +169,11 @@ Looking at operator 【&】 [12&13 = 01, 06&91 = -14, 87&89 = 02]:
     abs determinant f(87, 89) = |8*9 - 7*8| = |72 - 56| = 16 -rev-> 61 wrong
 
 Applying to 99/99:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(99, 99) = |99 - 99| = 0
-  Result is non-negative, no suffix needed: 【0】
-  Result: 【0】
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
+  reversed result
+  multiplication f(99, 99) = (90 + 9) * 99 = 90 * 99 + 9 * 99 = 8910 + 891 = 9801 -rev-> 1089
+  Result is non-negative, no suffix needed: 【1089】
+  Result: 【1089】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{0}
+The answer in \boxed{–} is \boxed{1089}

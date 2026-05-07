@@ -775,7 +775,7 @@ Selected
 0 AND45
 1 AND56
 2 I0
-3 default 1
+3 MAJ(0,1,2)
 4 AND12
 5 AND23
 6 AND34
@@ -795,7 +795,7 @@ Output
 0 AND45 = AND(1,1) = 1
 1 AND56 = AND(1,0) = 0
 2 I0 = 1
-3 default 1 = 1
+3 MAJ(0,1,2) = MAJ(1,0,1) = 1
 4 AND12 = AND(0,1) = 0
 5 AND23 = AND(1,0) = 0
 6 AND34 = AND(0,1) = 0

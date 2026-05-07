@@ -778,7 +778,7 @@ Matched
 
 Selected
 0 AND-NOT67
-1 AND-NOT70
+1 CH(0,1,6)
 2 I0
 3 I1
 4 I2
@@ -798,7 +798,7 @@ Input
 7 1
 Output
 0 AND-NOT67 = AND(0,NOT(1)) = 0
-1 AND-NOT70 = AND(1,NOT(0)) = 1
+1 CH(0,1,6) = CH(0,0,0) = 0
 2 I0 = 0
 3 I1 = 0
 4 I2 = 1
@@ -807,4 +807,4 @@ Output
 7 I5 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01001111}
+The answer in \boxed{–} is \boxed{00001111}

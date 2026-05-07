@@ -792,8 +792,8 @@ Matched
 7 OR-NOT62
 
 Selected
-0 XOR50
-1 default 1
+0 CH(5,6,0)
+1 CH(0,2,3)
 2 default 1
 3 default 1
 4 OR-NOT37
@@ -812,8 +812,8 @@ Input
 6 1
 7 0
 Output
-0 XOR50 = XOR(1,1) = 0
-1 default 1 = 1
+0 CH(5,6,0) = CH(1,1,1) = 1
+1 CH(0,2,3) = CH(1,0,1) = 0
 2 default 1 = 1
 3 default 1 = 1
 4 OR-NOT37 = OR(1,NOT(0)) = 1
@@ -822,4 +822,4 @@ Output
 7 OR-NOT62 = OR(1,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01111111}
+The answer in \boxed{–} is \boxed{10111111}

@@ -772,7 +772,7 @@ Matched
 7 OR-NOT20
 
 Selected
-0 XOR34
+0 CH(1,7,0)
 1 NOT2
 2 NOT3
 3 NOT4
@@ -792,7 +792,7 @@ Input
 6 1
 7 0
 Output
-0 XOR34 = XOR(1,1) = 0
+0 CH(1,7,0) = CH(0,0,1) = 1
 1 NOT2 = NOT(0) = 1
 2 NOT3 = NOT(1) = 0
 3 NOT4 = NOT(1) = 0
@@ -802,4 +802,4 @@ Output
 7 OR-NOT20 = OR(0,NOT(1)) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01000110}
+The answer in \boxed{–} is \boxed{11000110}

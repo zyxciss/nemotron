@@ -759,7 +759,7 @@ Selected
 1 XOR-NOT03
 2 XOR-NOT14
 3 XOR-NOT25
-4 default 1
+4 AND24
 5 default 1
 6 OR-NOT25
 7 OR-NOT36
@@ -779,10 +779,10 @@ Output
 1 XOR-NOT03 = XOR(1,NOT(1)) = 1
 2 XOR-NOT14 = XOR(1,NOT(0)) = 0
 3 XOR-NOT25 = XOR(1,NOT(1)) = 1
-4 default 1 = 1
+4 AND24 = AND(1,0) = 0
 5 default 1 = 1
 6 OR-NOT25 = OR(1,NOT(1)) = 1
 7 OR-NOT36 = OR(1,NOT(1)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11011111}
+The answer in \boxed{–} is \boxed{11010111}

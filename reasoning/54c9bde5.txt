@@ -170,8 +170,8 @@ Looking at operator 【-】 [50-78 = 5078, 36-79 = 3679]:
     abs determinant f(36, 79) = |3*9 - 6*7| = |27 - 42| = 15 -rev-> 51 wrong
 
 Applying to 30-64:
-  reversed operands [30->03, 64->46] and reversed result
-  reverse concatenation f(03, 46) = 46 || 03 = 4603 -rev-> 3064
+  identity
+  concatenation f(30, 64) = 30 || 64 = 3064
   Result: 【3064】
 
 I will now return the answer in \boxed{}

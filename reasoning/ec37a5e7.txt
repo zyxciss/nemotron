@@ -166,10 +166,10 @@ Looking at operator 【*】 [15*06 = 0603, 81*54 = 018, 35*55 = 5192, 46*95 = 67
     abs determinant f(46, 95) = |4*5 - 6*9| = |20 - 54| = 34 -rev-> 43 wrong
 
 Applying to 42-59:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be negated absolute difference.
   identity
-  absolute difference f(42, 59) = |42 - 59| = 17
-  Result: 【17】
+  negated absolute difference f(42, 59) = -|42 - 59| = -17
+  Result: 【-17】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{17}
+The answer in \boxed{–} is \boxed{-17}

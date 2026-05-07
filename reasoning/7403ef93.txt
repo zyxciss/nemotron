@@ -829,7 +829,7 @@ Selected
 4 NOT1
 5 NOT2
 6 NOT3
-7 I7
+7 CH(0,7,6)
 
 Applying to 00010010
 Input
@@ -849,7 +849,7 @@ Output
 4 NOT1 = NOT(0) = 1
 5 NOT2 = NOT(0) = 1
 6 NOT3 = NOT(1) = 0
-7 I7 = 0
+7 CH(0,7,6) = CH(0,0,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10011100}
+The answer in \boxed{–} is \boxed{10011101}

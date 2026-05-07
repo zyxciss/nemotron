@@ -167,7 +167,7 @@ Looking at operator 【-】 [68-93 = 74, 39-26 = 13, 93-46 = -52, 81-67 = -85]:
 
 Applying to 47-48:
   reversed operands [47->74, 48->84] and reversed result
-  subtraction (a-b) f(74, 84) = 74 - 84 = -10 -rev-> -01
+  negated absolute difference f(74, 84) = -|74 - 84| = -10 -rev-> -01
   Result is negative - we add back the operator prefix 【-】: -01 -> 【-01】
   Result: 【-01】
 

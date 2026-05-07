@@ -166,9 +166,9 @@ Looking at operator 【*】 [28*78 = -50]:
 
 Applying to 50*15:
   identity
-  negated absolute difference f(50, 15) = -|50 - 15| = -35
-  Result is negative - we add back the operator prefix 【*】: -35 -> 【*35】
-  Result: 【*35】
+  absolute difference f(50, 15) = |50 - 15| = 35
+  Result is non-negative, no prefix needed: 【35】
+  Result: 【35】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{*35}
+The answer in \boxed{–} is \boxed{35}

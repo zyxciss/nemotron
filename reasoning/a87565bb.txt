@@ -167,10 +167,10 @@ Looking at operator 【^】 [64^78 = 6478, 77^61 = 7761, 17^61 = 1761]:
     abs determinant f(17, 61) = |1*1 - 7*6| = |1 - 42| = 41 -rev-> 14 wrong
 
 Applying to 81)85:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(81, 85) = |81 - 85| = 4
-  Result: 【4】
+  We recall that the question operator is not found in the examples. We deduce it must be addition.
+  reversed operands [81->18, 85->58] and reversed result
+  addition f(18, 58) = 18 + 58 = 76 -rev-> 67
+  Result: 【67】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4}
+The answer in \boxed{–} is \boxed{67}

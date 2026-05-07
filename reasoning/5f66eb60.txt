@@ -796,12 +796,12 @@ Matched
 
 Selected
 0 AND61
-1 default 1
-2 default 1
-3 default 1
-4 default 1
-5 default 1
-6 default 1
+1 MAJ(0,2,7)
+2 MAJ(0,1,3)
+3 CH(0,1,2)
+4 MAJ(0,2,6)
+5 MAJ(0,2,3)
+6 MAJ(4,5,7)
 7 I5
 
 Applying to 11111111
@@ -816,12 +816,12 @@ Input
 7 1
 Output
 0 AND61 = AND(1,1) = 1
-1 default 1 = 1
-2 default 1 = 1
-3 default 1 = 1
-4 default 1 = 1
-5 default 1 = 1
-6 default 1 = 1
+1 MAJ(0,2,7) = MAJ(1,1,1) = 1
+2 MAJ(0,1,3) = MAJ(1,1,1) = 1
+3 CH(0,1,2) = CH(1,1,1) = 1
+4 MAJ(0,2,6) = MAJ(1,1,1) = 1
+5 MAJ(0,2,3) = MAJ(1,1,1) = 1
+6 MAJ(4,5,7) = MAJ(1,1,1) = 1
 7 I5 = 1
 
 I will now return the answer in \boxed{}

@@ -171,7 +171,7 @@ Looking at operator 【<】 [96<48 = 48, 56<68 = -12]:
 
 Applying to 95<31:
   identity
-  subtraction (a-b) f(95, 31) = 95 - 31 = 64
+  absolute difference f(95, 31) = |95 - 31| = 64
   Result is non-negative, no prefix needed: 【64】
   Result: 【64】
 

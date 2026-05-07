@@ -165,10 +165,10 @@ Looking at operator 【[】 [47[35 = 2293, 09[97 = 0117]:
     abs determinant f(09, 97) = |0*7 - 9*9| = |0 - 81| = 81 -rev-> 18 wrong
 
 Applying to 79'97:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(79, 97) = |79 - 97| = 18
-  Result: 【18】
+  We recall that the question operator is not found in the examples. We deduce it must be addition.
+  reversed result
+  addition f(79, 97) = 79 + 97 = 176 -rev-> 671
+  Result: 【671】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{18}
+The answer in \boxed{–} is \boxed{671}

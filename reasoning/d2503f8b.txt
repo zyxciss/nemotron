@@ -817,7 +817,7 @@ Selected
 3 default 1
 4 default 1
 5 default 1
-6 default 1
+6 OR-NOT31
 7 OR-NOT46
 
 Applying to 11010010
@@ -837,7 +837,7 @@ Output
 3 default 1 = 1
 4 default 1 = 1
 5 default 1 = 1
-6 default 1 = 1
+6 OR-NOT31 = OR(1,NOT(1)) = 1
 7 OR-NOT46 = OR(0,NOT(1)) = 0
 
 I will now return the answer in \boxed{}

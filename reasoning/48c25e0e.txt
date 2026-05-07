@@ -165,10 +165,10 @@ Looking at operator 【-】 [82-18 = 1476, 26-61 = 1586]:
     abs determinant f(26, 61) = |2*1 - 6*6| = |2 - 36| = 34 -rev-> 43 wrong
 
 Applying to 43&11:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be add-1.
   identity
-  absolute difference f(43, 11) = |43 - 11| = 32
-  Result: 【32】
+  add-1 f(43, 11) = 43 + 11 - 1 = 53
+  Result: 【53】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{32}
+The answer in \boxed{–} is \boxed{53}

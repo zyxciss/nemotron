@@ -774,7 +774,7 @@ Matched
 7 I6
 
 Selected
-0 AND-NOT74
+0 CH(5,0,7)
 1 I0
 2 I1
 3 I2
@@ -794,7 +794,7 @@ Input
 6 0
 7 1
 Output
-0 AND-NOT74 = AND(1,NOT(1)) = 0
+0 CH(5,0,7) = CH(0,1,1) = 1
 1 I0 = 1
 2 I1 = 1
 3 I2 = 0
@@ -804,4 +804,4 @@ Output
 7 I6 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01101100}
+The answer in \boxed{–} is \boxed{11101100}

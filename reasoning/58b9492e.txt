@@ -167,7 +167,7 @@ Looking at operator 【\】 [77\31 = 15]:
 
 Applying to 14\15:
   identity
-  max mod min f(14, 15) = max(14,15) mod min(14,15) = 15 mod 14 = 1
+  absolute difference f(14, 15) = |14 - 15| = 1
   Result: 【1】
 
 I will now return the answer in \boxed{}

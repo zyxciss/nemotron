@@ -169,8 +169,8 @@ Looking at operator 【-】 [87-64 = 8764, 21-13 = 2113]:
     abs determinant f(21, 13) = |2*3 - 1*1| = |6 - 1| = 5 -rev-> 5 wrong
 
 Applying to 26-40:
-  reversed operands [26->62, 40->04] and reversed result
-  reverse concatenation f(62, 04) = 04 || 62 = 0462 -rev-> 2640
+  identity
+  concatenation f(26, 40) = 26 || 40 = 2640
   Result: 【2640】
 
 I will now return the answer in \boxed{}

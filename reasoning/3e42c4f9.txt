@@ -167,8 +167,8 @@ Looking at operator 【-】 [34-44 = 1, 85-53 = 32, 51-38 = 8, 33-96 = 3]:
     abs determinant f(33, 96) = |3*6 - 3*9| = |18 - 27| = 9 -rev-> 9 wrong
 
 Applying to 45-65:
-  reversed operands [45->54, 65->56] and reversed result
-  max mod min f(54, 56) = max(54,56) mod min(54,56) = 56 mod 54 = 2 -rev-> 2
+  reversed operands [45->54, 65->56]
+  absolute difference f(54, 56) = |54 - 56| = 2
   Result: 【2】
 
 I will now return the answer in \boxed{}

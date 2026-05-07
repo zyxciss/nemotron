@@ -166,9 +166,9 @@ Looking at operator 【:】 [88:77 = 11]:
     abs determinant f(88, 77) = |8*7 - 8*7| = |56 - 56| = 0 -rev-> 0 wrong
 
 Applying to 37:67:
-  reversed operands [37->73, 67->76] and reversed result
-  absolute difference f(73, 76) = |73 - 76| = 3 -rev-> 3
-  Result: 【3】
+  identity
+  absolute difference f(37, 67) = |37 - 67| = 30
+  Result: 【30】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3}
+The answer in \boxed{–} is \boxed{30}

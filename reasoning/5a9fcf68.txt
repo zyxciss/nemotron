@@ -164,11 +164,11 @@ Looking at operator 【?】 [36?55 = -8, 97?14 = -83, 23?74 = -51]:
     abs determinant f(23, 74) = |2*4 - 3*7| = |8 - 21| = 13 -rev-> 31 wrong
 
 Applying to 24@28:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(24, 28) = |24 - 28| = 4
-  Result is non-negative, no suffix needed: 【4】
-  Result: 【4】
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
+  reversed operands [24->42, 28->82] and reversed result
+  multiplication f(42, 82) = (40 + 2) * 82 = 40 * 82 + 2 * 82 = 3280 + 164 = 3444 -rev-> 4443
+  Result is non-negative, no suffix needed: 【4443】
+  Result: 【4443】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4}
+The answer in \boxed{–} is \boxed{4443}

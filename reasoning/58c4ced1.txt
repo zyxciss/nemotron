@@ -166,7 +166,7 @@ Looking at operator 【?】 [29?35 = -6, 87?38 = 49]:
 
 Applying to 96?87:
   identity
-  subtraction (a-b) f(96, 87) = 96 - 87 = 9
+  absolute difference f(96, 87) = |96 - 87| = 9
   Result is non-negative, no prefix needed: 【9】
   Result: 【9】
 

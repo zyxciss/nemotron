@@ -805,7 +805,7 @@ Selected
 4 NOT3
 5 NOT4
 6 NOT5
-7 OR01
+7 MAJ(0,2,5)
 
 Applying to 00111100
 Input
@@ -825,7 +825,7 @@ Output
 4 NOT3 = NOT(1) = 0
 5 NOT4 = NOT(1) = 0
 6 NOT5 = NOT(1) = 0
-7 OR01 = OR(0,0) = 0
+7 MAJ(0,2,5) = MAJ(0,1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11100000}
+The answer in \boxed{–} is \boxed{11100001}

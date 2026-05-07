@@ -163,7 +163,7 @@ Looking at operator 【+】 [47+42 = 99]:
     abs determinant f(47, 42) = |4*2 - 7*4| = |8 - 28| = 20 -rev-> 02 wrong
 
 Applying to 22+44:
-  reversed operands [22->22, 44->44] and reversed result
+  reversed result
   add+1 f(22, 44) = 22 + 44 + 1 = 67 -rev-> 76
   Result: 【76】
 

@@ -169,8 +169,8 @@ Looking at operator 【-】 [78-45 = 33]:
 
 Applying to 42-44:
   reversed operands [42->24, 44->44] and reversed result
-  absolute difference f(24, 44) = |24 - 44| = 20 -rev-> 02
-  Result: 【02】
+  negated absolute difference f(24, 44) = -|24 - 44| = -20 -rev-> -02
+  Result: 【-02】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{02}
+The answer in \boxed{–} is \boxed{-02}

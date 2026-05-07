@@ -787,7 +787,7 @@ Matched
 
 Selected
 0 C0
-1 C0
+1 CH(3,6,4)
 2 C0
 3 C0
 4 C0
@@ -807,7 +807,7 @@ Input
 7 1
 Output
 0 C0 = 0
-1 C0 = 0
+1 CH(3,6,4) = CH(1,1,0) = 1
 2 C0 = 0
 3 C0 = 0
 4 C0 = 0
@@ -816,4 +816,4 @@ Output
 7 AND13 = AND(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00000001}
+The answer in \boxed{–} is \boxed{01000001}

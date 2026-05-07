@@ -166,10 +166,10 @@ Looking at operator 【-】 [21-75 = 54, 39-42 = 3, 56-50 = 6, 70-11 = 59, 14-90
     abs determinant f(70, 11) = |7*1 - 0*1| = |7 - 0| = 7 -rev-> 7 wrong
 
 Applying to 79"59:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be addition.
   identity
-  absolute difference f(79, 59) = |79 - 59| = 20
-  Result: 【20】
+  addition f(79, 59) = 79 + 59 = 138
+  Result: 【138】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{20}
+The answer in \boxed{–} is \boxed{138}

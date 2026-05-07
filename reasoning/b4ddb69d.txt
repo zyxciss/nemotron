@@ -772,10 +772,10 @@ Matched
 
 Selected
 0 AND-NOT52
-1 default 1
-2 default 1
+1 CH(1,4,0)
+2 CH(1,4,7)
 3 AND20
-4 default 1
+4 CH(4,3,1)
 5 I2
 6 I3
 7 I4
@@ -792,13 +792,13 @@ Input
 7 0
 Output
 0 AND-NOT52 = AND(0,NOT(0)) = 0
-1 default 1 = 1
-2 default 1 = 1
+1 CH(1,4,0) = CH(0,0,0) = 0
+2 CH(1,4,7) = CH(0,0,0) = 0
 3 AND20 = AND(0,0) = 0
-4 default 1 = 1
+4 CH(4,3,1) = CH(0,0,0) = 0
 5 I2 = 0
 6 I3 = 0
 7 I4 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01101000}
+The answer in \boxed{–} is \boxed{00000000}

@@ -793,10 +793,10 @@ Selected
 1 XOR-NOT23
 2 XOR-NOT34
 3 XOR-NOT45
-4 default 1
-5 default 1
-6 OR-NOT47
-7 OR-NOT50
+4 XOR-NOT71
+5 CH(7,0,1)
+6 OR-NOT27
+7 CH(4,5,3)
 
 Applying to 10100111
 Input
@@ -813,10 +813,10 @@ Output
 1 XOR-NOT23 = XOR(1,NOT(0)) = 0
 2 XOR-NOT34 = XOR(0,NOT(0)) = 1
 3 XOR-NOT45 = XOR(0,NOT(1)) = 0
-4 default 1 = 1
-5 default 1 = 1
-6 OR-NOT47 = OR(0,NOT(1)) = 0
-7 OR-NOT50 = OR(1,NOT(1)) = 1
+4 XOR-NOT71 = XOR(1,NOT(0)) = 0
+5 CH(7,0,1) = CH(1,1,0) = 1
+6 OR-NOT27 = OR(1,NOT(1)) = 1
+7 CH(4,5,3) = CH(0,1,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00101101}
+The answer in \boxed{–} is \boxed{00100110}

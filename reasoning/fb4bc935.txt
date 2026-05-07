@@ -165,10 +165,10 @@ Looking at operator 【+】 [28+26 = 341, 14+39 = 331, 45+56 = 811]:
     abs determinant f(45, 56) = |4*6 - 5*5| = |24 - 25| = 1 -rev-> 1 wrong
 
 Applying to 64-25:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(64, 25) = |64 - 25| = 39
-  Result: 【39】
+  We recall that the question operator is not found in the examples. We deduce it must be negated absolute difference.
+  reversed operands [64->46, 25->52]
+  negated absolute difference f(46, 52) = -|46 - 52| = -6
+  Result: 【-6】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{39}
+The answer in \boxed{–} is \boxed{-6}

@@ -167,9 +167,9 @@ Looking at operator 【-】 [67-44 = 23]:
     abs determinant f(67, 44) = |6*4 - 7*4| = |24 - 28| = 4 -rev-> 4 wrong
 
 Applying to 92-63:
-  reversed operands [92->29, 63->36] and reversed result
-  absolute difference f(29, 36) = |29 - 36| = 7 -rev-> 7
-  Result: 【7】
+  reversed operands [92->29, 63->36]
+  negated absolute difference f(29, 36) = -|29 - 36| = -7
+  Result: 【-7】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{7}
+The answer in \boxed{–} is \boxed{-7}

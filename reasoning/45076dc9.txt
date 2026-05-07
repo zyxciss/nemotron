@@ -166,10 +166,10 @@ Looking at operator 【}】 [08}95 = -12]:
     abs determinant f(08, 95) = |0*5 - 8*9| = |0 - 72| = 72 -rev-> 27 wrong
 
 Applying to 56}17:
-  reversed operands [56->65, 17->71] and reversed result
-  negated absolute difference f(65, 71) = -|65 - 71| = -6 -rev-> -6
-  Result is negative - we add back the operator suffix 【}】: -6 -> 【6}】
-  Result: 【6}】
+  reversed operands [56->65, 17->71]
+  absolute difference f(65, 71) = |65 - 71| = 6
+  Result is non-negative, no suffix needed: 【6】
+  Result: 【6】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6}}
+The answer in \boxed{–} is \boxed{6}

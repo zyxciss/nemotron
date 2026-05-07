@@ -168,9 +168,9 @@ Looking at operator 【^】 [49^50 = 99]:
     abs determinant f(49, 50) = |4*0 - 9*5| = |0 - 45| = 45 -rev-> 54 wrong
 
 Applying to 48^79:
-  reversed operands [48->84, 79->97] and reversed result
-  addition f(84, 97) = 84 + 97 = 181 -rev-> 181
-  Result: 【181】
+  identity
+  addition f(48, 79) = 48 + 79 = 127
+  Result: 【127】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{181}
+The answer in \boxed{–} is \boxed{127}

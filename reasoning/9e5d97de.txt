@@ -168,8 +168,8 @@ Looking at operator 【-】 [65-44 = 001, 97-88 = 761]:
     abs determinant f(97, 88) = |9*8 - 7*8| = |72 - 56| = 16 -rev-> 61 wrong
 
 Applying to 48-31:
-  reversed operands [48->84, 31->13] and reversed result
-  addition f(84, 13) = 84 + 13 = 97 -rev-> 79
+  identity
+  addition f(48, 31) = 48 + 31 = 79
   Result: 【79】
 
 I will now return the answer in \boxed{}

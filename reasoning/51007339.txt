@@ -798,10 +798,10 @@ Matched
 Selected
 0 AND-NOT32
 1 AND-NOT43
-2 default 1
-3 default 1
+2 CH(2,0,6)
+3 MAJ(1,2,4)
 4 OR76
-5 default 1
+5 CH(1,3,0)
 6 I1
 7 I2
 
@@ -818,12 +818,12 @@ Input
 Output
 0 AND-NOT32 = AND(1,NOT(0)) = 1
 1 AND-NOT43 = AND(0,NOT(1)) = 0
-2 default 1 = 1
-3 default 1 = 1
+2 CH(2,0,6) = CH(0,1,0) = 0
+3 MAJ(1,2,4) = MAJ(1,0,0) = 0
 4 OR76 = OR(1,0) = 1
-5 default 1 = 1
+5 CH(1,3,0) = CH(1,1,1) = 1
 6 I1 = 1
 7 I2 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10111110}
+The answer in \boxed{–} is \boxed{10001110}

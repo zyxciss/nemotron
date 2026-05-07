@@ -163,8 +163,8 @@ Looking at operator 【^】 [44^31 = 75, 45^88 = 241]:
     abs determinant f(45, 88) = |4*8 - 5*8| = |32 - 40| = 8 -rev-> 8 wrong
 
 Applying to 03^21:
-  reversed operands [03->30, 21->12] and reversed result
-  addition f(30, 12) = 30 + 12 = 42 -rev-> 24
+  identity
+  addition f(03, 21) = 03 + 21 = 24
   Result: 【24】
 
 I will now return the answer in \boxed{}

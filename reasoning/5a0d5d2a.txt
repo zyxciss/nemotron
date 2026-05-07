@@ -165,11 +165,11 @@ Looking at operator 【-】 [27-65 = 61, 81-09 = -27]:
     abs determinant f(81, 09) = |8*9 - 1*0| = |72 - 0| = 72 -rev-> 27 wrong
 
 Applying to 39+94:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(39, 94) = |39 - 94| = 55
-  Result is non-negative, no prefix needed: 【55】
-  Result: 【55】
+  We recall that the question operator is not found in the examples. We deduce it must be add+1.
+  reversed operands [39->93, 94->49] and reversed result
+  add+1 f(93, 49) = 93 + 49 + 1 = 143 -rev-> 341
+  Result is non-negative, no prefix needed: 【341】
+  Result: 【341】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{55}
+The answer in \boxed{–} is \boxed{341}

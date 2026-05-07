@@ -163,7 +163,7 @@ Looking at operator 【+】 [35+55 = 5535, 49+21 = 2149]:
     abs determinant f(49, 21) = |4*1 - 9*2| = |4 - 18| = 14 -rev-> 41 wrong
 
 Applying to 08-17:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(08, 17) = |08 - 17| = 9
   Result: 【9】

@@ -164,8 +164,8 @@ Looking at operator 【&】 [67&82 = 6782]:
     abs determinant f(67, 82) = |6*2 - 7*8| = |12 - 56| = 44 -rev-> 44 wrong
 
 Applying to 74&95:
-  reversed operands [74->47, 95->59] and reversed result
-  reverse concatenation f(47, 59) = 59 || 47 = 5947 -rev-> 7495
+  identity
+  concatenation f(74, 95) = 74 || 95 = 7495
   Result: 【7495】
 
 I will now return the answer in \boxed{}

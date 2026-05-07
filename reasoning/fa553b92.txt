@@ -797,7 +797,7 @@ Selected
 3 XOR-NOT46
 4 XOR-NOT57
 5 XOR-NOT60
-6 default 1
+6 XOR-NOT50
 7 OR-NOT12
 
 Applying to 01010011
@@ -817,7 +817,7 @@ Output
 3 XOR-NOT46 = XOR(0,NOT(1)) = 0
 4 XOR-NOT57 = XOR(0,NOT(1)) = 0
 5 XOR-NOT60 = XOR(1,NOT(0)) = 0
-6 default 1 = 1
+6 XOR-NOT50 = XOR(0,NOT(0)) = 1
 7 OR-NOT12 = OR(1,NOT(0)) = 1
 
 I will now return the answer in \boxed{}

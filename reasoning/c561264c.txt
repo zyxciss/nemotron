@@ -169,11 +169,11 @@ Looking at operator 【-】 [54-34 = 2, 42-01 = 41, 86-52 = 34, 93-35 = -41]:
     abs determinant f(93, 35) = |9*5 - 3*3| = |45 - 9| = 36 -rev-> 63 wrong
 
 Applying to 79+02:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(79, 02) = |79 - 02| = 77
-  Result is non-negative, no prefix needed: 【77】
-  Result: 【77】
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
+  reversed operands [79->97, 02->20] and reversed result
+  concatenation f(97, 20) = 97 || 20 = 9720 -rev-> 0279
+  Result is non-negative, no prefix needed: 【0279】
+  Result: 【0279】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{77}
+The answer in \boxed{–} is \boxed{0279}

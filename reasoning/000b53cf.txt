@@ -802,12 +802,12 @@ Matched
 
 Selected
 0 AND-NOT21
-1 AND-NOT32
+1 CH(2,0,3)
 2 AND-NOT43
-3 default 1
-4 default 1
-5 default 1
-6 default 1
+3 MAJ(2,3,5)
+4 CH(5,3,6)
+5 CH(0,4,6)
+6 MAJ(0,1,6)
 7 I1
 
 Applying to 11100000
@@ -822,13 +822,13 @@ Input
 7 0
 Output
 0 AND-NOT21 = AND(1,NOT(1)) = 0
-1 AND-NOT32 = AND(0,NOT(1)) = 0
+1 CH(2,0,3) = CH(1,1,0) = 1
 2 AND-NOT43 = AND(0,NOT(0)) = 0
-3 default 1 = 1
-4 default 1 = 1
-5 default 1 = 1
-6 default 1 = 1
+3 MAJ(2,3,5) = MAJ(1,0,0) = 0
+4 CH(5,3,6) = CH(0,0,0) = 0
+5 CH(0,4,6) = CH(1,0,0) = 0
+6 MAJ(0,1,6) = MAJ(1,1,0) = 1
 7 I1 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00011111}
+The answer in \boxed{–} is \boxed{01000011}

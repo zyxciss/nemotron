@@ -774,12 +774,12 @@ Matched
 7 I6
 
 Selected
-0 I1
-1 default 1
-2 default 1
-3 default 1
-4 default 1
-5 default 1
+0 MAJ(0,1,2)
+1 CH(0,2,3)
+2 XOR14
+3 XOR25
+4 XOR36
+5 CH(4,0,7)
 6 I5
 7 I6
 
@@ -794,14 +794,14 @@ Input
 6 1
 7 0
 Output
-0 I1 = 0
-1 default 1 = 1
-2 default 1 = 1
-3 default 1 = 1
-4 default 1 = 1
-5 default 1 = 1
+0 MAJ(0,1,2) = MAJ(1,0,1) = 1
+1 CH(0,2,3) = CH(1,1,0) = 1
+2 XOR14 = XOR(0,0) = 0
+3 XOR25 = XOR(1,1) = 0
+4 XOR36 = XOR(0,1) = 1
+5 CH(4,0,7) = CH(0,1,0) = 0
 6 I5 = 1
 7 I6 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01111111}
+The answer in \boxed{–} is \boxed{11001011}

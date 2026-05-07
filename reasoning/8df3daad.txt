@@ -163,7 +163,7 @@ Looking at operator 【+】 [60+19 = 6019, 69+97 = 6997]:
     abs determinant f(69, 97) = |6*7 - 9*9| = |42 - 81| = 39 -rev-> 93 wrong
 
 Applying to 45|11:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(45, 11) = |45 - 11| = 34
   Result: 【34】

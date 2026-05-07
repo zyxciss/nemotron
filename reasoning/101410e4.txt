@@ -814,9 +814,9 @@ Selected
 0 XOR-NOT12
 1 XOR-NOT23
 2 XOR-NOT34
-3 default 1
-4 default 1
-5 default 1
+3 MAJ(0,6,7)
+4 CH(0,1,2)
+5 CH(6,0,2)
 6 OR-NOT37
 7 OR-NOT40
 
@@ -834,11 +834,11 @@ Output
 0 XOR-NOT12 = XOR(1,NOT(1)) = 1
 1 XOR-NOT23 = XOR(1,NOT(0)) = 0
 2 XOR-NOT34 = XOR(0,NOT(1)) = 0
-3 default 1 = 1
-4 default 1 = 1
-5 default 1 = 1
+3 MAJ(0,6,7) = MAJ(0,0,1) = 0
+4 CH(0,1,2) = CH(0,1,1) = 1
+5 CH(6,0,2) = CH(0,0,1) = 1
 6 OR-NOT37 = OR(0,NOT(1)) = 0
 7 OR-NOT40 = OR(1,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10011101}
+The answer in \boxed{–} is \boxed{10001101}

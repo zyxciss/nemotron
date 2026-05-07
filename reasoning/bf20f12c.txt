@@ -797,10 +797,10 @@ Matched
 Selected
 0 AND14
 1 AND25
-2 default 1
+2 MAJ(0,1,3)
 3 I7
 4 I0
-5 default 1
+5 MAJ(0,1,6)
 6 OR72
 7 AND35
 
@@ -817,10 +817,10 @@ Input
 Output
 0 AND14 = AND(1,1) = 1
 1 AND25 = AND(0,0) = 0
-2 default 1 = 1
+2 MAJ(0,1,3) = MAJ(0,1,1) = 1
 3 I7 = 1
 4 I0 = 0
-5 default 1 = 1
+5 MAJ(0,1,6) = MAJ(0,1,1) = 1
 6 OR72 = OR(1,0) = 1
 7 AND35 = AND(1,0) = 0
 

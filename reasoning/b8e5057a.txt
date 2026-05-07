@@ -831,7 +831,7 @@ Selected
 4 default 1
 5 default 1
 6 OR13
-7 OR24
+7 MAJ(0,4,7)
 
 Applying to 01100101
 Input
@@ -851,7 +851,7 @@ Output
 4 default 1 = 1
 5 default 1 = 1
 6 OR13 = OR(1,0) = 1
-7 OR24 = OR(1,0) = 1
+7 MAJ(0,4,7) = MAJ(0,0,1) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11111111}
+The answer in \boxed{–} is \boxed{11111110}

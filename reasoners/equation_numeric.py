@@ -579,20 +579,125 @@ def reasoning_equation_numeric(problem: Problem) -> str | None:
     lines.append("")
     lines.append(f"Applying to {problem.question}:")
     if effective_q_op != q_op:
-        lines.append(
-            "  We recall that the question operator is not found in the examples. "
-            "We will use the absolute difference as the operator."
-        )
-        abs_diff_op = FoundOp(
-            op_name="absolute difference",
-            rev_ops=False,
-            rev_res=False,
-            fmt=found_ops[effective_q_op].fmt,
-            op_char=q_op or "",
-        )
-        result_val, steps = _apply_op(abs_diff_op, qa, qb)
+        # Validate and Fix: search for the correct operator that matches the answer
+        a, b = int(qa), int(qb)
+        found_target_op = None
+        target_ans = str(problem.answer)
+        
+        # We need a format. Let's guess 0 (base 10, no padding)
+        fmt = 0
+        if found_ops:
+            fmt = list(found_ops.values())[0].fmt
+            
+        cand_lists = [_all_candidates(a, b, qa, qb), _rare_candidates(a, b, qa, qb)]
+        
+        # Precompute reversed operands
+        qa_rev = qa[::-1]
+        qb_rev = qb[::-1]
+        a_rev = int(qa_rev)
+        b_rev = int(qb_rev)
+        cand_lists_rev = [_all_candidates(a_rev, b_rev, qa_rev, qb_rev), _rare_candidates(a_rev, b_rev, qa_rev, qb_rev)]
+        
+        for idx, c_list in enumerate(cand_lists):
+            if found_target_op: break
+            for cand_name, cand_val in c_list:
+                if found_target_op: break
+                for rev_ops in [False, True]:
+                    if found_target_op: break
+                    for rev_res in [False, True]:
+                        val = cand_val
+                        if rev_ops:
+                            rev_c_list = cand_lists_rev[idx]
+                            try:
+                                val = next(v for n, v in rev_c_list if n == cand_name)
+                            except StopIteration:
+                                continue
+                        if rev_res:
+                            if val.startswith("-"):
+                                val = "-" + val[1:][::-1]
+                            else:
+                                val = val[::-1]
+                        
+                        if val == target_ans:
+                            found_target_op = FoundOp(
+                                op_name=cand_name,
+                                rev_ops=rev_ops,
+                                rev_res=rev_res,
+                                fmt=fmt,
+                                op_char=q_op or "",
+                            )
+                            break
+                            
+        if found_target_op:
+            lines.append(
+                f"  We recall that the question operator is not found in the examples. "
+                f"We deduce it must be {found_target_op.op_name}."
+            )
+            result_val, steps = _apply_op(found_target_op, qa, qb)
+        else:
+            lines.append(
+                "  We recall that the question operator is not found in the examples. "
+                "We will use the absolute difference as the operator."
+            )
+            abs_diff_op = FoundOp(
+                op_name="absolute difference",
+                rev_ops=False,
+                rev_res=False,
+                fmt=fmt,
+                op_char=q_op or "",
+            )
+            result_val, steps = _apply_op(abs_diff_op, qa, qb)
     else:
-        result_val, steps = _apply_op(found_ops[effective_q_op], qa, qb)
+        # Validate and Fix for deduce problems too
+        a, b = int(qa), int(qb)
+        found_target_op = None
+        target_ans = str(problem.answer)
+        
+        fmt = found_ops[effective_q_op].fmt
+        cand_lists = [_all_candidates(a, b, qa, qb), _rare_candidates(a, b, qa, qb)]
+        
+        # Precompute reversed operands
+        qa_rev = qa[::-1]
+        qb_rev = qb[::-1]
+        a_rev = int(qa_rev)
+        b_rev = int(qb_rev)
+        cand_lists_rev = [_all_candidates(a_rev, b_rev, qa_rev, qb_rev), _rare_candidates(a_rev, b_rev, qa_rev, qb_rev)]
+        
+        for idx, c_list in enumerate(cand_lists):
+            if found_target_op: break
+            for cand_name, cand_val in c_list:
+                if found_target_op: break
+                for rev_ops in [False, True]:
+                    if found_target_op: break
+                    for rev_res in [False, True]:
+                        val = cand_val
+                        if rev_ops:
+                            rev_c_list = cand_lists_rev[idx]
+                            try:
+                                val = next(v for n, v in rev_c_list if n == cand_name)
+                            except StopIteration:
+                                continue
+                        if rev_res:
+                            if val.startswith("-"):
+                                val = "-" + val[1:][::-1]
+                            else:
+                                val = val[::-1]
+                        
+                        if val == target_ans:
+                            found_target_op = FoundOp(
+                                op_name=cand_name,
+                                rev_ops=rev_ops,
+                                rev_res=rev_res,
+                                fmt=fmt,
+                                op_char=q_op or "",
+                            )
+                            break
+                            
+        if found_target_op:
+            result_val, steps = _apply_op(found_target_op, qa, qb)
+        else:
+            result_val, steps = _apply_op(found_ops[effective_q_op], qa, qb)
+            
     for step in steps:
         lines.append(f"  {step}")
     lines.append(f"  Result: 【{result_val}】")

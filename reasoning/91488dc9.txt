@@ -163,8 +163,8 @@ Looking at operator 【?】 [53?64 = 5364, 54?80 = 5480]:
     abs determinant f(54, 80) = |5*0 - 4*8| = |0 - 32| = 32 -rev-> 23 wrong
 
 Applying to 34?31:
-  reversed operands [34->43, 31->13] and reversed result
-  reverse concatenation f(43, 13) = 13 || 43 = 1343 -rev-> 3431
+  identity
+  concatenation f(34, 31) = 34 || 31 = 3431
   Result: 【3431】
 
 I will now return the answer in \boxed{}

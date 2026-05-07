@@ -777,9 +777,9 @@ Selected
 1 XOR-NOT23
 2 default 1
 3 default 1
-4 default 1
-5 default 1
-6 default 1
+4 CH(6,5,2)
+5 CH(0,5,2)
+6 OR-NOT21
 7 OR25
 
 Applying to 01110100
@@ -797,9 +797,9 @@ Output
 1 XOR-NOT23 = XOR(1,NOT(1)) = 1
 2 default 1 = 1
 3 default 1 = 1
-4 default 1 = 1
-5 default 1 = 1
-6 default 1 = 1
+4 CH(6,5,2) = CH(0,1,1) = 1
+5 CH(0,5,2) = CH(0,1,1) = 1
+6 OR-NOT21 = OR(1,NOT(1)) = 1
 7 OR25 = OR(1,1) = 1
 
 I will now return the answer in \boxed{}

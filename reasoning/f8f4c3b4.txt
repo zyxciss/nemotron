@@ -762,7 +762,7 @@ Matched
 Selected
 0 I6
 1 I7
-2 NOT7
+2 C0
 3 I0
 4 I1
 5 I2
@@ -782,7 +782,7 @@ Input
 Output
 0 I6 = 1
 1 I7 = 0
-2 NOT7 = NOT(0) = 1
+2 C0 = 0
 3 I0 = 0
 4 I1 = 1
 5 I2 = 1
@@ -790,4 +790,4 @@ Output
 7 I4 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10101101}
+The answer in \boxed{–} is \boxed{10001101}

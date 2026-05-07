@@ -166,8 +166,8 @@ Looking at operator 【*】 [79*95 = 3275]:
     abs determinant f(79, 95) = |7*5 - 9*9| = |35 - 81| = 46 -rev-> 64 wrong
 
 Applying to 84*24:
-  reversed operands [84->48, 24->42] and reversed result
-  multiplication f(48, 42) = (40 + 8) * 42 = 40 * 42 + 8 * 42 = 1680 + 336 = 2016 -rev-> 6102
+  reversed result
+  multiplication f(84, 24) = (80 + 4) * 24 = 80 * 24 + 4 * 24 = 1920 + 96 = 2016 -rev-> 6102
   Result: 【6102】
 
 I will now return the answer in \boxed{}

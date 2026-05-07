@@ -168,8 +168,8 @@ Looking at operator 【-】 [34-93 = 4, 99-34 = 31, 34-63 = 7]:
     abs determinant f(34, 63) = |3*3 - 4*6| = |9 - 24| = 15 -rev-> 51 wrong
 
 Applying to 32-62:
-  reversed operands [32->23, 62->26] and reversed result
-  max mod min f(23, 26) = max(23,26) mod min(23,26) = 26 mod 23 = 3 -rev-> 3
+  reversed operands [32->23, 62->26]
+  absolute difference f(23, 26) = |23 - 26| = 3
   Result: 【3】
 
 I will now return the answer in \boxed{}

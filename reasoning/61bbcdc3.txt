@@ -163,8 +163,8 @@ Looking at operator 【`】 [06`77 = 631, 61`93 = 45]:
     abs determinant f(61, 93) = |6*3 - 1*9| = |18 - 9| = 9 -rev-> 9 wrong
 
 Applying to 75`34:
-  reversed operands [75->57, 34->43] and reversed result
-  add-1 f(57, 43) = 57 + 43 - 1 = 99 -rev-> 99
+  reversed operands [75->57, 34->43]
+  add-1 f(57, 43) = 57 + 43 - 1 = 99
   Result: 【99】
 
 I will now return the answer in \boxed{}

@@ -813,10 +813,10 @@ Matched
 Selected
 0 XOR-NOT25
 1 XOR-NOT36
-2 default 1
+2 OR-NOT03
 3 default 1
 4 default 1
-5 default 1
+5 CH(2,6,3)
 6 OR-NOT43
 7 OR-NOT54
 
@@ -833,12 +833,12 @@ Input
 Output
 0 XOR-NOT25 = XOR(1,NOT(1)) = 1
 1 XOR-NOT36 = XOR(1,NOT(1)) = 1
-2 default 1 = 1
+2 OR-NOT03 = OR(0,NOT(1)) = 0
 3 default 1 = 1
 4 default 1 = 1
-5 default 1 = 1
+5 CH(2,6,3) = CH(1,1,1) = 1
 6 OR-NOT43 = OR(0,NOT(1)) = 0
 7 OR-NOT54 = OR(1,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11111101}
+The answer in \boxed{–} is \boxed{11011101}

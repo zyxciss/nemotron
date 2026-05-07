@@ -166,8 +166,8 @@ Looking at operator 【&】 [67&31 = 98]:
     abs determinant f(67, 31) = |6*1 - 7*3| = |6 - 21| = 15 -rev-> 51 wrong
 
 Applying to 79&45:
-  reversed operands [79->97, 45->54] and reversed result
-  addition f(97, 54) = 97 + 54 = 151 -rev-> 151
+  reversed operands [79->97, 45->54]
+  addition f(97, 54) = 97 + 54 = 151
   Result: 【151】
 
 I will now return the answer in \boxed{}

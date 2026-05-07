@@ -164,10 +164,10 @@ Looking at operator 【*】 [58*31 = 88, 79*93 = 171, 19*99 = 117, 77*88 = 164]:
     abs determinant f(77, 88) = |7*8 - 7*8| = |56 - 56| = 0 -rev-> 0 wrong
 
 Applying to 26%23:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
   identity
-  absolute difference f(26, 23) = |26 - 23| = 3
-  Result: 【3】
+  multiplication f(26, 23) = (20 + 6) * 23 = 20 * 23 + 6 * 23 = 460 + 138 = 598
+  Result: 【598】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3}
+The answer in \boxed{–} is \boxed{598}

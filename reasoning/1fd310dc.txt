@@ -801,8 +801,8 @@ Selected
 2 XOR-NOT35
 3 C1
 4 default 1
-5 default 1
-6 default 1
+5 CH(7,3,2)
+6 MAJ(1,3,4)
 7 OR-NOT52
 
 Applying to 01100100
@@ -821,9 +821,9 @@ Output
 2 XOR-NOT35 = XOR(0,NOT(1)) = 0
 3 C1 = 1
 4 default 1 = 1
-5 default 1 = 1
-6 default 1 = 1
+5 CH(7,3,2) = CH(0,0,1) = 1
+6 MAJ(1,3,4) = MAJ(1,0,0) = 0
 7 OR-NOT52 = OR(1,NOT(1)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00011111}
+The answer in \boxed{–} is \boxed{00011101}

@@ -165,8 +165,8 @@ Looking at operator 【+】 [20+44 = 2044, 82+31 = 8231]:
     abs determinant f(82, 31) = |8*1 - 2*3| = |8 - 6| = 2 -rev-> 2 wrong
 
 Applying to 18+67:
-  reversed operands [18->81, 67->76] and reversed result
-  reverse concatenation f(81, 76) = 76 || 81 = 7681 -rev-> 1867
+  identity
+  concatenation f(18, 67) = 18 || 67 = 1867
   Result: 【1867】
 
 I will now return the answer in \boxed{}

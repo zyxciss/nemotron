@@ -170,8 +170,8 @@ Looking at operator 【-】 [82-22 = 6, 02-66 = -64]:
     abs determinant f(02, 66) = |0*6 - 2*6| = |0 - 12| = 12 -rev-> 21 wrong
 
 Applying to 01-16:
-  reversed operands [01->10, 16->61] and reversed result
-  subtraction (a-b) f(10, 61) = 10 - 61 = -51 -rev-> -15
+  identity
+  negated absolute difference f(01, 16) = -|01 - 16| = -15
   Result is negative - we add back the operator prefix 【-】: -15 -> 【-15】
   Result: 【-15】
 

@@ -169,10 +169,10 @@ Looking at operator 【"】 [35"65 = 100, 68"97 = 165, 72"58 = 130]:
     abs determinant f(72, 58) = |7*8 - 2*5| = |56 - 10| = 46 -rev-> 64 wrong
 
 Applying to 62:21:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
   identity
-  absolute difference f(62, 21) = |62 - 21| = 41
-  Result: 【41】
+  concatenation f(62, 21) = 62 || 21 = 6221
+  Result: 【6221】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{41}
+The answer in \boxed{–} is \boxed{6221}

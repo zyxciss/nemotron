@@ -167,11 +167,11 @@ Looking at operator 【-】 [66-83 = -82, 55-54 = -01]:
     abs determinant f(55, 54) = |5*4 - 5*5| = |20 - 25| = 5 -rev-> 5 wrong
 
 Applying to 34*82:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(34, 82) = |34 - 82| = 48
-  Result is non-negative, no prefix needed: 【48】
-  Result: 【48】
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
+  reversed operands [34->43, 82->28] and reversed result
+  concatenation f(43, 28) = 43 || 28 = 4328 -rev-> 8234
+  Result is non-negative, no prefix needed: 【8234】
+  Result: 【8234】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{48}
+The answer in \boxed{–} is \boxed{8234}

@@ -166,8 +166,8 @@ Looking at operator 【#】 [19#54 = 1954]:
     abs determinant f(19, 54) = |1*4 - 9*5| = |4 - 45| = 41 -rev-> 14 wrong
 
 Applying to 58#99:
-  reversed operands [58->85, 99->99] and reversed result
-  reverse concatenation f(85, 99) = 99 || 85 = 9985 -rev-> 5899
+  identity
+  concatenation f(58, 99) = 58 || 99 = 5899
   Result: 【5899】
 
 I will now return the answer in \boxed{}

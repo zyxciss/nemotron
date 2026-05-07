@@ -169,8 +169,8 @@ Looking at operator 【<】 [73<25 = 51, 95<05 = -9]:
     abs determinant f(95, 05) = |9*5 - 5*0| = |45 - 0| = 45 -rev-> 54 wrong
 
 Applying to 86<09:
-  reversed operands [86->68, 09->90] and reversed result
-  reverse subtraction (b-a) f(68, 90) = 90 - 68 = 22 -rev-> 22
+  reversed operands [86->68, 09->90]
+  absolute difference f(68, 90) = |68 - 90| = 22
   Result is non-negative, no suffix needed: 【22】
   Result: 【22】
 

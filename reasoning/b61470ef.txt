@@ -825,7 +825,7 @@ Selected
 4 XOR-NOT25
 5 XOR-NOT36
 6 default 1
-7 OR61
+7 OR26
 
 Applying to 00100000
 Input
@@ -845,7 +845,7 @@ Output
 4 XOR-NOT25 = XOR(1,NOT(0)) = 0
 5 XOR-NOT36 = XOR(0,NOT(0)) = 1
 6 default 1 = 1
-7 OR61 = OR(0,0) = 0
+7 OR26 = OR(1,0) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10110110}
+The answer in \boxed{–} is \boxed{10110111}

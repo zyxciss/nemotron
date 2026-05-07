@@ -169,7 +169,7 @@ Looking at operator 【]】 [47]72 = 25, 10]99 = 9]:
 
 Applying to 18]17:
   identity
-  max mod min f(18, 17) = max(18,17) mod min(18,17) = 18 mod 17 = 1
+  absolute difference f(18, 17) = |18 - 17| = 1
   Result: 【1】
 
 I will now return the answer in \boxed{}

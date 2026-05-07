@@ -761,7 +761,7 @@ Matched
 Selected
 0 XOR-NOT15
 1 XOR-NOT26
-2 default 1
+2 CH(6,0,2)
 3 OR-NOT24
 4 OR-NOT35
 5 OR-NOT46
@@ -781,7 +781,7 @@ Input
 Output
 0 XOR-NOT15 = XOR(0,NOT(1)) = 0
 1 XOR-NOT26 = XOR(0,NOT(1)) = 0
-2 default 1 = 1
+2 CH(6,0,2) = CH(1,0,0) = 0
 3 OR-NOT24 = OR(0,NOT(1)) = 0
 4 OR-NOT35 = OR(1,NOT(1)) = 1
 5 OR-NOT46 = OR(1,NOT(1)) = 1
@@ -789,4 +789,4 @@ Output
 7 OR-NOT60 = OR(1,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00101111}
+The answer in \boxed{–} is \boxed{00001111}

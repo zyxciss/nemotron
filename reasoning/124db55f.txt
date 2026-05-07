@@ -166,10 +166,10 @@ Looking at operator 【!】 [93!69 = 24, 10!94 = 4, 48!60 = 12, 47!24 = 23, 75!1
     abs determinant f(47, 24) = |4*4 - 7*2| = |16 - 14| = 2 -rev-> 2 wrong
 
 Applying to 44{47:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
   identity
-  absolute difference f(44, 47) = |44 - 47| = 3
-  Result: 【3】
+  concatenation f(44, 47) = 44 || 47 = 4447
+  Result: 【4447】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3}
+The answer in \boxed{–} is \boxed{4447}

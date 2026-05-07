@@ -806,7 +806,7 @@ Selected
 4 OR57
 5 OR60
 6 OR71
-7 OR02
+7 CH(0,1,2)
 
 Applying to 10010110
 Input
@@ -826,7 +826,7 @@ Output
 4 OR57 = OR(1,0) = 1
 5 OR60 = OR(1,1) = 1
 6 OR71 = OR(0,0) = 0
-7 OR02 = OR(1,0) = 1
+7 CH(0,1,2) = CH(1,0,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10111101}
+The answer in \boxed{–} is \boxed{10111100}

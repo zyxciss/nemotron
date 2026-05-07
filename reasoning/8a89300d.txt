@@ -796,7 +796,7 @@ Selected
 3 AND-NOT74
 4 AND-NOT05
 5 AND-NOT16
-6 default 1
+6 CH(6,7,1)
 7 I3
 
 Applying to 10111001
@@ -816,8 +816,8 @@ Output
 3 AND-NOT74 = AND(1,NOT(1)) = 0
 4 AND-NOT05 = AND(1,NOT(0)) = 1
 5 AND-NOT16 = AND(0,NOT(0)) = 0
-6 default 1 = 1
+6 CH(6,7,1) = CH(0,1,0) = 0
 7 I3 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10001011}
+The answer in \boxed{–} is \boxed{10001001}

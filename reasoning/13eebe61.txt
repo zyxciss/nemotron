@@ -767,9 +767,9 @@ Matched
 
 Selected
 0 C0
-1 default 1
+1 MAJ(0,4,5)
 2 OR61
-3 default 1
+3 CH(0,1,6)
 4 OR03
 5 AND14
 6 AND25
@@ -787,13 +787,13 @@ Input
 7 0
 Output
 0 C0 = 0
-1 default 1 = 1
+1 MAJ(0,4,5) = MAJ(1,0,1) = 1
 2 OR61 = OR(1,0) = 1
-3 default 1 = 1
+3 CH(0,1,6) = CH(1,0,1) = 0
 4 OR03 = OR(1,1) = 1
 5 AND14 = AND(0,0) = 0
 6 AND25 = AND(0,1) = 0
 7 AND36 = AND(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01111001}
+The answer in \boxed{–} is \boxed{01101001}

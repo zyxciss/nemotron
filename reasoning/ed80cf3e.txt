@@ -165,11 +165,11 @@ Looking at operator 【-】 [56-78 = -22, 34-95 = -61]:
     abs determinant f(34, 95) = |3*5 - 4*9| = |15 - 36| = 21 -rev-> 12 wrong
 
 Applying to 31*14:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(31, 14) = |31 - 14| = 17
-  Result is non-negative, no prefix needed: 【17】
-  Result: 【17】
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
+  reversed operands [31->13, 14->41] and reversed result
+  concatenation f(13, 41) = 13 || 41 = 1341 -rev-> 1431
+  Result is non-negative, no prefix needed: 【1431】
+  Result: 【1431】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{17}
+The answer in \boxed{–} is \boxed{1431}

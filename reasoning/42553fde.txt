@@ -163,8 +163,8 @@ Looking at operator 【?】 [16?21 = 37, 48?06 = 441]:
     abs determinant f(48, 06) = |4*6 - 8*0| = |24 - 0| = 24 -rev-> 42 wrong
 
 Applying to 04?73:
-  reversed operands [04->40, 73->37] and reversed result
-  addition f(40, 37) = 40 + 37 = 77 -rev-> 77
+  identity
+  addition f(04, 73) = 04 + 73 = 77
   Result: 【77】
 
 I will now return the answer in \boxed{}

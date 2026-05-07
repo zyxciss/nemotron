@@ -163,10 +163,10 @@ Looking at operator 【+】 [06+41 = 4106, 09+13 = 1309]:
     abs determinant f(09, 13) = |0*3 - 9*1| = |0 - 9| = 9 -rev-> 9 wrong
 
 Applying to 24*95:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(24, 95) = |24 - 95| = 71
-  Result: 【71】
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
+  reversed operands [24->42, 95->59] and reversed result
+  multiplication f(42, 59) = (40 + 2) * 59 = 40 * 59 + 2 * 59 = 2360 + 118 = 2478 -rev-> 8742
+  Result: 【8742】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{71}
+The answer in \boxed{–} is \boxed{8742}

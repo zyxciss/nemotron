@@ -789,7 +789,7 @@ Selected
 2 AND57
 3 C0
 4 C0
-5 AND70
+5 C0
 6 AND01
 7 AND12
 
@@ -809,9 +809,9 @@ Output
 2 AND57 = AND(0,1) = 0
 3 C0 = 0
 4 C0 = 0
-5 AND70 = AND(1,1) = 1
+5 C0 = 0
 6 AND01 = AND(1,0) = 0
 7 AND12 = AND(0,1) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01000100}
+The answer in \boxed{–} is \boxed{01000000}

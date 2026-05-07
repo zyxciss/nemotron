@@ -165,8 +165,8 @@ Looking at operator 【$】 [25$31 = 2531]:
     abs determinant f(25, 31) = |2*1 - 5*3| = |2 - 15| = 13 -rev-> 31 wrong
 
 Applying to 37$67:
-  reversed operands [37->73, 67->76] and reversed result
-  reverse concatenation f(73, 76) = 76 || 73 = 7673 -rev-> 3767
+  identity
+  concatenation f(37, 67) = 37 || 67 = 3767
   Result: 【3767】
 
 I will now return the answer in \boxed{}

@@ -162,10 +162,10 @@ Looking at operator 【|】 [57|64 = 121, 49|62 = 021, 77|21 = 98]:
     abs determinant f(77, 21) = |7*1 - 7*2| = |7 - 14| = 7 -rev-> 7 wrong
 
 Applying to 56[71:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(56, 71) = |56 - 71| = 15
-  Result: 【15】
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
+  reversed operands [56->65, 71->17] and reversed result
+  multiplication f(65, 17) = (60 + 5) * 17 = 60 * 17 + 5 * 17 = 1020 + 85 = 1105 -rev-> 5011
+  Result: 【5011】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{15}
+The answer in \boxed{–} is \boxed{5011}

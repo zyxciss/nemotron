@@ -779,9 +779,9 @@ Selected
 2 I3
 3 I4
 4 I5
-5 C1
+5 CH(0,5,6)
 6 AND-NOT17
-7 AND-NOT20
+7 MAJ(0,2,6)
 
 Applying to 11110011
 Input
@@ -799,9 +799,9 @@ Output
 2 I3 = 1
 3 I4 = 0
 4 I5 = 0
-5 C1 = 1
+5 CH(0,5,6) = CH(1,0,1) = 0
 6 AND-NOT17 = AND(1,NOT(1)) = 0
-7 AND-NOT20 = AND(1,NOT(1)) = 0
+7 MAJ(0,2,6) = MAJ(1,1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11100100}
+The answer in \boxed{–} is \boxed{11100001}

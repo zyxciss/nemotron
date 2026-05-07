@@ -164,8 +164,8 @@ Looking at operator 【[】 [26[97 = 71]:
     abs determinant f(26, 97) = |2*7 - 6*9| = |14 - 54| = 40 -rev-> 04 wrong
 
 Applying to 22[38:
-  reversed operands [22->22, 38->83] and reversed result
-  absolute difference f(22, 83) = |22 - 83| = 61 -rev-> 16
+  identity
+  absolute difference f(22, 38) = |22 - 38| = 16
   Result: 【16】
 
 I will now return the answer in \boxed{}

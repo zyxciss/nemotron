@@ -167,8 +167,8 @@ Looking at operator 【"】 [57"87 = 3, 27"45 = 81, 85"21 = 01]:
     abs determinant f(85, 21) = |8*1 - 5*2| = |8 - 10| = 2 -rev-> 2 wrong
 
 Applying to 65"38:
-  reversed operands [65->56, 38->83] and reversed result
-  max mod min f(56, 83) = max(56,83) mod min(56,83) = 83 mod 56 = 27 -rev-> 72
+  reversed result
+  absolute difference f(65, 38) = |65 - 38| = 27 -rev-> 72
   Result: 【72】
 
 I will now return the answer in \boxed{}

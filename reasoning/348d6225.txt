@@ -163,8 +163,8 @@ Looking at operator 【+】 [48+09 = 471, 26+11 = 37]:
     abs determinant f(26, 11) = |2*1 - 6*1| = |2 - 6| = 4 -rev-> 4 wrong
 
 Applying to 55+43:
-  reversed operands [55->55, 43->34] and reversed result
-  addition f(55, 34) = 55 + 34 = 89 -rev-> 98
+  identity
+  addition f(55, 43) = 55 + 43 = 98
   Result: 【98】
 
 I will now return the answer in \boxed{}

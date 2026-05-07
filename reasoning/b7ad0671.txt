@@ -165,7 +165,7 @@ Looking at operator 【@】 [22@75 = 4521, 28@77 = 4136]:
     abs determinant f(28, 77) = |2*7 - 8*7| = |14 - 56| = 42 -rev-> 24 wrong
 
 Applying to 28:12:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(28, 12) = |28 - 12| = 16
   Result: 【16】

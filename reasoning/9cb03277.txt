@@ -168,8 +168,8 @@ Looking at operator 【!】 [57!58 = 01]:
     abs determinant f(57, 58) = |5*8 - 7*5| = |40 - 35| = 5 -rev-> 5 wrong
 
 Applying to 52!78:
-  reversed operands [52->25, 78->87] and reversed result
-  absolute difference f(25, 87) = |25 - 87| = 62 -rev-> 26
+  identity
+  absolute difference f(52, 78) = |52 - 78| = 26
   Result: 【26】
 
 I will now return the answer in \boxed{}

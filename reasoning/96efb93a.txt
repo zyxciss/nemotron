@@ -168,9 +168,9 @@ Looking at operator 【"】 [17"82 = -34, 78"48 = -3, 86"33 = -53]:
 
 Applying to 95"57:
   reversed operands [95->59, 57->75] and reversed result
-  negated absolute difference f(59, 75) = -|59 - 75| = -16 -rev-> -61
-  Result is negative - we add back the operator suffix 【"】: -61 -> 【61"】
-  Result: 【61"】
+  absolute difference f(59, 75) = |59 - 75| = 16 -rev-> 61
+  Result is non-negative, no suffix needed: 【61】
+  Result: 【61】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{61"}
+The answer in \boxed{–} is \boxed{61}

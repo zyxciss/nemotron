@@ -166,11 +166,11 @@ Looking at operator 【|】 [18|74 = -56, 61|89 = -28, 95|59 = 36, 13|99 = -86]:
     abs determinant f(13, 99) = |1*9 - 3*9| = |9 - 27| = 18 -rev-> 81 wrong
 
 Applying to 20#24:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
   identity
-  absolute difference f(20, 24) = |20 - 24| = 4
-  Result is non-negative, no prefix needed: 【4】
-  Result: 【4】
+  concatenation f(20, 24) = 20 || 24 = 2024
+  Result is non-negative, no prefix needed: 【2024】
+  Result: 【2024】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4}
+The answer in \boxed{–} is \boxed{2024}

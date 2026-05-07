@@ -164,8 +164,8 @@ Looking at operator 【-】 [06-65 = 4, 86-72 = 41]:
 
 Applying to 11-39:
   reversed operands [11->11, 39->93]
-  absolute difference f(11, 93) = |11 - 93| = 82
-  Result: 【82】
+  max mod min f(11, 93) = max(11,93) mod min(11,93) = 93 mod 11 = 5
+  Result: 【5】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{82}
+The answer in \boxed{–} is \boxed{5}

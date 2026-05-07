@@ -165,10 +165,10 @@ Looking at operator 【-】 [12-64 = -52, 28-88 = -6]:
     abs determinant f(28, 88) = |2*8 - 8*8| = |16 - 64| = 48 -rev-> 84 wrong
 
 Applying to 77-35:
-  reversed operands [77->77, 35->53] and reversed result
-  negated absolute difference f(77, 53) = -|77 - 53| = -24 -rev-> -42
-  Result is negative - we add back the operator prefix 【-】: -42 -> 【-42】
-  Result: 【-42】
+  identity
+  absolute difference f(77, 35) = |77 - 35| = 42
+  Result is non-negative, no prefix needed: 【42】
+  Result: 【42】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-42}
+The answer in \boxed{–} is \boxed{42}

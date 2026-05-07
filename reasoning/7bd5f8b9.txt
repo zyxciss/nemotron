@@ -169,8 +169,8 @@ Looking at operator 【-】 [45-54 = -9, 44-59 = -15, 89-62 = -27]:
     abs determinant f(89, 62) = |8*2 - 9*6| = |16 - 54| = 38 -rev-> 83 wrong
 
 Applying to 97-97:
-  reversed operands [97->79, 97->79] and reversed result
-  negated absolute difference f(79, 79) = -|79 - 79| = 0 -rev-> 0
+  identity
+  absolute difference f(97, 97) = |97 - 97| = 0
   Result is non-negative, no prefix needed: 【0】
   Result: 【0】
 

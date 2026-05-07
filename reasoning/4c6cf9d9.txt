@@ -165,8 +165,8 @@ Looking at operator 【*】 [58*34 = 24, 29*25 = 04]:
     abs determinant f(29, 25) = |2*5 - 9*2| = |10 - 18| = 8 -rev-> 8 wrong
 
 Applying to 29*65:
-  reversed operands [29->92, 65->56] and reversed result
-  absolute difference f(92, 56) = |92 - 56| = 36 -rev-> 63
+  reversed result
+  absolute difference f(29, 65) = |29 - 65| = 36 -rev-> 63
   Result: 【63】
 
 I will now return the answer in \boxed{}

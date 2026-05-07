@@ -167,8 +167,8 @@ Looking at operator 【-】 [34-73 = 6, 56-45 = 11]:
     abs determinant f(56, 45) = |5*5 - 6*4| = |25 - 24| = 1 -rev-> 1 wrong
 
 Applying to 97-65:
-  reversed operands [97->79, 65->56] and reversed result
-  absolute difference f(79, 56) = |79 - 56| = 23 -rev-> 32
+  identity
+  absolute difference f(97, 65) = |97 - 65| = 32
   Result: 【32】
 
 I will now return the answer in \boxed{}

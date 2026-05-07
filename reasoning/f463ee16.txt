@@ -170,8 +170,8 @@ Looking at operator 【!】 [38!44 = 621, 26!84 = 901]:
     abs determinant f(26, 84) = |2*4 - 6*8| = |8 - 48| = 40 -rev-> 04 wrong
 
 Applying to 75!13:
-  reversed operands [75->57, 13->31] and reversed result
-  add-1 f(57, 31) = 57 + 31 - 1 = 87 -rev-> 78
+  reversed result
+  add-1 f(75, 13) = 75 + 13 - 1 = 87 -rev-> 78
   Result: 【78】
 
 I will now return the answer in \boxed{}

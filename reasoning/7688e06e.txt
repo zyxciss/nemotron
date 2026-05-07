@@ -166,9 +166,9 @@ Looking at operator 【-】 [06-63 = 42, 96-32 = 64, 87-15 = 72, 58-64 = 93, 87-
     abs determinant f(58, 64) = |5*4 - 8*6| = |20 - 48| = 28 -rev-> 82 wrong
 
 Applying to 63-19:
-  reversed operands [63->36, 19->91] and reversed result
-  absolute difference f(36, 91) = |36 - 91| = 55 -rev-> 55
-  Result: 【55】
+  reversed operands [63->36, 19->91]
+  negated absolute difference f(36, 91) = -|36 - 91| = -55
+  Result: 【-55】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{55}
+The answer in \boxed{–} is \boxed{-55}

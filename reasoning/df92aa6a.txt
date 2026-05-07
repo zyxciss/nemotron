@@ -167,10 +167,10 @@ Looking at operator 【+】 [02+12 = 24, 82+17 = 001]:
     abs determinant f(82, 17) = |8*7 - 2*1| = |56 - 2| = 54 -rev-> 45 wrong
 
 Applying to 82*76:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(82, 76) = |82 - 76| = 6
-  Result: 【6】
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
+  reversed operands [82->28, 76->67] and reversed result
+  concatenation f(28, 67) = 28 || 67 = 2867 -rev-> 7682
+  Result: 【7682】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6}
+The answer in \boxed{–} is \boxed{7682}

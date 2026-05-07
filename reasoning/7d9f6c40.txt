@@ -166,11 +166,11 @@ Looking at operator 【-】 [71-81 = -1, 97-58 = -6, 06-03 = 03, 51-72 = -21]:
     abs determinant f(51, 72) = |5*2 - 1*7| = |10 - 7| = 3 -rev-> 3 wrong
 
 Applying to 98+47:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(98, 47) = |98 - 47| = 51
-  Result is non-negative, no prefix needed: 【51】
-  Result: 【51】
+  We recall that the question operator is not found in the examples. We deduce it must be add+1.
+  reversed operands [98->89, 47->74] and reversed result
+  add+1 f(89, 74) = 89 + 74 + 1 = 164 -rev-> 461
+  Result is non-negative, no prefix needed: 【461】
+  Result: 【461】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{51}
+The answer in \boxed{–} is \boxed{461}

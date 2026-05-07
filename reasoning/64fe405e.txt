@@ -166,9 +166,9 @@ Looking at operator 【<】 [69<51 = 18]:
     abs determinant f(69, 51) = |6*1 - 9*5| = |6 - 45| = 39 -rev-> 93 wrong
 
 Applying to 32<33:
-  reversed operands [32->23, 33->33] and reversed result
-  absolute difference f(23, 33) = |23 - 33| = 10 -rev-> 01
-  Result: 【01】
+  identity
+  absolute difference f(32, 33) = |32 - 33| = 1
+  Result: 【1】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01}
+The answer in \boxed{–} is \boxed{1}

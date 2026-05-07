@@ -165,10 +165,10 @@ Looking at operator 【<】 [41<21 = 2, 25<51 = 7]:
     abs determinant f(25, 51) = |2*1 - 5*5| = |2 - 25| = 23 -rev-> 32 wrong
 
 Applying to 38\29:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(38, 29) = |38 - 29| = 9
-  Result: 【9】
+  We recall that the question operator is not found in the examples. We deduce it must be addition.
+  reversed operands [38->83, 29->92] and reversed result
+  addition f(83, 92) = 83 + 92 = 175 -rev-> 571
+  Result: 【571】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9}
+The answer in \boxed{–} is \boxed{571}

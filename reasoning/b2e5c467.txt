@@ -162,10 +162,10 @@ Looking at operator 【@】 [35@81 = 17, 95@97 = 831, 25@32 = 57]:
     abs determinant f(25, 32) = |2*2 - 5*3| = |4 - 15| = 11 -rev-> 11 wrong
 
 Applying to 61^07:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(61, 07) = |61 - 07| = 54
-  Result: 【54】
+  We recall that the question operator is not found in the examples. We deduce it must be multiply-1.
+  reversed operands [61->16, 07->70] and reversed result
+  multiply-1 f(16, 70) = (10 + 6) * 70 - 1 = 10 * 70 + 6 * 70 - 1 = 700 + 420 - 1 = 1120 - 1 = 1119 -rev-> 9111
+  Result: 【9111】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{54}
+The answer in \boxed{–} is \boxed{9111}

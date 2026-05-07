@@ -763,7 +763,7 @@ Selected
 2 XOR-NOT47
 3 XOR-NOT50
 4 XOR-NOT61
-5 default 1
+5 OR60
 6 OR-NOT13
 7 OR-NOT24
 
@@ -783,7 +783,7 @@ Output
 2 XOR-NOT47 = XOR(0,NOT(0)) = 1
 3 XOR-NOT50 = XOR(0,NOT(1)) = 0
 4 XOR-NOT61 = XOR(0,NOT(1)) = 0
-5 default 1 = 1
+5 OR60 = OR(0,1) = 1
 6 OR-NOT13 = OR(1,NOT(1)) = 1
 7 OR-NOT24 = OR(1,NOT(0)) = 1
 

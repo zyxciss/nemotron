@@ -781,7 +781,7 @@ Matched
 7 I3
 
 Selected
-0 XOR46
+0 AND-NOT47
 1 I5
 2 I6
 3 I7
@@ -801,7 +801,7 @@ Input
 6 0
 7 1
 Output
-0 XOR46 = XOR(1,0) = 1
+0 AND-NOT47 = AND(1,NOT(1)) = 0
 1 I5 = 0
 2 I6 = 0
 3 I7 = 1
@@ -811,4 +811,4 @@ Output
 7 I3 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10011110}
+The answer in \boxed{–} is \boxed{00011110}

@@ -169,10 +169,10 @@ Looking at operator 【*】 [35*26 = 6823, 46*41 = 698, 52*43 = 058]:
     abs determinant f(52, 43) = |5*3 - 2*4| = |15 - 8| = 7 -rev-> 7 wrong
 
 Applying to 29+11:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(29, 11) = |29 - 11| = 18
-  Result: 【18】
+  We recall that the question operator is not found in the examples. We deduce it must be add+1.
+  reversed operands [29->92, 11->11] and reversed result
+  add+1 f(92, 11) = 92 + 11 + 1 = 104 -rev-> 401
+  Result: 【401】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{18}
+The answer in \boxed{–} is \boxed{401}

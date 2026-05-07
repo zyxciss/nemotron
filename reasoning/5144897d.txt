@@ -166,9 +166,9 @@ Looking at operator 【:】 [13:92 = 1]:
     abs determinant f(13, 92) = |1*2 - 3*9| = |2 - 27| = 25 -rev-> 52 wrong
 
 Applying to 90:15:
-  reversed operands [90->09, 15->51] and reversed result
-  sub-1 f(09, 51) = 09 - 51 - 1 = -43 -rev-> -34
-  Result: 【-34】
+  identity
+  max mod min f(90, 15) = max(90,15) mod min(90,15) = 90 mod 15 = 0
+  Result: 【0】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-34}
+The answer in \boxed{–} is \boxed{0}

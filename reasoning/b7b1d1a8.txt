@@ -170,10 +170,10 @@ Looking at operator 【"】 [41"98 = -57]:
     abs determinant f(41, 98) = |4*8 - 1*9| = |32 - 9| = 23 -rev-> 32 wrong
 
 Applying to 74"17:
-  reversed operands [74->47, 17->71] and reversed result
-  negated absolute difference f(47, 71) = -|47 - 71| = -24 -rev-> -42
-  Result is negative - we add back the operator prefix 【"】: -42 -> 【"42】
-  Result: 【"42】
+  identity
+  absolute difference f(74, 17) = |74 - 17| = 57
+  Result is non-negative, no prefix needed: 【57】
+  Result: 【57】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{"42}
+The answer in \boxed{–} is \boxed{57}

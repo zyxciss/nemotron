@@ -769,7 +769,7 @@ Selected
 4 NOT2
 5 OR04
 6 OR15
-7 OR26
+7 NOT5
 
 Applying to 01001111
 Input
@@ -789,7 +789,7 @@ Output
 4 NOT2 = NOT(0) = 1
 5 OR04 = OR(0,1) = 1
 6 OR15 = OR(1,1) = 1
-7 OR26 = OR(0,1) = 1
+7 NOT5 = NOT(1) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11001111}
+The answer in \boxed{–} is \boxed{11001110}

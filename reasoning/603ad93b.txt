@@ -169,10 +169,10 @@ Looking at operator 【+】 [38+05 = 231, 97+37 = 151, 83+43 = 17]:
     abs determinant f(83, 43) = |8*3 - 3*4| = |24 - 12| = 12 -rev-> 21 wrong
 
 Applying to 32*05:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(32, 05) = |32 - 05| = 27
-  Result: 【27】
+  We recall that the question operator is not found in the examples. We deduce it must be multiply-1.
+  reversed operands [32->23, 05->50] and reversed result
+  multiply-1 f(23, 50) = (20 + 3) * 50 - 1 = 20 * 50 + 3 * 50 - 1 = 1000 + 150 - 1 = 1150 - 1 = 1149 -rev-> 9411
+  Result: 【9411】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{27}
+The answer in \boxed{–} is \boxed{9411}

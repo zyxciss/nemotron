@@ -166,8 +166,8 @@ Looking at operator 【]】 [30]47 = 3047]:
     abs determinant f(30, 47) = |3*7 - 0*4| = |21 - 0| = 21 -rev-> 12 wrong
 
 Applying to 97]83:
-  reversed operands [97->79, 83->38] and reversed result
-  reverse concatenation f(79, 38) = 38 || 79 = 3879 -rev-> 9783
+  identity
+  concatenation f(97, 83) = 97 || 83 = 9783
   Result: 【9783】
 
 I will now return the answer in \boxed{}

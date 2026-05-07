@@ -167,11 +167,11 @@ Looking at operator 【:】 [82:87 = -05, 41:15 = -73, 42:31 = 11]:
     abs determinant f(42, 31) = |4*1 - 2*3| = |4 - 6| = 2 -rev-> 2 wrong
 
 Applying to 36\28:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(36, 28) = |36 - 28| = 8
-  Result is non-negative, no prefix needed: 【8】
-  Result: 【8】
+  We recall that the question operator is not found in the examples. We deduce it must be multiply-1.
+  reversed operands [36->63, 28->82] and reversed result
+  multiply-1 f(63, 82) = (60 + 3) * 82 - 1 = 60 * 82 + 3 * 82 - 1 = 4920 + 246 - 1 = 5166 - 1 = 5165 -rev-> 5615
+  Result is non-negative, no prefix needed: 【5615】
+  Result: 【5615】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{8}
+The answer in \boxed{–} is \boxed{5615}

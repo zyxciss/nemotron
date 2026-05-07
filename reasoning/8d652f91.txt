@@ -168,8 +168,8 @@ Looking at operator 【-】 [39-82 = 56]:
     abs determinant f(39, 82) = |3*2 - 9*8| = |6 - 72| = 66 -rev-> 66 wrong
 
 Applying to 97-57:
-  reversed operands [97->79, 57->75] and reversed result
-  absolute difference f(79, 75) = |79 - 75| = 4 -rev-> 4
+  reversed operands [97->79, 57->75]
+  absolute difference f(79, 75) = |79 - 75| = 4
   Result: 【4】
 
 I will now return the answer in \boxed{}

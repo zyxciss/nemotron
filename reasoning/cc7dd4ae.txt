@@ -815,8 +815,8 @@ Selected
 2 AND-NOT03
 3 AND-NOT14
 4 AND-NOT25
-5 default 1
-6 default 1
+5 CH(6,0,3)
+6 CH(7,1,4)
 7 I5
 
 Applying to 01111110
@@ -835,9 +835,9 @@ Output
 2 AND-NOT03 = AND(0,NOT(1)) = 0
 3 AND-NOT14 = AND(1,NOT(1)) = 0
 4 AND-NOT25 = AND(1,NOT(1)) = 0
-5 default 1 = 1
-6 default 1 = 1
+5 CH(6,0,3) = CH(1,0,1) = 0
+6 CH(7,1,4) = CH(0,1,1) = 1
 7 I5 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00000111}
+The answer in \boxed{–} is \boxed{00000011}

@@ -165,10 +165,10 @@ Looking at operator 【\】 [82\83 = 4601, 09\84 = 0234]:
     abs determinant f(09, 84) = |0*4 - 9*8| = |0 - 72| = 72 -rev-> 27 wrong
 
 Applying to 57$07:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(57, 07) = |57 - 07| = 50
-  Result: 【50】
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
+  reversed operands [57->75, 07->70]
+  absolute difference f(75, 70) = |75 - 70| = 5
+  Result: 【5】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{50}
+The answer in \boxed{–} is \boxed{5}

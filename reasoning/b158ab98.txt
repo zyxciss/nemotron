@@ -817,7 +817,7 @@ Matched
 7 AND25
 
 Selected
-0 AND26
+0 CH(1,6,7)
 1 AND37
 2 C0
 3 C0
@@ -837,7 +837,7 @@ Input
 6 1
 7 0
 Output
-0 AND26 = AND(1,1) = 1
+0 CH(1,6,7) = CH(0,1,0) = 0
 1 AND37 = AND(0,0) = 0
 2 C0 = 0
 3 C0 = 0
@@ -847,4 +847,4 @@ Output
 7 AND25 = AND(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10000001}
+The answer in \boxed{–} is \boxed{00000001}

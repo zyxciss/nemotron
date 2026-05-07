@@ -166,7 +166,7 @@ Looking at operator 【-】 [26-31 = 01, 21-49 = 01, 38-07 = 31]:
 
 Applying to 65-57:
   reversed operands [65->56, 57->75] and reversed result
-  max mod min f(56, 75) = max(56,75) mod min(56,75) = 75 mod 56 = 19 -rev-> 91
+  absolute difference f(56, 75) = |56 - 75| = 19 -rev-> 91
   Result: 【91】
 
 I will now return the answer in \boxed{}

@@ -756,13 +756,13 @@ Matched
 7 XOR26
 
 Selected
-0 OR71
+0 CH(1,4,7)
 1 AND02
-2 default 1
-3 default 1
+2 NOT7
+3 NOT0
 4 I5
-5 default 1
-6 default 1
+5 CH(3,1,6)
+6 CH(2,1,6)
 7 XOR26
 
 Applying to 11000011
@@ -776,14 +776,14 @@ Input
 6 1
 7 1
 Output
-0 OR71 = OR(1,1) = 1
+0 CH(1,4,7) = CH(1,0,1) = 0
 1 AND02 = AND(1,0) = 0
-2 default 1 = 1
-3 default 1 = 1
+2 NOT7 = NOT(1) = 0
+3 NOT0 = NOT(1) = 0
 4 I5 = 0
-5 default 1 = 1
-6 default 1 = 1
+5 CH(3,1,6) = CH(0,1,1) = 1
+6 CH(2,1,6) = CH(0,1,1) = 1
 7 XOR26 = XOR(0,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10110111}
+The answer in \boxed{–} is \boxed{00000111}

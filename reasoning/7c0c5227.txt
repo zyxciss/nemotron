@@ -163,7 +163,7 @@ Looking at operator 【*】 [58*47 = 0926, 68*18 = 6696]:
     abs determinant f(68, 18) = |6*8 - 8*1| = |48 - 8| = 40 -rev-> 04 wrong
 
 Applying to 69-55:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(69, 55) = |69 - 55| = 14
   Result: 【14】

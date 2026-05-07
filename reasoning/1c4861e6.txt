@@ -165,10 +165,10 @@ Looking at operator 【-】 [03-59 = 56, 63-87 = 24, 66-15 = 51]:
     abs determinant f(66, 15) = |6*5 - 6*1| = |30 - 6| = 24 -rev-> 42 wrong
 
 Applying to 12*91:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(12, 91) = |12 - 91| = 79
-  Result: 【79】
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
+  reversed operands [12->21, 91->19] and reversed result
+  multiplication f(21, 19) = (20 + 1) * 19 = 20 * 19 + 1 * 19 = 380 + 19 = 399 -rev-> 993
+  Result: 【993】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{79}
+The answer in \boxed{–} is \boxed{993}

@@ -165,8 +165,8 @@ Looking at operator 【(】 [43(81 = 4381]:
     abs determinant f(43, 81) = |4*1 - 3*8| = |4 - 24| = 20 -rev-> 02 wrong
 
 Applying to 75(60:
-  reversed operands [75->57, 60->06] and reversed result
-  reverse concatenation f(57, 06) = 06 || 57 = 0657 -rev-> 7560
+  identity
+  concatenation f(75, 60) = 75 || 60 = 7560
   Result: 【7560】
 
 I will now return the answer in \boxed{}

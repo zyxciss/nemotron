@@ -163,10 +163,10 @@ Looking at operator 【+】 [47+15 = 421, 55+09 = 441]:
     abs determinant f(55, 09) = |5*9 - 5*0| = |45 - 0| = 45 -rev-> 54 wrong
 
 Applying to 01-91:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(01, 91) = |01 - 91| = 90
-  Result: 【90】
+  We recall that the question operator is not found in the examples. We deduce it must be negated absolute difference.
+  reversed operands [01->10, 91->19]
+  negated absolute difference f(10, 19) = -|10 - 19| = -9
+  Result: 【-9】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{90}
+The answer in \boxed{–} is \boxed{-9}

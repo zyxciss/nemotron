@@ -772,7 +772,7 @@ Selected
 4 XOR-NOT51
 5 OR-NOT62
 6 C1
-7 C1
+7 OR-NOT24
 
 Applying to 11001001
 Input
@@ -792,7 +792,7 @@ Output
 4 XOR-NOT51 = XOR(0,NOT(1)) = 0
 5 OR-NOT62 = OR(0,NOT(0)) = 1
 6 C1 = 1
-7 C1 = 1
+7 OR-NOT24 = OR(0,NOT(1)) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01010111}
+The answer in \boxed{–} is \boxed{01010110}

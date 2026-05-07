@@ -767,7 +767,7 @@ Matched
 
 Selected
 0 AND67
-1 AND70
+1 CH(2,3,0)
 2 C0
 3 C0
 4 C0
@@ -787,7 +787,7 @@ Input
 7 1
 Output
 0 AND67 = AND(1,1) = 1
-1 AND70 = AND(1,1) = 1
+1 CH(2,3,0) = CH(1,0,1) = 0
 2 C0 = 0
 3 C0 = 0
 4 C0 = 0
@@ -796,4 +796,4 @@ Output
 7 I2 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11000101}
+The answer in \boxed{–} is \boxed{10000101}

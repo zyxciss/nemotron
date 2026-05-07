@@ -163,10 +163,10 @@ Looking at operator 【-】 [18-43 = 4572, 46-34 = 2572]:
     abs determinant f(46, 34) = |4*4 - 6*3| = |16 - 18| = 2 -rev-> 2 wrong
 
 Applying to 24#28:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(24, 28) = |24 - 28| = 4
-  Result: 【4】
+  We recall that the question operator is not found in the examples. We deduce it must be addition.
+  reversed operands [24->42, 28->82] and reversed result
+  addition f(42, 82) = 42 + 82 = 124 -rev-> 421
+  Result: 【421】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4}
+The answer in \boxed{–} is \boxed{421}

@@ -757,7 +757,7 @@ Selected
 3 XOR-NOT47
 4 XOR-NOT50
 5 XOR-NOT61
-6 OR-NOT27
+6 OR25
 7 OR-NOT13
 
 Applying to 10000101
@@ -777,8 +777,8 @@ Output
 3 XOR-NOT47 = XOR(0,NOT(1)) = 0
 4 XOR-NOT50 = XOR(1,NOT(1)) = 1
 5 XOR-NOT61 = XOR(0,NOT(0)) = 1
-6 OR-NOT27 = OR(0,NOT(1)) = 0
+6 OR25 = OR(0,1) = 1
 7 OR-NOT13 = OR(0,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10101101}
+The answer in \boxed{–} is \boxed{10101111}

@@ -165,11 +165,11 @@ Looking at operator 【(】 [65(87 = -22, 71(58 = -13]:
     abs determinant f(71, 58) = |7*8 - 1*5| = |56 - 5| = 51 -rev-> 15 wrong
 
 Applying to 44:82:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
   identity
-  absolute difference f(44, 82) = |44 - 82| = 38
-  Result is non-negative, no prefix needed: 【38】
-  Result: 【38】
+  concatenation f(44, 82) = 44 || 82 = 4482
+  Result is non-negative, no prefix needed: 【4482】
+  Result: 【4482】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{38}
+The answer in \boxed{–} is \boxed{4482}

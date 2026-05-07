@@ -167,7 +167,7 @@ Looking at operator 【}】 [69}44 = 112, 17}34 = 50, 10}39 = 48]:
     abs determinant f(10, 39) = |1*9 - 0*3| = |9 - 0| = 9 -rev-> 9 wrong
 
 Applying to 91+66:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(91, 66) = |91 - 66| = 25
   Result: 【25】

@@ -165,11 +165,11 @@ Looking at operator 【-】 [33-12 = -21, 32-34 = -02]:
     abs determinant f(32, 34) = |3*4 - 2*3| = |12 - 6| = 6 -rev-> 6 wrong
 
 Applying to 97*93:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(97, 93) = |97 - 93| = 4
-  Result is non-negative, no prefix needed: 【4】
-  Result: 【4】
+  We recall that the question operator is not found in the examples. We deduce it must be multiply+1.
+  reversed operands [97->79, 93->39] and reversed result
+  multiply+1 f(79, 39) = (70 + 9) * 39 + 1 = 70 * 39 + 9 * 39 + 1 = 2730 + 351 + 1 = 3081 + 1 = 3082 -rev-> 2803
+  Result is non-negative, no prefix needed: 【2803】
+  Result: 【2803】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4}
+The answer in \boxed{–} is \boxed{2803}

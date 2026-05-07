@@ -801,8 +801,8 @@ Matched
 
 Selected
 0 I6
-1 default 1
-2 default 1
+1 MAJ(0,6,7)
+2 MAJ(0,1,7)
 3 AND12
 4 AND23
 5 AND34
@@ -821,8 +821,8 @@ Input
 7 0
 Output
 0 I6 = 1
-1 default 1 = 1
-2 default 1 = 1
+1 MAJ(0,6,7) = MAJ(0,1,0) = 0
+2 MAJ(0,1,7) = MAJ(0,1,0) = 0
 3 AND12 = AND(1,0) = 0
 4 AND23 = AND(0,1) = 0
 5 AND34 = AND(1,1) = 1
@@ -830,4 +830,4 @@ Output
 7 AND56 = AND(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11100111}
+The answer in \boxed{–} is \boxed{10000111}

@@ -794,7 +794,7 @@ Selected
 0 XOR-NOT34
 1 XOR-NOT45
 2 XOR-NOT56
-3 default 1
+3 CH(0,1,5)
 4 OR-NOT17
 5 OR-NOT20
 6 OR-NOT31
@@ -814,7 +814,7 @@ Output
 0 XOR-NOT34 = XOR(1,NOT(1)) = 1
 1 XOR-NOT45 = XOR(1,NOT(0)) = 0
 2 XOR-NOT56 = XOR(0,NOT(0)) = 1
-3 default 1 = 1
+3 CH(0,1,5) = CH(1,1,0) = 1
 4 OR-NOT17 = OR(1,NOT(1)) = 1
 5 OR-NOT20 = OR(1,NOT(1)) = 1
 6 OR-NOT31 = OR(1,NOT(1)) = 1

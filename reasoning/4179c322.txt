@@ -170,8 +170,8 @@ Looking at operator 【-】 [24-65 = -41]:
     abs determinant f(24, 65) = |2*5 - 4*6| = |10 - 24| = 14 -rev-> 41 wrong
 
 Applying to 15-75:
-  reversed operands [15->51, 75->57] and reversed result
-  negated absolute difference f(51, 57) = -|51 - 57| = -6 -rev-> -6
+  reversed operands [15->51, 75->57]
+  negated absolute difference f(51, 57) = -|51 - 57| = -6
   Result is negative - we add back the operator prefix 【-】: -6 -> 【-6】
   Result: 【-6】
 

@@ -168,8 +168,8 @@ Looking at operator 【-】 [25-79 = 2579]:
     abs determinant f(25, 79) = |2*9 - 5*7| = |18 - 35| = 17 -rev-> 71 wrong
 
 Applying to 12-11:
-  reversed operands [12->21, 11->11] and reversed result
-  reverse concatenation f(21, 11) = 11 || 21 = 1121 -rev-> 1211
+  identity
+  concatenation f(12, 11) = 12 || 11 = 1211
   Result: 【1211】
 
 I will now return the answer in \boxed{}

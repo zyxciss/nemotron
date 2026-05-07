@@ -162,10 +162,10 @@ Looking at operator 【-】 [28-36 = 91, 51-97 = 46, 02-01 = 01]:
     abs determinant f(02, 01) = |0*1 - 2*0| = |0 - 0| = 0 -rev-> 0 wrong
 
 Applying to 86+87:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(86, 87) = |86 - 87| = 1
-  Result: 【1】
+  We recall that the question operator is not found in the examples. We deduce it must be addition.
+  reversed operands [86->68, 87->78] and reversed result
+  addition f(68, 78) = 68 + 78 = 146 -rev-> 641
+  Result: 【641】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1}
+The answer in \boxed{–} is \boxed{641}

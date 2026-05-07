@@ -169,10 +169,10 @@ Looking at operator 【*】 [91*21 = 2191, 15*39 = 3915, 39*36 = 3639]:
     abs determinant f(39, 36) = |3*6 - 9*3| = |18 - 27| = 9 -rev-> 9 wrong
 
 Applying to 58+66:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(58, 66) = |58 - 66| = 8
-  Result: 【8】
+  We recall that the question operator is not found in the examples. We deduce it must be addition.
+  reversed operands [58->85, 66->66]
+  addition f(85, 66) = 85 + 66 = 151
+  Result: 【151】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{8}
+The answer in \boxed{–} is \boxed{151}

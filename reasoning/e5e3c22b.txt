@@ -780,7 +780,7 @@ Selected
 3 C0
 4 C0
 5 C0
-6 AND-NOT76
+6 CH(0,7,4)
 7 AND-NOT07
 
 Applying to 00010101
@@ -800,8 +800,8 @@ Output
 3 C0 = 0
 4 C0 = 0
 5 C0 = 0
-6 AND-NOT76 = AND(1,NOT(0)) = 1
+6 CH(0,7,4) = CH(0,1,0) = 0
 7 AND-NOT07 = AND(0,NOT(1)) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00100010}
+The answer in \boxed{–} is \boxed{00100000}

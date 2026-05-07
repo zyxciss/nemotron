@@ -802,7 +802,7 @@ Matched
 Selected
 0 AND61
 1 AND72
-2 AND03
+2 CH(4,5,0)
 3 C0
 4 C0
 5 AND60
@@ -822,7 +822,7 @@ Input
 Output
 0 AND61 = AND(1,1) = 1
 1 AND72 = AND(1,1) = 1
-2 AND03 = AND(1,1) = 1
+2 CH(4,5,0) = CH(1,0,1) = 0
 3 C0 = 0
 4 C0 = 0
 5 AND60 = AND(1,1) = 1
@@ -830,4 +830,4 @@ Output
 7 AND02 = AND(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11100111}
+The answer in \boxed{–} is \boxed{11000111}

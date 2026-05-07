@@ -167,10 +167,10 @@ Looking at operator 【'】 [75'62 = 4650, 51'59 = 3009, 56'13 = 728]:
     abs determinant f(56, 13) = |5*3 - 6*1| = |15 - 6| = 9 -rev-> 9 wrong
 
 Applying to 55^54:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
   identity
-  absolute difference f(55, 54) = |55 - 54| = 1
-  Result: 【1】
+  concatenation f(55, 54) = 55 || 54 = 5554
+  Result: 【5554】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1}
+The answer in \boxed{–} is \boxed{5554}

@@ -166,8 +166,8 @@ Looking at operator 【{】 [59{68 = 5968, 89{86 = 8986]:
     abs determinant f(89, 86) = |8*6 - 9*8| = |48 - 72| = 24 -rev-> 42 wrong
 
 Applying to 65{57:
-  reversed operands [65->56, 57->75] and reversed result
-  reverse concatenation f(56, 75) = 75 || 56 = 7556 -rev-> 6557
+  identity
+  concatenation f(65, 57) = 65 || 57 = 6557
   Result: 【6557】
 
 I will now return the answer in \boxed{}

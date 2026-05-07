@@ -168,7 +168,7 @@ Looking at operator 【)】 [55)97 = -42, 90)83 = 7, 96)65 = 31]:
 
 Applying to 28)19:
   identity
-  subtraction (a-b) f(28, 19) = 28 - 19 = 9
+  absolute difference f(28, 19) = |28 - 19| = 9
   Result is non-negative, no prefix needed: 【9】
   Result: 【9】
 

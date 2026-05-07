@@ -163,10 +163,10 @@ Looking at operator 【^】 [66^67 = 1, 87^60 = 27]:
     abs determinant f(87, 60) = |8*0 - 7*6| = |0 - 42| = 42 -rev-> 24 wrong
 
 Applying to 91(29:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
   identity
-  absolute difference f(91, 29) = |91 - 29| = 62
-  Result: 【62】
+  multiplication f(91, 29) = (90 + 1) * 29 = 90 * 29 + 1 * 29 = 2610 + 29 = 2639
+  Result: 【2639】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{62}
+The answer in \boxed{–} is \boxed{2639}

@@ -756,12 +756,12 @@ Matched
 7 OR-NOT64
 
 Selected
-0 OR03
-1 default 1
-2 default 1
-3 default 1
+0 MAJ(0,1,3)
+1 OR-NOT23
+2 CH(2,1,3)
+3 AND-NOT10
 4 OR-NOT31
-5 default 1
+5 MAJ(1,3,7)
 6 OR-NOT53
 7 OR-NOT64
 
@@ -776,14 +776,14 @@ Input
 6 0
 7 1
 Output
-0 OR03 = OR(0,1) = 1
-1 default 1 = 1
-2 default 1 = 1
-3 default 1 = 1
+0 MAJ(0,1,3) = MAJ(0,0,1) = 0
+1 OR-NOT23 = OR(0,NOT(1)) = 0
+2 CH(2,1,3) = CH(0,0,1) = 1
+3 AND-NOT10 = AND(0,NOT(0)) = 0
 4 OR-NOT31 = OR(1,NOT(0)) = 1
-5 default 1 = 1
+5 MAJ(1,3,7) = MAJ(0,1,1) = 1
 6 OR-NOT53 = OR(1,NOT(1)) = 1
 7 OR-NOT64 = OR(0,NOT(1)) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11111110}
+The answer in \boxed{–} is \boxed{00101110}

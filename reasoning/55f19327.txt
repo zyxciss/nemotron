@@ -168,9 +168,9 @@ Looking at operator 【:】 [20:20 = 0]:
     abs determinant f(20, 20) = |2*0 - 0*2| = |0 - 0| = 0 -rev-> 0 match, correct, but skipping
 
 Applying to 77:38:
-  reversed operands [77->77, 38->83] and reversed result
-  absolute difference f(77, 83) = |77 - 83| = 6 -rev-> 6
-  Result: 【6】
+  identity
+  max mod min f(77, 38) = max(77,38) mod min(77,38) = 77 mod 38 = 1
+  Result: 【1】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6}
+The answer in \boxed{–} is \boxed{1}

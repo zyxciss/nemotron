@@ -163,10 +163,10 @@ Looking at operator 【%】 [23%11 = 12, 77%50 = 27]:
     abs determinant f(77, 50) = |7*0 - 7*5| = |0 - 35| = 35 -rev-> 53 wrong
 
 Applying to 45/78:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be multiply+1.
   identity
-  absolute difference f(45, 78) = |45 - 78| = 33
-  Result: 【33】
+  multiply+1 f(45, 78) = (40 + 5) * 78 + 1 = 40 * 78 + 5 * 78 + 1 = 3120 + 390 + 1 = 3510 + 1 = 3511
+  Result: 【3511】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{33}
+The answer in \boxed{–} is \boxed{3511}

@@ -776,10 +776,10 @@ Selected
 0 AND12
 1 I3
 2 I3
-3 default 1
-4 default 1
-5 default 1
-6 default 1
+3 MAJ(2,4,5)
+4 MAJ(0,2,5)
+5 CH(1,4,6)
+6 MAJ(0,5,7)
 7 AND61
 
 Applying to 00100111
@@ -796,10 +796,10 @@ Output
 0 AND12 = AND(0,1) = 0
 1 I3 = 0
 2 I3 = 0
-3 default 1 = 1
-4 default 1 = 1
-5 default 1 = 1
-6 default 1 = 1
+3 MAJ(2,4,5) = MAJ(1,0,1) = 1
+4 MAJ(0,2,5) = MAJ(0,1,1) = 1
+5 CH(1,4,6) = CH(0,0,1) = 1
+6 MAJ(0,5,7) = MAJ(0,1,1) = 1
 7 AND61 = AND(1,0) = 0
 
 I will now return the answer in \boxed{}

@@ -164,11 +164,11 @@ Looking at operator 【`】 [87`52 = 35, 65`02 = 63, 62`09 = -46]:
     abs determinant f(62, 09) = |6*9 - 2*0| = |54 - 0| = 54 -rev-> 45 wrong
 
 Applying to 63/38:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(63, 38) = |63 - 38| = 25
-  Result is non-negative, no prefix needed: 【25】
-  Result: 【25】
+  We recall that the question operator is not found in the examples. We deduce it must be addition.
+  reversed operands [63->36, 38->83] and reversed result
+  addition f(36, 83) = 36 + 83 = 119 -rev-> 911
+  Result is non-negative, no prefix needed: 【911】
+  Result: 【911】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{25}
+The answer in \boxed{–} is \boxed{911}

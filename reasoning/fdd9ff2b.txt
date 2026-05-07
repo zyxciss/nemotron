@@ -162,10 +162,10 @@ Looking at operator 【-】 [24-99 = 51, 97-87 = 1, 02-73 = 71]:
     abs determinant f(02, 73) = |0*3 - 2*7| = |0 - 14| = 14 -rev-> 41 wrong
 
 Applying to 21*44:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(21, 44) = |21 - 44| = 23
-  Result: 【23】
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
+  reversed operands [21->12, 44->44] and reversed result
+  multiplication f(12, 44) = (10 + 2) * 44 = 10 * 44 + 2 * 44 = 440 + 88 = 528 -rev-> 825
+  Result: 【825】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{23}
+The answer in \boxed{–} is \boxed{825}

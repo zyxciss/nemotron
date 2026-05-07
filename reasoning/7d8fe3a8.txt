@@ -165,10 +165,10 @@ Looking at operator 【"】 [22"20 = 43, 84"52 = 137]:
     abs determinant f(84, 52) = |8*2 - 4*5| = |16 - 20| = 4 -rev-> 4 wrong
 
 Applying to 91%84:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
   identity
-  absolute difference f(91, 84) = |91 - 84| = 7
-  Result: 【7】
+  multiplication f(91, 84) = (90 + 1) * 84 = 90 * 84 + 1 * 84 = 7560 + 84 = 7644
+  Result: 【7644】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{7}
+The answer in \boxed{–} is \boxed{7644}

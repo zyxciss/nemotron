@@ -163,8 +163,8 @@ Looking at operator 【-】 [26-16 = 1]:
     abs determinant f(26, 16) = |2*6 - 6*1| = |12 - 6| = 6 -rev-> 6 wrong
 
 Applying to 83-43:
-  reversed operands [83->38, 43->34] and reversed result
-  absolute difference f(38, 34) = |38 - 34| = 4 -rev-> 4
+  reversed operands [83->38, 43->34]
+  absolute difference f(38, 34) = |38 - 34| = 4
   Result: 【4】
 
 I will now return the answer in \boxed{}

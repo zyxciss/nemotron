@@ -773,7 +773,7 @@ Selected
 1 XOR-NOT40
 2 XOR01
 3 default 1
-4 NOT3
+4 CH(2,1,6)
 5 OR-NOT34
 6 OR-NOT45
 7 OR-NOT56
@@ -793,10 +793,10 @@ Output
 1 XOR-NOT40 = XOR(0,NOT(1)) = 0
 2 XOR01 = XOR(1,0) = 1
 3 default 1 = 1
-4 NOT3 = NOT(0) = 1
+4 CH(2,1,6) = CH(0,0,0) = 0
 5 OR-NOT34 = OR(0,NOT(0)) = 1
 6 OR-NOT45 = OR(0,NOT(0)) = 1
 7 OR-NOT56 = OR(0,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00111111}
+The answer in \boxed{–} is \boxed{00110111}

@@ -760,7 +760,7 @@ Selected
 2 XOR-NOT34
 3 XOR-NOT45
 4 XOR-NOT56
-5 default 1
+5 MAJ(0,2,5)
 6 OR-NOT17
 7 OR-NOT20
 
@@ -780,9 +780,9 @@ Output
 2 XOR-NOT34 = XOR(1,NOT(1)) = 1
 3 XOR-NOT45 = XOR(1,NOT(0)) = 0
 4 XOR-NOT56 = XOR(0,NOT(1)) = 0
-5 default 1 = 1
+5 MAJ(0,2,5) = MAJ(0,0,0) = 0
 6 OR-NOT17 = OR(0,NOT(0)) = 1
 7 OR-NOT20 = OR(0,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10100111}
+The answer in \boxed{–} is \boxed{10100011}

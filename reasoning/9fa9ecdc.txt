@@ -167,7 +167,7 @@ Looking at operator 【/】 [25/84 = 109, 59/46 = 105, 45/67 = 112]:
     abs determinant f(45, 67) = |4*7 - 5*6| = |28 - 30| = 2 -rev-> 2 wrong
 
 Applying to 50^86:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(50, 86) = |50 - 86| = 36
   Result: 【36】

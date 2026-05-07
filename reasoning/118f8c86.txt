@@ -171,7 +171,7 @@ Looking at operator 【}】 [18}50 = -32, 65}48 = 17]:
 
 Applying to 50}49:
   identity
-  subtraction (a-b) f(50, 49) = 50 - 49 = 1
+  absolute difference f(50, 49) = |50 - 49| = 1
   Result is non-negative, no prefix needed: 【1】
   Result: 【1】
 

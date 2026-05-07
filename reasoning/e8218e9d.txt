@@ -777,10 +777,10 @@ Matched
 7 I2
 
 Selected
-0 I3
-1 default 1
-2 default 1
-3 default 1
+0 MAJ(0,3,6)
+1 CH(0,5,4)
+2 CH(2,1,5)
+3 MAJ(2,6,7)
 4 I7
 5 I0
 6 I1
@@ -797,14 +797,14 @@ Input
 6 0
 7 0
 Output
-0 I3 = 1
-1 default 1 = 1
-2 default 1 = 1
-3 default 1 = 1
+0 MAJ(0,3,6) = MAJ(0,1,0) = 0
+1 CH(0,5,4) = CH(0,0,1) = 1
+2 CH(2,1,5) = CH(1,0,0) = 0
+3 MAJ(2,6,7) = MAJ(1,0,0) = 0
 4 I7 = 0
 5 I0 = 0
 6 I1 = 0
 7 I2 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11110001}
+The answer in \boxed{–} is \boxed{01000001}

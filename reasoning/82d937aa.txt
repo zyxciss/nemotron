@@ -814,7 +814,7 @@ Selected
 4 I3
 5 I4
 6 I5
-7 I6
+7 CH(2,0,6)
 
 Applying to 11110101
 Input
@@ -834,7 +834,7 @@ Output
 4 I3 = 1
 5 I4 = 0
 6 I5 = 1
-7 I6 = 0
+7 CH(2,0,6) = CH(1,1,0) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11111010}
+The answer in \boxed{–} is \boxed{11111011}

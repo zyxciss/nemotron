@@ -166,8 +166,8 @@ Looking at operator 【-】 [58-04 = 54]:
     abs determinant f(58, 04) = |5*4 - 8*0| = |20 - 0| = 20 -rev-> 02 wrong
 
 Applying to 89-21:
-  reversed operands [89->98, 21->12] and reversed result
-  absolute difference f(98, 12) = |98 - 12| = 86 -rev-> 68
+  identity
+  absolute difference f(89, 21) = |89 - 21| = 68
   Result: 【68】
 
 I will now return the answer in \boxed{}

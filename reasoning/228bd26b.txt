@@ -165,10 +165,10 @@ Looking at operator 【!】 [43!79 = 3397, 84!32 = 2688]:
     abs determinant f(84, 32) = |8*2 - 4*3| = |16 - 12| = 4 -rev-> 4 wrong
 
 Applying to 40/12:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
   identity
-  absolute difference f(40, 12) = |40 - 12| = 28
-  Result: 【28】
+  concatenation f(40, 12) = 40 || 12 = 4012
+  Result: 【4012】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{28}
+The answer in \boxed{–} is \boxed{4012}

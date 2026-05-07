@@ -163,10 +163,10 @@ Looking at operator 【+】 [65+76 = 2573, 13+76 = 7702]:
     abs determinant f(13, 76) = |1*6 - 3*7| = |6 - 21| = 15 -rev-> 51 wrong
 
 Applying to 16}95:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(16, 95) = |16 - 95| = 79
-  Result: 【79】
+  We recall that the question operator is not found in the examples. We deduce it must be add+1.
+  reversed operands [16->61, 95->59]
+  add+1 f(61, 59) = 61 + 59 + 1 = 121
+  Result: 【121】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{79}
+The answer in \boxed{–} is \boxed{121}

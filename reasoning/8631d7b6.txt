@@ -829,7 +829,7 @@ Matched
 7 C0
 
 Selected
-0 AND47
+0 CH(6,7,2)
 1 C0
 2 C0
 3 C0
@@ -849,7 +849,7 @@ Input
 6 0
 7 1
 Output
-0 AND47 = AND(1,1) = 1
+0 CH(6,7,2) = CH(0,1,0) = 0
 1 C0 = 0
 2 C0 = 0
 3 C0 = 0
@@ -859,4 +859,4 @@ Output
 7 C0 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10000000}
+The answer in \boxed{–} is \boxed{00000000}

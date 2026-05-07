@@ -774,10 +774,10 @@ Selected
 0 XOR-NOT12
 1 XOR-NOT23
 2 XOR-NOT34
-3 default 1
-4 default 1
-5 default 1
-6 default 1
+3 CH(2,1,0)
+4 OR-NOT05
+5 CH(0,2,7)
+6 MAJ(0,3,7)
 7 OR-NOT41
 
 Applying to 10000001
@@ -794,11 +794,11 @@ Output
 0 XOR-NOT12 = XOR(0,NOT(0)) = 1
 1 XOR-NOT23 = XOR(0,NOT(0)) = 1
 2 XOR-NOT34 = XOR(0,NOT(0)) = 1
-3 default 1 = 1
-4 default 1 = 1
-5 default 1 = 1
-6 default 1 = 1
+3 CH(2,1,0) = CH(0,0,1) = 1
+4 OR-NOT05 = OR(1,NOT(0)) = 1
+5 CH(0,2,7) = CH(1,0,1) = 0
+6 MAJ(0,3,7) = MAJ(1,0,1) = 1
 7 OR-NOT41 = OR(0,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11111111}
+The answer in \boxed{–} is \boxed{11111011}

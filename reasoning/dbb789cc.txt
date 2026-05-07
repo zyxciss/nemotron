@@ -757,7 +757,7 @@ Selected
 2 I0
 3 I1
 4 I2
-5 I3
+5 CH(1,3,0)
 6 OR14
 7 OR25
 
@@ -777,9 +777,9 @@ Output
 2 I0 = 1
 3 I1 = 0
 4 I2 = 1
-5 I3 = 0
+5 CH(1,3,0) = CH(0,0,1) = 1
 6 OR14 = OR(0,0) = 0
 7 OR25 = OR(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10101001}
+The answer in \boxed{–} is \boxed{10101101}

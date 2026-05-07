@@ -171,9 +171,9 @@ Looking at operator 【-】 [05-58 = -53]:
 
 Applying to 08-23:
   reversed operands [08->80, 23->32] and reversed result
-  negated absolute difference f(80, 32) = -|80 - 32| = -48 -rev-> -84
-  Result is negative - we add back the operator prefix 【-】: -84 -> 【-84】
-  Result: 【-84】
+  absolute difference f(80, 32) = |80 - 32| = 48 -rev-> 84
+  Result is non-negative, no prefix needed: 【84】
+  Result: 【84】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-84}
+The answer in \boxed{–} is \boxed{84}

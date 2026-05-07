@@ -817,7 +817,7 @@ Matched
 
 Selected
 0 C1
-1 C1
+1 OR-NOT17
 2 OR-NOT10
 3 OR-NOT21
 4 OR-NOT32
@@ -837,7 +837,7 @@ Input
 7 1
 Output
 0 C1 = 1
-1 C1 = 1
+1 OR-NOT17 = OR(0,NOT(1)) = 0
 2 OR-NOT10 = OR(0,NOT(1)) = 0
 3 OR-NOT21 = OR(1,NOT(0)) = 1
 4 OR-NOT32 = OR(0,NOT(1)) = 0
@@ -846,4 +846,4 @@ Output
 7 OR-NOT65 = OR(1,NOT(1)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11010111}
+The answer in \boxed{–} is \boxed{10010111}

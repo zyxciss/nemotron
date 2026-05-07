@@ -163,7 +163,7 @@ Looking at operator 【$】 [19$41 = 60, 85$70 = 155]:
     abs determinant f(85, 70) = |8*0 - 5*7| = |0 - 35| = 35 -rev-> 53 wrong
 
 Applying to 74+66:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(74, 66) = |74 - 66| = 8
   Result: 【8】

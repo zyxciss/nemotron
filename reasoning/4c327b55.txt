@@ -794,7 +794,7 @@ Selected
 3 I4
 4 XOR50
 5 XOR61
-6 AND25
+6 CH(0,5,6)
 7 AND36
 
 Applying to 01101101
@@ -814,8 +814,8 @@ Output
 3 I4 = 1
 4 XOR50 = XOR(1,0) = 1
 5 XOR61 = XOR(0,1) = 1
-6 AND25 = AND(1,1) = 1
+6 CH(0,5,6) = CH(0,1,0) = 0
 7 AND36 = AND(0,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11011110}
+The answer in \boxed{–} is \boxed{11011100}

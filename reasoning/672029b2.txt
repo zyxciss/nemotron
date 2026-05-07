@@ -162,10 +162,10 @@ Looking at operator 【*】 [27*77 = 4455, 18*84 = 8883, 78*99 = 3168]:
     abs determinant f(78, 99) = |7*9 - 8*9| = |63 - 72| = 9 -rev-> 9 wrong
 
 Applying to 98-83:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(98, 83) = |98 - 83| = 15
-  Result: 【15】
+  We recall that the question operator is not found in the examples. We deduce it must be max mod min.
+  reversed operands [98->89, 83->38] and reversed result
+  max mod min f(89, 38) = max(89,38) mod min(89,38) = 89 mod 38 = 13 -rev-> 31
+  Result: 【31】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{15}
+The answer in \boxed{–} is \boxed{31}

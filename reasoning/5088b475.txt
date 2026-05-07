@@ -794,10 +794,10 @@ Selected
 0 AND-NOT31
 1 AND-NOT42
 2 AND-NOT53
-3 default 1
+3 CH(1,0,6)
 4 OR75
 5 I0
-6 default 1
+6 MAJ(0,1,3)
 7 I2
 
 Applying to 11110010
@@ -814,10 +814,10 @@ Output
 0 AND-NOT31 = AND(1,NOT(1)) = 0
 1 AND-NOT42 = AND(0,NOT(1)) = 0
 2 AND-NOT53 = AND(0,NOT(1)) = 0
-3 default 1 = 1
+3 CH(1,0,6) = CH(1,1,1) = 1
 4 OR75 = OR(0,0) = 0
 5 I0 = 1
-6 default 1 = 1
+6 MAJ(0,1,3) = MAJ(1,1,1) = 1
 7 I2 = 1
 
 I will now return the answer in \boxed{}

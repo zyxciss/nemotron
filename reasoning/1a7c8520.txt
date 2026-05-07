@@ -763,8 +763,8 @@ Selected
 2 AND34
 3 AND45
 4 AND56
-5 default 1
-6 default 1
+5 CH(0,1,6)
+6 MAJ(0,1,5)
 7 AND12
 
 Applying to 10111000
@@ -783,9 +783,9 @@ Output
 2 AND34 = AND(1,1) = 1
 3 AND45 = AND(1,0) = 0
 4 AND56 = AND(0,0) = 0
-5 default 1 = 1
-6 default 1 = 1
+5 CH(0,1,6) = CH(1,0,0) = 0
+6 MAJ(0,1,5) = MAJ(1,0,0) = 0
 7 AND12 = AND(0,1) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01100110}
+The answer in \boxed{–} is \boxed{01100000}

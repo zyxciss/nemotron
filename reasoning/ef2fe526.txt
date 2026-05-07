@@ -804,7 +804,7 @@ Selected
 4 AND50
 5 AND61
 6 AND72
-7 AND-NOT26
+7 C0
 
 Applying to 10101101
 Input
@@ -824,7 +824,7 @@ Output
 4 AND50 = AND(1,1) = 1
 5 AND61 = AND(0,0) = 0
 6 AND72 = AND(1,1) = 1
-7 AND-NOT26 = AND(1,NOT(0)) = 1
+7 C0 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01011011}
+The answer in \boxed{–} is \boxed{01011010}

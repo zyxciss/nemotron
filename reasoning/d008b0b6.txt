@@ -163,8 +163,8 @@ Looking at operator 【+】 [79+05 = 741, 23+28 = 411]:
     abs determinant f(23, 28) = |2*8 - 3*2| = |16 - 6| = 10 -rev-> 01 wrong
 
 Applying to 37+85:
-  reversed operands [37->73, 85->58] and reversed result
-  addition f(73, 58) = 73 + 58 = 131 -rev-> 131
+  reversed operands [37->73, 85->58]
+  addition f(73, 58) = 73 + 58 = 131
   Result: 【131】
 
 I will now return the answer in \boxed{}

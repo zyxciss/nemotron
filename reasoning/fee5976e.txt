@@ -792,7 +792,7 @@ Selected
 4 I2
 5 I3
 6 I4
-7 I5
+7 CH(0,6,5)
 
 Applying to 10000011
 Input
@@ -812,7 +812,7 @@ Output
 4 I2 = 0
 5 I3 = 0
 6 I4 = 0
-7 I5 = 0
+7 CH(0,6,5) = CH(1,1,0) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11100000}
+The answer in \boxed{–} is \boxed{11100001}

@@ -164,8 +164,8 @@ Looking at operator 【!】 [57!25 = 32]:
 
 Applying to 49!82:
   reversed operands [49->94, 82->28] and reversed result
-  absolute difference f(94, 28) = |94 - 28| = 66 -rev-> 66
-  Result: 【66】
+  max mod min f(94, 28) = max(94,28) mod min(94,28) = 94 mod 28 = 10 -rev-> 01
+  Result: 【01】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{66}
+The answer in \boxed{–} is \boxed{01}

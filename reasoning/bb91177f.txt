@@ -779,12 +779,12 @@ Matched
 
 Selected
 0 OR67
-1 default 1
-2 default 1
-3 default 1
-4 default 1
-5 default 1
-6 default 1
+1 MAJ(4,6,7)
+2 CH(0,7,5)
+3 MAJ(2,5,6)
+4 CH(2,4,3)
+5 NOT6
+6 CH(0,3,2)
 7 C1
 
 Applying to 01100100
@@ -799,13 +799,13 @@ Input
 7 0
 Output
 0 OR67 = OR(0,0) = 0
-1 default 1 = 1
-2 default 1 = 1
-3 default 1 = 1
-4 default 1 = 1
-5 default 1 = 1
-6 default 1 = 1
+1 MAJ(4,6,7) = MAJ(0,0,0) = 0
+2 CH(0,7,5) = CH(0,0,1) = 1
+3 MAJ(2,5,6) = MAJ(1,1,0) = 1
+4 CH(2,4,3) = CH(1,0,0) = 0
+5 NOT6 = NOT(0) = 1
+6 CH(0,3,2) = CH(0,0,1) = 1
 7 C1 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01111111}
+The answer in \boxed{–} is \boxed{00110111}

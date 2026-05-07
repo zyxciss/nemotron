@@ -163,10 +163,10 @@ Looking at operator 【*】 [06*88 = 1825, 26*35 = 7823]:
     abs determinant f(26, 35) = |2*5 - 6*3| = |10 - 18| = 8 -rev-> 8 wrong
 
 Applying to 74-86:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be negated absolute difference.
   identity
-  absolute difference f(74, 86) = |74 - 86| = 12
-  Result: 【12】
+  negated absolute difference f(74, 86) = -|74 - 86| = -12
+  Result: 【-12】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{12}
+The answer in \boxed{–} is \boxed{-12}

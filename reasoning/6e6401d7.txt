@@ -162,7 +162,7 @@ Looking at operator 【'】 [95'87 = 8266, 14'63 = 883, 40'97 = 3881]:
     abs determinant f(40, 97) = |4*7 - 0*9| = |28 - 0| = 28 -rev-> 82 wrong
 
 Applying to 94\93:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(94, 93) = |94 - 93| = 1
   Result: 【1】

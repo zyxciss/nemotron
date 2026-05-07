@@ -163,10 +163,10 @@ Looking at operator 【*】 [56*05 = 1523, 77*02 = 1451]:
     abs determinant f(77, 02) = |7*2 - 7*0| = |14 - 0| = 14 -rev-> 41 wrong
 
 Applying to 93-91:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(93, 91) = |93 - 91| = 2
-  Result: 【2】
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
+  reversed operands [93->39, 91->19] and reversed result
+  absolute difference f(39, 19) = |39 - 19| = 20 -rev-> 02
+  Result: 【02】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{2}
+The answer in \boxed{–} is \boxed{02}

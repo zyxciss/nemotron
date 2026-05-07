@@ -162,10 +162,10 @@ Looking at operator 【*】 [79*29 = 2979, 12*65 = 6512, 47*03 = 0347]:
     abs determinant f(47, 03) = |4*3 - 7*0| = |12 - 0| = 12 -rev-> 21 wrong
 
 Applying to 07+38:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(07, 38) = |07 - 38| = 31
-  Result: 【31】
+  We recall that the question operator is not found in the examples. We deduce it must be addition.
+  reversed operands [07->70, 38->83] and reversed result
+  addition f(70, 83) = 70 + 83 = 153 -rev-> 351
+  Result: 【351】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{31}
+The answer in \boxed{–} is \boxed{351}

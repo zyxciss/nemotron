@@ -167,8 +167,8 @@ Looking at operator 【-】 [16-06 = 1, 16-89 = 73, 91-96 = 21]:
     abs determinant f(91, 96) = |9*6 - 1*9| = |54 - 9| = 45 -rev-> 54 wrong
 
 Applying to 74-03:
-  reversed operands [74->47, 03->30] and reversed result
-  max mod min f(47, 30) = max(47,30) mod min(47,30) = 47 mod 30 = 17 -rev-> 71
+  identity
+  absolute difference f(74, 03) = |74 - 03| = 71
   Result: 【71】
 
 I will now return the answer in \boxed{}

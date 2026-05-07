@@ -762,7 +762,7 @@ Matched
 7 OR-NOT52
 
 Selected
-0 I5
+0 MAJ(1,3,5)
 1 NOT4
 2 OR-NOT05
 3 OR-NOT16
@@ -782,7 +782,7 @@ Input
 6 1
 7 1
 Output
-0 I5 = 0
+0 MAJ(1,3,5) = MAJ(1,1,0) = 1
 1 NOT4 = NOT(0) = 1
 2 OR-NOT05 = OR(1,NOT(0)) = 1
 3 OR-NOT16 = OR(1,NOT(1)) = 1
@@ -792,4 +792,4 @@ Output
 7 OR-NOT52 = OR(0,NOT(1)) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01111100}
+The answer in \boxed{–} is \boxed{11111100}

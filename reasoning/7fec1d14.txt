@@ -801,7 +801,7 @@ Selected
 4 NOT7
 5 NOT0
 6 OR70
-7 OR01
+7 MAJ(0,1,3)
 
 Applying to 10101010
 Input
@@ -821,7 +821,7 @@ Output
 4 NOT7 = NOT(0) = 1
 5 NOT0 = NOT(1) = 0
 6 OR70 = OR(0,1) = 1
-7 OR01 = OR(1,0) = 1
+7 MAJ(0,1,3) = MAJ(1,0,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00101011}
+The answer in \boxed{–} is \boxed{00101010}

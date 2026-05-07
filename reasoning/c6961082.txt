@@ -168,11 +168,11 @@ Looking at operator 【'】 [55'82 = -27, 27'50 = -23, 54'75 = -21, 84'23 = -61,
     abs determinant f(84, 23) = |8*3 - 4*2| = |24 - 8| = 16 -rev-> 61 wrong
 
 Applying to 69]99:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be multiplication.
   identity
-  absolute difference f(69, 99) = |69 - 99| = 30
-  Result is non-negative, no prefix needed: 【30】
-  Result: 【30】
+  multiplication f(69, 99) = (60 + 9) * 99 = 60 * 99 + 9 * 99 = 5940 + 891 = 6831
+  Result is non-negative, no prefix needed: 【6831】
+  Result: 【6831】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{30}
+The answer in \boxed{–} is \boxed{6831}

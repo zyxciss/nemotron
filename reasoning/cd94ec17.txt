@@ -165,8 +165,8 @@ Looking at operator 【)】 [22)64 = 86]:
     abs determinant f(22, 64) = |2*4 - 2*6| = |8 - 12| = 4 -rev-> 4 wrong
 
 Applying to 75)79:
-  reversed operands [75->57, 79->97] and reversed result
-  addition f(57, 97) = 57 + 97 = 154 -rev-> 451
+  reversed result
+  addition f(75, 79) = 75 + 79 = 154 -rev-> 451
   Result: 【451】
 
 I will now return the answer in \boxed{}

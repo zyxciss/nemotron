@@ -162,8 +162,8 @@ Looking at operator 【^】 [72^14 = 41, 63^22 = 41, 68^34 = 34]:
     abs determinant f(68, 34) = |6*4 - 8*3| = |24 - 24| = 0 -rev-> 0 wrong
 
 Applying to 49^76:
-  reversed operands [49->94, 76->67] and reversed result
-  absolute difference f(94, 67) = |94 - 67| = 27 -rev-> 72
+  reversed result
+  absolute difference f(49, 76) = |49 - 76| = 27 -rev-> 72
   Result: 【72】
 
 I will now return the answer in \boxed{}

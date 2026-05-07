@@ -164,8 +164,8 @@ Looking at operator 【*】 [93*58 = 9358]:
     abs determinant f(93, 58) = |9*8 - 3*5| = |72 - 15| = 57 -rev-> 75 wrong
 
 Applying to 26*29:
-  reversed operands [26->62, 29->92] and reversed result
-  reverse concatenation f(62, 92) = 92 || 62 = 9262 -rev-> 2629
+  identity
+  concatenation f(26, 29) = 26 || 29 = 2629
   Result: 【2629】
 
 I will now return the answer in \boxed{}

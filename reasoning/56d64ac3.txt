@@ -780,7 +780,7 @@ Matched
 Selected
 0 AND-NOT54
 1 AND-NOT65
-2 default 1
+2 MAJ(0,4,7)
 3 OR70
 4 I1
 5 I2
@@ -800,7 +800,7 @@ Input
 Output
 0 AND-NOT54 = AND(0,NOT(1)) = 0
 1 AND-NOT65 = AND(1,NOT(0)) = 1
-2 default 1 = 1
+2 MAJ(0,4,7) = MAJ(1,1,0) = 1
 3 OR70 = OR(0,1) = 1
 4 I1 = 0
 5 I2 = 0

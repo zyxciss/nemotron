@@ -803,9 +803,9 @@ Selected
 1 C1
 2 C1
 3 default 1
-4 NOT5
+4 OR-NOT25
 5 default 1
-6 default 1
+6 CH(1,4,2)
 7 OR-NOT40
 
 Applying to 10110110
@@ -823,10 +823,10 @@ Output
 1 C1 = 1
 2 C1 = 1
 3 default 1 = 1
-4 NOT5 = NOT(1) = 0
+4 OR-NOT25 = OR(1,NOT(1)) = 1
 5 default 1 = 1
-6 default 1 = 1
+6 CH(1,4,2) = CH(0,0,1) = 1
 7 OR-NOT40 = OR(0,NOT(1)) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11110110}
+The answer in \boxed{–} is \boxed{11111110}

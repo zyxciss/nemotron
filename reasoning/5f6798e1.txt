@@ -166,9 +166,9 @@ Looking at operator 【-】 [04-49 = -45, 21-74 = -53]:
 
 Applying to 06-71:
   reversed operands [06->60, 71->17] and reversed result
-  negated absolute difference f(60, 17) = -|60 - 17| = -43 -rev-> -34
-  Result is negative - we add back the operator prefix 【-】: -34 -> 【-34】
-  Result: 【-34】
+  absolute difference f(60, 17) = |60 - 17| = 43 -rev-> 34
+  Result is non-negative, no prefix needed: 【34】
+  Result: 【34】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-34}
+The answer in \boxed{–} is \boxed{34}

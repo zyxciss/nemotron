@@ -166,8 +166,8 @@ Looking at operator 【*】 [54*78 = 6193]:
     abs determinant f(54, 78) = |5*8 - 4*7| = |40 - 28| = 12 -rev-> 21 wrong
 
 Applying to 85*11:
-  reversed operands [85->58, 11->11] and reversed result
-  multiply+1 f(58, 11) = (50 + 8) * 11 + 1 = 50 * 11 + 8 * 11 + 1 = 550 + 88 + 1 = 638 + 1 = 639 -rev-> 936
+  identity
+  multiply+1 f(85, 11) = (80 + 5) * 11 + 1 = 80 * 11 + 5 * 11 + 1 = 880 + 55 + 1 = 935 + 1 = 936
   Result: 【936】
 
 I will now return the answer in \boxed{}

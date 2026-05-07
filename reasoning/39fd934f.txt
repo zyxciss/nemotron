@@ -167,9 +167,9 @@ Looking at operator 【-】 [25-74 = 5, 69-42 = 27]:
     abs determinant f(69, 42) = |6*2 - 9*4| = |12 - 36| = 24 -rev-> 42 wrong
 
 Applying to 32-23:
-  reversed operands [32->23, 23->32] and reversed result
-  absolute difference f(23, 32) = |23 - 32| = 9 -rev-> 9
-  Result: 【9】
+  identity
+  negated absolute difference f(32, 23) = -|32 - 23| = -9
+  Result: 【-9】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9}
+The answer in \boxed{–} is \boxed{-9}

@@ -797,7 +797,7 @@ Selected
 1 XOR-NOT56
 2 XOR-NOT67
 3 XOR-NOT70
-4 XOR-NOT01
+4 CH(1,0,5)
 5 OR-NOT12
 6 OR-NOT23
 7 OR-NOT34
@@ -817,10 +817,10 @@ Output
 1 XOR-NOT56 = XOR(1,NOT(0)) = 0
 2 XOR-NOT67 = XOR(0,NOT(0)) = 1
 3 XOR-NOT70 = XOR(0,NOT(1)) = 0
-4 XOR-NOT01 = XOR(1,NOT(0)) = 0
+4 CH(1,0,5) = CH(0,1,1) = 1
 5 OR-NOT12 = OR(0,NOT(0)) = 1
 6 OR-NOT23 = OR(0,NOT(1)) = 0
 7 OR-NOT34 = OR(1,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00100101}
+The answer in \boxed{–} is \boxed{00101101}

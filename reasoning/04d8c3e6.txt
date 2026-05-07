@@ -809,7 +809,7 @@ Matched
 7 AND70
 
 Selected
-0 AND34
+0 MAJ(0,4,5)
 1 C0
 2 C0
 3 C0
@@ -829,7 +829,7 @@ Input
 6 1
 7 1
 Output
-0 AND34 = AND(0,1) = 0
+0 MAJ(0,4,5) = MAJ(0,1,1) = 1
 1 C0 = 0
 2 C0 = 0
 3 C0 = 0
@@ -839,4 +839,4 @@ Output
 7 AND70 = AND(1,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00000000}
+The answer in \boxed{–} is \boxed{10000000}

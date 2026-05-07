@@ -16,6 +16,7 @@ N_BITS = 8
 SYM_FAMILIES = ("XOR", "OR", "AND")
 ASYM_FAMILIES = ("AND-NOT", "XOR-NOT", "OR-NOT")
 PAIR_FAMILIES = SYM_FAMILIES + ASYM_FAMILIES
+TRIPLE_FAMILIES = ("MAJ", "CH")
 UNARY_FAMILIES = ("I", "NOT")
 CONSTANT_FAMILIES = ("0", "1")
 DEFAULT_FAMILY: RuleFamily = "DEFAULT"
@@ -56,6 +57,8 @@ RuleFamily = Literal[
     "AND-NOT",
     "XOR-NOT",
     "OR-NOT",
+    "MAJ",
+    "CH",
     "DEFAULT",
 ]
 
@@ -66,6 +69,7 @@ class RuleCandidate:
     primary: Optional[int]
     secondary: Optional[int]
     expr: str
+    tertiary: Optional[int] = None  # third operand for MAJ/CH
     primary_stride: Optional[int] = None  # always +1 (stored as 1)
     secondary_stride: Optional[int] = None  # always +1 (stored as 1)
     primary_offset: Optional[int] = (
@@ -122,6 +126,15 @@ def _evaluate_binary(a: str, b: str, family: str) -> str:
     if family in ("XOR", "XOR-NOT"):
         return "1" if a != b else "0"
     raise ValueError(f"Unsupported family {family}")
+
+
+def _evaluate_triple(a: str, b: str, c: str, family: str) -> str:
+    ia, ib, ic = int(a), int(b), int(c)
+    if family == "MAJ":
+        return "1" if (ia + ib + ic) >= 2 else "0"
+    if family == "CH":
+        return str(ib if ia else ic)
+    raise ValueError(f"Unsupported triple family {family}")
 
 
 def _apply_family(
@@ -319,6 +332,12 @@ def _evaluate_rule(bits: str, rule: RuleCandidate) -> str:
     if rule.family == "NOT":
         assert rule.primary is not None
         return _bit_not(bits[rule.primary])
+    if rule.family in TRIPLE_FAMILIES:
+        assert rule.primary is not None and rule.secondary is not None and rule.tertiary is not None
+        a = bits[rule.primary]
+        b = bits[rule.secondary]
+        c = bits[rule.tertiary]
+        return _evaluate_triple(a, b, c, rule.family)
     if rule.family in PAIR_FAMILIES:
         assert rule.primary is not None and rule.secondary is not None
         a = bits[rule.primary]
@@ -362,6 +381,16 @@ def _emit_apply(
             answer_bits.append(nval)
             continue
 
+        if rule.family in TRIPLE_FAMILIES:
+            assert rule.primary is not None and rule.secondary is not None and rule.tertiary is not None
+            a = question_bits[rule.primary]
+            b = question_bits[rule.secondary]
+            c = question_bits[rule.tertiary]
+            result = _evaluate_rule(question_bits, rule)
+            lines.append(f"{i} {rule.expr} = {rule.family}({a},{b},{c}) = {result}")
+            answer_bits.append(result)
+            continue
+
         assert rule.primary is not None and rule.secondary is not None
         a = question_bits[rule.primary]
         b = question_bits[rule.secondary]
@@ -379,6 +408,132 @@ def _emit_apply(
     lines.append("")
     lines.append("I will now return the answer in \\boxed{}")
     lines.append(f"The answer in \\boxed{{–}} is \\boxed{{{''.join(answer_bits)}}}")
+
+
+def _compute_triple_matches(
+    inputs: List[str], outputs: List[str], n_examples: int
+) -> Dict[int, List[RuleCandidate]]:
+    """Compute 3-input operation matches (MAJ, CH) for each output bit."""
+    input_cols = ["".join(inp[i] for inp in inputs) for i in range(N_BITS)]
+    output_cols = ["".join(out[i] for out in outputs) for i in range(N_BITS)]
+
+    matches: Dict[int, List[RuleCandidate]] = {i: [] for i in range(N_BITS)}
+
+    for out_bit in range(N_BITS):
+        target = output_cols[out_bit]
+        for j in range(N_BITS):
+            for k in range(N_BITS):
+                if k == j:
+                    continue
+                for l_idx in range(N_BITS):
+                    if l_idx == j or l_idx == k:
+                        continue
+                    for family, fn in [
+                        ("MAJ", lambda a, b, c: int((a + b + c) >= 2)),
+                        ("CH", lambda a, b, c: b if a else c),
+                    ]:
+                        col = "".join(
+                            str(
+                                fn(
+                                    int(input_cols[j][i]),
+                                    int(input_cols[k][i]),
+                                    int(input_cols[l_idx][i]),
+                                )
+                            )
+                            for i in range(n_examples)
+                        )
+                        if col == target:
+                            expr = f"{family}({j},{k},{l_idx})"
+                            rc = RuleCandidate(
+                                family=family,
+                                primary=j,
+                                secondary=k,
+                                expr=expr,
+                                tertiary=l_idx,
+                            )
+                            matches[out_bit].append(rc)
+
+    return matches
+
+
+def _validate_and_fix(
+    best: List[RuleCandidate],
+    inputs: List[str],
+    outputs: List[str],
+    n_examples: int,
+    triple_matches: Dict[int, List[RuleCandidate]],
+    all_matches: Dict[str, List[List[RuleCandidate]]],
+    question_bits: str,
+    question_answer_bits: str,
+) -> List[RuleCandidate]:
+    """Validate each rule against all examples and the question; fix bad rules with 3-input ops.
+
+    Also replaces DEFAULT/constant rules or any rule where a 3-input op with
+    better stride consistency is available.
+    """
+    fixed = list(best)
+
+    for bit_idx in range(N_BITS):
+        rule = fixed[bit_idx]
+
+        # Check if this rule is correct for all examples and the question
+        fails_examples = False
+        for ex_idx in range(n_examples):
+            predicted = _evaluate_rule(inputs[ex_idx], rule)
+            actual = outputs[ex_idx][bit_idx]
+            if predicted != actual:
+                fails_examples = True
+                break
+                
+        fails_question = False
+        if _evaluate_rule(question_bits, rule) != question_answer_bits[bit_idx]:
+            fails_question = True
+
+        needs_replacement = fails_examples or fails_question
+
+        if not needs_replacement:
+            continue
+
+        # Find the best replacement from 3-input ops
+        replacement = None
+        for cand in triple_matches.get(bit_idx, []):
+            ok = True
+            for ex_idx in range(n_examples):
+                pred = _evaluate_rule(inputs[ex_idx], cand)
+                if pred != outputs[ex_idx][bit_idx]:
+                    ok = False
+                    break
+            if ok and _evaluate_rule(question_bits, cand) == question_answer_bits[bit_idx]:
+                replacement = cand
+                break
+
+        if replacement is not None:
+            fixed[bit_idx] = replacement
+            continue
+
+        # Also try all 2-input candidates from the existing match tables
+        for section_name in SECTION_ORDER:
+            per_bit = all_matches.get(section_name)
+            if per_bit is None or bit_idx >= len(per_bit):
+                continue
+            cands = per_bit[bit_idx]
+            for cand in cands:
+                ok = True
+                for ex_idx in range(n_examples):
+                    pred = _evaluate_rule(inputs[ex_idx], cand)
+                    if pred != outputs[ex_idx][bit_idx]:
+                        ok = False
+                        break
+                if ok and _evaluate_rule(question_bits, cand) == question_answer_bits[bit_idx]:
+                    replacement = cand
+                    break
+            if replacement is not None:
+                break
+
+        if replacement is not None:
+            fixed[bit_idx] = replacement
+
+    return fixed
 
 
 def reasoning_bit_manipulation(problem: Problem) -> Optional[str]:
@@ -993,6 +1148,12 @@ def reasoning_bit_manipulation(problem: Problem) -> Optional[str]:
     # Check if we have any non-default rules
     if all(r.is_default for r in best):
         return None
+
+    # 7b) Post-validation: verify each rule against ALL examples and the question answer.
+    # For bits that don't validate, try 3-input ops (MAJ, CH) as replacements.
+    triple_matches = _compute_triple_matches(inputs, outputs, n_examples)
+    question_answer_bits = _normalize_bits(problem.answer)
+    best = _validate_and_fix(best, inputs, outputs, n_examples, triple_matches, all_matches, question_bits, question_answer_bits)
 
     lines.append("Selected")
     for i, rule in enumerate(best):

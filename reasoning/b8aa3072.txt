@@ -770,8 +770,8 @@ Selected
 1 AND-NOT03
 2 AND-NOT14
 3 AND-NOT25
-4 XOR36
-5 I4
+4 CH(2,0,3)
+5 CH(3,4,1)
 6 I5
 7 I6
 
@@ -790,10 +790,10 @@ Output
 1 AND-NOT03 = AND(0,NOT(0)) = 0
 2 AND-NOT14 = AND(0,NOT(1)) = 0
 3 AND-NOT25 = AND(1,NOT(1)) = 0
-4 XOR36 = XOR(0,1) = 1
-5 I4 = 1
+4 CH(2,0,3) = CH(1,0,0) = 0
+5 CH(3,4,1) = CH(0,1,0) = 0
 6 I5 = 1
 7 I6 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00001111}
+The answer in \boxed{–} is \boxed{00000011}

@@ -165,8 +165,8 @@ Looking at operator 【)】 [70)60 = 7060]:
     abs determinant f(70, 60) = |7*0 - 0*6| = |0 - 0| = 0 -rev-> 0 wrong
 
 Applying to 95)55:
-  reversed operands [95->59, 55->55] and reversed result
-  reverse concatenation f(59, 55) = 55 || 59 = 5559 -rev-> 9555
+  identity
+  concatenation f(95, 55) = 95 || 55 = 9555
   Result: 【9555】
 
 I will now return the answer in \boxed{}

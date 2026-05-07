@@ -164,8 +164,8 @@ Looking at operator 【!】 [29!81 = 47]:
     abs determinant f(29, 81) = |2*1 - 9*8| = |2 - 72| = 70 -rev-> 07 wrong
 
 Applying to 65!76:
-  reversed operands [65->56, 76->67] and reversed result
-  absolute difference f(56, 67) = |56 - 67| = 11 -rev-> 11
+  identity
+  absolute difference f(65, 76) = |65 - 76| = 11
   Result: 【11】
 
 I will now return the answer in \boxed{}

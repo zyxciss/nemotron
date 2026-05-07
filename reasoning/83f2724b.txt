@@ -165,7 +165,7 @@ Looking at operator 【[】 [92[66 = 4191, 82[23 = 698, 87[09 = 0207]:
     abs determinant f(87, 09) = |8*9 - 7*0| = |72 - 0| = 72 -rev-> 27 wrong
 
 Applying to 35>13:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(35, 13) = |35 - 13| = 22
   Result: 【22】

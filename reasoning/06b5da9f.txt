@@ -798,7 +798,7 @@ Matched
 Selected
 0 AND-NOT34
 1 AND-NOT45
-2 default 1
+2 CH(6,0,1)
 3 OR26
 4 I7
 5 I0
@@ -818,7 +818,7 @@ Input
 Output
 0 AND-NOT34 = AND(0,NOT(0)) = 0
 1 AND-NOT45 = AND(0,NOT(1)) = 0
-2 default 1 = 1
+2 CH(6,0,1) = CH(1,0,1) = 0
 3 OR26 = OR(0,1) = 1
 4 I7 = 1
 5 I0 = 0
@@ -826,4 +826,4 @@ Output
 7 I2 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00111010}
+The answer in \boxed{–} is \boxed{00011010}

@@ -767,8 +767,8 @@ Matched
 7 C1
 
 Selected
-0 OR-NOT46
-1 OR-NOT57
+0 OR01
+1 NOT7
 2 C1
 3 C1
 4 C1
@@ -787,8 +787,8 @@ Input
 6 1
 7 1
 Output
-0 OR-NOT46 = OR(0,NOT(1)) = 0
-1 OR-NOT57 = OR(1,NOT(1)) = 1
+0 OR01 = OR(1,0) = 1
+1 NOT7 = NOT(1) = 0
 2 C1 = 1
 3 C1 = 1
 4 C1 = 1
@@ -797,4 +797,4 @@ Output
 7 C1 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01111111}
+The answer in \boxed{–} is \boxed{10111111}

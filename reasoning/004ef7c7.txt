@@ -778,7 +778,7 @@ Selected
 1 XOR-NOT24
 2 XOR-NOT35
 3 default 1
-4 default 1
+4 OR-NOT17
 5 OR-NOT26
 6 OR-NOT37
 7 OR-NOT40
@@ -798,7 +798,7 @@ Output
 1 XOR-NOT24 = XOR(0,NOT(0)) = 1
 2 XOR-NOT35 = XOR(1,NOT(1)) = 1
 3 default 1 = 1
-4 default 1 = 1
+4 OR-NOT17 = OR(1,NOT(1)) = 1
 5 OR-NOT26 = OR(0,NOT(0)) = 1
 6 OR-NOT37 = OR(1,NOT(1)) = 1
 7 OR-NOT40 = OR(0,NOT(0)) = 1

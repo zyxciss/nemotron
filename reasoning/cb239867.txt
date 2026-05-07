@@ -758,7 +758,7 @@ Selected
 1 AND-NOT34
 2 I4
 3 AND35
-4 default 1
+4 MAJ(2,3,4)
 5 I7
 6 I0
 7 I1
@@ -778,10 +778,10 @@ Output
 1 AND-NOT34 = AND(0,NOT(0)) = 0
 2 I4 = 0
 3 AND35 = AND(0,0) = 0
-4 default 1 = 1
+4 MAJ(2,3,4) = MAJ(1,0,0) = 0
 5 I7 = 0
 6 I0 = 1
 7 I1 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10001011}
+The answer in \boxed{–} is \boxed{10000011}

@@ -164,8 +164,8 @@ Looking at operator 【"】 [89"28 = 61]:
     abs determinant f(89, 28) = |8*8 - 9*2| = |64 - 18| = 46 -rev-> 64 wrong
 
 Applying to 94"10:
-  reversed operands [94->49, 10->01] and reversed result
-  absolute difference f(49, 01) = |49 - 01| = 48 -rev-> 84
+  identity
+  absolute difference f(94, 10) = |94 - 10| = 84
   Result: 【84】
 
 I will now return the answer in \boxed{}

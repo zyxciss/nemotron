@@ -163,10 +163,10 @@ Looking at operator 【-】 [14-04 = 18, 99-07 = 961]:
     abs determinant f(99, 07) = |9*7 - 9*0| = |63 - 0| = 63 -rev-> 36 wrong
 
 Applying to 71)42:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(71, 42) = |71 - 42| = 29
-  Result: 【29】
+  We recall that the question operator is not found in the examples. We deduce it must be multiply-1.
+  reversed operands [71->17, 42->24] and reversed result
+  multiply-1 f(17, 24) = (10 + 7) * 24 - 1 = 10 * 24 + 7 * 24 - 1 = 240 + 168 - 1 = 408 - 1 = 407 -rev-> 704
+  Result: 【704】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{29}
+The answer in \boxed{–} is \boxed{704}

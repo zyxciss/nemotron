@@ -168,9 +168,9 @@ Looking at operator 【%】 [95%35 = 25]:
     abs determinant f(95, 35) = |9*5 - 5*3| = |45 - 15| = 30 -rev-> 03 wrong
 
 Applying to 75%24:
-  reversed operands [75->57, 24->42] and reversed result
-  cross multiply f(57, 42) = 5*4 + 7*2 = 20 + 14 = 34 -rev-> 43
-  Result: 【43】
+  identity
+  max mod min f(75, 24) = max(75,24) mod min(75,24) = 75 mod 24 = 3
+  Result: 【3】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{43}
+The answer in \boxed{–} is \boxed{3}

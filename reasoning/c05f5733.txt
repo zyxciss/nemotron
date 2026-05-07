@@ -767,8 +767,8 @@ Selected
 0 AND13
 1 AND24
 2 AND35
-3 default 1
-4 default 1
+3 MAJ(0,4,6)
+4 MAJ(0,1,5)
 5 AND62
 6 AND73
 7 AND04
@@ -787,11 +787,11 @@ Output
 0 AND13 = AND(0,1) = 0
 1 AND24 = AND(1,0) = 0
 2 AND35 = AND(1,1) = 1
-3 default 1 = 1
-4 default 1 = 1
+3 MAJ(0,4,6) = MAJ(1,0,0) = 0
+4 MAJ(0,1,5) = MAJ(1,0,1) = 1
 5 AND62 = AND(0,1) = 0
 6 AND73 = AND(1,1) = 1
 7 AND04 = AND(1,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00111010}
+The answer in \boxed{–} is \boxed{00101010}

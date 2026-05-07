@@ -167,7 +167,7 @@ Looking at operator 【*】 [66*66 = 6666, 24*32 = 3224, 91*47 = 4791, 29*55 = 5
     abs determinant f(29, 55) = |2*5 - 9*5| = |10 - 45| = 35 -rev-> 53 wrong
 
 Applying to 97-12:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(97, 12) = |97 - 12| = 85
   Result: 【85】

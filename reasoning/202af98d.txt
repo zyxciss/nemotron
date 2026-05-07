@@ -792,9 +792,9 @@ Matched
 
 Selected
 0 XOR-NOT13
-1 default 1
+1 OR50
 2 default 1
-3 default 1
+3 CH(4,2,1)
 4 default 1
 5 OR-NOT06
 6 default 1
@@ -812,9 +812,9 @@ Input
 7 0
 Output
 0 XOR-NOT13 = XOR(1,NOT(1)) = 1
-1 default 1 = 1
+1 OR50 = OR(0,1) = 1
 2 default 1 = 1
-3 default 1 = 1
+3 CH(4,2,1) = CH(0,1,1) = 1
 4 default 1 = 1
 5 OR-NOT06 = OR(1,NOT(1)) = 1
 6 default 1 = 1

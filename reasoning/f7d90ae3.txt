@@ -165,8 +165,8 @@ Looking at operator 【/】 [84/48 = 8448, 73/54 = 7354]:
     abs determinant f(73, 54) = |7*4 - 3*5| = |28 - 15| = 13 -rev-> 31 wrong
 
 Applying to 98/19:
-  reversed operands [98->89, 19->91] and reversed result
-  reverse concatenation f(89, 91) = 91 || 89 = 9189 -rev-> 9819
+  identity
+  concatenation f(98, 19) = 98 || 19 = 9819
   Result: 【9819】
 
 I will now return the answer in \boxed{}

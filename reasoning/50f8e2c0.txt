@@ -166,8 +166,8 @@ Looking at operator 【-】 [14-19 = -05]:
     abs determinant f(14, 19) = |1*9 - 4*1| = |9 - 4| = 5 -rev-> 5 wrong
 
 Applying to 31-53:
-  reversed operands [31->13, 53->35] and reversed result
-  negated absolute difference f(13, 35) = -|13 - 35| = -22 -rev-> -22
+  identity
+  negated absolute difference f(31, 53) = -|31 - 53| = -22
   Result is negative - we add back the operator prefix 【-】: -22 -> 【-22】
   Result: 【-22】
 

@@ -170,8 +170,8 @@ Looking at operator 【?】 [34?86 = 111]:
     abs determinant f(34, 86) = |3*6 - 4*8| = |18 - 32| = 14 -rev-> 41 wrong
 
 Applying to 22?34:
-  reversed operands [22->22, 34->43] and reversed result
-  addition f(22, 43) = 22 + 43 = 65 -rev-> 56
+  identity
+  addition f(22, 34) = 22 + 34 = 56
   Result: 【56】
 
 I will now return the answer in \boxed{}

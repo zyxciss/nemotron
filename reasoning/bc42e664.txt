@@ -168,7 +168,7 @@ Looking at operator 【*】 [26*99 = -73, 29*19 = 1, 34*64 = -3]:
 
 Applying to 47*75:
   reversed operands [47->74, 75->57] and reversed result
-  subtraction (a-b) f(74, 57) = 74 - 57 = 17 -rev-> 71
+  absolute difference f(74, 57) = |74 - 57| = 17 -rev-> 71
   Result is non-negative, no prefix needed: 【71】
   Result: 【71】
 

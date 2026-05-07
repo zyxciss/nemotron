@@ -772,7 +772,7 @@ Selected
 1 AND24
 2 AND35
 3 AND46
-4 default 1
+4 MAJ(0,2,6)
 5 AND61
 6 AND72
 7 AND03
@@ -792,7 +792,7 @@ Output
 1 AND24 = AND(1,1) = 1
 2 AND35 = AND(0,1) = 0
 3 AND46 = AND(1,0) = 0
-4 default 1 = 1
+4 MAJ(0,2,6) = MAJ(1,1,0) = 1
 5 AND61 = AND(0,1) = 0
 6 AND72 = AND(0,1) = 0
 7 AND03 = AND(1,0) = 0

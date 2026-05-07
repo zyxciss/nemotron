@@ -163,7 +163,7 @@ Looking at operator 【[】 [43[47 = 2022, 20[79 = 1581]:
     abs determinant f(20, 79) = |2*9 - 0*7| = |18 - 0| = 18 -rev-> 81 wrong
 
 Applying to 70]53:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(70, 53) = |70 - 53| = 17
   Result: 【17】

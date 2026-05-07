@@ -813,10 +813,10 @@ Selected
 0 AND-NOT41
 1 AND-NOT52
 2 AND-NOT63
-3 default 1
-4 default 1
-5 default 1
-6 default 1
+3 CH(4,0,3)
+4 CH(5,1,0)
+5 CH(0,2,1)
+6 CH(7,3,2)
 7 I3
 
 Applying to 00001001
@@ -833,11 +833,11 @@ Output
 0 AND-NOT41 = AND(1,NOT(0)) = 1
 1 AND-NOT52 = AND(0,NOT(0)) = 0
 2 AND-NOT63 = AND(0,NOT(0)) = 0
-3 default 1 = 1
-4 default 1 = 1
-5 default 1 = 1
-6 default 1 = 1
+3 CH(4,0,3) = CH(1,0,0) = 0
+4 CH(5,1,0) = CH(0,0,0) = 0
+5 CH(0,2,1) = CH(0,0,0) = 0
+6 CH(7,3,2) = CH(1,0,0) = 0
 7 I3 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10011110}
+The answer in \boxed{–} is \boxed{10000000}

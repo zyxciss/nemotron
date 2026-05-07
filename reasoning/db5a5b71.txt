@@ -164,8 +164,8 @@ Looking at operator 【"】 [54"25 = 7]:
 
 Applying to 58"42:
   reversed operands [58->85, 42->24] and reversed result
-  absolute difference f(85, 24) = |85 - 24| = 61 -rev-> 16
-  Result: 【16】
+  max mod min f(85, 24) = max(85,24) mod min(85,24) = 85 mod 24 = 13 -rev-> 31
+  Result: 【31】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{16}
+The answer in \boxed{–} is \boxed{31}

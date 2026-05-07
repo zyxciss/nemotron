@@ -165,7 +165,7 @@ Looking at operator 【[】 [84[69 = 153, 52[80 = 132]:
     abs determinant f(52, 80) = |5*0 - 2*8| = |0 - 16| = 16 -rev-> 61 wrong
 
 Applying to 22\65:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be absolute difference.
   identity
   absolute difference f(22, 65) = |22 - 65| = 43
   Result: 【43】

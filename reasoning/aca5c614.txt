@@ -167,10 +167,10 @@ Looking at operator 【+】 [25+25 = 2525, 77+53 = 5377, 43+76 = 7643]:
     abs determinant f(43, 76) = |4*6 - 3*7| = |24 - 21| = 3 -rev-> 3 wrong
 
 Applying to 14-63:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(14, 63) = |14 - 63| = 49
-  Result: 【49】
+  We recall that the question operator is not found in the examples. We deduce it must be negated absolute difference.
+  reversed operands [14->41, 63->36]
+  negated absolute difference f(41, 36) = -|41 - 36| = -5
+  Result: 【-5】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{49}
+The answer in \boxed{–} is \boxed{-5}

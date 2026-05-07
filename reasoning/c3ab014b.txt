@@ -814,8 +814,8 @@ Selected
 0 AND-NOT13
 1 AND-NOT24
 2 AND-NOT35
-3 default 1
-4 default 1
+3 CH(6,0,4)
+4 CH(7,1,5)
 5 I6
 6 I7
 7 I0
@@ -834,11 +834,11 @@ Output
 0 AND-NOT13 = AND(0,NOT(1)) = 0
 1 AND-NOT24 = AND(0,NOT(1)) = 0
 2 AND-NOT35 = AND(1,NOT(1)) = 0
-3 default 1 = 1
-4 default 1 = 1
+3 CH(6,0,4) = CH(0,0,1) = 1
+4 CH(7,1,5) = CH(1,0,1) = 0
 5 I6 = 0
 6 I7 = 1
 7 I0 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00011010}
+The answer in \boxed{–} is \boxed{00010010}

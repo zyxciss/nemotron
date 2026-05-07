@@ -761,7 +761,7 @@ Selected
 4 I7
 5 C0
 6 AND-NOT54
-7 AND-NOT65
+7 MAJ(0,6,7)
 
 Applying to 01011010
 Input
@@ -781,7 +781,7 @@ Output
 4 I7 = 0
 5 C0 = 0
 6 AND-NOT54 = AND(0,NOT(1)) = 0
-7 AND-NOT65 = AND(1,NOT(0)) = 1
+7 MAJ(0,6,7) = MAJ(0,1,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11010001}
+The answer in \boxed{–} is \boxed{11010000}

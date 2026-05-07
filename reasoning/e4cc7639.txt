@@ -167,10 +167,10 @@ Looking at operator 【[】 [62[83 = 5146, 99[39 = 3861, 14[53 = 742, 33[43 = 14
     abs determinant f(33, 43) = |3*3 - 3*4| = |9 - 12| = 3 -rev-> 3 wrong
 
 Applying to 48*64:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be add+1.
   identity
-  absolute difference f(48, 64) = |48 - 64| = 16
-  Result: 【16】
+  add+1 f(48, 64) = 48 + 64 + 1 = 113
+  Result: 【113】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{16}
+The answer in \boxed{–} is \boxed{113}

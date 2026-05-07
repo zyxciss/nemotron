@@ -780,8 +780,8 @@ Selected
 1 AND-NOT43
 2 AND-NOT54
 3 AND-NOT65
-4 default 1
-5 I0
+4 MAJ(0,3,7)
+5 CH(7,1,0)
 6 I1
 7 I2
 
@@ -800,10 +800,10 @@ Output
 1 AND-NOT43 = AND(0,NOT(0)) = 0
 2 AND-NOT54 = AND(0,NOT(0)) = 0
 3 AND-NOT65 = AND(1,NOT(0)) = 1
-4 default 1 = 1
-5 I0 = 0
+4 MAJ(0,3,7) = MAJ(0,0,1) = 0
+5 CH(7,1,0) = CH(1,1,0) = 1
 6 I1 = 1
 7 I2 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00011010}
+The answer in \boxed{–} is \boxed{00010110}

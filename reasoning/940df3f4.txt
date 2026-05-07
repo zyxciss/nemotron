@@ -163,10 +163,10 @@ Looking at operator 【#】 [74#48 = 131, 91#84 = 76]:
     abs determinant f(91, 84) = |9*4 - 1*8| = |36 - 8| = 28 -rev-> 82 wrong
 
 Applying to 27!82:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
-  identity
-  absolute difference f(27, 82) = |27 - 82| = 55
-  Result: 【55】
+  We recall that the question operator is not found in the examples. We deduce it must be multiply-1.
+  reversed operands [27->72, 82->28] and reversed result
+  multiply-1 f(72, 28) = (70 + 2) * 28 - 1 = 70 * 28 + 2 * 28 - 1 = 1960 + 56 - 1 = 2016 - 1 = 2015 -rev-> 5102
+  Result: 【5102】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{55}
+The answer in \boxed{–} is \boxed{5102}

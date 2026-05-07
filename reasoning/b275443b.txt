@@ -790,7 +790,7 @@ Selected
 4 default 1
 5 OR-NOT67
 6 OR14
-7 OR25
+7 CH(0,3,5)
 
 Applying to 10100001
 Input
@@ -810,7 +810,7 @@ Output
 4 default 1 = 1
 5 OR-NOT67 = OR(0,NOT(1)) = 0
 6 OR14 = OR(0,0) = 0
-7 OR25 = OR(1,0) = 1
+7 CH(0,3,5) = CH(1,0,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00111001}
+The answer in \boxed{–} is \boxed{00111000}

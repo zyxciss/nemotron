@@ -166,9 +166,9 @@ Looking at operator 【?】 [31?46 = 77]:
     abs determinant f(31, 46) = |3*6 - 1*4| = |18 - 4| = 14 -rev-> 41 wrong
 
 Applying to 25?75:
-  reversed operands [25->52, 75->57] and reversed result
-  addition f(52, 57) = 52 + 57 = 109 -rev-> 901
-  Result: 【901】
+  identity
+  addition f(25, 75) = 25 + 75 = 100
+  Result: 【100】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{901}
+The answer in \boxed{–} is \boxed{100}

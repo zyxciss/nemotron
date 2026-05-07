@@ -793,11 +793,11 @@ Matched
 Selected
 0 OR-NOT13
 1 default 1
-2 I3
+2 OR-NOT34
 3 default 1
-4 C1
+4 CH(1,3,5)
 5 OR-NOT60
-6 OR-NOT71
+6 CH(0,5,7)
 7 OR-NOT62
 
 Applying to 10000001
@@ -813,12 +813,12 @@ Input
 Output
 0 OR-NOT13 = OR(0,NOT(0)) = 1
 1 default 1 = 1
-2 I3 = 0
+2 OR-NOT34 = OR(0,NOT(0)) = 1
 3 default 1 = 1
-4 C1 = 1
+4 CH(1,3,5) = CH(0,0,0) = 0
 5 OR-NOT60 = OR(0,NOT(1)) = 0
-6 OR-NOT71 = OR(1,NOT(0)) = 1
+6 CH(0,5,7) = CH(1,0,1) = 0
 7 OR-NOT62 = OR(0,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11011011}
+The answer in \boxed{–} is \boxed{11110001}

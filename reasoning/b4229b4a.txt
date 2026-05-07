@@ -779,9 +779,9 @@ Matched
 Selected
 0 C1
 1 XOR03
-2 default 1
+2 OR-NOT74
 3 XOR25
-4 default 1
+4 CH(6,7,5)
 5 NOT7
 6 OR-NOT50
 7 OR-NOT61
@@ -799,9 +799,9 @@ Input
 Output
 0 C1 = 1
 1 XOR03 = XOR(0,0) = 0
-2 default 1 = 1
+2 OR-NOT74 = OR(1,NOT(1)) = 1
 3 XOR25 = XOR(0,1) = 1
-4 default 1 = 1
+4 CH(6,7,5) = CH(0,1,1) = 1
 5 NOT7 = NOT(1) = 0
 6 OR-NOT50 = OR(1,NOT(0)) = 1
 7 OR-NOT61 = OR(0,NOT(0)) = 1

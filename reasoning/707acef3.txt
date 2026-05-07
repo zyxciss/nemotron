@@ -773,7 +773,7 @@ Selected
 0 AND-NOT43
 1 AND-NOT54
 2 AND-NOT65
-3 default 1
+3 CH(6,0,7)
 4 AND-NOT07
 5 I1
 6 I2
@@ -793,11 +793,11 @@ Output
 0 AND-NOT43 = AND(1,NOT(1)) = 0
 1 AND-NOT54 = AND(1,NOT(1)) = 0
 2 AND-NOT65 = AND(0,NOT(1)) = 0
-3 default 1 = 1
+3 CH(6,0,7) = CH(0,0,0) = 0
 4 AND-NOT07 = AND(0,NOT(0)) = 0
 5 I1 = 0
 6 I2 = 0
 7 I3 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00010001}
+The answer in \boxed{–} is \boxed{00000001}

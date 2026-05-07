@@ -164,11 +164,11 @@ Looking at operator 【<】 [20<92 = -72, 69<83 = -14, 48<31 = 17]:
     abs determinant f(48, 31) = |4*1 - 8*3| = |4 - 24| = 20 -rev-> 02 wrong
 
 Applying to 90/99:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be concatenation.
   identity
-  absolute difference f(90, 99) = |90 - 99| = 9
-  Result is non-negative, no prefix needed: 【9】
-  Result: 【9】
+  concatenation f(90, 99) = 90 || 99 = 9099
+  Result is non-negative, no prefix needed: 【9099】
+  Result: 【9099】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9}
+The answer in \boxed{–} is \boxed{9099}

@@ -797,9 +797,9 @@ Matched
 Selected
 0 AND45
 1 OR45
-2 OR16
-3 default 1
-4 default 1
+2 CH(0,1,3)
+3 CH(6,2,7)
+4 CH(7,3,0)
 5 I1
 6 I2
 7 I3
@@ -817,12 +817,12 @@ Input
 Output
 0 AND45 = AND(1,1) = 1
 1 OR45 = OR(1,1) = 1
-2 OR16 = OR(0,1) = 1
-3 default 1 = 1
-4 default 1 = 1
+2 CH(0,1,3) = CH(1,0,0) = 0
+3 CH(6,2,7) = CH(1,0,1) = 0
+4 CH(7,3,0) = CH(1,0,1) = 0
 5 I1 = 0
 6 I2 = 0
 7 I3 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11111000}
+The answer in \boxed{–} is \boxed{11000000}

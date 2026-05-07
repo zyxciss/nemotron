@@ -169,8 +169,8 @@ Looking at operator 【-】 [76-68 = -91, 16-61 = -54, 39-02 = -37]:
     abs determinant f(39, 02) = |3*2 - 9*0| = |6 - 0| = 6 -rev-> 6 wrong
 
 Applying to 54-89:
-  reversed operands [54->45, 89->98] and reversed result
-  negated absolute difference f(45, 98) = -|45 - 98| = -53 -rev-> -35
+  identity
+  negated absolute difference f(54, 89) = -|54 - 89| = -35
   Result is negative - we add back the operator prefix 【-】: -35 -> 【-35】
   Result: 【-35】
 

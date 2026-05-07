@@ -775,7 +775,7 @@ Selected
 4 C0
 5 C0
 6 C0
-7 AND35
+7 CH(0,3,7)
 
 Applying to 01111110
 Input
@@ -795,7 +795,7 @@ Output
 4 C0 = 0
 5 C0 = 0
 6 C0 = 0
-7 AND35 = AND(1,1) = 1
+7 CH(0,3,7) = CH(0,1,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00000001}
+The answer in \boxed{–} is \boxed{00000000}

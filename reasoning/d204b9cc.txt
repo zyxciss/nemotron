@@ -168,8 +168,8 @@ Looking at operator 【)】 [49)04 = 431]:
     abs determinant f(49, 04) = |4*4 - 9*0| = |16 - 0| = 16 -rev-> 61 wrong
 
 Applying to 75)57:
-  reversed operands [75->57, 57->75] and reversed result
-  addition f(57, 75) = 57 + 75 = 132 -rev-> 231
+  reversed result
+  addition f(75, 57) = 75 + 57 = 132 -rev-> 231
   Result: 【231】
 
 I will now return the answer in \boxed{}

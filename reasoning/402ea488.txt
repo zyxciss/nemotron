@@ -801,7 +801,7 @@ Selected
 4 AND71
 5 C0
 6 C0
-7 AND34
+7 CH(0,4,2)
 
 Applying to 10001011
 Input
@@ -821,7 +821,7 @@ Output
 4 AND71 = AND(1,0) = 0
 5 C0 = 0
 6 C0 = 0
-7 AND34 = AND(0,1) = 0
+7 CH(0,4,2) = CH(1,1,0) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01010000}
+The answer in \boxed{–} is \boxed{01010001}

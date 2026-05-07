@@ -168,8 +168,8 @@ Looking at operator 【?】 [76?18 = 7618, 31?65 = 3165]:
     abs determinant f(31, 65) = |3*5 - 1*6| = |15 - 6| = 9 -rev-> 9 wrong
 
 Applying to 97?56:
-  reversed operands [97->79, 56->65] and reversed result
-  reverse concatenation f(79, 65) = 65 || 79 = 6579 -rev-> 9756
+  identity
+  concatenation f(97, 56) = 97 || 56 = 9756
   Result: 【9756】
 
 I will now return the answer in \boxed{}

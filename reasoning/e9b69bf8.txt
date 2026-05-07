@@ -170,8 +170,8 @@ Looking at operator 【]】 [13]87 = -74, 24]13 = 11, 11]84 = -73]:
     abs determinant f(11, 84) = |1*4 - 1*8| = |4 - 8| = 4 -rev-> 4 wrong
 
 Applying to 99]84:
-  reversed operands [99->99, 84->48] and reversed result
-  subtraction (a-b) f(99, 48) = 99 - 48 = 51 -rev-> 15
+  identity
+  absolute difference f(99, 84) = |99 - 84| = 15
   Result is non-negative, no prefix needed: 【15】
   Result: 【15】
 

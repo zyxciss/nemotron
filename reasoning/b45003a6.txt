@@ -764,7 +764,7 @@ Matched
 7 I4
 
 Selected
-0 AND02
+0 AND-NOT23
 1 I6
 2 I7
 3 I0
@@ -784,7 +784,7 @@ Input
 6 0
 7 1
 Output
-0 AND02 = AND(1,1) = 1
+0 AND-NOT23 = AND(1,NOT(1)) = 0
 1 I6 = 0
 2 I7 = 1
 3 I0 = 1
@@ -794,4 +794,4 @@ Output
 7 I4 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10110110}
+The answer in \boxed{–} is \boxed{00110110}

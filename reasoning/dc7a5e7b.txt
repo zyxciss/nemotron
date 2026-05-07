@@ -166,8 +166,8 @@ Looking at operator 【@】 [73@82 = 7382]:
     abs determinant f(73, 82) = |7*2 - 3*8| = |14 - 24| = 10 -rev-> 01 wrong
 
 Applying to 44@45:
-  reversed operands [44->44, 45->54] and reversed result
-  reverse concatenation f(44, 54) = 54 || 44 = 5444 -rev-> 4445
+  identity
+  concatenation f(44, 45) = 44 || 45 = 4445
   Result: 【4445】
 
 I will now return the answer in \boxed{}

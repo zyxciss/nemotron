@@ -794,9 +794,9 @@ Selected
 1 I2
 2 I3
 3 I4
-4 default 1
-5 default 1
-6 default 1
+4 XOR50
+5 CH(1,7,6)
+6 CH(2,6,7)
 7 I2
 
 Applying to 10000101
@@ -814,10 +814,10 @@ Output
 1 I2 = 0
 2 I3 = 0
 3 I4 = 0
-4 default 1 = 1
-5 default 1 = 1
-6 default 1 = 1
+4 XOR50 = XOR(1,1) = 0
+5 CH(1,7,6) = CH(0,1,0) = 0
+6 CH(2,6,7) = CH(0,0,1) = 1
 7 I2 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00001110}
+The answer in \boxed{–} is \boxed{00000010}

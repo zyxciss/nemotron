@@ -759,7 +759,7 @@ Matched
 
 Selected
 0 XOR-NOT46
-1 default 1
+1 AND46
 2 OR-NOT16
 3 OR-NOT27
 4 OR-NOT30
@@ -779,7 +779,7 @@ Input
 7 0
 Output
 0 XOR-NOT46 = XOR(0,NOT(1)) = 0
-1 default 1 = 1
+1 AND46 = AND(0,1) = 0
 2 OR-NOT16 = OR(0,NOT(1)) = 0
 3 OR-NOT27 = OR(1,NOT(0)) = 1
 4 OR-NOT30 = OR(0,NOT(0)) = 1
@@ -788,4 +788,4 @@ Output
 7 OR-NOT63 = OR(1,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01011111}
+The answer in \boxed{–} is \boxed{00011111}

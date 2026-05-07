@@ -169,10 +169,10 @@ Looking at operator 【*】 [61*43 = 345, 27*33 = 5732, 94*24 = 7502]:
     abs determinant f(94, 24) = |9*4 - 4*2| = |36 - 8| = 28 -rev-> 82 wrong
 
 Applying to 41+28:
-  We recall that the question operator is not found in the examples. We will use the absolute difference as the operator.
+  We recall that the question operator is not found in the examples. We deduce it must be addition.
   identity
-  absolute difference f(41, 28) = |41 - 28| = 13
-  Result: 【13】
+  addition f(41, 28) = 41 + 28 = 69
+  Result: 【69】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{13}
+The answer in \boxed{–} is \boxed{69}

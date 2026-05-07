@@ -168,7 +168,7 @@ Looking at operator 【(】 [66(45 = 21, 35(80 = -45]:
 
 Applying to 90(74:
   identity
-  subtraction (a-b) f(90, 74) = 90 - 74 = 16
+  absolute difference f(90, 74) = |90 - 74| = 16
   Result is non-negative, no prefix needed: 【16】
   Result: 【16】
 

@@ -798,7 +798,7 @@ Matched
 7 I3
 
 Selected
-0 AND24
+0 CH(7,0,4)
 1 I5
 2 I6
 3 I7
@@ -818,7 +818,7 @@ Input
 6 0
 7 0
 Output
-0 AND24 = AND(0,1) = 0
+0 CH(7,0,4) = CH(0,0,1) = 1
 1 I5 = 0
 2 I6 = 0
 3 I7 = 0
@@ -828,4 +828,4 @@ Output
 7 I3 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00000100}
+The answer in \boxed{–} is \boxed{10000100}

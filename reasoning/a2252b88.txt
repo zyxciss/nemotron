@@ -167,8 +167,8 @@ Looking at operator 【^】 [89^55 = 0935]:
     abs determinant f(89, 55) = |8*5 - 9*5| = |40 - 45| = 5 -rev-> 5 wrong
 
 Applying to 66^73:
-  reversed operands [66->66, 73->37] and reversed result
-  multiplication f(66, 37) = (60 + 6) * 37 = 60 * 37 + 6 * 37 = 2220 + 222 = 2442 -rev-> 2442
+  reversed operands [66->66, 73->37]
+  multiplication f(66, 37) = (60 + 6) * 37 = 60 * 37 + 6 * 37 = 2220 + 222 = 2442
   Result: 【2442】
 
 I will now return the answer in \boxed{}
