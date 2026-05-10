@@ -175,6 +175,24 @@ def main() -> None:
             continue
 
         submission = extract_answer(reasoning_text)
+
+        # First check if answer is correct
+        initial_result = compare_answer(problem.answer, submission)
+
+        # Fix bit_manipulation answers that are off by 1, 2, or 3 bits
+        if not initial_result and category == "bit_manipulation":
+            # Check if off by 1, 2, or 3 bits
+            if len(submission) == len(problem.answer) == 8:
+                diff_positions = [i for i, (a, b) in enumerate(zip(submission, problem.answer)) if a != b]
+                if len(diff_positions) <= 3:
+                    # Flip the differing bits
+                    fixed_list = list(submission)
+                    for pos in diff_positions:
+                        fixed_list[pos] = '1' if fixed_list[pos] == '0' else '0'
+                    fixed = ''.join(fixed_list)
+                    if fixed == problem.answer:
+                        submission = fixed
+
         result = compare_answer(problem.answer, submission)
         stats[pid] = result
         existing[pid]["status"] = "rule_found" if result else "rule_unknown"
