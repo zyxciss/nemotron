@@ -1,0 +1,51 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+% -> A
+# -> B
+& -> C
+! -> D
+^ -> E
+[ -> F
+} -> G
+\ -> H
+` -> I
+Operators:
++ -> x
+* -> y
+
+Converting examples to letter form:
+
+  「%#+&!」 = 「#%」:
+    input:  % # + & ! : % -> A, # -> B, + -> x, & -> C, ! -> D -> AB x CD
+    output: # % : # -> B, % -> A -> BA
+
+  「##*^!」 = 「##^!」:
+    input:  # # * ^ ! : # -> B, # -> B, * -> y, ^ -> E, ! -> D -> BB y ED
+    output: # # ^ ! : # -> B, # -> B, ^ -> E, ! -> D -> BBED
+
+  「[}+^[」 = 「&%#」:
+    input:  [ } + ^ [ : [ -> F, } -> G, + -> x, ^ -> E, [ -> F -> FG x EF
+    output: & % # : & -> C, % -> A, # -> B -> CAB
+
+  「%\*`&」 = 「%\`&」:
+    input:  % \ * ` & : % -> A, \ -> H, * -> y, ` -> I, & -> C -> AH y IC
+    output: % \ ` & : % -> A, \ -> H, ` -> I, & -> C -> AHIC
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: concatenation
+Operator x: unknown
+
+The question operator is y, which is concatenation.
+
+Converting question "\[*%^": \ [ * % ^ : \ -> H, [ -> F, * -> y, % -> A, ^ -> E -> HF y AE
+
+Applying to HF y AE:
+  concatenation(HF, AE) = HF || AE = HFAE
+  Converting back: H F A E : H -> \, F -> [, A -> %, E -> ^ -> \[%^
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{\[%^}
+</think>
+\boxed{\[%^}

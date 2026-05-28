@@ -1,0 +1,48 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+& -> A
+! -> B
+] -> C
+[ -> D
+` -> E
+| -> F
+{ -> G
+> -> H
+Operators:
+- -> x
+* -> y
++ -> z
+
+Converting examples to letter form:
+
+  「&!-][」 = 「`」:
+    input:  & ! - ] [ : & -> A, ! -> B, - -> x, ] -> C, [ -> D -> AB x CD
+    output: ` : ` -> E -> E
+
+  「]!*!|」 = 「!|`」:
+    input:  ] ! * ! | : ] -> C, ! -> B, * -> y, ! -> B, | -> F -> CB y BF
+    output: ! | ` : ! -> B, | -> F, ` -> E -> BFE
+
+  「`{+>]」 = 「>]`{」:
+    input:  ` { + > ] : ` -> E, { -> G, + -> z, > -> H, ] -> C -> EG z HC
+    output: > ] ` { : > -> H, ] -> C, ` -> E, { -> G -> HCEG
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: unknown
+Operator z: reverse concatenation
+Operator x: unknown
+
+The question operator is z, which is reverse concatenation.
+
+Converting question ">>+|>": > > + | > : > -> H, > -> H, + -> z, | -> F, > -> H -> HH z FH
+
+Applying to HH z FH:
+  reverse concatenation(HH, FH) = FH || HH = FHHH
+  Converting back: F H H H : F -> |, H -> >, H -> >, H -> > -> |>>>
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{|>>>}
+</think>
+\boxed{|>>>}

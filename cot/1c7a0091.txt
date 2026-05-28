@@ -1,0 +1,58 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+? -> A
+@ -> B
+) -> C
+( -> D
+! -> E
+$ -> F
+` -> G
+] -> H
+| -> I
+< -> J
+Operators:
+# -> x
+* -> y
+/ -> z
+
+Converting examples to letter form:
+
+  「?@#?)」 = 「?@?)」:
+    input:  ? @ # ? ) : ? -> A, @ -> B, # -> x, ? -> A, ) -> C -> AB x AC
+    output: ? @ ? ) : ? -> A, @ -> B, ? -> A, ) -> C -> ABAC
+
+  「??#?(」 = 「???(」:
+    input:  ? ? # ? ( : ? -> A, ? -> A, # -> x, ? -> A, ( -> D -> AA x AD
+    output: ? ? ? ( : ? -> A, ? -> A, ? -> A, ( -> D -> AAAD
+
+  「!$*`?」 = 「](?」:
+    input:  ! $ * ` ? : ! -> E, $ -> F, * -> y, ` -> G, ? -> A -> EF y GA
+    output: ] ( ? : ] -> H, ( -> D, ? -> A -> HDA
+
+  「`)/?`」 = 「?|」:
+    input:  ` ) / ? ` : ` -> G, ) -> C, / -> z, ? -> A, ` -> G -> GC z AG
+    output: ? | : ? -> A, | -> I -> AI
+
+  「|$#|)」 = 「|$|)」:
+    input:  | $ # | ) : | -> I, $ -> F, # -> x, | -> I, ) -> C -> IF x IC
+    output: | $ | ) : | -> I, $ -> F, | -> I, ) -> C -> IFIC
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: concatenation
+Operator y: unknown
+Operator z: unknown
+
+The question operator is x, which is concatenation.
+
+Converting question ")`#<@": ) ` # < @ : ) -> C, ` -> G, # -> x, < -> J, @ -> B -> CG x JB
+
+Applying to CG x JB:
+  concatenation(CG, JB) = CG || JB = CGJB
+  Converting back: C G J B : C -> ), G -> `, J -> <, B -> @ -> )`<@
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{)`<@}
+</think>
+\boxed{)`<@}

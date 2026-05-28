@@ -247,7 +247,6 @@ def reasoning_cipher(problem: Problem) -> str | None:
 
     if unknown_words:
         wonderland_set = set(wonderland_words)
-        initial_c2p = dict(cipher_to_plain)
 
         for idx, cw, _partial_orig, display_partial, orig_dashed in unknown_words:
             # Recompute partial with current mappings (may have new letters from previous words)
@@ -265,15 +264,21 @@ def reasoning_cipher(problem: Problem) -> str | None:
                 f"({cc})" if cc not in cipher_to_plain else cipher_to_plain[cc]
                 for cc in cw
             )
-            accumulated_new = [
-                f"【({cc})】->【{cipher_to_plain[cc]}】"
-                for cc in sorted(cipher_to_plain)
-                if cc not in initial_c2p
-            ]
+            # Show what changed between original and current partial decryption
+            new_from_prev: list[str] = []
+            seen_chars: set[str] = set()
+            for cc in cw:
+                if (
+                    cc not in seen_chars
+                    and f"({cc})" in orig_dashed
+                    and cc in cipher_to_plain
+                ):
+                    new_from_prev.append(f"【({cc})】->【{cipher_to_plain[cc]}】")
+                    seen_chars.add(cc)
             lines.append("")
             lines.append(f"【{orig_dashed}】")
-            if accumulated_new:
-                lines.append(f"New mappings: {', '.join(accumulated_new)}")
+            if new_from_prev:
+                lines.append(f"New mappings: {', '.join(new_from_prev)}")
             else:
                 lines.append("New mappings: none")
             lines.append(f"【{display_dashed}】")
@@ -290,33 +295,18 @@ def reasoning_cipher(problem: Problem) -> str | None:
                 word_dashed = dash.join(word)
                 comparisons: list[str] = []
                 mismatch_found = False
-                tentative: dict[str, str] = {}
-                mapped_plain = set(cipher_to_plain.values())
                 for pos, (wi_char, cc) in enumerate(zip(word, cw)):
                     if cc in cipher_to_plain:
                         pc = cipher_to_plain[cc]
                         if wi_char == pc:
                             comparisons.append(f"{pos}【{wi_char}】【{pc}】match")
                         else:
-                            comparisons.append(f"{pos}【{pc}】【{wi_char}】unmatchable")
+                            comparisons.append(f"{pos}【{pc}】【{wi_char}】mismatch")
                             mismatch_found = True
                             break
                     else:
-                        if cc in tentative:
-                            if tentative[cc] == wi_char:
-                                comparisons.append(f"{pos}【{wi_char}】【({cc})】consistent")
-                            else:
-                                comparisons.append(f"{pos}【{wi_char}】【({cc})】contradiction")
-                                mismatch_found = True
-                                break
-                        else:
-                            if wi_char in mapped_plain:
-                                comparisons.append(f"{pos}【{wi_char}】【({cc})】untargeted")
-                                mismatch_found = True
-                                break
-                            tentative[cc] = wi_char
-                            comparisons.append(f"{pos}【{wi_char}】【({cc})】matchable")
-                comp_str = ", ".join(comparisons)
+                        comparisons.append(f"{pos}【{wi_char}】【({cc})】match")
+                comp_str = " , ".join(comparisons)
                 if not mismatch_found:
                     comp_str += f", {len(cw)} all match"
                 lines.append(f"{word} {wlen} 【{word_dashed}】, {comp_str}")
@@ -369,7 +359,7 @@ def reasoning_cipher(problem: Problem) -> str | None:
                 plain_to_cipher[pc] = cc
             if new_mappings:
                 nl_new = "\n".join(new_mappings)
-                lines.append(f"Added mappings\n{nl_new}")
+                lines.append(f"New mappings\n{nl_new}")
 
     if any(w == "" for w in decoded_words):
         return None

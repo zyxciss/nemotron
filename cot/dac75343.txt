@@ -1,0 +1,59 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+% -> A
+| -> B
+` -> C
+# -> D
+( -> E
+{ -> F
+@ -> G
+' -> H
+[ -> I
+) -> J
+- -> K
+Operators:
+* -> x
++ -> y
+- -> z
+
+Converting examples to letter form:
+
+  「%|*`#」 = 「(||{」:
+    input:  % | * ` # : % -> A, | -> B, * -> x, ` -> C, # -> D -> AB x CD
+    output: ( | | { : ( -> E, | -> B, | -> B, { -> F -> EBBF
+
+  「%%+{`」 = 「%%{`」:
+    input:  % % + { ` : % -> A, % -> A, + -> y, { -> F, ` -> C -> AA y FC
+    output: % % { ` : % -> A, % -> A, { -> F, ` -> C -> AAFC
+
+  「@|*{(」 = 「''[#」:
+    input:  @ | * { ( : @ -> G, | -> B, * -> x, { -> F, ( -> E -> GB x FE
+    output: ' ' [ # : ' -> H, ' -> H, [ -> I, # -> D -> HHID
+
+  「%@-()」 = 「|@」:
+    input:  % @ - ( ) : % -> A, @ -> G, - -> z, ( -> E, ) -> J -> AG z EJ
+    output: | @ : | -> B, @ -> G -> BG
+
+  「%`-@%」 = 「-`#」:
+    input:  % ` - @ % : % -> A, ` -> C, - -> z, @ -> G, % -> A -> AC z GA
+    output: - ` # : - -> K, ` -> C, # -> D -> KCD
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: unknown
+Operator y: concatenation
+Operator z: unknown
+
+The question operator is y, which is concatenation.
+
+Converting question "#@+@`": # @ + @ ` : # -> D, @ -> G, + -> y, @ -> G, ` -> C -> DG y GC
+
+Applying to DG y GC:
+  concatenation(DG, GC) = DG || GC = DGGC
+  Converting back: D G G C : D -> #, G -> @, G -> @, C -> ` -> #@@`
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{#@@`}
+</think>
+\boxed{#@@`}

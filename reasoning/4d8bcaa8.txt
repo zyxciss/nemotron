@@ -369,8 +369,8 @@ Let me find the best matching wonderland words:
 New mappings: none
 【a–(b)–(f)–(s)–e】
 The length of the word is 5.
-above 5 【a–b–o–v–e】, 0【a】【a】match, 1【b】【(b)】matchable, 2【o】【(f)】matchable, 3【v】【(s)】matchable, 4【e】【e】match, 5 all match
-alice 5 【a–l–i–c–e】, 0【a】【a】match, 1【l】【(b)】untargeted
+above 5 【a–b–o–v–e】, 0【a】【a】match , 1【b】【(b)】match , 2【o】【(f)】match , 3【v】【(s)】match , 4【e】【e】match, 5 all match
+alice 5 【a–l–i–c–e】, 0【a】【a】match , 1【l】【(b)】match , 2【i】【(f)】match , 3【c】【(s)】match , 4【e】【e】match, 5 all match
 ancient 7 length
 around 6 length
 beyond 6 length
@@ -390,12 +390,12 @@ dark 4 length
 discovers 9 length
 door 4 length
 dragon 6 length
-draws 5 【d–r–a–w–s】, 0【a】【d】unmatchable
+draws 5 【d–r–a–w–s】, 0【a】【d】mismatch
 dreams 6 length
 explores 8 length
 follows 7 length
 forest 6 length
-found 5 【f–o–u–n–d】, 0【a】【f】unmatchable
+found 5 【f–o–u–n–d】, 0【a】【f】mismatch
 garden 6 length
 golden 6 length
 hatter 6 length
@@ -413,32 +413,32 @@ map 3 length
 message 7 length
 mirror 6 length
 mountain 8 length
-mouse 5 【m–o–u–s–e】, 0【a】【m】unmatchable
+mouse 5 【m–o–u–s–e】, 0【a】【m】mismatch
 mysterious 10 length
 near 4 length
-ocean 5 【o–c–e–a–n】, 0【a】【o】unmatchable
+ocean 5 【o–c–e–a–n】, 0【a】【o】mismatch
 palace 6 length
 potion 6 length
 princess 8 length
 puzzle 6 length
-queen 5 【q–u–e–e–n】, 0【a】【q】unmatchable
+queen 5 【q–u–e–e–n】, 0【a】【q】mismatch
 rabbit 6 length
-reads 5 【r–e–a–d–s】, 0【a】【r】unmatchable
+reads 5 【r–e–a–d–s】, 0【a】【r】mismatch
 school 6 length
 secret 6 length
 sees 4 length
 silver 6 length
-story 5 【s–t–o–r–y】, 0【a】【s】unmatchable
+story 5 【s–t–o–r–y】, 0【a】【s】mismatch
 strange 7 length
 student 7 length
 studies 7 length
 teacher 7 length
 the 3 length
 through 7 length
-tower 5 【t–o–w–e–r】, 0【a】【t】unmatchable
+tower 5 【t–o–w–e–r】, 0【a】【t】mismatch
 treasure 8 length
 turtle 6 length
-under 5 【u–n–d–e–r】, 0【a】【u】unmatchable
+under 5 【u–n–d–e–r】, 0【a】【u】mismatch
 valley 6 length
 village 7 length
 watches 7 length
@@ -453,18 +453,18 @@ Best match: 【above】
 【(f)】->【o】 new
 【(s)】->【v】 new
 【e】->【e】same
-Added mappings
+New mappings
 【(b)】->【b】
 【(f)】->【o】
 【(s)】->【v】
 
 【(s)–i–l–l–a–g–e】
-New mappings: 【(b)】->【b】, 【(f)】->【o】, 【(s)】->【v】
+New mappings: 【(s)】->【v】
 【v–i–l–l–a–g–e】
 The length of the word is 7.
 above 5 length
 alice 5 length
-ancient 7 【a–n–c–i–e–n–t】, 0【v】【a】unmatchable
+ancient 7 【a–n–c–i–e–n–t】, 0【v】【a】mismatch
 around 6 length
 beyond 6 length
 bird 4 length
@@ -476,9 +476,9 @@ cave 4 length
 chases 6 length
 clever 6 length
 colorful 8 length
-creates 7 【c–r–e–a–t–e–s】, 0【v】【c】unmatchable
-crystal 7 【c–r–y–s–t–a–l】, 0【v】【c】unmatchable
-curious 7 【c–u–r–i–o–u–s】, 0【v】【c】unmatchable
+creates 7 【c–r–e–a–t–e–s】, 0【v】【c】mismatch
+crystal 7 【c–r–y–s–t–a–l】, 0【v】【c】mismatch
+curious 7 【c–u–r–i–o–u–s】, 0【v】【c】mismatch
 dark 4 length
 discovers 9 length
 door 4 length
@@ -486,7 +486,7 @@ dragon 6 length
 draws 5 length
 dreams 6 length
 explores 8 length
-follows 7 【f–o–l–l–o–w–s】, 0【v】【f】unmatchable
+follows 7 【f–o–l–l–o–w–s】, 0【v】【f】mismatch
 forest 6 length
 found 5 length
 garden 6 length
@@ -500,10 +500,10 @@ island 6 length
 key 3 length
 king 4 length
 knight 6 length
-library 7 【l–i–b–r–a–r–y】, 0【v】【l】unmatchable
-magical 7 【m–a–g–i–c–a–l】, 0【v】【m】unmatchable
+library 7 【l–i–b–r–a–r–y】, 0【v】【l】mismatch
+magical 7 【m–a–g–i–c–a–l】, 0【v】【m】mismatch
 map 3 length
-message 7 【m–e–s–s–a–g–e】, 0【v】【m】unmatchable
+message 7 【m–e–s–s–a–g–e】, 0【v】【m】mismatch
 mirror 6 length
 mountain 8 length
 mouse 5 length
@@ -522,19 +522,19 @@ secret 6 length
 sees 4 length
 silver 6 length
 story 5 length
-strange 7 【s–t–r–a–n–g–e】, 0【v】【s】unmatchable
-student 7 【s–t–u–d–e–n–t】, 0【v】【s】unmatchable
-studies 7 【s–t–u–d–i–e–s】, 0【v】【s】unmatchable
-teacher 7 【t–e–a–c–h–e–r】, 0【v】【t】unmatchable
+strange 7 【s–t–r–a–n–g–e】, 0【v】【s】mismatch
+student 7 【s–t–u–d–e–n–t】, 0【v】【s】mismatch
+studies 7 【s–t–u–d–i–e–s】, 0【v】【s】mismatch
+teacher 7 【t–e–a–c–h–e–r】, 0【v】【t】mismatch
 the 3 length
-through 7 【t–h–r–o–u–g–h】, 0【v】【t】unmatchable
+through 7 【t–h–r–o–u–g–h】, 0【v】【t】mismatch
 tower 5 length
 treasure 8 length
 turtle 6 length
 under 5 length
 valley 6 length
-village 7 【v–i–l–l–a–g–e】, 0【v】【v】match, 1【i】【i】match, 2【l】【l】match, 3【l】【l】match, 4【a】【a】match, 5【g】【g】match, 6【e】【e】match, 7 all match
-watches 7 【w–a–t–c–h–e–s】, 0【v】【w】unmatchable
+village 7 【v–i–l–l–a–g–e】, 0【v】【v】match , 1【i】【i】match , 2【l】【l】match , 3【l】【l】match , 4【a】【a】match , 5【g】【g】match , 6【e】【e】match, 7 all match
+watches 7 【w–a–t–c–h–e–s】, 0【v】【w】mismatch
 wise 4 length
 wizard 6 length
 wonderland 10 length

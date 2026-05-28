@@ -1,0 +1,59 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+: -> A
+# -> B
+@ -> C
+/ -> D
+- -> E
+| -> F
+< -> G
+& -> H
+^ -> I
+% -> J
+> -> K
+Operators:
+* -> x
+- -> y
++ -> z
+
+Converting examples to letter form:
+
+  「:#*@:」 = 「@//」:
+    input:  : # * @ : : : -> A, # -> B, * -> x, @ -> C, : -> A -> AB x CA
+    output: @ / / : @ -> C, / -> D, / -> D -> CDD
+
+  「/#-#@」 = 「-/#」:
+    input:  / # - # @ : / -> D, # -> B, - -> y, # -> B, @ -> C -> DB y BC
+    output: - / # : - -> E, / -> D, # -> B -> EDB
+
+  「|<*@&」 = 「|&^&」:
+    input:  | < * @ & : | -> F, < -> G, * -> x, @ -> C, & -> H -> FG x CH
+    output: | & ^ & : | -> F, & -> H, ^ -> I, & -> H -> FHIH
+
+  「%>-#<」 = 「-@:」:
+    input:  % > - # < : % -> J, > -> K, - -> y, # -> B, < -> G -> JK y BG
+    output: - @ : : - -> E, @ -> C, : -> A -> ECA
+
+  「/:+%/」 = 「%//:」:
+    input:  / : + % / : / -> D, : -> A, + -> z, % -> J, / -> D -> DA z JD
+    output: % / / : : % -> J, / -> D, / -> D, : -> A -> JDDA
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: unknown
+Operator z: reverse concatenation
+Operator y: unknown
+
+The question operator is z, which is reverse concatenation.
+
+Converting question "|:+^@": | : + ^ @ : | -> F, : -> A, + -> z, ^ -> I, @ -> C -> FA z IC
+
+Applying to FA z IC:
+  reverse concatenation(FA, IC) = IC || FA = ICFA
+  Converting back: I C F A : I -> ^, C -> @, F -> |, A -> : -> ^@|:
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{^@|:}
+</think>
+\boxed{^@|:}

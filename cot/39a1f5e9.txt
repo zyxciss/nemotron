@@ -1,0 +1,47 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+" -> A
+\ -> B
+% -> C
+> -> D
+[ -> E
+? -> F
+! -> G
+$ -> H
+< -> I
+Operators:
++ -> x
+* -> y
+
+Converting examples to letter form:
+
+  「"\+"%」 = 「>[?」:
+    input:  " \ + " % : " -> A, \ -> B, + -> x, " -> A, % -> C -> AB x AC
+    output: > [ ? : > -> D, [ -> E, ? -> F -> DEF
+
+  「"\*!\」 = 「!\"\」:
+    input:  " \ * ! \ : " -> A, \ -> B, * -> y, ! -> G, \ -> B -> AB y GB
+    output: ! \ " \ : ! -> G, \ -> B, " -> A, \ -> B -> GBAB
+
+  「%[*"$」 = 「"$%[」:
+    input:  % [ * " $ : % -> C, [ -> E, * -> y, " -> A, $ -> H -> CE y AH
+    output: " $ % [ : " -> A, $ -> H, % -> C, [ -> E -> AHCE
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: reverse concatenation
+Operator x: unknown
+
+The question operator is y, which is reverse concatenation.
+
+Converting question ">[*<"": > [ * < " : > -> D, [ -> E, * -> y, < -> I, " -> A -> DE y IA
+
+Applying to DE y IA:
+  reverse concatenation(DE, IA) = IA || DE = IADE
+  Converting back: I A D E : I -> <, A -> ", D -> >, E -> [ -> <">[
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{<">[}
+</think>
+\boxed{<">[}

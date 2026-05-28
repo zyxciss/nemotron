@@ -409,16 +409,16 @@ The length of the word is 6.
 above 5 length
 alice 5 length
 ancient 7 length
-around 6 【a–r–o–u–n–d】, 0【c】【a】unmatchable
-beyond 6 【b–e–y–o–n–d】, 0【c】【b】unmatchable
+around 6 【a–r–o–u–n–d】, 0【c】【a】mismatch
+beyond 6 【b–e–y–o–n–d】, 0【c】【b】mismatch
 bird 4 length
 book 4 length
-bright 6 【b–r–i–g–h–t】, 0【c】【b】unmatchable
-castle 6 【c–a–s–t–l–e】, 0【c】【c】match, 1【l】【a】unmatchable
+bright 6 【b–r–i–g–h–t】, 0【c】【b】mismatch
+castle 6 【c–a–s–t–l–e】, 0【c】【c】match , 1【l】【a】mismatch
 cat 3 length
 cave 4 length
-chases 6 【c–h–a–s–e–s】, 0【c】【c】match, 1【l】【h】unmatchable
-clever 6 【c–l–e–v–e–r】, 0【c】【c】match, 1【l】【l】match, 2【e】【e】match, 3【v】【(f)】matchable, 4【e】【e】match, 5【r】【r】match, 6 all match
+chases 6 【c–h–a–s–e–s】, 0【c】【c】match , 1【l】【h】mismatch
+clever 6 【c–l–e–v–e–r】, 0【c】【c】match , 1【l】【l】match , 2【e】【e】match , 3【v】【(f)】match , 4【e】【e】match , 5【r】【r】match, 6 all match
 colorful 8 length
 creates 7 length
 crystal 7 length
@@ -426,45 +426,45 @@ curious 7 length
 dark 4 length
 discovers 9 length
 door 4 length
-dragon 6 【d–r–a–g–o–n】, 0【c】【d】unmatchable
+dragon 6 【d–r–a–g–o–n】, 0【c】【d】mismatch
 draws 5 length
-dreams 6 【d–r–e–a–m–s】, 0【c】【d】unmatchable
+dreams 6 【d–r–e–a–m–s】, 0【c】【d】mismatch
 explores 8 length
 follows 7 length
-forest 6 【f–o–r–e–s–t】, 0【c】【f】unmatchable
+forest 6 【f–o–r–e–s–t】, 0【c】【f】mismatch
 found 5 length
-garden 6 【g–a–r–d–e–n】, 0【c】【g】unmatchable
-golden 6 【g–o–l–d–e–n】, 0【c】【g】unmatchable
-hatter 6 【h–a–t–t–e–r】, 0【c】【h】unmatchable
-hidden 6 【h–i–d–d–e–n】, 0【c】【h】unmatchable
+garden 6 【g–a–r–d–e–n】, 0【c】【g】mismatch
+golden 6 【g–o–l–d–e–n】, 0【c】【g】mismatch
+hatter 6 【h–a–t–t–e–r】, 0【c】【h】mismatch
+hidden 6 【h–i–d–d–e–n】, 0【c】【h】mismatch
 imagines 8 length
 in 2 length
-inside 6 【i–n–s–i–d–e】, 0【c】【i】unmatchable
-island 6 【i–s–l–a–n–d】, 0【c】【i】unmatchable
+inside 6 【i–n–s–i–d–e】, 0【c】【i】mismatch
+island 6 【i–s–l–a–n–d】, 0【c】【i】mismatch
 key 3 length
 king 4 length
-knight 6 【k–n–i–g–h–t】, 0【c】【k】unmatchable
+knight 6 【k–n–i–g–h–t】, 0【c】【k】mismatch
 library 7 length
 magical 7 length
 map 3 length
 message 7 length
-mirror 6 【m–i–r–r–o–r】, 0【c】【m】unmatchable
+mirror 6 【m–i–r–r–o–r】, 0【c】【m】mismatch
 mountain 8 length
 mouse 5 length
 mysterious 10 length
 near 4 length
 ocean 5 length
-palace 6 【p–a–l–a–c–e】, 0【c】【p】unmatchable
-potion 6 【p–o–t–i–o–n】, 0【c】【p】unmatchable
+palace 6 【p–a–l–a–c–e】, 0【c】【p】mismatch
+potion 6 【p–o–t–i–o–n】, 0【c】【p】mismatch
 princess 8 length
-puzzle 6 【p–u–z–z–l–e】, 0【c】【p】unmatchable
+puzzle 6 【p–u–z–z–l–e】, 0【c】【p】mismatch
 queen 5 length
-rabbit 6 【r–a–b–b–i–t】, 0【c】【r】unmatchable
+rabbit 6 【r–a–b–b–i–t】, 0【c】【r】mismatch
 reads 5 length
-school 6 【s–c–h–o–o–l】, 0【c】【s】unmatchable
-secret 6 【s–e–c–r–e–t】, 0【c】【s】unmatchable
+school 6 【s–c–h–o–o–l】, 0【c】【s】mismatch
+secret 6 【s–e–c–r–e–t】, 0【c】【s】mismatch
 sees 4 length
-silver 6 【s–i–l–v–e–r】, 0【c】【s】unmatchable
+silver 6 【s–i–l–v–e–r】, 0【c】【s】mismatch
 story 5 length
 strange 7 length
 student 7 length
@@ -474,15 +474,15 @@ the 3 length
 through 7 length
 tower 5 length
 treasure 8 length
-turtle 6 【t–u–r–t–l–e】, 0【c】【t】unmatchable
+turtle 6 【t–u–r–t–l–e】, 0【c】【t】mismatch
 under 5 length
-valley 6 【v–a–l–l–e–y】, 0【c】【v】unmatchable
+valley 6 【v–a–l–l–e–y】, 0【c】【v】mismatch
 village 7 length
 watches 7 length
 wise 4 length
-wizard 6 【w–i–z–a–r–d】, 0【c】【w】unmatchable
+wizard 6 【w–i–z–a–r–d】, 0【c】【w】mismatch
 wonderland 10 length
-writes 6 【w–r–i–t–e–s】, 0【c】【w】unmatchable
+writes 6 【w–r–i–t–e–s】, 0【c】【w】mismatch
 Best match: 【clever】
 【c–l–e–(f)–e–r】->【c–l–e–v–e–r】
 【c】->【c】same
@@ -491,7 +491,7 @@ Best match: 【clever】
 【(f)】->【v】 new
 【e】->【e】same
 【r】->【r】same
-Added mappings
+New mappings
 【(f)】->【v】
 
 I will now return the answer in \boxed{}

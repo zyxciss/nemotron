@@ -1,0 +1,58 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+} -> A
+% -> B
+) -> C
+| -> D
+` -> E
+^ -> F
+" -> G
+{ -> H
+! -> I
+? -> J
+Operators:
+* -> x
+- -> y
++ -> z
+
+Converting examples to letter form:
+
+  「}%*})」 = 「||)」:
+    input:  } % * } ) : } -> A, % -> B, * -> x, } -> A, ) -> C -> AB x AC
+    output: | | ) : | -> D, | -> D, ) -> C -> DDC
+
+  「`^-%"」 = 「%{」:
+    input:  ` ^ - % " : ` -> E, ^ -> F, - -> y, % -> B, " -> G -> EF y BG
+    output: % { : % -> B, { -> H -> BH
+
+  「|}-!?」 = 「)`」:
+    input:  | } - ! ? : | -> D, } -> A, - -> y, ! -> I, ? -> J -> DA y IJ
+    output: ) ` : ) -> C, ` -> E -> CE
+
+  「{^+?)」 = 「{^?)」:
+    input:  { ^ + ? ) : { -> H, ^ -> F, + -> z, ? -> J, ) -> C -> HF z JC
+    output: { ^ ? ) : { -> H, ^ -> F, ? -> J, ) -> C -> HFJC
+
+  「}!+}^」 = 「}!}^」:
+    input:  } ! + } ^ : } -> A, ! -> I, + -> z, } -> A, ^ -> F -> AI z AF
+    output: } ! } ^ : } -> A, ! -> I, } -> A, ^ -> F -> AIAF
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: unknown
+Operator z: concatenation
+Operator y: unknown
+
+The question operator is z, which is concatenation.
+
+Converting question "!"+"!": ! " + " ! : ! -> I, " -> G, + -> z, " -> G, ! -> I -> IG z GI
+
+Applying to IG z GI:
+  concatenation(IG, GI) = IG || GI = IGGI
+  Converting back: I G G I : I -> !, G -> ", G -> ", I -> ! -> !""!
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{!""!}
+</think>
+\boxed{!""!}

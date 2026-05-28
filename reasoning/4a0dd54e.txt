@@ -397,8 +397,8 @@ Let me find the best matching wonderland words:
 New mappings: none
 【d–r–a–(k)–s】
 The length of the word is 5.
-above 5 【a–b–o–v–e】, 0【d】【a】unmatchable
-alice 5 【a–l–i–c–e】, 0【d】【a】unmatchable
+above 5 【a–b–o–v–e】, 0【d】【a】mismatch
+alice 5 【a–l–i–c–e】, 0【d】【a】mismatch
 ancient 7 length
 around 6 length
 beyond 6 length
@@ -418,12 +418,12 @@ dark 4 length
 discovers 9 length
 door 4 length
 dragon 6 length
-draws 5 【d–r–a–w–s】, 0【d】【d】match, 1【r】【r】match, 2【a】【a】match, 3【w】【(k)】matchable, 4【s】【s】match, 5 all match
+draws 5 【d–r–a–w–s】, 0【d】【d】match , 1【r】【r】match , 2【a】【a】match , 3【w】【(k)】match , 4【s】【s】match, 5 all match
 dreams 6 length
 explores 8 length
 follows 7 length
 forest 6 length
-found 5 【f–o–u–n–d】, 0【d】【f】unmatchable
+found 5 【f–o–u–n–d】, 0【d】【f】mismatch
 garden 6 length
 golden 6 length
 hatter 6 length
@@ -441,32 +441,32 @@ map 3 length
 message 7 length
 mirror 6 length
 mountain 8 length
-mouse 5 【m–o–u–s–e】, 0【d】【m】unmatchable
+mouse 5 【m–o–u–s–e】, 0【d】【m】mismatch
 mysterious 10 length
 near 4 length
-ocean 5 【o–c–e–a–n】, 0【d】【o】unmatchable
+ocean 5 【o–c–e–a–n】, 0【d】【o】mismatch
 palace 6 length
 potion 6 length
 princess 8 length
 puzzle 6 length
-queen 5 【q–u–e–e–n】, 0【d】【q】unmatchable
+queen 5 【q–u–e–e–n】, 0【d】【q】mismatch
 rabbit 6 length
-reads 5 【r–e–a–d–s】, 0【d】【r】unmatchable
+reads 5 【r–e–a–d–s】, 0【d】【r】mismatch
 school 6 length
 secret 6 length
 sees 4 length
 silver 6 length
-story 5 【s–t–o–r–y】, 0【d】【s】unmatchable
+story 5 【s–t–o–r–y】, 0【d】【s】mismatch
 strange 7 length
 student 7 length
 studies 7 length
 teacher 7 length
 the 3 length
 through 7 length
-tower 5 【t–o–w–e–r】, 0【d】【t】unmatchable
+tower 5 【t–o–w–e–r】, 0【d】【t】mismatch
 treasure 8 length
 turtle 6 length
-under 5 【u–n–d–e–r】, 0【d】【u】unmatchable
+under 5 【u–n–d–e–r】, 0【d】【u】mismatch
 valley 6 length
 village 7 length
 watches 7 length
@@ -481,7 +481,7 @@ Best match: 【draws】
 【a】->【a】same
 【(k)】->【w】 new
 【s】->【s】same
-Added mappings
+New mappings
 【(k)】->【w】
 
 I will now return the answer in \boxed{}

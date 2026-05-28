@@ -347,6 +347,7 @@ dependencies = [
     { name = "tinker" },
     { name = "tinker-cookbook" },
     { name = "torch" },
+    { name = "tqdm" },
     { name = "transformers" },
 ]
 
@@ -364,6 +365,7 @@ requires-dist = [
     { name = "tinker", specifier = ">=0.16.1" },
     { name = "tinker-cookbook", specifier = ">=0.3.0" },
     { name = "torch", specifier = ">=2.11.0" },
+    { name = "tqdm", specifier = ">=4.67.3" },
     { name = "transformers", specifier = "==4.57.6" },
 ]
 

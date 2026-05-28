@@ -1,0 +1,49 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+< -> A
+$ -> B
+} -> C
+\ -> D
+% -> E
+{ -> F
+> -> G
+" -> H
+/ -> I
+Operators:
+@ -> x
+[ -> y
+^ -> z
+
+Converting examples to letter form:
+
+  「<$@}\」 = 「\%{」:
+    input:  < $ @ } \ : < -> A, $ -> B, @ -> x, } -> C, \ -> D -> AB x CD
+    output: \ % { : \ -> D, % -> E, { -> F -> DEF
+
+  「{%[$}」 = 「{%$}」:
+    input:  { % [ $ } : { -> F, % -> E, [ -> y, $ -> B, } -> C -> FE y BC
+    output: { % $ } : { -> F, % -> E, $ -> B, } -> C -> FEBC
+
+  「<$^>>」 = 「"\」:
+    input:  < $ ^ > > : < -> A, $ -> B, ^ -> z, > -> G, > -> G -> AB z GG
+    output: " \ : " -> H, \ -> D -> HD
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: unknown
+Operator y: concatenation
+Operator z: unknown
+
+The question operator is y, which is concatenation.
+
+Converting question "%/[<>": % / [ < > : % -> E, / -> I, [ -> y, < -> A, > -> G -> EI y AG
+
+Applying to EI y AG:
+  concatenation(EI, AG) = EI || AG = EIAG
+  Converting back: E I A G : E -> %, I -> /, A -> <, G -> > -> %/<>
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{%/<>}
+</think>
+\boxed{%/<>}

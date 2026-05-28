@@ -1,0 +1,47 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+? -> A
+] -> B
+% -> C
+" -> D
+! -> E
+# -> F
+| -> G
+` -> H
+' -> I
+Operators:
+* -> x
++ -> y
+
+Converting examples to letter form:
+
+  「?]*%%」 = 「?]%%」:
+    input:  ? ] * % % : ? -> A, ] -> B, * -> x, % -> C, % -> C -> AB x CC
+    output: ? ] % % : ? -> A, ] -> B, % -> C, % -> C -> ABCC
+
+  「"!*]?」 = 「"!]?」:
+    input:  " ! * ] ? : " -> D, ! -> E, * -> x, ] -> B, ? -> A -> DE x BA
+    output: " ! ] ? : " -> D, ! -> E, ] -> B, ? -> A -> DEBA
+
+  「#|+`|」 = 「?|」:
+    input:  # | + ` | : # -> F, | -> G, + -> y, ` -> H, | -> G -> FG y HG
+    output: ? | : ? -> A, | -> G -> AG
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: concatenation
+Operator y: unknown
+
+The question operator is x, which is concatenation.
+
+Converting question "%'*"`": % ' * " ` : % -> C, ' -> I, * -> x, " -> D, ` -> H -> CI x DH
+
+Applying to CI x DH:
+  concatenation(CI, DH) = CI || DH = CIDH
+  Converting back: C I D H : C -> %, I -> ', D -> ", H -> ` -> %'"`
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{%'"`}
+</think>
+\boxed{%'"`}

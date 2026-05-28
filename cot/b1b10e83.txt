@@ -1,0 +1,55 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+" -> A
+\ -> B
+# -> C
+| -> D
+! -> E
+) -> F
+{ -> G
+$ -> H
+` -> I
+Operators:
++ -> x
+* -> y
+
+Converting examples to letter form:
+
+  「"\+#|」 = 「"\#|」:
+    input:  " \ + # | : " -> A, \ -> B, + -> x, # -> C, | -> D -> AB x CD
+    output: " \ # | : " -> A, \ -> B, # -> C, | -> D -> ABCD
+
+  「#!+#\」 = 「#!#\」:
+    input:  # ! + # \ : # -> C, ! -> E, + -> x, # -> C, \ -> B -> CE x CB
+    output: # ! # \ : # -> C, ! -> E, # -> C, \ -> B -> CECB
+
+  「#"*#"」 = 「#){|」:
+    input:  # " * # " : # -> C, " -> A, * -> y, # -> C, " -> A -> CA y CA
+    output: # ) { | : # -> C, ) -> F, { -> G, | -> D -> CFGD
+
+  「$\*)"」 = 「${$#」:
+    input:  $ \ * ) " : $ -> H, \ -> B, * -> y, ) -> F, " -> A -> HB y FA
+    output: $ { $ # : $ -> H, { -> G, $ -> H, # -> C -> HGHC
+
+  「)\+`#」 = 「)\`#」:
+    input:  ) \ + ` # : ) -> F, \ -> B, + -> x, ` -> I, # -> C -> FB x IC
+    output: ) \ ` # : ) -> F, \ -> B, ` -> I, # -> C -> FBIC
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: unknown
+Operator x: concatenation
+
+The question operator is x, which is concatenation.
+
+Converting question "|"+#$": | " + # $ : | -> D, " -> A, + -> x, # -> C, $ -> H -> DA x CH
+
+Applying to DA x CH:
+  concatenation(DA, CH) = DA || CH = DACH
+  Converting back: D A C H : D -> |, A -> ", C -> #, H -> $ -> |"#$
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{|"#$}
+</think>
+\boxed{|"#$}

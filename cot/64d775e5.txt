@@ -1,0 +1,51 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+< -> A
+$ -> B
+@ -> C
+` -> D
+% -> E
+/ -> F
+& -> G
+! -> H
+) -> I
+Operators:
++ -> x
+* -> y
+
+Converting examples to letter form:
+
+  「<$+@<」 = 「@<<$」:
+    input:  < $ + @ < : < -> A, $ -> B, + -> x, @ -> C, < -> A -> AB x CA
+    output: @ < < $ : @ -> C, < -> A, < -> A, $ -> B -> CAAB
+
+  「$`*`%」 = 「/$%$」:
+    input:  $ ` * ` % : $ -> B, ` -> D, * -> y, ` -> D, % -> E -> BD y DE
+    output: / $ % $ : / -> F, $ -> B, % -> E, $ -> B -> FBEB
+
+  「&$+<%」 = 「<%&$」:
+    input:  & $ + < % : & -> G, $ -> B, + -> x, < -> A, % -> E -> GB x AE
+    output: < % & $ : < -> A, % -> E, & -> G, $ -> B -> AEGB
+
+  「&`*/!」 = 「&$@/」:
+    input:  & ` * / ! : & -> G, ` -> D, * -> y, / -> F, ! -> H -> GD y FH
+    output: & $ @ / : & -> G, $ -> B, @ -> C, / -> F -> GBCF
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: unknown
+Operator x: reverse concatenation
+
+The question operator is x, which is reverse concatenation.
+
+Converting question ")<+$&": ) < + $ & : ) -> I, < -> A, + -> x, $ -> B, & -> G -> IA x BG
+
+Applying to IA x BG:
+  reverse concatenation(IA, BG) = BG || IA = BGIA
+  Converting back: B G I A : B -> $, G -> &, I -> ), A -> < -> $&)<
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{$&)<}
+</think>
+\boxed{$&)<}

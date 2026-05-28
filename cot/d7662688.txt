@@ -1,0 +1,49 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+" -> A
+@ -> B
+: -> C
+( -> D
+! -> E
+] -> F
+\ -> G
+% -> H
+& -> I
+Operators:
+- -> x
+* -> y
++ -> z
+
+Converting examples to letter form:
+
+  「"@-:(」 = 「!(」:
+    input:  " @ - : ( : " -> A, @ -> B, - -> x, : -> C, ( -> D -> AB x CD
+    output: ! ( : ! -> E, ( -> D -> ED
+
+  「]\*"%」 = 「"%]\」:
+    input:  ] \ * " % : ] -> F, \ -> G, * -> y, " -> A, % -> H -> FG y AH
+    output: " % ] \ : " -> A, % -> H, ] -> F, \ -> G -> AHFG
+
+  「"(+(]」 = 「(&」:
+    input:  " ( + ( ] : " -> A, ( -> D, + -> z, ( -> D, ] -> F -> AD z DF
+    output: ( & : ( -> D, & -> I -> DI
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: reverse concatenation
+Operator z: unknown
+Operator x: unknown
+
+The question operator is y, which is reverse concatenation.
+
+Converting question "]]*]&": ] ] * ] & : ] -> F, ] -> F, * -> y, ] -> F, & -> I -> FF y FI
+
+Applying to FF y FI:
+  reverse concatenation(FF, FI) = FI || FF = FIFF
+  Converting back: F I F F : F -> ], I -> &, F -> ], F -> ] -> ]&]]
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{]&]]}
+</think>
+\boxed{]&]]}

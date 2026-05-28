@@ -1,0 +1,55 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+" -> A
+: -> B
+| -> C
+? -> D
+< -> E
+> -> F
+& -> G
+{ -> H
+% -> I
+Operators:
++ -> x
+- -> y
+
+Converting examples to letter form:
+
+  「""+:|」 = 「"":|」:
+    input:  " " + : | : " -> A, " -> A, + -> x, : -> B, | -> C -> AA x BC
+    output: " " : | : " -> A, " -> A, : -> B, | -> C -> AABC
+
+  「?<+<>」 = 「?<<>」:
+    input:  ? < + < > : ? -> D, < -> E, + -> x, < -> E, > -> F -> DE x EF
+    output: ? < < > : ? -> D, < -> E, < -> E, > -> F -> DEEF
+
+  「??-:&」 = 「|?」:
+    input:  ? ? - : & : ? -> D, ? -> D, - -> y, : -> B, & -> G -> DD y BG
+    output: | ? : | -> C, ? -> D -> CD
+
+  「?&+>{」 = 「?&>{」:
+    input:  ? & + > { : ? -> D, & -> G, + -> x, > -> F, { -> H -> DG x FH
+    output: ? & > { : ? -> D, & -> G, > -> F, { -> H -> DGFH
+
+  「:|+%&」 = 「:|%&」:
+    input:  : | + % & : : -> B, | -> C, + -> x, % -> I, & -> G -> BC x IG
+    output: : | % & : : -> B, | -> C, % -> I, & -> G -> BCIG
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: concatenation
+Operator y: unknown
+
+The question operator is x, which is concatenation.
+
+Converting question ""|+"%": " | + " % : " -> A, | -> C, + -> x, " -> A, % -> I -> AC x AI
+
+Applying to AC x AI:
+  concatenation(AC, AI) = AC || AI = ACAI
+  Converting back: A C A I : A -> ", C -> |, A -> ", I -> % -> "|"%
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{"|"%}
+</think>
+\boxed{"|"%}

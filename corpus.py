@@ -1,14 +1,18 @@
-"""Create synthetic training corpus with reasoning from reasoning/*.txt files.
+"""Tokenize train_cot.csv into the training/sft/nemotron corpus.
 
-The completion for each entry is:
-    (reasoning text)</think>\\boxed{(answer)}<|im_end|>
+Reads train_cot.csv (produced by reasoning.py) plus train_order.txt and writes a
+directory layout that mirrors training/sft/04-08-16-14:
 
-The opening <think>\\n is already part of the prompt (from the chat template),
-so the reasoning text flows directly after it.
+    training/sft/nemotron/
+        tokens/<problem_id[-suffix]>/synthetic.json   {"tokens": [...], "mask": [...]}
+        logprobs/0/<problem_id[-suffix]>/synthetic.jsonl
+        logprobs/index.jsonl                          training-order index
+        config.json                                   training config + aggregate stats
 
-Outputs:
-- corpus.jsonl          - Index with metadata per entry
-- corpus/<problem_id>/synthetic.jsonl  - Segment files with interleaved masked/unmasked
+`train_order.txt` carries the deterministic stratified-shuffle order that was
+used to lay out 04-08-16-14. Every line gives the suffixed problem id (e.g.
+524cb5c6-d3) for the row at the matching position in train_cot.csv, so we can
+recover the original directory naming without re-running the random shuffle.
 
 Usage:
     uv run corpus.py
@@ -24,43 +28,88 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from tokenizers import Tokenizer  # type: ignore[import-untyped]
+from tqdm import tqdm
 from transformers import AutoTokenizer  # type: ignore[import-untyped]
 
-TRAIN_CSV = Path(__file__).parent / "train.csv"
-AUGMENTATIONS_DIR = Path(__file__).parent / "augmentations"
-PROBLEMS_INDEX = Path(__file__).parent / "problems.jsonl"
-REASONING_DIR = Path(__file__).parent / "reasoning"
-CORPUS_DIR = Path(__file__).parent / "corpus"
-CORPUS_INDEX = Path(__file__).parent / "corpus.jsonl"
+TRAIN_COT_CSV = Path(__file__).parent / "train_cot.csv"
+TRAIN_ORDER_PATH = Path(__file__).parent / "train_order.txt"
 TOKENIZER_PATH = Path(__file__).parent / "tokenizer.json"
 
-# Must match metric_reference.py / query.py
+OUTPUT_ROOT = Path(__file__).parent / "training" / "sft" / "nemotron"
+TOKENS_DIR = OUTPUT_ROOT / "tokens"
+LOGPROBS_DIR = OUTPUT_ROOT / "logprobs"
+LOGPROBS_INDEX = LOGPROBS_DIR / "index.jsonl"
+CONFIG_PATH = OUTPUT_ROOT / "config.json"
+
 PROMPT_SUFFIX = (
     "\nPlease put your final answer inside `\\boxed{}`. "
     "For example: `\\boxed{your answer}`"
 )
 
 TOKEN_LIMIT = 8192
+BATCH_SIZE = 32
+MODEL_NAME = "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16"
+LOG_PATH = "nemotron"
 
 
-def load_jsonl(path: Path) -> list[dict]:
-    entries = []
-    with open(path) as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                entries.append(json.loads(line))
-    return entries
+@dataclass
+class Row:
+    problem_id: str
+    suffixed_id: str
+    category: str
+    prompt: str
+    answer: str
+    generated_cot: str
 
 
-def tokenize_prompt(
-    prompt_text: str,
-    chat_tokenizer: AutoTokenizer,
-    *,
-    suffix: str = PROMPT_SUFFIX,
-) -> list[int]:
-    """Tokenize a problem prompt using the chat template, matching query.py."""
-    messages = [{"role": "user", "content": prompt_text + suffix}]
+def _load_rows() -> list[Row]:
+    if not TRAIN_COT_CSV.exists():
+        raise FileNotFoundError(
+            f"Missing {TRAIN_COT_CSV.name}; run `uv run reasoning.py` first."
+        )
+    if not TRAIN_ORDER_PATH.exists():
+        raise FileNotFoundError(
+            f"Missing {TRAIN_ORDER_PATH.name}; this captures the training shuffle order."
+        )
+
+    suffixed_ids = [
+        line.strip()
+        for line in TRAIN_ORDER_PATH.read_text().splitlines()
+        if line.strip()
+    ]
+
+    with TRAIN_COT_CSV.open(encoding="utf-8-sig", newline="") as f:
+        csv_rows = list(csv.DictReader(f))
+
+    if len(csv_rows) != len(suffixed_ids):
+        raise ValueError(
+            f"train_cot.csv has {len(csv_rows)} rows but train_order.txt has "
+            f"{len(suffixed_ids)} entries; they must line up 1:1."
+        )
+
+    rows: list[Row] = []
+    for csv_row, suffixed in zip(csv_rows, suffixed_ids):
+        base_id = re.sub(r"-[a-z]\d+$", "", suffixed)
+        if base_id != csv_row["id"]:
+            raise ValueError(
+                f"train_order entry {suffixed!r} (base={base_id}) does not match "
+                f"train_cot.csv row id {csv_row['id']!r}."
+            )
+        rows.append(
+            Row(
+                problem_id=csv_row["id"],
+                suffixed_id=suffixed,
+                category=csv_row["type"],
+                prompt=csv_row["prompt"],
+                answer=csv_row["answer"],
+                generated_cot=csv_row["generated_cot"],
+            )
+        )
+    return rows
+
+
+def _tokenize_prompt(prompt_text: str, chat_tokenizer: AutoTokenizer) -> list[int]:
+    messages = [{"role": "user", "content": prompt_text + PROMPT_SUFFIX}]
     return chat_tokenizer.apply_chat_template(
         messages,
         tokenize=True,
@@ -69,239 +118,137 @@ def tokenize_prompt(
     )
 
 
-@dataclass
-class CorpusEntry:
-    problem_id: str
-    category: str
-    tokens: list[int]
-    mask: list[int]
-    masked_token_count: int
-    unmasked_token_count: int
-    answer: str
-    included: bool = False
+def _encode_row(
+    row: Row,
+    tokenizer: Tokenizer,
+    chat_tokenizer: AutoTokenizer,
+) -> tuple[list[int], list[int]]:
+    prompt_ids = _tokenize_prompt(row.prompt, chat_tokenizer)
+    completion_text = f"{row.generated_cot}<|im_end|>"
+    completion_ids = tokenizer.encode(completion_text, add_special_tokens=False).ids
 
-    @property
-    def token_count(self) -> int:
-        return len(self.tokens)
+    tokens = prompt_ids + completion_ids
+    mask = [0] * len(prompt_ids) + [1] * len(completion_ids)
 
-    def to_index_dict(self) -> dict:
-        return {
-            "problem_id": self.problem_id,
-            "segment": "synthetic.jsonl",
-            "category": self.category,
-            "masked_token_count": self.masked_token_count,
-            "unmasked_token_count": self.unmasked_token_count,
-            "token_count": self.token_count,
-            "answer": self.answer,
-            "included": self.included,
-        }
+    if len(tokens) > TOKEN_LIMIT:
+        tokens = tokens[:TOKEN_LIMIT]
+        mask = mask[:TOKEN_LIMIT]
+    return tokens, mask
 
 
-def build_segments(
-    tokens: list[int],
-    mask: list[int],
-) -> list[dict]:
-    """Build segment list from tokens and mask."""
-    if not tokens:
-        return []
+def _reset_output_dirs() -> None:
+    if OUTPUT_ROOT.exists():
+        shutil.rmtree(OUTPUT_ROOT)
+    TOKENS_DIR.mkdir(parents=True)
+    (LOGPROBS_DIR / "0").mkdir(parents=True)
 
-    segments: list[dict] = []
-    seg_start = 0
-    current_type = "unmasked" if mask[0] == 1 else "masked"
 
-    for i in range(1, len(tokens)):
-        token_type = "unmasked" if mask[i] == 1 else "masked"
-        if token_type != current_type:
-            segments.append(
-                {
-                    "type": current_type,
-                    "pos": seg_start,
-                    "tokens": tokens[seg_start:i],
-                }
-            )
-            seg_start = i
-            current_type = token_type
+def _write_tokens(suffixed_id: str, tokens: list[int], mask: list[int]) -> None:
+    out_dir = TOKENS_DIR / suffixed_id
+    out_dir.mkdir(parents=True, exist_ok=True)
+    with (out_dir / "synthetic.json").open("w") as f:
+        json.dump({"tokens": tokens, "mask": mask}, f)
 
-    segments.append(
-        {
-            "type": current_type,
-            "pos": seg_start,
-            "tokens": tokens[seg_start:],
-        }
-    )
 
-    return segments
+def _write_logprob_placeholder(suffixed_id: str, num_loss_tokens: int) -> None:
+    out_dir = LOGPROBS_DIR / "0" / suffixed_id
+    out_dir.mkdir(parents=True, exist_ok=True)
+    with (out_dir / "synthetic.jsonl").open("w") as f:
+        json.dump({"logprobs": [0.0] * num_loss_tokens}, f)
+        f.write("\n")
 
 
 def main() -> None:
-    if not PROBLEMS_INDEX.exists():
-        print(f"No {PROBLEMS_INDEX} found. Run problems.py first.")
-        return
+    rows = _load_rows()
 
-    # Load tokenizers
     tokenizer = Tokenizer.from_file(str(TOKENIZER_PATH))
-    chat_tokenizer = AutoTokenizer.from_pretrained(
-        "nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16", trust_remote_code=True
-    )
+    chat_tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
 
-    # Load problem prompts from train.csv
-    prompts: dict[str, str] = {}
-    answers: dict[str, str] = {}
-    with open(TRAIN_CSV, newline="") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            pid = row["id"]
-            prompts[pid] = row["prompt"]
-            answers[pid] = row["answer"]
+    _reset_output_dirs()
 
-    # Load problem categories
-    problem_cats: dict[str, str] = {}
-    for prob_raw in load_jsonl(PROBLEMS_INDEX):
-        problem_cats[prob_raw["id"]] = prob_raw["category"]
+    total_unmasked = 0
+    total_masked = 0
+    cat_unmasked: dict[str, int] = {}
+    cat_count: dict[str, int] = {}
+    index_entries: list[dict] = []
+    n = len(rows)
 
-    # Clean and recreate corpus directory
-    if CORPUS_DIR.exists():
-        shutil.rmtree(CORPUS_DIR)
-    CORPUS_DIR.mkdir(parents=True)
+    for step_global, row in enumerate(tqdm(rows, desc="corpus")):
+        tokens, mask = _encode_row(row, tokenizer, chat_tokenizer)
+        num_loss = sum(mask)
+        num_pad = len(mask) - num_loss
 
-    entries: list[CorpusEntry] = []
+        _write_tokens(row.suffixed_id, tokens, mask)
+        _write_logprob_placeholder(row.suffixed_id, num_loss)
 
-    # Iterate over problems that have reasoning files
-    problem_ids = sorted(
-        pid
-        for pid in problem_cats
-        if (REASONING_DIR / f"{pid}.txt").exists() and pid in prompts
-    )
+        total_unmasked += num_loss
+        total_masked += num_pad
+        cat_unmasked[row.category] = cat_unmasked.get(row.category, 0) + num_loss
+        cat_count[row.category] = cat_count.get(row.category, 0) + 1
 
-    for problem_id in problem_ids:
-        category = problem_cats[problem_id]
-        answer = answers[problem_id]
-
-        reasoning_text = (REASONING_DIR / f"{problem_id}.txt").read_text().rstrip("\n")
-
-        # Extract answer from reasoning's \boxed{} so they match
-        boxed_match = re.findall(r"\\boxed\{([^}]*)\}", reasoning_text)
-        reasoning_answer = boxed_match[-1] if boxed_match else answer
-        completion_text = (
-            f"{reasoning_text}\n</think>\n\\boxed{{{reasoning_answer}}}<|im_end|>"
-        )
-        completion_ids = tokenizer.encode(completion_text, add_special_tokens=False).ids
-
-        # Tokenize prompt directly (no raw/ dependency)
-        prompt_ids = tokenize_prompt(prompts[problem_id], chat_tokenizer)
-
-        all_tokens = prompt_ids + completion_ids
-        mask = [0] * len(prompt_ids) + [1] * len(completion_ids)
-
-        # Truncate to token limit
-        if len(all_tokens) > TOKEN_LIMIT:
-            all_tokens = all_tokens[:TOKEN_LIMIT]
-            mask = mask[:TOKEN_LIMIT]
-
-        unmasked_count = sum(mask)
-        masked_count = len(mask) - unmasked_count
-
-        entry = CorpusEntry(
-            problem_id=problem_id,
-            category=category,
-            tokens=all_tokens,
-            mask=mask,
-            masked_token_count=masked_count,
-            unmasked_token_count=unmasked_count,
-            answer=answer,
-            included=True,
+        index_entries.append(
+            {
+                "epoch": 0,
+                "step": step_global // BATCH_SIZE,
+                "problem_id": row.suffixed_id,
+                "segment": "synthetic.jsonl",
+                "category": row.category,
+                "num_loss_tokens": num_loss,
+            }
         )
 
-        # Build interleaved segments and write segment file
-        segments = build_segments(all_tokens, mask)
-
-        problem_dir = CORPUS_DIR / problem_id
-        problem_dir.mkdir(parents=True, exist_ok=True)
-        seg_path = problem_dir / "synthetic.jsonl"
-
-        with open(seg_path, "w") as f:
-            for seg in segments:
-                json.dump(seg, f)
-                f.write("\n")
-
-        entries.append(entry)
-
-    # Process augmentations/*.txt (no reasoning, no \boxed{})
-    if AUGMENTATIONS_DIR.exists():
-        for aug_path in sorted(AUGMENTATIONS_DIR.glob("*.txt")):
-            text = aug_path.read_text()
-            # Parse [category], [prompt], and [completion] sections
-            category = text.split("[category]\n", 1)[1].split("\n[prompt]\n", 1)[0]
-            prompt_text = text.split("[prompt]\n", 1)[1].split("\n[completion]\n", 1)[0]
-            completion = text.split("\n[completion]\n", 1)[1].rstrip("\n")
-
-            problem_id = aug_path.stem
-
-            completion_text = f"{completion}\n</think><|im_end|>"
-            completion_ids = tokenizer.encode(
-                completion_text, add_special_tokens=False
-            ).ids
-
-            prompt_ids = tokenize_prompt(prompt_text, chat_tokenizer, suffix="")
-
-            all_tokens = prompt_ids + completion_ids
-            mask = [0] * len(prompt_ids) + [1] * len(completion_ids)
-
-            assert len(all_tokens) <= TOKEN_LIMIT, (
-                f"augmented entry {problem_id} exceeds token limit: "
-                f"{len(all_tokens)} > {TOKEN_LIMIT}"
-            )
-
-            unmasked_count = sum(mask)
-            masked_count = len(mask) - unmasked_count
-
-            entry = CorpusEntry(
-                problem_id=problem_id,
-                category=category,
-                tokens=all_tokens,
-                mask=mask,
-                masked_token_count=masked_count,
-                unmasked_token_count=unmasked_count,
-                answer=completion,
-                included=True,
-            )
-
-            segments = build_segments(all_tokens, mask)
-            problem_dir = CORPUS_DIR / problem_id
-            problem_dir.mkdir(parents=True, exist_ok=True)
-            with open(problem_dir / "synthetic.jsonl", "w") as sf:
-                for seg in segments:
-                    json.dump(seg, sf)
-                    sf.write("\n")
-
-            entries.append(entry)
-
-    entries.sort(key=lambda e: e.problem_id)
-
-    # Write index JSONL
-    with open(CORPUS_INDEX, "w") as f:
-        for e in entries:
-            json.dump(e.to_index_dict(), f)
+    LOGPROBS_INDEX.parent.mkdir(parents=True, exist_ok=True)
+    with LOGPROBS_INDEX.open("w") as f:
+        for entry in index_entries:
+            json.dump(entry, f)
             f.write("\n")
 
-    # Stats
-    cat_counts: dict[str, int] = {cat: 0 for cat in {e.category for e in entries}}
-    cat_tokens: dict[str, int] = {cat: 0 for cat in cat_counts}
-    for e in entries:
-        cat_counts[e.category] += 1
-        cat_tokens[e.category] += e.unmasked_token_count
+    total_steps = (n + BATCH_SIZE - 1) // BATCH_SIZE
+    config = {
+        "loss_config": {
+            "name": "cross_entropy",
+            "class_name": "CrossEntropyLossConfig",
+        },
+        "lr_schedule": {
+            "learning_rate": 0.0002,
+            "class_name": "StepLinearDecayLRSchedule",
+        },
+        "log_path": LOG_PATH,
+        "model_name": MODEL_NAME,
+        "batch_size": BATCH_SIZE,
+        "num_epochs": 1,
+        "lora_rank": 32,
+        "max_length": TOKEN_LIMIT,
+        "train_mlp": True,
+        "train_attn": True,
+        "train_unembed": True,
+        "adam_config": {
+            "beta1": 0.9,
+            "beta2": 0.95,
+            "eps": 1e-08,
+            "weight_decay": 0.0,
+            "grad_clip_norm": 1000000000.0,
+        },
+        "backend": "tinker",
+        "micro_batch_size": 16,
+        "time": LOG_PATH,
+        "stats": {
+            "num_examples": n,
+            "total_masked_tokens": total_masked,
+            "total_unmasked_tokens": total_unmasked,
+            "total_steps": total_steps,
+        },
+    }
+    with CONFIG_PATH.open("w") as f:
+        json.dump(config, f, indent=2)
 
-    total_unmasked = sum(e.unmasked_token_count for e in entries)
-    total_masked = sum(e.masked_token_count for e in entries)
-    max_tokens = max((e.token_count for e in entries), default=0)
-
-    print(f"Corpus (synthetic): {len(entries)} entries")
+    print(f"\nCorpus: {n} entries written to {OUTPUT_ROOT}")
     print(f"Unmasked tokens: {total_unmasked:,}")
     print(f"Masked tokens:   {total_masked:,}")
-    print(f"Max seq length:  {max_tokens:,}")
+    print(f"Total steps:     {total_steps}")
     print()
-    for cat in sorted(cat_counts):
-        print(f"  {cat}: {cat_counts[cat]} runs, {cat_tokens[cat]:,} unmasked tokens")
+    for cat in sorted(cat_count):
+        print(f"  {cat}: {cat_count[cat]} runs, {cat_unmasked[cat]:,} unmasked tokens")
 
 
 if __name__ == "__main__":

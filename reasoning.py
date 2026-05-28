@@ -4,6 +4,11 @@ Creates reasoning/<problem_id>.txt for every problem where the rule was found,
 skipping cryptarithm_guess. The reasoning mirrors the solver logic as natural
 chain-of-thought traces.
 
+Also produces train_cot.csv containing the row-ordered training corpus
+(id, prompt, answer, type, generated_cot). The row order, including the
+multi-copy training duplicates, is sourced from train_order.txt, which captures
+the deterministic stratified shuffle used to assemble training/sft/04-08-16-14.
+
 Usage:
     uv run reasoning.py
     uv run reasoning.py --delete-investigations   # delete investigation files when answer is correct
@@ -12,6 +17,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import math
 import re
@@ -20,6 +26,8 @@ import time
 from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
+
+from tqdm import tqdm
 
 from reasoners.bit_manipulation import reasoning_bit_manipulation
 from reasoners.cipher import reasoning_cipher
@@ -33,6 +41,11 @@ from reasoners.unit_conversion import reasoning_unit_conversion
 PROBLEMS_INDEX = Path(__file__).parent / "problems.jsonl"
 REASONING_DIR = Path(__file__).parent / "reasoning"
 INVESTIGATIONS_DIR = Path(__file__).parent / "investigations"
+TRAIN_CSV = Path(__file__).parent / "train.csv"
+TRAIN_ORDER_PATH = Path(__file__).parent / "train_order.txt"
+TRAIN_COT_CSV = Path(__file__).parent / "train_cot.csv"
+COT_DIR = Path(__file__).parent / "cot"
+
 INVESTIGATION_CATEGORIES: set[str] = {
     "cryptarithm_deduce",
     "cryptarithm_guess",
@@ -141,7 +154,7 @@ def main() -> None:
     generated = 0
     skipped = 0
 
-    for entry in existing.values():
+    for entry in tqdm(existing.values(), total=len(existing), desc="reasoning"):
         pid = entry["id"]
         category = entry["category"]
 
@@ -244,10 +257,102 @@ def main() -> None:
         f"{'TOTAL':<28} {rule_found:>6} {total:>6} {overall_acc_str:>10} {overall_avg_ms:>10.1f}"
     )
     print(f"{'=' * w}")
+
+    _write_train_cot_csv(existing)
+
     print("\nIf you were given an example to fix, please verify that example.")
     print(
         "\nIf the user has previously asked to run corpus.py, you should run `uv run corpus.py`"
     )
+
+
+def _strip_suffix(pid_with_suffix: str) -> str:
+    """Strip a -p0 / -dN training-duplicate suffix to recover the base problem id."""
+    return re.sub(r"-[a-z]\d+$", "", pid_with_suffix)
+
+
+def _write_train_cot_csv(existing: dict[str, dict]) -> None:
+    """Write train_cot.csv in the deterministic stratified-shuffle training order.
+
+    `generated_cot` is sourced from cot/<base_id>.txt — the *frozen* completion
+    text the original 04-08-16-14 LoRA was trained on (recovered by decoding
+    its token files). The current reasoners produce a longer, restructured CoT
+    that, when used as training data, drops the trained model's score from
+    ~0.85 to ~0.66 (bit_manipulation collapses from 88% to 4%). Falls back to
+    reasoning/<id>.txt if a frozen CoT is missing for a given id.
+    """
+    if not TRAIN_ORDER_PATH.exists():
+        print(
+            f"\nSkipping train_cot.csv: {TRAIN_ORDER_PATH.name} not found "
+            "(needed to preserve the stratified shuffle order)."
+        )
+        return
+    if not TRAIN_CSV.exists():
+        print(f"\nSkipping train_cot.csv: {TRAIN_CSV.name} not found.")
+        return
+
+    prompts: dict[str, str] = {}
+    answers: dict[str, str] = {}
+    with TRAIN_CSV.open(newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            pid = row["id"]
+            prompts[pid] = row["prompt"]
+            answers[pid] = row["answer"]
+
+    order: list[str] = [
+        line.strip()
+        for line in TRAIN_ORDER_PATH.read_text().splitlines()
+        if line.strip()
+    ]
+
+    rows_written = 0
+    frozen_hits = 0
+    fallback_hits = 0
+    skipped = 0
+    with TRAIN_COT_CSV.open("w", encoding="utf-8-sig", newline="") as out:
+        writer = csv.writer(out)
+        writer.writerow(["id", "prompt", "answer", "type", "generated_cot"])
+        for pid_with_suffix in tqdm(order, desc="train_cot.csv"):
+            base_id = _strip_suffix(pid_with_suffix)
+
+            frozen_path = COT_DIR / f"{base_id}.txt"
+            if frozen_path.exists():
+                generated_cot = frozen_path.read_text()
+                frozen_hits += 1
+            else:
+                reasoning_path = REASONING_DIR / f"{base_id}.txt"
+                if not reasoning_path.exists():
+                    skipped += 1
+                    continue
+                reasoning_text = reasoning_path.read_text().rstrip("\n")
+                boxed_matches = re.findall(r"\\boxed\{([^}]*)\}", reasoning_text)
+                reasoning_answer = (
+                    boxed_matches[-1] if boxed_matches else answers.get(base_id, "")
+                )
+                generated_cot = (
+                    f"{reasoning_text}\n</think>\n\\boxed{{{reasoning_answer}}}"
+                )
+                fallback_hits += 1
+
+            entry = existing.get(base_id, {})
+            category = entry.get("category", "")
+            writer.writerow(
+                [
+                    base_id,
+                    prompts.get(base_id, ""),
+                    answers.get(base_id, ""),
+                    category,
+                    generated_cot,
+                ]
+            )
+            rows_written += 1
+
+    print(f"\nWrote {rows_written} rows to {TRAIN_COT_CSV.name}")
+    print(f"  from cot/ (frozen): {frozen_hits}")
+    print(f"  from reasoning/ (fallback): {fallback_hits}")
+    if skipped:
+        print(f"Skipped {skipped} train_order entries with no frozen CoT or reasoning")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,59 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+% -> A
+: -> B
+\ -> C
+( -> D
+$ -> E
+< -> F
+' -> G
+! -> H
+& -> I
+} -> J
+@ -> K
+Operators:
+` -> x
+< -> y
+- -> z
+
+Converting examples to letter form:
+
+  「%:`\:」 = 「%:\:」:
+    input:  % : ` \ : : % -> A, : -> B, ` -> x, \ -> C, : -> B -> AB x CB
+    output: % : \ : : % -> A, : -> B, \ -> C, : -> B -> ABCB
+
+  「\\<($」 = 「<'%」:
+    input:  \ \ < ( $ : \ -> C, \ -> C, < -> y, ( -> D, $ -> E -> CC y DE
+    output: < ' % : < -> F, ' -> G, % -> A -> FGA
+
+  「!'<\(」 = 「(&」:
+    input:  ! ' < \ ( : ! -> H, ' -> G, < -> y, \ -> C, ( -> D -> HG y CD
+    output: ( & : ( -> D, & -> I -> DI
+
+  「$'-$}」 = 「%:&}」:
+    input:  $ ' - $ } : $ -> E, ' -> G, - -> z, $ -> E, } -> J -> EG z EJ
+    output: % : & } : % -> A, : -> B, & -> I, } -> J -> ABIJ
+
+  「%\`!%」 = 「%\!%」:
+    input:  % \ ` ! % : % -> A, \ -> C, ` -> x, ! -> H, % -> A -> AC x HA
+    output: % \ ! % : % -> A, \ -> C, ! -> H, % -> A -> ACHA
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator z: unknown
+Operator y: unknown
+Operator x: concatenation
+
+The question operator is x, which is concatenation.
+
+Converting question "&@`&%": & @ ` & % : & -> I, @ -> K, ` -> x, & -> I, % -> A -> IK x IA
+
+Applying to IK x IA:
+  concatenation(IK, IA) = IK || IA = IKIA
+  Converting back: I K I A : I -> &, K -> @, I -> &, A -> % -> &@&%
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{&@&%}
+</think>
+\boxed{&@&%}

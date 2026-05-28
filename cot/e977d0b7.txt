@@ -1,0 +1,57 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+% -> A
+: -> B
+' -> C
+$ -> D
+{ -> E
+[ -> F
+| -> G
+/ -> H
+& -> I
+Operators:
+* -> x
+- -> y
++ -> z
+
+Converting examples to letter form:
+
+  「%:*:'」 = 「:${'」:
+    input:  % : * : ' : % -> A, : -> B, * -> x, : -> B, ' -> C -> AB x BC
+    output: : $ { ' : : -> B, $ -> D, { -> E, ' -> C -> BDEC
+
+  「$%-%[」 = 「$|」:
+    input:  $ % - % [ : $ -> D, % -> A, - -> y, % -> A, [ -> F -> DA y AF
+    output: $ | : $ -> D, | -> G -> DG
+
+  「|'+/'」 = 「|'/'」:
+    input:  | ' + / ' : | -> G, ' -> C, + -> z, / -> H, ' -> C -> GC z HC
+    output: | ' / ' : | -> G, ' -> C, / -> H, ' -> C -> GCHC
+
+  「'{+&:」 = 「'{&:」:
+    input:  ' { + & : : ' -> C, { -> E, + -> z, & -> I, : -> B -> CE z IB
+    output: ' { & : : ' -> C, { -> E, & -> I, : -> B -> CEIB
+
+  「|'-::」 = 「{&」:
+    input:  | ' - : : : | -> G, ' -> C, - -> y, : -> B, : -> B -> GC y BB
+    output: { & : { -> E, & -> I -> EI
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: unknown
+Operator z: concatenation
+Operator y: unknown
+
+The question operator is z, which is concatenation.
+
+Converting question "&[+/{": & [ + / { : & -> I, [ -> F, + -> z, / -> H, { -> E -> IF z HE
+
+Applying to IF z HE:
+  concatenation(IF, HE) = IF || HE = IFHE
+  Converting back: I F H E : I -> &, F -> [, H -> /, E -> { -> &[/{
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{&[/{}
+</think>
+\boxed{&[/{}
