@@ -38,7 +38,7 @@
 {"id": "0122d53a", "category": "numeral", "status": "rule_found", "submission": "LI"}
 {"id": "01248b76", "category": "bit_manipulation", "status": "rule_found", "submission": "11000101"}
 {"id": "012cab1f", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "{`(&"}
-{"id": "012fb81b", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10010100"}
+{"id": "012fb81b", "category": "bit_manipulation", "status": "rule_found", "submission": "10000100"}
 {"id": "0133bcec", "category": "cryptarithm_deduce", "status": "rule_found", "submission": "\\([#"}
 {"id": "0140788e", "category": "unit_conversion", "status": "rule_found", "submission": "38.735"}
 {"id": "01466f0b", "category": "unit_conversion", "status": "rule_found", "submission": "46.883"}
@@ -103,7 +103,7 @@
 {"id": "0290f51a", "category": "bit_manipulation", "status": "rule_found", "submission": "10101111"}
 {"id": "02a04b59", "category": "cryptarithm_deduce", "status": "rule_found", "submission": "#>]#"}
 {"id": "02a57a2f", "category": "unit_conversion", "status": "rule_found", "submission": "56.620"}
-{"id": "02a5a1ca", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01111101"}
+{"id": "02a5a1ca", "category": "bit_manipulation", "status": "rule_found", "submission": "01101101"}
 {"id": "02a66bcb", "category": "bit_manipulation", "status": "rule_found", "submission": "00011110"}
 {"id": "02b8d816", "category": "cryptarithm_deduce", "status": "rule_found", "submission": ">$$>"}
 {"id": "02beaa05", "category": "gravity", "status": "rule_found", "submission": "38.600"}
@@ -128,7 +128,7 @@
 {"id": "033826f6", "category": "unit_conversion", "status": "rule_found", "submission": "29.144"}
 {"id": "033d2b33", "category": "cipher", "status": "rule_found", "submission": "mouse dreams near cave"}
 {"id": "034930e2", "category": "bit_manipulation", "status": "rule_found", "submission": "00010111"}
-{"id": "034fb629", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01111001"}
+{"id": "034fb629", "category": "bit_manipulation", "status": "rule_found", "submission": "00111001"}
 {"id": "035c4c40", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "?<'#"}
 {"id": "0375a010", "category": "numeral", "status": "rule_found", "submission": "LXXV"}
 {"id": "037921b9", "category": "gravity", "status": "rule_found", "submission": "86.255"}
@@ -180,7 +180,7 @@
 {"id": "04c44df4", "category": "bit_manipulation", "status": "rule_found", "submission": "00000000"}
 {"id": "04c6aa94", "category": "numeral", "status": "rule_found", "submission": "LXXII"}
 {"id": "04d492a9", "category": "bit_manipulation", "status": "rule_found", "submission": "00110111"}
-{"id": "04d8c3e6", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00000000"}
+{"id": "04d8c3e6", "category": "bit_manipulation", "status": "rule_found", "submission": "10000000"}
 {"id": "04f03c7e", "category": "numeral", "status": "rule_found", "submission": "LXXXII"}
 {"id": "04f569be", "category": "numeral", "status": "rule_found", "submission": "LXXXVII"}
 {"id": "050492a9", "category": "unit_conversion", "status": "rule_found", "submission": "73.038"}
@@ -211,7 +211,7 @@
 {"id": "05c36467", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "\"&($"}
 {"id": "05c38073", "category": "unit_conversion", "status": "rule_found", "submission": "15.619"}
 {"id": "05c939be", "category": "numeral", "status": "rule_found", "submission": "LXXXIX"}
-{"id": "05ca617c", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01011011"}
+{"id": "05ca617c", "category": "bit_manipulation", "status": "rule_found", "submission": "11011011"}
 {"id": "05d58fb3", "category": "bit_manipulation", "status": "rule_found", "submission": "01011101"}
 {"id": "05d88aa8", "category": "unit_conversion", "status": "rule_found", "submission": "42.132"}
 {"id": "05d90bdf", "category": "cipher", "status": "rule_found", "submission": "king writes inside mountain"}
@@ -238,7 +238,7 @@
 {"id": "06667a93", "category": "bit_manipulation", "status": "rule_found", "submission": "10100011"}
 {"id": "06698d4e", "category": "bit_manipulation", "status": "rule_found", "submission": "00110010"}
 {"id": "067a0668", "category": "cipher", "status": "rule_found", "submission": "alice follows near castle"}
-{"id": "06881e47", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01111100"}
+{"id": "06881e47", "category": "bit_manipulation", "status": "rule_found", "submission": "11111100"}
 {"id": "06907f76", "category": "unit_conversion", "status": "rule_found", "submission": "27.912"}
 {"id": "06940ba0", "category": "unit_conversion", "status": "rule_found", "submission": "32.617"}
 {"id": "069813dc", "category": "gravity", "status": "rule_found", "submission": "82.377"}
@@ -288,7 +288,7 @@
 {"id": "07ceed47", "category": "bit_manipulation", "status": "rule_found", "submission": "10000101"}
 {"id": "07d1cd39", "category": "bit_manipulation", "status": "rule_found", "submission": "11000000"}
 {"id": "07d4f5a6", "category": "unit_conversion", "status": "rule_found", "submission": "46.134"}
-{"id": "07d61ec8", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10011001"}
+{"id": "07d61ec8", "category": "bit_manipulation", "status": "rule_found", "submission": "10111101"}
 {"id": "07d8149a", "category": "bit_manipulation", "status": "rule_found", "submission": "01000000"}
 {"id": "07e8cf66", "category": "bit_manipulation", "status": "rule_unknown", "submission": "10011110"}
 {"id": "07e9a377", "category": "gravity", "status": "rule_found", "submission": "15.654"}
@@ -542,7 +542,7 @@
 {"id": "0e5b7624", "category": "unit_conversion", "status": "rule_found", "submission": "10.961"}
 {"id": "0e653f2b", "category": "unit_conversion", "status": "rule_found", "submission": "25.274"}
 {"id": "0e700e9d", "category": "numeral", "status": "rule_found", "submission": "LXIX"}
-{"id": "0e70c867", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01001000"}
+{"id": "0e70c867", "category": "bit_manipulation", "status": "rule_found", "submission": "01000000"}
 {"id": "0e745bd8", "category": "numeral", "status": "rule_found", "submission": "XXXIII"}
 {"id": "0e7a6920", "category": "bit_manipulation", "status": "rule_found", "submission": "00101111"}
 {"id": "0e7f299d", "category": "bit_manipulation", "status": "rule_found", "submission": "01010010"}
@@ -725,7 +725,7 @@
 {"id": "12e0ac8c", "category": "bit_manipulation", "status": "rule_found", "submission": "10101001"}
 {"id": "12e6f711", "category": "gravity", "status": "rule_found", "submission": "102.927"}
 {"id": "12e947ca", "category": "bit_manipulation", "status": "rule_found", "submission": "00111110"}
-{"id": "12fd5b6c", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11011111"}
+{"id": "12fd5b6c", "category": "bit_manipulation", "status": "rule_found", "submission": "11001111"}
 {"id": "12fe3d99", "category": "gravity", "status": "rule_found", "submission": "17.803"}
 {"id": "13009e35", "category": "bit_manipulation", "status": "rule_found", "submission": "11111011"}
 {"id": "1302c7df", "category": "cipher", "status": "rule_found", "submission": "bird writes the curious story"}
@@ -1139,7 +1139,7 @@
 {"id": "1e7b12ac", "category": "unit_conversion", "status": "rule_found", "submission": "47.385"}
 {"id": "1e818af1", "category": "unit_conversion", "status": "rule_found", "submission": "21.770"}
 {"id": "1e86ac86", "category": "numeral", "status": "rule_found", "submission": "XCVIII"}
-{"id": "1e86b3a7", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11100111"}
+{"id": "1e86b3a7", "category": "bit_manipulation", "status": "rule_found", "submission": "11000111"}
 {"id": "1e8cf9c5", "category": "numeral", "status": "rule_found", "submission": "XCIX"}
 {"id": "1e9308a9", "category": "cipher", "status": "rule_found", "submission": "the dark knight draws"}
 {"id": "1e99e10f", "category": "gravity", "status": "rule_found", "submission": "13.872"}
@@ -1193,7 +1193,7 @@
 {"id": "1fd310dc", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00011111"}
 {"id": "1fd4d961", "category": "numeral", "status": "rule_found", "submission": "XXX"}
 {"id": "1fd65d86", "category": "bit_manipulation", "status": "rule_found", "submission": "01001000"}
-{"id": "1fd84ab1", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11001111"}
+{"id": "1fd84ab1", "category": "bit_manipulation", "status": "rule_found", "submission": "11001110"}
 {"id": "1fde04cc", "category": "gravity", "status": "rule_found", "submission": "100.173"}
 {"id": "1fe9b923", "category": "bit_manipulation", "status": "rule_found", "submission": "00000001"}
 {"id": "1fefd874", "category": "numeral", "status": "rule_found", "submission": "XXV"}
@@ -1912,7 +1912,7 @@
 {"id": "335fa8ce", "category": "unit_conversion", "status": "rule_found", "submission": "62.611"}
 {"id": "336399f4", "category": "numeral", "status": "rule_found", "submission": "LXXIV"}
 {"id": "336953fa", "category": "gravity", "status": "rule_found", "submission": "137.290"}
-{"id": "3370302a", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00001110"}
+{"id": "3370302a", "category": "bit_manipulation", "status": "rule_found", "submission": "00000010"}
 {"id": "337422d3", "category": "gravity", "status": "rule_found", "submission": "81.184"}
 {"id": "3376d8b7", "category": "bit_manipulation", "status": "rule_found", "submission": "00100010"}
 {"id": "337e110d", "category": "numeral", "status": "rule_found", "submission": "LII"}
@@ -2172,11 +2172,11 @@
 {"id": "3a61d8ad", "category": "bit_manipulation", "status": "rule_found", "submission": "11111111"}
 {"id": "3a6286e9", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "!|||"}
 {"id": "3a67aa26", "category": "bit_manipulation", "status": "rule_found", "submission": "00101110"}
-{"id": "3a6a8eb9", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01000100"}
+{"id": "3a6a8eb9", "category": "bit_manipulation", "status": "rule_found", "submission": "01000000"}
 {"id": "3a6e7b0b", "category": "gravity", "status": "rule_found", "submission": "96.133"}
 {"id": "3a72f760", "category": "bit_manipulation", "status": "rule_found", "submission": "10101101"}
 {"id": "3a77dee7", "category": "gravity", "status": "rule_found", "submission": "24.330"}
-{"id": "3a7dd604", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01001011"}
+{"id": "3a7dd604", "category": "bit_manipulation", "status": "rule_found", "submission": "01001010"}
 {"id": "3a7fe2a6", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "))%|"}
 {"id": "3a8a4ebc", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "'54"}
 {"id": "3a8f53f6", "category": "numeral", "status": "rule_found", "submission": "XXXVI"}
@@ -2188,7 +2188,7 @@
 {"id": "3abae1d9", "category": "gravity", "status": "rule_found", "submission": "138.254"}
 {"id": "3abbb73b", "category": "gravity", "status": "rule_found", "submission": "11.700"}
 {"id": "3abe72f4", "category": "bit_manipulation", "status": "rule_found", "submission": "01111111"}
-{"id": "3ace787f", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11111111"}
+{"id": "3ace787f", "category": "bit_manipulation", "status": "rule_found", "submission": "11111011"}
 {"id": "3acfa7a4", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "6651"}
 {"id": "3ad042eb", "category": "bit_manipulation", "status": "rule_found", "submission": "01010101"}
 {"id": "3ae5412e", "category": "cipher", "status": "rule_found", "submission": "the golden hatter chases"}
@@ -2370,7 +2370,7 @@
 {"id": "4024acac", "category": "bit_manipulation", "status": "rule_found", "submission": "00000000"}
 {"id": "4026447b", "category": "numeral", "status": "rule_found", "submission": "LII"}
 {"id": "4027a3ae", "category": "cipher", "status": "rule_found", "submission": "student reads puzzle"}
-{"id": "402ea488", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01010000"}
+{"id": "402ea488", "category": "bit_manipulation", "status": "rule_found", "submission": "01010001"}
 {"id": "4032cd69", "category": "gravity", "status": "rule_found", "submission": "49.810"}
 {"id": "40400f33", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11011011"}
 {"id": "404cffae", "category": "unit_conversion", "status": "rule_found", "submission": "55.127"}
@@ -2548,7 +2548,7 @@
 {"id": "44fb2f96", "category": "bit_manipulation", "status": "rule_unknown", "submission": "11111110"}
 {"id": "45009147", "category": "numeral", "status": "rule_found", "submission": "XV"}
 {"id": "45076dc9", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "6"}
-{"id": "4510a429", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11111110"}
+{"id": "4510a429", "category": "bit_manipulation", "status": "rule_found", "submission": "11111111"}
 {"id": "4513f03e", "category": "gravity", "status": "rule_found", "submission": "110.133"}
 {"id": "451a85d7", "category": "numeral", "status": "rule_found", "submission": "XXX"}
 {"id": "45206b76", "category": "numeral", "status": "rule_found", "submission": "LX"}
@@ -2621,7 +2621,7 @@
 {"id": "471dd348", "category": "gravity", "status": "rule_found", "submission": "5.832"}
 {"id": "4723911c", "category": "bit_manipulation", "status": "rule_found", "submission": "00101010"}
 {"id": "4724b23b", "category": "gravity", "status": "rule_found", "submission": "7.755"}
-{"id": "4732c53f", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01001110"}
+{"id": "4732c53f", "category": "bit_manipulation", "status": "rule_found", "submission": "01001010"}
 {"id": "47366481", "category": "cipher", "status": "rule_found", "submission": "cat reads puzzle"}
 {"id": "4736daab", "category": "bit_manipulation", "status": "rule_found", "submission": "01000111"}
 {"id": "473d9dc5", "category": "numeral", "status": "rule_found", "submission": "XIX"}
@@ -2699,7 +2699,7 @@
 {"id": "492fa295", "category": "cipher", "status": "rule_found", "submission": "princess found the dark crystal"}
 {"id": "4931f8f6", "category": "numeral", "status": "rule_found", "submission": "XXI"}
 {"id": "49322650", "category": "numeral", "status": "rule_found", "submission": "XVIII"}
-{"id": "493b0817", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10101101"}
+{"id": "493b0817", "category": "bit_manipulation", "status": "rule_found", "submission": "10101111"}
 {"id": "493c1c83", "category": "numeral", "status": "rule_found", "submission": "II"}
 {"id": "4943b661", "category": "unit_conversion", "status": "rule_found", "submission": "25.107"}
 {"id": "4946ba02", "category": "unit_conversion", "status": "rule_found", "submission": "22.005"}
@@ -2898,7 +2898,7 @@
 {"id": "4e28b132", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "//>:"}
 {"id": "4e2a7ef6", "category": "gravity", "status": "rule_found", "submission": "134.392"}
 {"id": "4e3d1b8f", "category": "unit_conversion", "status": "rule_found", "submission": "15.213"}
-{"id": "4e4424d5", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10101111"}
+{"id": "4e4424d5", "category": "bit_manipulation", "status": "rule_found", "submission": "00101111"}
 {"id": "4e4fb429", "category": "bit_manipulation", "status": "rule_found", "submission": "10111110"}
 {"id": "4e5df314", "category": "bit_manipulation", "status": "rule_found", "submission": "00100010"}
 {"id": "4e5fa95b", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "86"}
@@ -2927,7 +2927,7 @@
 {"id": "4ef4c666", "category": "numeral", "status": "rule_found", "submission": "LVIII"}
 {"id": "4ef4e95f", "category": "unit_conversion", "status": "rule_found", "submission": "13.202"}
 {"id": "4ef565f3", "category": "numeral", "status": "rule_found", "submission": "XXXV"}
-{"id": "4ef88f92", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01011111"}
+{"id": "4ef88f92", "category": "bit_manipulation", "status": "rule_found", "submission": "01010111"}
 {"id": "4efe5c16", "category": "unit_conversion", "status": "rule_found", "submission": "19.794"}
 {"id": "4f01e7b4", "category": "unit_conversion", "status": "rule_found", "submission": "8.753"}
 {"id": "4f06e1c0", "category": "equation_numeric_guess", "status": "rule_unknown", "submission": "31"}
@@ -2994,7 +2994,7 @@
 {"id": "50c0b6f8", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "921"}
 {"id": "50cd5357", "category": "unit_conversion", "status": "rule_found", "submission": "14.624"}
 {"id": "50d4b49a", "category": "numeral", "status": "rule_found", "submission": "XXXVII"}
-{"id": "50e57462", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11101111"}
+{"id": "50e57462", "category": "bit_manipulation", "status": "rule_found", "submission": "11100111"}
 {"id": "50ea5164", "category": "gravity", "status": "rule_found", "submission": "80.254"}
 {"id": "50eab1a0", "category": "gravity", "status": "rule_found", "submission": "133.541"}
 {"id": "50f2caf4", "category": "cipher", "status": "rule_found", "submission": "dragon draws in valley"}
@@ -3054,7 +3054,7 @@
 {"id": "51ff6cdb", "category": "gravity", "status": "rule_found", "submission": "124.687"}
 {"id": "5201041d", "category": "numeral", "status": "rule_found", "submission": "VII"}
 {"id": "520b6879", "category": "unit_conversion", "status": "rule_found", "submission": "35.610"}
-{"id": "522058b9", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11010001"}
+{"id": "522058b9", "category": "bit_manipulation", "status": "rule_found", "submission": "11010000"}
 {"id": "522c0009", "category": "unit_conversion", "status": "rule_found", "submission": "13.232"}
 {"id": "522cc588", "category": "cipher", "status": "rule_found", "submission": "mouse found near village"}
 {"id": "522f94ac", "category": "cipher", "status": "rule_found", "submission": "the dark dragon follows"}
@@ -3119,7 +3119,7 @@
 {"id": "53bf0235", "category": "cipher", "status": "rule_found", "submission": "knight follows puzzle"}
 {"id": "53c0218c", "category": "unit_conversion", "status": "rule_found", "submission": "26.680"}
 {"id": "53ccc521", "category": "unit_conversion", "status": "rule_found", "submission": "13.693"}
-{"id": "53d09e5a", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10011101"}
+{"id": "53d09e5a", "category": "bit_manipulation", "status": "rule_found", "submission": "11011101"}
 {"id": "53d23bc8", "category": "numeral", "status": "rule_found", "submission": "XL"}
 {"id": "53db9c58", "category": "unit_conversion", "status": "rule_found", "submission": "67.568"}
 {"id": "53df550e", "category": "numeral", "status": "rule_found", "submission": "XXV"}
@@ -3200,7 +3200,7 @@
 {"id": "55bc449c", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "!`&:"}
 {"id": "55bc6738", "category": "bit_manipulation", "status": "rule_found", "submission": "10000000"}
 {"id": "55c7342b", "category": "cipher", "status": "rule_found", "submission": "princess studies around forest"}
-{"id": "55d834d1", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10111111"}
+{"id": "55d834d1", "category": "bit_manipulation", "status": "rule_found", "submission": "00111111"}
 {"id": "55d86f7e", "category": "cipher", "status": "rule_found", "submission": "student discovers the secret door"}
 {"id": "55dbd860", "category": "cipher", "status": "rule_found", "submission": "the wise queen watches"}
 {"id": "55dd52a9", "category": "gravity", "status": "rule_found", "submission": "46.810"}
@@ -3232,11 +3232,11 @@
 {"id": "5660874b", "category": "cipher", "status": "rule_found", "submission": "dragon explores in village"}
 {"id": "56637233", "category": "numeral", "status": "rule_found", "submission": "LXXIX"}
 {"id": "5666e340", "category": "unit_conversion", "status": "rule_found", "submission": "13.753"}
-{"id": "56672c27", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11101101"}
+{"id": "56672c27", "category": "bit_manipulation", "status": "rule_found", "submission": "01101101"}
 {"id": "56693c1b", "category": "unit_conversion", "status": "rule_found", "submission": "78.584"}
 {"id": "5674eb77", "category": "gravity", "status": "rule_found", "submission": "65.589"}
 {"id": "5679ae0e", "category": "numeral", "status": "rule_found", "submission": "XXIII"}
-{"id": "567e3da4", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00000100"}
+{"id": "567e3da4", "category": "bit_manipulation", "status": "rule_found", "submission": "10000100"}
 {"id": "568c01a4", "category": "numeral", "status": "rule_found", "submission": "XLVI"}
 {"id": "5690981d", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "(`&%"}
 {"id": "56910ccb", "category": "unit_conversion", "status": "rule_found", "submission": "23.051"}
@@ -3962,11 +3962,11 @@
 {"id": "6a152e42", "category": "cipher", "status": "rule_found", "submission": "dragon creates potion"}
 {"id": "6a186446", "category": "bit_manipulation", "status": "rule_found", "submission": "01110111"}
 {"id": "6a333ed6", "category": "bit_manipulation", "status": "rule_found", "submission": "00010000"}
-{"id": "6a41d37b", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00101111"}
+{"id": "6a41d37b", "category": "bit_manipulation", "status": "rule_found", "submission": "00101011"}
 {"id": "6a578940", "category": "bit_manipulation", "status": "rule_found", "submission": "10010000"}
 {"id": "6a5c65fd", "category": "numeral", "status": "rule_found", "submission": "LI"}
 {"id": "6a5cd9ec", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "<$|?"}
-{"id": "6a635e3e", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10111111"}
+{"id": "6a635e3e", "category": "bit_manipulation", "status": "rule_found", "submission": "10001111"}
 {"id": "6a644b80", "category": "cipher", "status": "rule_found", "submission": "dragon imagines key"}
 {"id": "6a933284", "category": "bit_manipulation", "status": "rule_found", "submission": "00101101"}
 {"id": "6a9cf9e1", "category": "cipher", "status": "rule_found", "submission": "dragon found the secret mirror"}
@@ -4082,7 +4082,7 @@
 {"id": "6df4b5e1", "category": "gravity", "status": "rule_found", "submission": "90.906"}
 {"id": "6df91964", "category": "unit_conversion", "status": "rule_found", "submission": "51.008"}
 {"id": "6e05de93", "category": "unit_conversion", "status": "rule_found", "submission": "83.993"}
-{"id": "6e2311e1", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10000100"}
+{"id": "6e2311e1", "category": "bit_manipulation", "status": "rule_found", "submission": "10000000"}
 {"id": "6e2f2d29", "category": "cipher", "status": "rule_found", "submission": "princess found near mountain"}
 {"id": "6e318a02", "category": "numeral", "status": "rule_found", "submission": "XXII"}
 {"id": "6e3f32d5", "category": "cipher", "status": "rule_found", "submission": "queen draws the clever garden"}
@@ -4111,7 +4111,7 @@
 {"id": "6eb85496", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "%'/>"}
 {"id": "6ec2d1a4", "category": "numeral", "status": "rule_found", "submission": "LIX"}
 {"id": "6ec54946", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "/|[]"}
-{"id": "6ecc51b1", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00100101"}
+{"id": "6ecc51b1", "category": "bit_manipulation", "status": "rule_found", "submission": "00101101"}
 {"id": "6ed58b4e", "category": "gravity", "status": "rule_found", "submission": "14.851"}
 {"id": "6ee4b565", "category": "gravity", "status": "rule_found", "submission": "91.182"}
 {"id": "6ee9976b", "category": "unit_conversion", "status": "rule_found", "submission": "47.148"}
@@ -4209,7 +4209,7 @@
 {"id": "716998e8", "category": "bit_manipulation", "status": "rule_found", "submission": "10010000"}
 {"id": "716d8bc9", "category": "unit_conversion", "status": "rule_found", "submission": "17.156"}
 {"id": "7192535b", "category": "bit_manipulation", "status": "rule_unknown", "submission": "00001010"}
-{"id": "7192fc55", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01100110"}
+{"id": "7192fc55", "category": "bit_manipulation", "status": "rule_found", "submission": "01100011"}
 {"id": "7195cb7b", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "68"}
 {"id": "719b314e", "category": "bit_manipulation", "status": "rule_found", "submission": "10010010"}
 {"id": "71a661f7", "category": "bit_manipulation", "status": "rule_found", "submission": "11000001"}
@@ -4298,7 +4298,7 @@
 {"id": "73eac211", "category": "cipher", "status": "rule_found", "submission": "king watches under cave"}
 {"id": "73f98498", "category": "gravity", "status": "rule_found", "submission": "32.437"}
 {"id": "74016148", "category": "unit_conversion", "status": "rule_found", "submission": "11.733"}
-{"id": "7403ef93", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10011100"}
+{"id": "7403ef93", "category": "bit_manipulation", "status": "rule_found", "submission": "10011101"}
 {"id": "740e0460", "category": "unit_conversion", "status": "rule_found", "submission": "11.640"}
 {"id": "741899de", "category": "cipher", "status": "rule_found", "submission": "the hidden rabbit dreams"}
 {"id": "7418fc5e", "category": "unit_conversion", "status": "rule_found", "submission": "17.747"}
@@ -4463,7 +4463,7 @@
 {"id": "78989fb5", "category": "bit_manipulation", "status": "rule_found", "submission": "01100001"}
 {"id": "789b83ce", "category": "bit_manipulation", "status": "rule_found", "submission": "00001110"}
 {"id": "78cf1c8f", "category": "bit_manipulation", "status": "rule_found", "submission": "00000100"}
-{"id": "78d02fc5", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11001011"}
+{"id": "78d02fc5", "category": "bit_manipulation", "status": "rule_found", "submission": "11001001"}
 {"id": "78d6a133", "category": "numeral", "status": "rule_found", "submission": "LXXXV"}
 {"id": "78d9d61d", "category": "bit_manipulation", "status": "rule_found", "submission": "00001001"}
 {"id": "78db4aa3", "category": "bit_manipulation", "status": "rule_found", "submission": "11011011"}
@@ -4474,7 +4474,7 @@
 {"id": "78fd8106", "category": "cipher", "status": "rule_found", "submission": "cat follows mirror"}
 {"id": "7900ca32", "category": "unit_conversion", "status": "rule_found", "submission": "24.894"}
 {"id": "790d2fa8", "category": "bit_manipulation", "status": "rule_found", "submission": "11011001"}
-{"id": "790e0153", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11111011"}
+{"id": "790e0153", "category": "bit_manipulation", "status": "rule_found", "submission": "11101011"}
 {"id": "791056ce", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "4922"}
 {"id": "791fc537", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "5342"}
 {"id": "7924844c", "category": "cryptarithm_guess", "status": "rule_unknown", "submission": ">\\>"}
@@ -4588,7 +4588,7 @@
 {"id": "7c3a313c", "category": "gravity", "status": "rule_found", "submission": "81.894"}
 {"id": "7c41629c", "category": "numeral", "status": "rule_found", "submission": "XII"}
 {"id": "7c494c86", "category": "unit_conversion", "status": "rule_found", "submission": "22.620"}
-{"id": "7c4db527", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11100000"}
+{"id": "7c4db527", "category": "bit_manipulation", "status": "rule_found", "submission": "11100001"}
 {"id": "7c538bb0", "category": "bit_manipulation", "status": "rule_found", "submission": "10110110"}
 {"id": "7c5c7b73", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "13"}
 {"id": "7c68cc31", "category": "gravity", "status": "rule_found", "submission": "26.336"}
@@ -4725,7 +4725,7 @@
 {"id": "7fc73970", "category": "unit_conversion", "status": "rule_found", "submission": "13.365"}
 {"id": "7fcfe0db", "category": "numeral", "status": "rule_found", "submission": "XCII"}
 {"id": "7fe5361b", "category": "unit_conversion", "status": "rule_found", "submission": "46.968"}
-{"id": "7fec1d14", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00101011"}
+{"id": "7fec1d14", "category": "bit_manipulation", "status": "rule_found", "submission": "00101010"}
 {"id": "7ff1a44d", "category": "gravity", "status": "rule_found", "submission": "42.102"}
 {"id": "7ff6d6c3", "category": "bit_manipulation", "status": "rule_found", "submission": "00000010"}
 {"id": "8000348f", "category": "unit_conversion", "status": "rule_found", "submission": "80.562"}
@@ -5166,7 +5166,7 @@
 {"id": "8b3b3999", "category": "numeral", "status": "rule_found", "submission": "XLI"}
 {"id": "8b3f0912", "category": "cipher", "status": "rule_found", "submission": "the secret teacher found"}
 {"id": "8b434583", "category": "bit_manipulation", "status": "rule_unknown", "submission": "01011111"}
-{"id": "8b471ce9", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00101111"}
+{"id": "8b471ce9", "category": "bit_manipulation", "status": "rule_found", "submission": "00001111"}
 {"id": "8b47cb08", "category": "gravity", "status": "rule_found", "submission": "155.762"}
 {"id": "8b486833", "category": "cipher", "status": "rule_found", "submission": "turtle follows the secret mirror"}
 {"id": "8b4a1460", "category": "numeral", "status": "rule_found", "submission": "LXII"}
@@ -6185,7 +6185,7 @@
 {"id": "a6195da7", "category": "unit_conversion", "status": "rule_found", "submission": "3.540"}
 {"id": "a62417fe", "category": "bit_manipulation", "status": "rule_found", "submission": "01000110"}
 {"id": "a62934d7", "category": "gravity", "status": "rule_found", "submission": "56.427"}
-{"id": "a62dd199", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00111011"}
+{"id": "a62dd199", "category": "bit_manipulation", "status": "rule_found", "submission": "10111011"}
 {"id": "a6319294", "category": "unit_conversion", "status": "rule_found", "submission": "49.267"}
 {"id": "a631adf5", "category": "gravity", "status": "rule_found", "submission": "10.698"}
 {"id": "a63caf28", "category": "unit_conversion", "status": "rule_found", "submission": "29.848"}
@@ -6387,7 +6387,7 @@
 {"id": "aaec36e0", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "3201"}
 {"id": "aaf46fca", "category": "unit_conversion", "status": "rule_found", "submission": "90.386"}
 {"id": "ab015d3c", "category": "gravity", "status": "rule_found", "submission": "87.334"}
-{"id": "ab064b6a", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11111110"}
+{"id": "ab064b6a", "category": "bit_manipulation", "status": "rule_found", "submission": "11111111"}
 {"id": "ab0eee3d", "category": "bit_manipulation", "status": "rule_found", "submission": "00010111"}
 {"id": "ab104009", "category": "bit_manipulation", "status": "rule_found", "submission": "10010001"}
 {"id": "ab1c0546", "category": "cipher", "status": "rule_found", "submission": "turtle sees beyond garden"}
@@ -6601,7 +6601,7 @@
 {"id": "b14f7be3", "category": "bit_manipulation", "status": "rule_found", "submission": "10111110"}
 {"id": "b14fb614", "category": "bit_manipulation", "status": "rule_found", "submission": "01100000"}
 {"id": "b15368e8", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "\\{\\`"}
-{"id": "b158ab98", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10000001"}
+{"id": "b158ab98", "category": "bit_manipulation", "status": "rule_found", "submission": "00000001"}
 {"id": "b15a1ff8", "category": "numeral", "status": "rule_found", "submission": "XLIX"}
 {"id": "b163a1ab", "category": "cipher", "status": "rule_found", "submission": "the clever turtle sees"}
 {"id": "b16455a2", "category": "bit_manipulation", "status": "rule_found", "submission": "10101011"}
@@ -6635,7 +6635,7 @@
 {"id": "b20b39bf", "category": "bit_manipulation", "status": "rule_found", "submission": "01110010"}
 {"id": "b20bba0b", "category": "cipher", "status": "rule_found", "submission": "princess reads above cave"}
 {"id": "b2285221", "category": "numeral", "status": "rule_found", "submission": "XLVII"}
-{"id": "b236ba44", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01011101"}
+{"id": "b236ba44", "category": "bit_manipulation", "status": "rule_found", "submission": "11011101"}
 {"id": "b23f94f8", "category": "cipher", "status": "rule_found", "submission": "turtle explores inside castle"}
 {"id": "b24ad7be", "category": "numeral", "status": "rule_found", "submission": "XCI"}
 {"id": "b250470b", "category": "numeral", "status": "rule_found", "submission": "LXXVIII"}
@@ -6915,7 +6915,7 @@
 {"id": "b9bf883d", "category": "equation_numeric_deduce", "status": "rule_unknown", "submission": "901"}
 {"id": "b9c14cde", "category": "cipher", "status": "rule_found", "submission": "princess found above cave"}
 {"id": "b9e045e8", "category": "cipher", "status": "rule_found", "submission": "cat draws inside island"}
-{"id": "b9e7c7c4", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00000001"}
+{"id": "b9e7c7c4", "category": "bit_manipulation", "status": "rule_found", "submission": "00000000"}
 {"id": "b9e9dc9f", "category": "bit_manipulation", "status": "rule_found", "submission": "00000000"}
 {"id": "b9f0d732", "category": "cipher", "status": "rule_found", "submission": "the hidden student sees"}
 {"id": "b9f1d959", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "$\\\"["}
@@ -6959,7 +6959,7 @@
 {"id": "baebfd26", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "<\""}
 {"id": "baee520f", "category": "bit_manipulation", "status": "rule_found", "submission": "01100100"}
 {"id": "baf66f84", "category": "bit_manipulation", "status": "rule_found", "submission": "10111010"}
-{"id": "bb056bc9", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11011101"}
+{"id": "bb056bc9", "category": "bit_manipulation", "status": "rule_found", "submission": "11010101"}
 {"id": "bb070853", "category": "numeral", "status": "rule_found", "submission": "XXXIII"}
 {"id": "bb0abecc", "category": "bit_manipulation", "status": "rule_found", "submission": "00000010"}
 {"id": "bb187775", "category": "cipher", "status": "rule_found", "submission": "hatter reads book"}
@@ -6981,7 +6981,7 @@
 {"id": "bb8a739b", "category": "gravity", "status": "rule_found", "submission": "61.814"}
 {"id": "bb8f5a6a", "category": "gravity", "status": "rule_found", "submission": "22.000"}
 {"id": "bb90b29d", "category": "cipher", "status": "rule_found", "submission": "rabbit creates the mysterious crystal"}
-{"id": "bb91177f", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01111111"}
+{"id": "bb91177f", "category": "bit_manipulation", "status": "rule_found", "submission": "00110111"}
 {"id": "bb9611b7", "category": "gravity", "status": "rule_found", "submission": "131.169"}
 {"id": "bb9c9d6f", "category": "numeral", "status": "rule_found", "submission": "XCIII"}
 {"id": "bb9dd0ad", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "\""}
@@ -7380,7 +7380,7 @@
 {"id": "c640593b", "category": "numeral", "status": "rule_found", "submission": "XVIII"}
 {"id": "c644a425", "category": "gravity", "status": "rule_found", "submission": "34.320"}
 {"id": "c64ebe75", "category": "numeral", "status": "rule_found", "submission": "XIX"}
-{"id": "c65654a5", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01010011"}
+{"id": "c65654a5", "category": "bit_manipulation", "status": "rule_found", "submission": "01010001"}
 {"id": "c65911c6", "category": "numeral", "status": "rule_found", "submission": "II"}
 {"id": "c65ab88f", "category": "numeral", "status": "rule_found", "submission": "LI"}
 {"id": "c65adf3e", "category": "cipher", "status": "rule_found", "submission": "mouse studies the mysterious potion"}
@@ -7808,7 +7808,7 @@
 {"id": "d137bdb0", "category": "cipher", "status": "rule_found", "submission": "knight studies the wise book"}
 {"id": "d13e92ec", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "@^!["}
 {"id": "d14923e2", "category": "gravity", "status": "rule_found", "submission": "139.675"}
-{"id": "d155a508", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01010111"}
+{"id": "d155a508", "category": "bit_manipulation", "status": "rule_found", "submission": "01010110"}
 {"id": "d15c3b07", "category": "numeral", "status": "rule_found", "submission": "X"}
 {"id": "d1611217", "category": "cipher", "status": "rule_found", "submission": "dragon follows beyond mountain"}
 {"id": "d162c3d8", "category": "gravity", "status": "rule_found", "submission": "85.019"}
@@ -7948,7 +7948,7 @@
 {"id": "d570c63b", "category": "numeral", "status": "rule_found", "submission": "LXX"}
 {"id": "d57d85e1", "category": "cipher", "status": "rule_found", "submission": "cat imagines mirror"}
 {"id": "d58269de", "category": "numeral", "status": "rule_found", "submission": "LXVI"}
-{"id": "d582c492", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00011111"}
+{"id": "d582c492", "category": "bit_manipulation", "status": "rule_found", "submission": "00010111"}
 {"id": "d58f81ad", "category": "numeral", "status": "rule_found", "submission": "LV"}
 {"id": "d59bfd5f", "category": "cipher", "status": "rule_found", "submission": "princess explores inside village"}
 {"id": "d5a03a2e", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "\"\"&&"}
@@ -8148,7 +8148,7 @@
 {"id": "da419164", "category": "numeral", "status": "rule_found", "submission": "V"}
 {"id": "da4c92a3", "category": "bit_manipulation", "status": "rule_found", "submission": "10000000"}
 {"id": "da51295d", "category": "cryptarithm_guess", "status": "rule_unknown", "submission": "/>[<"}
-{"id": "da616170", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00010011"}
+{"id": "da616170", "category": "bit_manipulation", "status": "rule_found", "submission": "00010111"}
 {"id": "da61dedc", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "\u2013"}
 {"id": "da64ce9e", "category": "numeral", "status": "rule_found", "submission": "XXXV"}
 {"id": "da7288cb", "category": "bit_manipulation", "status": "rule_found", "submission": "01101101"}
@@ -8179,7 +8179,7 @@
 {"id": "db1e0603", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "\u2013"}
 {"id": "db2fa45c", "category": "unit_conversion", "status": "rule_found", "submission": "28.742"}
 {"id": "db300a05", "category": "gravity", "status": "rule_found", "submission": "98.277"}
-{"id": "db360db0", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01000110"}
+{"id": "db360db0", "category": "bit_manipulation", "status": "rule_found", "submission": "11000110"}
 {"id": "db3da411", "category": "gravity", "status": "rule_found", "submission": "6.543"}
 {"id": "db4383f3", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "175"}
 {"id": "db45b1dd", "category": "gravity", "status": "rule_found", "submission": "11.646"}
@@ -8201,7 +8201,7 @@
 {"id": "dbabfbdd", "category": "bit_manipulation", "status": "rule_found", "submission": "11000000"}
 {"id": "dbb29dac", "category": "numeral", "status": "rule_found", "submission": "XIV"}
 {"id": "dbb611da", "category": "bit_manipulation", "status": "rule_found", "submission": "00000001"}
-{"id": "dbb789cc", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10101001"}
+{"id": "dbb789cc", "category": "bit_manipulation", "status": "rule_found", "submission": "10101101"}
 {"id": "dbbc0dab", "category": "gravity", "status": "rule_found", "submission": "14.153"}
 {"id": "dbc197e0", "category": "bit_manipulation", "status": "rule_found", "submission": "10111011"}
 {"id": "dbc31a23", "category": "gravity", "status": "rule_found", "submission": "28.116"}
@@ -8410,7 +8410,7 @@
 {"id": "e247d364", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "11"}
 {"id": "e24b1277", "category": "bit_manipulation", "status": "rule_found", "submission": "11101111"}
 {"id": "e24c8980", "category": "bit_manipulation", "status": "rule_found", "submission": "01111011"}
-{"id": "e266959e", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01100110"}
+{"id": "e266959e", "category": "bit_manipulation", "status": "rule_found", "submission": "11100110"}
 {"id": "e2838065", "category": "gravity", "status": "rule_found", "submission": "26.330"}
 {"id": "e2896720", "category": "cipher", "status": "rule_found", "submission": "rabbit discovers mirror"}
 {"id": "e28a9676", "category": "cipher", "status": "rule_found", "submission": "bird imagines the bright garden"}
@@ -8533,7 +8533,7 @@
 {"id": "e5956ffa", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "821"}
 {"id": "e598c0ba", "category": "numeral", "status": "rule_found", "submission": "LXXXV"}
 {"id": "e5a54a53", "category": "cipher", "status": "rule_found", "submission": "rabbit dreams beyond school"}
-{"id": "e5a5fdef", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01111111"}
+{"id": "e5a5fdef", "category": "bit_manipulation", "status": "rule_found", "submission": "11001011"}
 {"id": "e5ae10ea", "category": "unit_conversion", "status": "rule_found", "submission": "30.704"}
 {"id": "e5ae7b47", "category": "bit_manipulation", "status": "rule_found", "submission": "00000000"}
 {"id": "e5b3f73b", "category": "bit_manipulation", "status": "rule_found", "submission": "10111011"}
@@ -8546,7 +8546,7 @@
 {"id": "e5dd205d", "category": "gravity", "status": "rule_found", "submission": "157.608"}
 {"id": "e5de2bef", "category": "numeral", "status": "rule_found", "submission": "XXXVI"}
 {"id": "e5e29014", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": ">)|)"}
-{"id": "e5e3c22b", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00100010"}
+{"id": "e5e3c22b", "category": "bit_manipulation", "status": "rule_found", "submission": "00100000"}
 {"id": "e5e4f442", "category": "cipher", "status": "rule_found", "submission": "mouse studies under garden"}
 {"id": "e5eb5d40", "category": "unit_conversion", "status": "rule_found", "submission": "10.942"}
 {"id": "e60752d5", "category": "unit_conversion", "status": "rule_found", "submission": "26.435"}
@@ -8578,7 +8578,7 @@
 {"id": "e6c946e0", "category": "bit_manipulation", "status": "rule_found", "submission": "01010010"}
 {"id": "e6cbc2bd", "category": "bit_manipulation", "status": "rule_found", "submission": "00000011"}
 {"id": "e6cf4381", "category": "gravity", "status": "rule_found", "submission": "65.711"}
-{"id": "e6d2a064", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "11100010"}
+{"id": "e6d2a064", "category": "bit_manipulation", "status": "rule_found", "submission": "11100011"}
 {"id": "e6d3a97b", "category": "bit_manipulation", "status": "rule_found", "submission": "11010010"}
 {"id": "e6de0ad5", "category": "cipher", "status": "rule_found", "submission": "turtle discovers through mountain"}
 {"id": "e6f59041", "category": "numeral", "status": "rule_found", "submission": "LXIII"}
@@ -8736,7 +8736,7 @@
 {"id": "eb12e80d", "category": "bit_manipulation", "status": "rule_found", "submission": "11000111"}
 {"id": "eb15487a", "category": "cipher", "status": "rule_found", "submission": "dragon studies near tower"}
 {"id": "eb1a62f7", "category": "cryptarithm_guess", "status": "rule_unknown", "submission": ")"}
-{"id": "eb20ea88", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01110000"}
+{"id": "eb20ea88", "category": "bit_manipulation", "status": "rule_found", "submission": "00110000"}
 {"id": "eb252a80", "category": "bit_manipulation", "status": "rule_found", "submission": "01110011"}
 {"id": "eb26f607", "category": "unit_conversion", "status": "rule_found", "submission": "32.584"}
 {"id": "eb26fb93", "category": "gravity", "status": "rule_found", "submission": "8.735"}
@@ -8907,7 +8907,7 @@
 {"id": "ef9b4967", "category": "cipher", "status": "rule_found", "submission": "alice sees the magical puzzle"}
 {"id": "efa77fa0", "category": "unit_conversion", "status": "rule_found", "submission": "39.402"}
 {"id": "efa7edc3", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "[]/)"}
-{"id": "efb39cd2", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "00011000"}
+{"id": "efb39cd2", "category": "bit_manipulation", "status": "rule_found", "submission": "10011000"}
 {"id": "efb78214", "category": "numeral", "status": "rule_found", "submission": "V"}
 {"id": "efc2b69d", "category": "bit_manipulation", "status": "rule_found", "submission": "10111100"}
 {"id": "efc5b861", "category": "unit_conversion", "status": "rule_found", "submission": "81.962"}
@@ -8962,7 +8962,7 @@
 {"id": "f197d953", "category": "cipher", "status": "rule_found", "submission": "knight writes inside school"}
 {"id": "f19b29c6", "category": "gravity", "status": "rule_found", "submission": "19.766"}
 {"id": "f19ffbf1", "category": "numeral", "status": "rule_found", "submission": "LXXXVII"}
-{"id": "f1a05733", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "01011101"}
+{"id": "f1a05733", "category": "bit_manipulation", "status": "rule_found", "submission": "01110101"}
 {"id": "f1b0d213", "category": "cipher", "status": "rule_found", "submission": "student discovers inside library"}
 {"id": "f1c1ed58", "category": "bit_manipulation", "status": "rule_found", "submission": "01111111"}
 {"id": "f1d60ece", "category": "unit_conversion", "status": "rule_found", "submission": "71.313"}
@@ -8973,7 +8973,7 @@
 {"id": "f1faac46", "category": "unit_conversion", "status": "rule_found", "submission": "39.446"}
 {"id": "f2014638", "category": "bit_manipulation", "status": "rule_found", "submission": "10011010"}
 {"id": "f201b48d", "category": "gravity", "status": "rule_found", "submission": "21.900"}
-{"id": "f20bf656", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10100010"}
+{"id": "f20bf656", "category": "bit_manipulation", "status": "rule_found", "submission": "10100000"}
 {"id": "f20e64f5", "category": "gravity", "status": "rule_found", "submission": "221.542"}
 {"id": "f2164aa5", "category": "gravity", "status": "rule_found", "submission": "14.726"}
 {"id": "f2209ca5", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "$>@/"}
@@ -9052,7 +9052,7 @@
 {"id": "f40140b3", "category": "unit_conversion", "status": "rule_found", "submission": "39.724"}
 {"id": "f405e41d", "category": "numeral", "status": "rule_found", "submission": "XIII"}
 {"id": "f40d88b6", "category": "unit_conversion", "status": "rule_found", "submission": "11.620"}
-{"id": "f417b927", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10100111"}
+{"id": "f417b927", "category": "bit_manipulation", "status": "rule_found", "submission": "10100011"}
 {"id": "f42d5e08", "category": "cipher", "status": "rule_found", "submission": "king discovers the ancient door"}
 {"id": "f42d89af", "category": "numeral", "status": "rule_found", "submission": "LXXXI"}
 {"id": "f431cf03", "category": "gravity", "status": "rule_found", "submission": "81.894"}
@@ -9222,7 +9222,7 @@
 {"id": "f8d6abd1", "category": "equation_numeric_deduce", "status": "rule_found", "submission": "5543"}
 {"id": "f8e87e01", "category": "gravity", "status": "rule_found", "submission": "70.832"}
 {"id": "f8f0c5cb", "category": "numeral", "status": "rule_found", "submission": "II"}
-{"id": "f8f4c3b4", "category": "bit_manipulation", "status": "hypothesis_formed", "submission": "10101101"}
+{"id": "f8f4c3b4", "category": "bit_manipulation", "status": "rule_found", "submission": "10001101"}
 {"id": "f8f50a29", "category": "gravity", "status": "rule_found", "submission": "51.168"}
 {"id": "f8fc43d2", "category": "bit_manipulation", "status": "rule_found", "submission": "11100100"}
 {"id": "f901d1cc", "category": "cryptarithm_deduce", "status": "rule_unknown", "submission": "&#\"`"}

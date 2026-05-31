@@ -799,14 +799,24 @@ Matched
 6 AND71
 7 AND02
 
-Selected
-0 AND61
-1 AND72
-2 AND03
+
+Reselect (whole-word coverage)
+0 AND16
+1 AND27
+2 C0
 3 C0
 4 C0
-5 AND60
-6 AND71
+5 AND03
+6 AND13
+7 AND02
+Selected
+0 AND16
+1 AND27
+2 C0
+3 C0
+4 C0
+5 AND03
+6 AND13
 7 AND02
 
 Applying to 11111011
@@ -820,14 +830,14 @@ Input
 6 1
 7 1
 Output
-0 AND61 = AND(1,1) = 1
-1 AND72 = AND(1,1) = 1
-2 AND03 = AND(1,1) = 1
+0 AND16 = AND(1,1) = 1
+1 AND27 = AND(1,1) = 1
+2 C0 = 0
 3 C0 = 0
 4 C0 = 0
-5 AND60 = AND(1,1) = 1
-6 AND71 = AND(1,1) = 1
+5 AND03 = AND(1,1) = 1
+6 AND13 = AND(1,1) = 1
 7 AND02 = AND(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11100111}
+The answer in \boxed{–} is \boxed{11000111}

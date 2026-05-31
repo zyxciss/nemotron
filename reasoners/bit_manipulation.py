@@ -994,6 +994,47 @@ def reasoning_bit_manipulation(problem: Problem) -> Optional[str]:
     if all(r.is_default for r in best):
         return None
 
+    # Whole-word coverage extension: the stride-based selection can pick a rule
+    # that fits the examples yet is wrong on the query (a spurious example-fit).
+    # The whole-word solver (ROT/SHL/SHR, up to 3 transforms, example-only) returns
+    # an answer only under global agreement, so it is the correct query answer when
+    # it exists. If it disagrees with the stride selection, we re-render with the
+    # whole-word per-bit rule so Selected/Applying are correct and self-consistent.
+    def _reproduces_examples(rule_vec: List[RuleCandidate]) -> bool:
+        for inp, out in zip(inputs, outputs):
+            got = "".join(_evaluate_rule(inp, r) for r in rule_vec)
+            if got != out:
+                return False
+        return True
+
+    best_answer = "".join(_evaluate_rule(question_bits, r) for r in best)
+    from reasoners.bitword_solver import per_bit_ops, solve as _ww_solve
+
+    ex_pairs = list(zip(inputs, outputs))
+    ww_answer = _ww_solve(ex_pairs, question_bits)
+    if ww_answer is not None and ww_answer != best_answer:
+        pb = per_bit_ops(ex_pairs, question_bits, ww_answer)
+        if pb is not None:
+
+            def _mk(fam: str, p, q) -> RuleCandidate:
+                if fam == "I":
+                    return RuleCandidate("I", p, None, f"I{p}")
+                if fam == "NOT":
+                    return RuleCandidate("NOT", p, None, f"NOT{p}")
+                if fam == "0":
+                    return RuleCandidate("0", None, None, "C0")
+                if fam == "1":
+                    return RuleCandidate("1", None, None, "C1")
+                return RuleCandidate(fam, p, q, f"{fam}{p}{q}")
+
+            ww_best = [_mk(fam, p, q) for (fam, p, q) in pb]
+            if _reproduces_examples(ww_best):
+                best = ww_best
+                lines.append("")
+                lines.append("Reselect (whole-word coverage)")
+                for i, rule in enumerate(best):
+                    lines.append(f"{i} {rule.expr}")
+
     lines.append("Selected")
     for i, rule in enumerate(best):
         lines.append(f"{i} {rule.expr}")

@@ -1,0 +1,60 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+] -> A
+' -> B
+{ -> C
+% -> D
+@ -> E
+$ -> F
+` -> G
+? -> H
+\ -> I
+( -> J
+Operators:
+* -> x
++ -> y
+- -> z
+
+Converting examples to letter form:
+
+  「]'*{%」 = 「'{{%」:
+    input:  ] ' * { % : ] -> A, ' -> B, * -> x, { -> C, % -> D -> AB x CD
+    output: ' { { % : ' -> B, { -> C, { -> C, % -> D -> BCCD
+
+  「@$*@$」 = 「]%$`」:
+    input:  @ $ * @ $ : @ -> E, $ -> F, * -> x, @ -> E, $ -> F -> EF x EF
+    output: ] % $ ` : ] -> A, % -> D, $ -> F, ` -> G -> ADFG
+
+  「{?+`\」 = 「{?`\」:
+    input:  { ? + ` \ : { -> C, ? -> H, + -> y, ` -> G, \ -> I -> CH y GI
+    output: { ? ` \ : { -> C, ? -> H, ` -> G, \ -> I -> CHGI
+
+  「`?*{%」 = 「?$%」:
+    input:  ` ? * { % : ` -> G, ? -> H, * -> x, { -> C, % -> D -> GH x CD
+    output: ? $ % : ? -> H, $ -> F, % -> D -> HFD
+
+  「(]*{?」 = 「'%``」:
+    input:  ( ] * { ? : ( -> J, ] -> A, * -> x, { -> C, ? -> H -> JA x CH
+    output: ' % ` ` : ' -> B, % -> D, ` -> G, ` -> G -> BDGG
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: multiplication
+Operator y: concatenation
+Operator z: subtraction
+
+The question operator is z, which is subtraction.
+
+Converting question "@`-](": @ ` - ] ( : @ -> E, ` -> G, - -> z, ] -> A, ( -> J -> EG z AJ
+
+Applying to EG z AJ:
+  Digit values from the bijection: @ -> E -> 7, ` -> G -> 4, ] -> A -> 6, ( -> J -> 3
+  EG = 74, AJ = 63
+  subtraction(EG, AJ) = 74 - 63 = 11
+  Encoding result: 1 1 : 1 -> ' -> ''
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{''}
+</think>
+\boxed{''}

@@ -1,0 +1,50 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+) -> A
+% -> B
+> -> C
+` -> D
+? -> E
+$ -> F
+& -> G
+^ -> H
+: -> I
+/ -> J
+Operators:
+- -> x
++ -> y
+
+Converting examples to letter form:
+
+  「)%-%>」 = 「`)」:
+    input:  ) % - % > : ) -> A, % -> B, - -> x, % -> B, > -> C -> AB x BC
+    output: ` ) : ` -> D, ) -> A -> DA
+
+  「?>+)$」 = 「&^」:
+    input:  ? > + ) $ : ? -> E, > -> C, + -> y, ) -> A, $ -> F -> EC y AF
+    output: & ^ : & -> G, ^ -> H -> GH
+
+  「:&+/&」 = 「??>」:
+    input:  : & + / & : : -> I, & -> G, + -> y, / -> J, & -> G -> IG y JG
+    output: ? ? > : ? -> E, ? -> E, > -> C -> EEC
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: addition
+Operator x: reverse subtraction
+
+The question operator is x, which is reverse subtraction.
+
+Converting question ")^-$)": ) ^ - $ ) : ) -> A, ^ -> H, - -> x, $ -> F, ) -> A -> AH x FA
+
+Applying to AH x FA:
+  Digit values from the bijection: ) -> A -> 5, ^ -> H -> 0, $ -> F -> 6, ) -> A -> 5
+  AH = 50, FA = 65
+  reverse subtraction(AH, FA) = 65 - 50 = 15
+  Encoding result: 1 5 : 1 -> ?, 5 -> ) -> ?)
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{?)}
+</think>
+\boxed{?)}

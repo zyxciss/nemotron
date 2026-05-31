@@ -1,0 +1,48 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+& -> A
+` -> B
+} -> C
+- -> D
+> -> E
+$ -> F
+! -> G
+: -> H
+] -> I
+% -> J
+Operators:
+- -> x
+
+Converting examples to letter form:
+
+  「&`-}&」 = 「->$」:
+    input:  & ` - } & : & -> A, ` -> B, - -> x, } -> C, & -> A -> AB x CA
+    output: - > $ : - -> D, > -> E, $ -> F -> DEF
+
+  「}$-`>」 = 「-&!」:
+    input:  } $ - ` > : } -> C, $ -> F, - -> x, ` -> B, > -> E -> CF x BE
+    output: - & ! : - -> D, & -> A, ! -> G -> DAG
+
+  「:>-]%」 = 「-$&」:
+    input:  : > - ] % : : -> H, > -> E, - -> x, ] -> I, % -> J -> HE x IJ
+    output: - $ & : - -> D, $ -> F, & -> A -> DFA
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: subtraction
+
+The question operator is x, which is subtraction.
+
+Converting question "!%-$!": ! % - $ ! : ! -> G, % -> J, - -> x, $ -> F, ! -> G -> GJ x FG
+
+Applying to GJ x FG:
+  Digit values from the bijection: ! -> G -> 1, % -> J -> 6, $ -> F -> 3, ! -> G -> 1
+  GJ = 16, FG = 31
+  subtraction(GJ, FG) = 16 - 31 = -15
+  Encoding result: 1 5 : 1 -> !, 5 -> : -> -!:
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{-!:}
+</think>
+\boxed{-!:}

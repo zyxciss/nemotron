@@ -752,14 +752,24 @@ Matched
 6 OR-NOT43
 7 OR-NOT54
 
-Selected
-0 XOR-NOT35
+
+Reselect (whole-word coverage)
+0 I6
 1 XOR-NOT46
-2 default 1
-3 default 1
-4 default 1
-5 OR-NOT32
-6 OR-NOT43
+2 OR03
+3 OR15
+4 OR23
+5 OR06
+6 I4
+7 OR-NOT54
+Selected
+0 I6
+1 XOR-NOT46
+2 OR03
+3 OR15
+4 OR23
+5 OR06
+6 I4
 7 OR-NOT54
 
 Applying to 10110001
@@ -773,14 +783,14 @@ Input
 6 0
 7 1
 Output
-0 XOR-NOT35 = XOR(1,NOT(0)) = 0
+0 I6 = 0
 1 XOR-NOT46 = XOR(0,NOT(0)) = 1
-2 default 1 = 1
-3 default 1 = 1
-4 default 1 = 1
-5 OR-NOT32 = OR(1,NOT(1)) = 1
-6 OR-NOT43 = OR(0,NOT(1)) = 0
+2 OR03 = OR(1,1) = 1
+3 OR15 = OR(0,0) = 0
+4 OR23 = OR(1,1) = 1
+5 OR06 = OR(1,0) = 1
+6 I4 = 0
 7 OR-NOT54 = OR(0,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01111101}
+The answer in \boxed{–} is \boxed{01101101}

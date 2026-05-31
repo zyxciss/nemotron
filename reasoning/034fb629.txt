@@ -791,9 +791,19 @@ Matched
 6 I3
 7 I4
 
+
+Reselect (whole-word coverage)
+0 AND25
+1 AND03
+2 I7
+3 I0
+4 I1
+5 I2
+6 I3
+7 I4
 Selected
 0 AND25
-1 I6
+1 AND03
 2 I7
 3 I0
 4 I1
@@ -813,7 +823,7 @@ Input
 7 1
 Output
 0 AND25 = AND(0,0) = 0
-1 I6 = 1
+1 AND03 = AND(1,0) = 0
 2 I7 = 1
 3 I0 = 1
 4 I1 = 1
@@ -822,4 +832,4 @@ Output
 7 I4 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01111001}
+The answer in \boxed{–} is \boxed{00111001}

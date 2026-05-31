@@ -829,13 +829,23 @@ Matched
 6 AND15
 7 AND26
 
-Selected
-0 AND57
-1 AND60
-2 AND71
-3 AND02
+
+Reselect (whole-word coverage)
+0 AND45
+1 C0
+2 AND14
+3 C0
 4 C0
-5 AND04
+5 AND02
+6 AND15
+7 AND26
+Selected
+0 AND45
+1 C0
+2 AND14
+3 C0
+4 C0
+5 AND02
 6 AND15
 7 AND26
 
@@ -850,14 +860,14 @@ Input
 6 0
 7 1
 Output
-0 AND57 = AND(1,1) = 1
-1 AND60 = AND(0,1) = 0
-2 AND71 = AND(1,0) = 0
-3 AND02 = AND(1,1) = 1
+0 AND45 = AND(1,1) = 1
+1 C0 = 0
+2 AND14 = AND(0,1) = 0
+3 C0 = 0
 4 C0 = 0
-5 AND04 = AND(1,1) = 1
+5 AND02 = AND(1,1) = 1
 6 AND15 = AND(0,1) = 0
 7 AND26 = AND(1,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10010100}
+The answer in \boxed{–} is \boxed{10000100}

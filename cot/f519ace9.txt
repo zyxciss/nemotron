@@ -1,0 +1,55 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+# -> A
+^ -> B
+) -> C
+? -> D
+% -> E
+' -> F
+" -> G
+( -> H
+] -> I
+Operators:
+* -> x
++ -> y
+- -> z
+
+Converting examples to letter form:
+
+  「#^*#)」 = 「#^#)」:
+    input:  # ^ * # ) : # -> A, ^ -> B, * -> x, # -> A, ) -> C -> AB x AC
+    output: # ^ # ) : # -> A, ^ -> B, # -> A, ) -> C -> ABAC
+
+  「)?+#?」 = 「%')」:
+    input:  ) ? + # ? : ) -> C, ? -> D, + -> y, # -> A, ? -> D -> CD y AD
+    output: % ' ) : % -> E, ' -> F, ) -> C -> EFC
+
+  「?#+^%」 = 「%'"」:
+    input:  ? # + ^ % : ? -> D, # -> A, + -> y, ^ -> B, % -> E -> DA y BE
+    output: % ' " : % -> E, ' -> F, " -> G -> EFG
+
+  「(]+?^」 = 「#(」:
+    input:  ( ] + ? ^ : ( -> H, ] -> I, + -> y, ? -> D, ^ -> B -> HI y DB
+    output: # ( : # -> A, ( -> H -> AH
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: concatenation
+Operator y: addition
+Operator z: subtraction
+
+The question operator is z, which is subtraction.
+
+Converting question ""'-"(": " ' - " ( : " -> G, ' -> F, - -> z, " -> G, ( -> H -> GF z GH
+
+Applying to GF z GH:
+  Digit values from the bijection: " -> G -> 7, ' -> F -> 0, " -> G -> 7, ( -> H -> 3
+  GF = 70, GH = 73
+  subtraction(GF, GH) = 70 - 73 = -3
+  Encoding result: 3 : 3 -> ( -> -(
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{-(}
+</think>
+\boxed{-(}

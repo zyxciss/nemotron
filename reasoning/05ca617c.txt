@@ -775,15 +775,25 @@ Matched
 6 OR-NOT57
 7 OR-NOT60
 
-Selected
-0 AND71
+
+Reselect (whole-word coverage)
+0 XOR07
 1 OR-NOT02
 2 OR-NOT13
 3 OR-NOT24
 4 OR-NOT35
-5 OR-NOT46
+5 OR14
 6 OR-NOT57
-7 OR-NOT60
+7 OR16
+Selected
+0 XOR07
+1 OR-NOT02
+2 OR-NOT13
+3 OR-NOT24
+4 OR-NOT35
+5 OR14
+6 OR-NOT57
+7 OR16
 
 Applying to 10010010
 Input
@@ -796,14 +806,14 @@ Input
 6 1
 7 0
 Output
-0 AND71 = AND(0,0) = 0
+0 XOR07 = XOR(1,0) = 1
 1 OR-NOT02 = OR(1,NOT(0)) = 1
 2 OR-NOT13 = OR(0,NOT(1)) = 0
 3 OR-NOT24 = OR(0,NOT(0)) = 1
 4 OR-NOT35 = OR(1,NOT(0)) = 1
-5 OR-NOT46 = OR(0,NOT(1)) = 0
+5 OR14 = OR(0,0) = 0
 6 OR-NOT57 = OR(0,NOT(0)) = 1
-7 OR-NOT60 = OR(1,NOT(1)) = 1
+7 OR16 = OR(0,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01011011}
+The answer in \boxed{–} is \boxed{11011011}

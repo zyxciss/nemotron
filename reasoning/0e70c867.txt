@@ -764,15 +764,25 @@ Matched
 6 AND01
 7 AND12
 
+
+Reselect (whole-word coverage)
+0 AND24
+1 AND35
+2 AND26
+3 AND57
+4 C0
+5 AND02
+6 AND01
+7 AND01
 Selected
 0 AND24
 1 AND35
-2 AND46
+2 AND26
 3 AND57
-4 AND60
-5 AND70
+4 C0
+5 AND02
 6 AND01
-7 AND12
+7 AND01
 
 Applying to 10010110
 Input
@@ -787,12 +797,12 @@ Input
 Output
 0 AND24 = AND(0,0) = 0
 1 AND35 = AND(1,1) = 1
-2 AND46 = AND(0,1) = 0
+2 AND26 = AND(0,1) = 0
 3 AND57 = AND(1,0) = 0
-4 AND60 = AND(1,1) = 1
-5 AND70 = AND(0,1) = 0
+4 C0 = 0
+5 AND02 = AND(1,0) = 0
 6 AND01 = AND(1,0) = 0
-7 AND12 = AND(0,0) = 0
+7 AND01 = AND(1,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01001000}
+The answer in \boxed{–} is \boxed{01000000}

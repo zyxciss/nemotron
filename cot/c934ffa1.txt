@@ -1,0 +1,50 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+" -> A
+# -> B
+) -> C
+| -> D
+& -> E
+\ -> F
+! -> G
+$ -> H
+Operators:
+? -> x
++ -> y
+@ -> z
+
+Converting examples to letter form:
+
+  「"#?))」 = 「#|)"」:
+    input:  " # ? ) ) : " -> A, # -> B, ? -> x, ) -> C, ) -> C -> AB x CC
+    output: # | ) " : # -> B, | -> D, ) -> C, " -> A -> BDCA
+
+  「#&+\#」 = 「\!」:
+    input:  # & + \ # : # -> B, & -> E, + -> y, \ -> F, # -> B -> BE y FB
+    output: \ ! : \ -> F, ! -> G -> FG
+
+  「\"@\$」 = 「&"」:
+    input:  \ " @ \ $ : \ -> F, " -> A, @ -> z, \ -> F, $ -> H -> FA z FH
+    output: & " : & -> E, " -> A -> EA
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: subtraction
+Operator x: multiplication
+Operator z: addition
+
+The question operator is z, which is addition.
+
+Converting question "#"@"#": # " @ " # : # -> B, " -> A, @ -> z, " -> A, # -> B -> BA z AB
+
+Applying to BA z AB:
+  Digit values from the bijection: # -> B -> 3, " -> A -> 4, " -> A -> 4, # -> B -> 3
+  BA = 34, AB = 43
+  addition(BA, AB) = 34 + 43 = 77
+  Encoding result: 7 7 : 7 -> | -> ||
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{||}
+</think>
+\boxed{||}

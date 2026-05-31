@@ -1,0 +1,49 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+/ -> A
+^ -> B
+[ -> C
+: -> D
+% -> E
+] -> F
+" -> G
+@ -> H
+{ -> I
+Operators:
++ -> x
+- -> y
+
+Converting examples to letter form:
+
+  「/^+^[」 = 「:/%」:
+    input:  / ^ + ^ [ : / -> A, ^ -> B, + -> x, ^ -> B, [ -> C -> AB x BC
+    output: : / % : : -> D, / -> A, % -> E -> DAE
+
+  「^]-/]」 = 「[]」:
+    input:  ^ ] - / ] : ^ -> B, ] -> F, - -> y, / -> A, ] -> F -> BF y AF
+    output: [ ] : [ -> C, ] -> F -> CF
+
+  「/^+"@」 = 「[/」:
+    input:  / ^ + " @ : / -> A, ^ -> B, + -> x, " -> G, @ -> H -> AB x GH
+    output: [ / : [ -> C, / -> A -> CA
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: addition
+Operator y: subtraction
+
+The question operator is y, which is subtraction.
+
+Converting question ""{-:/": " { - : / : " -> G, { -> I, - -> y, : -> D, / -> A -> GI y DA
+
+Applying to GI y DA:
+  Digit values from the bijection: " -> G -> 4, { -> I -> 5, : -> D -> 1, / -> A -> 2
+  GI = 45, DA = 12
+  subtraction(GI, DA) = 45 - 12 = 33
+  Encoding result: 3 3 : 3 -> @ -> @@
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{@@}
+</think>
+\boxed{@@}

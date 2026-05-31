@@ -1,0 +1,55 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+@ -> A
+{ -> B
+> -> C
+& -> D
+- -> E
+/ -> F
+: -> G
+< -> H
+# -> I
+\ -> J
+` -> K
+Operators:
+- -> x
++ -> y
+
+Converting examples to letter form:
+
+  「@{->&」 = 「-&/」:
+    input:  @ { - > & : @ -> A, { -> B, - -> x, > -> C, & -> D -> AB x CD
+    output: - & / : - -> E, & -> D, / -> F -> EDF
+
+  「:/+/<」 = 「&::」:
+    input:  : / + / < : : -> G, / -> F, + -> y, / -> F, < -> H -> GF y FH
+    output: & : : : & -> D, : -> G, : -> G -> DGG
+
+  「>/+#{」 = 「//」:
+    input:  > / + # { : > -> C, / -> F, + -> y, # -> I, { -> B -> CF y IB
+    output: / / : / -> F, / -> F -> FF
+
+  「\#+<`」 = 「&::」:
+    input:  \ # + < ` : \ -> J, # -> I, + -> y, < -> H, ` -> K -> JI y HK
+    output: & : : : & -> D, : -> G, : -> G -> DGG
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: addition
+Operator x: reverse subtraction
+
+The question operator is y, which is addition.
+
+Converting question "<`+\>": < ` + \ > : < -> H, ` -> K, + -> y, \ -> J, > -> C -> HK y JC
+
+Applying to HK y JC:
+  Digit values from the bijection: < -> H -> 3, ` -> K -> 7, \ -> J -> 8, > -> C -> 4
+  HK = 37, JC = 84
+  addition(HK, JC) = 37 + 84 = 121
+  Encoding result: 1 2 1 : 1 -> &, 2 -> : -> &:&
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{&:&}
+</think>
+\boxed{&:&}

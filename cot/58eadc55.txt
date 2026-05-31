@@ -1,0 +1,48 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+) -> A
+` -> B
+\ -> C
+@ -> D
+! -> E
+$ -> F
+# -> G
+{ -> H
+Operators:
+] -> x
+| -> y
+
+Converting examples to letter form:
+
+  「)`]\@」 = 「)!$@」:
+    input:  ) ` ] \ @ : ) -> A, ` -> B, ] -> x, \ -> C, @ -> D -> AB x CD
+    output: ) ! $ @ : ) -> A, ! -> E, $ -> F, @ -> D -> AEFD
+
+  「\#|@#」 = 「)@`」:
+    input:  \ # | @ # : \ -> C, # -> G, | -> y, @ -> D, # -> G -> CG y DG
+    output: ) @ ` : ) -> A, @ -> D, ` -> B -> ADB
+
+  「#{|`!」 = 「)!!」:
+    input:  # { | ` ! : # -> G, { -> H, | -> y, ` -> B, ! -> E -> GH y BE
+    output: ) ! ! : ) -> A, ! -> E, ! -> E -> AEE
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: multiplication
+Operator y: addition
+
+The question operator is y, which is addition.
+
+Converting question "@@|@`": @ @ | @ ` : @ -> D, @ -> D, | -> y, @ -> D, ` -> B -> DD y DB
+
+Applying to DD y DB:
+  Digit values from the bijection: @ -> D -> 2, @ -> D -> 2, @ -> D -> 2, ` -> B -> 6
+  DD = 22, DB = 26
+  addition(DD, DB) = 22 + 26 = 48
+  Encoding result: 4 8 : 4 -> !, 8 -> # -> !#
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{!#}
+</think>
+\boxed{!#}

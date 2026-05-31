@@ -1,0 +1,53 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+% -> A
+( -> B
+' -> C
+! -> D
+- -> E
+] -> F
+[ -> G
+/ -> H
+< -> I
+? -> J
+` -> K
+Operators:
+- -> x
+) -> y
+& -> z
+
+Converting examples to letter form:
+
+  「%(-'!」 = 「-]]」:
+    input:  % ( - ' ! : % -> A, ( -> B, - -> x, ' -> C, ! -> D -> AB x CD
+    output: - ] ] : - -> E, ] -> F, ] -> F -> EFF
+
+  「[%)(/」 = 「%%」:
+    input:  [ % ) ( / : [ -> G, % -> A, ) -> y, ( -> B, / -> H -> GA y BH
+    output: % % : % -> A, % -> A -> AA
+
+  「]%&<%」 = 「[?<<」:
+    input:  ] % & < % : ] -> F, % -> A, & -> z, < -> I, % -> A -> FA z IA
+    output: [ ? < < : [ -> G, ? -> J, < -> I, < -> I -> GJII
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator z: multiplication
+Operator y: addition
+Operator x: reverse subtraction
+
+The question operator is y, which is addition.
+
+Converting question "[()`'": [ ( ) ` ' : [ -> G, ( -> B, ) -> y, ` -> K, ' -> C -> GB y KC
+
+Applying to GB y KC:
+  Digit values from the bijection: [ -> G -> 1, ( -> B -> 7, ` -> K -> 9, ' -> C -> 6
+  GB = 17, KC = 96
+  addition(GB, KC) = 17 + 96 = 113
+  Encoding result: 1 1 3 : 1 -> [, 3 -> ? -> [[?
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{[[?}
+</think>
+\boxed{[[?}

@@ -1,0 +1,54 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+| -> A
+' -> B
+% -> C
+> -> D
+! -> E
+@ -> F
+" -> G
+} -> H
+` -> I
+& -> J
+Operators:
+- -> x
+# -> y
+
+Converting examples to letter form:
+
+  「|'-%>」 = 「'!」:
+    input:  | ' - % > : | -> A, ' -> B, - -> x, % -> C, > -> D -> AB x CD
+    output: ' ! : ' -> B, ! -> E -> BE
+
+  「@"-'}」 = 「`|」:
+    input:  @ " - ' } : @ -> F, " -> G, - -> x, ' -> B, } -> H -> FG x BH
+    output: ` | : ` -> I, | -> A -> IA
+
+  「%>#"}」 = 「|%」:
+    input:  % > # " } : % -> C, > -> D, # -> y, " -> G, } -> H -> CD y GH
+    output: | % : | -> A, % -> C -> AC
+
+  「`&-@|」 = 「@!@」:
+    input:  ` & - @ | : ` -> I, & -> J, - -> x, @ -> F, | -> A -> IJ x FA
+    output: @ ! @ : @ -> F, ! -> E, @ -> F -> FEF
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: reverse subtraction
+Operator x: addition
+
+The question operator is y, which is reverse subtraction.
+
+Converting question "">#'`": " > # ' ` : " -> G, > -> D, # -> y, ' -> B, ` -> I -> GD y BI
+
+Applying to GD y BI:
+  Digit values from the bijection: " -> G -> 5, > -> D -> 4, ' -> B -> 6, ` -> I -> 8
+  GD = 54, BI = 68
+  reverse subtraction(GD, BI) = 68 - 54 = 14
+  Encoding result: 1 4 : 1 -> @, 4 -> > -> @>
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{@>}
+</think>
+\boxed{@>}
