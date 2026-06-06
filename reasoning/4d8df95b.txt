@@ -1,47 +1,49 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【/:-%(】 = 【-"^】
-  input: 【/】【:】【-】【%】【(】
-  left:【/】【:】
-  operator: 【-】
-  right:【%】【(】
-  output: 【-】【"】【^】
-  concatenation: 【/】【:】【%】【(】 mismatch
-  reverse concatenation: 【%】【(】【/】【:】 mismatch
-  operator: 【-】unknown
+First, let me assign letters to each symbol:
+/ -> A
+: -> B
+% -> C
+( -> D
+- -> E
+" -> F
+^ -> G
+? -> H
+@ -> I
+! -> J
+) -> K
+Operators:
+- -> x
+* -> y
 
-【(?-^/】 = 【-/"】
-  input: 【(】【?】【-】【^】【/】
-  left:【(】【?】
-  operator: 【-】
-  right:【^】【/】
-  output: 【-】【/】【"】
-  concatenation: 【(】【?】【^】【/】 mismatch
-  reverse concatenation: 【^】【/】【(】【?】 mismatch
-  operator: 【-】unknown
+Converting examples to letter form:
 
-【^/*@!】 = 【^)(/】
-  input: 【^】【/】【*】【@】【!】
-  left:【^】【/】
-  operator: 【*】
-  right:【@】【!】
-  output: 【^】【)】【(】【/】
-  concatenation: 【^】【/】【@】【!】 mismatch
-  reverse concatenation: 【@】【!】【^】【/】 mismatch
-  operator: 【*】unknown
+  「/:-%(」 = 「-"^」:
+    input:  / : - % ( : / -> A, : -> B, - -> x, % -> C, ( -> D -> AB x CD
+    output: - " ^ : - -> E, " -> F, ^ -> G -> EFG
 
-Question【??-??】
-  input: 【?】【?】【-】【?】【?】
-  left:【?】【?】
-  operator:【-】
-  right:【?】【?】
+  「(?-^/」 = 「-/"」:
+    input:  ( ? - ^ / : ( -> D, ? -> H, - -> x, ^ -> G, / -> A -> DH x GA
+    output: - / " : - -> E, / -> A, " -> F -> EAF
 
-The question operator is 【-】, which is unknown.
-As the question operator is unknown, we default to concatenation.
+  「^/*@!」 = 「^)(/」:
+    input:  ^ / * @ ! : ^ -> G, / -> A, * -> y, @ -> I, ! -> J -> GA y IJ
+    output: ^ ) ( / : ^ -> G, ) -> K, ( -> D, / -> A -> GKDA
 
-  concatenation(【?】【?】, 【?】【?】) = 【?】【?】【?】【?】
-  output: 【????】-> 【{????}】
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication
+Operator x: reverse subtraction
+
+The question operator is x, which is reverse subtraction.
+
+Converting question "??-??": ? ? - ? ? : ? -> H, ? -> H, - -> x, ? -> H, ? -> H -> HH x HH
+
+Applying to HH x HH:
+  Digit values from the bijection: ? -> H -> 6, ? -> H -> 6, ? -> H -> 6, ? -> H -> 6
+  HH = 66, HH = 66
+  reverse subtraction(HH, HH) = 66 - 66 = 0
+  Encoding result: 0 : 0 -> ) -> )
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{????}
+The answer in \boxed is
+\boxed{)}

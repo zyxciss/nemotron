@@ -1,66 +1,56 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【}%*})】 = 【||)】
-  input: 【}】【%】【*】【}】【)】
-  left:【}】【%】
-  operator: 【*】
-  right:【}】【)】
-  output: 【|】【|】【)】
-  concatenation: 【}】【%】【}】【)】 mismatch
-  reverse concatenation: 【}】【)】【}】【%】 mismatch
-  operator: 【*】unknown
+First, let me assign letters to each symbol:
+} -> A
+% -> B
+) -> C
+| -> D
+` -> E
+^ -> F
+" -> G
+{ -> H
+! -> I
+? -> J
+Operators:
+* -> x
+- -> y
++ -> z
 
-【`^-%"】 = 【%{】
-  input: 【`】【^】【-】【%】【"】
-  left:【`】【^】
-  operator: 【-】
-  right:【%】【"】
-  output: 【%】【{】
-  concatenation: 【`】【^】【%】【"】 mismatch
-  reverse concatenation: 【%】【"】【`】【^】 mismatch
-  operator: 【-】unknown
+Converting examples to letter form:
 
-【|}-!?】 = 【)`】
-  input: 【|】【}】【-】【!】【?】
-  left:【|】【}】
-  operator: 【-】
-  right:【!】【?】
-  output: 【)】【`】
-  concatenation: 【|】【}】【!】【?】 mismatch
-  reverse concatenation: 【!】【?】【|】【}】 mismatch
-  operator: 【-】unknown
+  「}%*})」 = 「||)」:
+    input:  } % * } ) : } -> A, % -> B, * -> x, } -> A, ) -> C -> AB x AC
+    output: | | ) : | -> D, | -> D, ) -> C -> DDC
 
-【{^+?)】 = 【{^?)】
-  input: 【{】【^】【+】【?】【)】
-  left:【{】【^】
-  operator: 【+】
-  right:【?】【)】
-  output: 【{】【^】【?】【)】
-  concatenation: 【{】【^】【?】【)】 match
-  reverse concatenation: 【?】【)】【{】【^】 mismatch
-  operator: 【+】concatenation
+  「`^-%"」 = 「%{」:
+    input:  ` ^ - % " : ` -> E, ^ -> F, - -> y, % -> B, " -> G -> EF y BG
+    output: % { : % -> B, { -> H -> BH
 
-【}!+}^】 = 【}!}^】
-  input: 【}】【!】【+】【}】【^】
-  left:【}】【!】
-  operator: 【+】
-  right:【}】【^】
-  output: 【}】【!】【}】【^】
-  concatenation: 【}】【!】【}】【^】 match
-  reverse concatenation: 【}】【^】【}】【!】 mismatch
-  operator: 【+】concatenation
+  「|}-!?」 = 「)`」:
+    input:  | } - ! ? : | -> D, } -> A, - -> y, ! -> I, ? -> J -> DA y IJ
+    output: ) ` : ) -> C, ` -> E -> CE
 
-Question【!"+"!】
-  input: 【!】【"】【+】【"】【!】
-  left:【!】【"】
-  operator:【+】
-  right:【"】【!】
+  「{^+?)」 = 「{^?)」:
+    input:  { ^ + ? ) : { -> H, ^ -> F, + -> z, ? -> J, ) -> C -> HF z JC
+    output: { ^ ? ) : { -> H, ^ -> F, ? -> J, ) -> C -> HFJC
 
-The question operator is 【+】, which is concatenation.
+  「}!+}^」 = 「}!}^」:
+    input:  } ! + } ^ : } -> A, ! -> I, + -> z, } -> A, ^ -> F -> AI z AF
+    output: } ! } ^ : } -> A, ! -> I, } -> A, ^ -> F -> AIAF
 
-  concatenation(【!】【"】, 【"】【!】) = 【!】【"】【"】【!】
-  output: 【!""!】-> 【{!""!}】
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: unknown
+Operator z: concatenation
+Operator y: unknown
+
+The question operator is z, which is concatenation.
+
+Converting question "!"+"!": ! " + " ! : ! -> I, " -> G, + -> z, " -> G, ! -> I -> IG z GI
+
+Applying to IG z GI:
+  concatenation(IG, GI) = IG || GI = IGGI
+  Converting back: I G G I : I -> !, G -> ", G -> ", I -> ! -> !""!
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{!""!}
+The answer in \boxed is
+\boxed{!""!}

@@ -1,67 +1,51 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【{($<(】 = 【<<\:】
-  input: 【{】【(】【$】【<】【(】
-  left:【{】【(】
-  operator: 【$】
-  right:【<】【(】
-  output: 【<】【<】【\】【:】
-  concatenation: 【{】【(】【<】【(】 mismatch
-  reverse concatenation: 【<】【(】【{】【(】 mismatch
-  operator: 【$】unknown
+First, let me assign letters to each symbol:
+{ -> A
+( -> B
+< -> C
+\ -> D
+: -> E
+? -> F
+! -> G
+% -> H
+@ -> I
+] -> J
+Operators:
+$ -> x
+% -> y
+* -> z
 
-【?<%!\】 = 【%\?】
-  input: 【?】【<】【%】【!】【\】
-  left:【?】【<】
-  operator: 【%】
-  right:【!】【\】
-  output: 【%】【\】【?】
-  concatenation: 【?】【<】【!】【\】 mismatch
-  reverse concatenation: 【!】【\】【?】【<】 mismatch
-  operator: 【%】unknown
+Converting examples to letter form:
 
-【\\%?@】 = 【]】
-  input: 【\】【\】【%】【?】【@】
-  left:【\】【\】
-  operator: 【%】
-  right:【?】【@】
-  output: 【]】
-  concatenation: 【\】【\】【?】【@】 mismatch
-  reverse concatenation: 【?】【@】【\】【\】 mismatch
-  operator: 【%】unknown
+  「{($<(」 = 「<<\:」:
+    input:  { ( $ < ( : { -> A, ( -> B, $ -> x, < -> C, ( -> B -> AB x CB
+    output: < < \ : : < -> C, < -> C, \ -> D, : -> E -> CCDE
 
-【?@$\(】 = 【::(】
-  input: 【?】【@】【$】【\】【(】
-  left:【?】【@】
-  operator: 【$】
-  right:【\】【(】
-  output: 【:】【:】【(】
-  concatenation: 【?】【@】【\】【(】 mismatch
-  reverse concatenation: 【\】【(】【?】【@】 mismatch
-  operator: 【$】unknown
+  「?<%!\」 = 「%\?」:
+    input:  ? < % ! \ : ? -> F, < -> C, % -> y, ! -> G, \ -> D -> FC y GD
+    output: % \ ? : % -> H, \ -> D, ? -> F -> HDF
 
-【@@%!?】 = 【%:】
-  input: 【@】【@】【%】【!】【?】
-  left:【@】【@】
-  operator: 【%】
-  right:【!】【?】
-  output: 【%】【:】
-  concatenation: 【@】【@】【!】【?】 mismatch
-  reverse concatenation: 【!】【?】【@】【@】 mismatch
-  operator: 【%】unknown
+  「\\%?@」 = 「]」:
+    input:  \ \ % ? @ : \ -> D, \ -> D, % -> y, ? -> F, @ -> I -> DD y FI
+    output: ] : ] -> J -> J
 
-Question【{{*@?】
-  input: 【{】【{】【*】【@】【?】
-  left:【{】【{】
-  operator:【*】
-  right:【@】【?】
+  「?@$\(」 = 「::(」:
+    input:  ? @ $ \ ( : ? -> F, @ -> I, $ -> x, \ -> D, ( -> B -> FI x DB
+    output: : : ( : : -> E, : -> E, ( -> B -> EEB
 
-The question operator is 【*】, which is unknown.
-As the question operator is unknown, we default to concatenation.
+  「@@%!?」 = 「%:」:
+    input:  @ @ % ! ? : @ -> I, @ -> I, % -> y, ! -> G, ? -> F -> II y GF
+    output: % : : % -> H, : -> E -> HE
 
-  concatenation(【{】【{】, 【@】【?】) = 【{】【{】【@】【?】
-  output: 【{{@?】-> 【{{{@?}】
+The question operator z does not appear in the examples.
+When the operator cannot be determined, the default transformation is concatenation.
+
+Converting question "{{*@?": -> AA z IF
+Applying to AA z IF:
+  concatenation(AA, IF) = AA || IF = AAIF
+  Converting back: A A I F : A -> {, A -> {, I -> @, F -> ? -> {{@?
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{{{@?}
+The answer in \boxed is
+\boxed{{{@?}

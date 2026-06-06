@@ -1,47 +1,42 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【$<*&&】 = 【[%<】
-  input: 【$】【<】【*】【&】【&】
-  left:【$】【<】
-  operator: 【*】
-  right:【&】【&】
-  output: 【[】【%】【<】
-  concatenation: 【$】【<】【&】【&】 mismatch
-  reverse concatenation: 【&】【&】【$】【<】 mismatch
-  operator: 【*】unknown
+First, let me assign letters to each symbol:
+$ -> A
+< -> B
+& -> C
+[ -> D
+% -> E
+) -> F
+@ -> G
+" -> H
+` -> I
+| -> J
+Operators:
+* -> x
+- -> y
 
-【&)*<$】 = 【@"&[】
-  input: 【&】【)】【*】【<】【$】
-  left:【&】【)】
-  operator: 【*】
-  right:【<】【$】
-  output: 【@】【"】【&】【[】
-  concatenation: 【&】【)】【<】【$】 mismatch
-  reverse concatenation: 【<】【$】【&】【)】 mismatch
-  operator: 【*】unknown
+Converting examples to letter form:
 
-【%&*@@】 = 【`&|】
-  input: 【%】【&】【*】【@】【@】
-  left:【%】【&】
-  operator: 【*】
-  right:【@】【@】
-  output: 【`】【&】【|】
-  concatenation: 【%】【&】【@】【@】 mismatch
-  reverse concatenation: 【@】【@】【%】【&】 mismatch
-  operator: 【*】unknown
+  「$<*&&」 = 「[%<」:
+    input:  $ < * & & : $ -> A, < -> B, * -> x, & -> C, & -> C -> AB x CC
+    output: [ % < : [ -> D, % -> E, < -> B -> DEB
 
-Question【&$-)|】
-  input: 【&】【$】【-】【)】【|】
-  left:【&】【$】
-  operator:【-】
-  right:【)】【|】
+  「&)*<$」 = 「@"&[」:
+    input:  & ) * < $ : & -> C, ) -> F, * -> x, < -> B, $ -> A -> CF x BA
+    output: @ " & [ : @ -> G, " -> H, & -> C, [ -> D -> GHCD
 
-The question operator is 【-】, which is unknown.
-As the question operator is unknown, we default to concatenation.
+  「%&*@@」 = 「`&|」:
+    input:  % & * @ @ : % -> E, & -> C, * -> x, @ -> G, @ -> G -> EC x GG
+    output: ` & | : ` -> I, & -> C, | -> J -> ICJ
 
-  concatenation(【&】【$】, 【)】【|】) = 【&】【$】【)】【|】
-  output: 【&$)|】-> 【{&$)|}】
+The question operator y does not appear in the examples.
+When the operator cannot be determined, the default transformation is concatenation.
+
+Converting question "&$-)|": -> CA y FJ
+Applying to CA y FJ:
+  concatenation(CA, FJ) = CA || FJ = CAFJ
+  Converting back: C A F J : C -> &, A -> $, F -> ), J -> | -> &$)|
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{&$)|}
+The answer in \boxed is
+\boxed{&$)|}

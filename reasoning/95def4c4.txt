@@ -1,67 +1,58 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【>?->@】 = 【@】
-  input: 【>】【?】【-】【>】【@】
-  left:【>】【?】
-  operator: 【-】
-  right:【>】【@】
-  output: 【@】
-  concatenation: 【>】【?】【>】【@】 mismatch
-  reverse concatenation: 【>】【@】【>】【?】 mismatch
-  operator: 【-】unknown
+First, let me assign letters to each symbol:
+> -> A
+? -> B
+@ -> C
+` -> D
+& -> E
+| -> F
+\ -> G
+' -> H
+{ -> I
+! -> J
+Operators:
+- -> x
++ -> y
+* -> z
 
-【`&-|\】 = 【>\】
-  input: 【`】【&】【-】【|】【\】
-  left:【`】【&】
-  operator: 【-】
-  right:【|】【\】
-  output: 【>】【\】
-  concatenation: 【`】【&】【|】【\】 mismatch
-  reverse concatenation: 【|】【\】【`】【&】 mismatch
-  operator: 【-】unknown
+Converting examples to letter form:
 
-【\'+@&】 = 【'@?】
-  input: 【\】【'】【+】【@】【&】
-  left:【\】【'】
-  operator: 【+】
-  right:【@】【&】
-  output: 【'】【@】【?】
-  concatenation: 【\】【'】【@】【&】 mismatch
-  reverse concatenation: 【@】【&】【\】【'】 mismatch
-  operator: 【+】unknown
+  「>?->@」 = 「@」:
+    input:  > ? - > @ : > -> A, ? -> B, - -> x, > -> A, @ -> C -> AB x AC
+    output: @ : @ -> C -> C
 
-【>{-'{】 = 【'?】
-  input: 【>】【{】【-】【'】【{】
-  left:【>】【{】
-  operator: 【-】
-  right:【'】【{】
-  output: 【'】【?】
-  concatenation: 【>】【{】【'】【{】 mismatch
-  reverse concatenation: 【'】【{】【>】【{】 mismatch
-  operator: 【-】unknown
+  「`&-|\」 = 「>\」:
+    input:  ` & - | \ : ` -> D, & -> E, - -> x, | -> F, \ -> G -> DE x FG
+    output: > \ : > -> A, \ -> G -> AG
 
-【`'*`&】 = 【!'!&】
-  input: 【`】【'】【*】【`】【&】
-  left:【`】【'】
-  operator: 【*】
-  right:【`】【&】
-  output: 【!】【'】【!】【&】
-  concatenation: 【`】【'】【`】【&】 mismatch
-  reverse concatenation: 【`】【&】【`】【'】 mismatch
-  operator: 【*】unknown
+  「\'+@&」 = 「'@?」:
+    input:  \ ' + @ & : \ -> G, ' -> H, + -> y, @ -> C, & -> E -> GH y CE
+    output: ' @ ? : ' -> H, @ -> C, ? -> B -> HCB
 
-Question【''+&'】
-  input: 【'】【'】【+】【&】【'】
-  left:【'】【'】
-  operator:【+】
-  right:【&】【'】
+  「>{-'{」 = 「'?」:
+    input:  > { - ' { : > -> A, { -> I, - -> x, ' -> H, { -> I -> AI x HI
+    output: ' ? : ' -> H, ? -> B -> HB
 
-The question operator is 【+】, which is unknown.
-As the question operator is unknown, we default to concatenation.
+  「`'*`&」 = 「!'!&」:
+    input:  ` ' * ` & : ` -> D, ' -> H, * -> z, ` -> D, & -> E -> DH z DE
+    output: ! ' ! & : ! -> J, ' -> H, ! -> J, & -> E -> JHJE
 
-  concatenation(【'】【'】, 【&】【'】) = 【'】【'】【&】【'】
-  output: 【''&'】-> 【{''&'}】
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator z: multiplication
+Operator y: addition plus one
+Operator x: absolute difference
+
+The question operator is y, which is addition plus one.
+
+Converting question "''+&'": ' ' + & ' : ' -> H, ' -> H, + -> y, & -> E, ' -> H -> HH y EH
+
+Applying to HH y EH:
+  Digit values from the bijection: ' -> H -> 1, ' -> H -> 1, & -> E -> 8, ' -> H -> 1
+  HH = 11, EH = 81
+  addition plus one(HH, EH) = 11 + 81 + 1 = 93
+  Encoding result: 9 3 : 9 -> \, 3 -> | -> \|
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{''&'}
+The answer in \boxed is
+\boxed{\|}

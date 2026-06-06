@@ -1,67 +1,51 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【]'*{%】 = 【'{{%】
-  input: 【]】【'】【*】【{】【%】
-  left:【]】【'】
-  operator: 【*】
-  right:【{】【%】
-  output: 【'】【{】【{】【%】
-  concatenation: 【]】【'】【{】【%】 mismatch
-  reverse concatenation: 【{】【%】【]】【'】 mismatch
-  operator: 【*】unknown
+First, let me assign letters to each symbol:
+] -> A
+' -> B
+{ -> C
+% -> D
+@ -> E
+$ -> F
+` -> G
+? -> H
+\ -> I
+( -> J
+Operators:
+* -> x
++ -> y
+- -> z
 
-【@$*@$】 = 【]%$`】
-  input: 【@】【$】【*】【@】【$】
-  left:【@】【$】
-  operator: 【*】
-  right:【@】【$】
-  output: 【]】【%】【$】【`】
-  concatenation: 【@】【$】【@】【$】 mismatch
-  reverse concatenation: 【@】【$】【@】【$】 mismatch
-  operator: 【*】unknown
+Converting examples to letter form:
 
-【{?+`\】 = 【{?`\】
-  input: 【{】【?】【+】【`】【\】
-  left:【{】【?】
-  operator: 【+】
-  right:【`】【\】
-  output: 【{】【?】【`】【\】
-  concatenation: 【{】【?】【`】【\】 match
-  reverse concatenation: 【`】【\】【{】【?】 mismatch
-  operator: 【+】concatenation
+  「]'*{%」 = 「'{{%」:
+    input:  ] ' * { % : ] -> A, ' -> B, * -> x, { -> C, % -> D -> AB x CD
+    output: ' { { % : ' -> B, { -> C, { -> C, % -> D -> BCCD
 
-【`?*{%】 = 【?$%】
-  input: 【`】【?】【*】【{】【%】
-  left:【`】【?】
-  operator: 【*】
-  right:【{】【%】
-  output: 【?】【$】【%】
-  concatenation: 【`】【?】【{】【%】 mismatch
-  reverse concatenation: 【{】【%】【`】【?】 mismatch
-  operator: 【*】unknown
+  「@$*@$」 = 「]%$`」:
+    input:  @ $ * @ $ : @ -> E, $ -> F, * -> x, @ -> E, $ -> F -> EF x EF
+    output: ] % $ ` : ] -> A, % -> D, $ -> F, ` -> G -> ADFG
 
-【(]*{?】 = 【'%``】
-  input: 【(】【]】【*】【{】【?】
-  left:【(】【]】
-  operator: 【*】
-  right:【{】【?】
-  output: 【'】【%】【`】【`】
-  concatenation: 【(】【]】【{】【?】 mismatch
-  reverse concatenation: 【{】【?】【(】【]】 mismatch
-  operator: 【*】unknown
+  「{?+`\」 = 「{?`\」:
+    input:  { ? + ` \ : { -> C, ? -> H, + -> y, ` -> G, \ -> I -> CH y GI
+    output: { ? ` \ : { -> C, ? -> H, ` -> G, \ -> I -> CHGI
 
-Question【@`-](】
-  input: 【@】【`】【-】【]】【(】
-  left:【@】【`】
-  operator:【-】
-  right:【]】【(】
+  「`?*{%」 = 「?$%」:
+    input:  ` ? * { % : ` -> G, ? -> H, * -> x, { -> C, % -> D -> GH x CD
+    output: ? $ % : ? -> H, $ -> F, % -> D -> HFD
 
-The question operator is 【-】, which is unknown.
-As the question operator is unknown, we default to concatenation.
+  「(]*{?」 = 「'%``」:
+    input:  ( ] * { ? : ( -> J, ] -> A, * -> x, { -> C, ? -> H -> JA x CH
+    output: ' % ` ` : ' -> B, % -> D, ` -> G, ` -> G -> BDGG
 
-  concatenation(【@】【`】, 【]】【(】) = 【@】【`】【]】【(】
-  output: 【@`](】-> 【{@`](}】
+The question operator z does not appear in the examples.
+When the operator cannot be determined, the default transformation is concatenation.
+
+Converting question "@`-](": -> EG z AJ
+Applying to EG z AJ:
+  concatenation(EG, AJ) = EG || AJ = EGAJ
+  Converting back: E G A J : E -> @, G -> `, A -> ], J -> ( -> @`](
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{@`](}
+The answer in \boxed is
+\boxed{@`](}

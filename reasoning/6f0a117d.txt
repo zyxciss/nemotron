@@ -1,67 +1,59 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【[:-[[】 = 【-'】
-  input: 【[】【:】【-】【[】【[】
-  left:【[】【:】
-  operator: 【-】
-  right:【[】【[】
-  output: 【-】【'】
-  concatenation: 【[】【:】【[】【[】 mismatch
-  reverse concatenation: 【[】【[】【[】【:】 mismatch
-  operator: 【-】unknown
+First, let me assign letters to each symbol:
+[ -> A
+: -> B
+- -> C
+' -> D
+) -> E
+$ -> F
+{ -> G
+< -> H
+] -> I
+@ -> J
+\ -> K
+Operators:
+- -> x
+* -> y
++ -> z
 
-【:)*$$】 = 【{<]@】
-  input: 【:】【)】【*】【$】【$】
-  left:【:】【)】
-  operator: 【*】
-  right:【$】【$】
-  output: 【{】【<】【]】【@】
-  concatenation: 【:】【)】【$】【$】 mismatch
-  reverse concatenation: 【$】【$】【:】【)】 mismatch
-  operator: 【*】unknown
+Converting examples to letter form:
 
-【<)+'<】 = 【[]<】
-  input: 【<】【)】【+】【'】【<】
-  left:【<】【)】
-  operator: 【+】
-  right:【'】【<】
-  output: 【[】【]】【<】
-  concatenation: 【<】【)】【'】【<】 mismatch
-  reverse concatenation: 【'】【<】【<】【)】 mismatch
-  operator: 【+】unknown
+  「[:-[[」 = 「-'」:
+    input:  [ : - [ [ : [ -> A, : -> B, - -> x, [ -> A, [ -> A -> AB x AA
+    output: - ' : - -> C, ' -> D -> CD
 
-【\\*\'】 = 【$:[】
-  input: 【\】【\】【*】【\】【'】
-  left:【\】【\】
-  operator: 【*】
-  right:【\】【'】
-  output: 【$】【:】【[】
-  concatenation: 【\】【\】【\】【'】 mismatch
-  reverse concatenation: 【\】【'】【\】【\】 mismatch
-  operator: 【*】unknown
+  「:)*$$」 = 「{<]@」:
+    input:  : ) * $ $ : : -> B, ) -> E, * -> y, $ -> F, $ -> F -> BE y FF
+    output: { < ] @ : { -> G, < -> H, ] -> I, @ -> J -> GHIJ
 
-【:'*[\】 = 【@[[】
-  input: 【:】【'】【*】【[】【\】
-  left:【:】【'】
-  operator: 【*】
-  right:【[】【\】
-  output: 【@】【[】【[】
-  concatenation: 【:】【'】【[】【\】 mismatch
-  reverse concatenation: 【[】【\】【:】【'】 mismatch
-  operator: 【*】unknown
+  「<)+'<」 = 「[]<」:
+    input:  < ) + ' < : < -> H, ) -> E, + -> z, ' -> D, < -> H -> HE z DH
+    output: [ ] < : [ -> A, ] -> I, < -> H -> AIH
 
-Question【]@-'[】
-  input: 【]】【@】【-】【'】【[】
-  left:【]】【@】
-  operator:【-】
-  right:【'】【[】
+  「\\*\'」 = 「$:[」:
+    input:  \ \ * \ ' : \ -> K, \ -> K, * -> y, \ -> K, ' -> D -> KK y KD
+    output: $ : [ : $ -> F, : -> B, [ -> A -> FBA
 
-The question operator is 【-】, which is unknown.
-As the question operator is unknown, we default to concatenation.
+  「:'*[\」 = 「@[[」:
+    input:  : ' * [ \ : : -> B, ' -> D, * -> y, [ -> A, \ -> K -> BD y AK
+    output: @ [ [ : @ -> J, [ -> A, [ -> A -> JAA
 
-  concatenation(【]】【@】, 【'】【[】) = 【]】【@】【'】【[】
-  output: 【]@'[】-> 【{]@'[}】
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication minus one
+Operator z: addition
+Operator x: reverse subtraction
+
+The question operator is x, which is reverse subtraction.
+
+Converting question "]@-'[": ] @ - ' [ : ] -> I, @ -> J, - -> x, ' -> D, [ -> A -> IJ x DA
+
+Applying to IJ x DA:
+  Digit values from the bijection: ] -> I -> 4, @ -> J -> 9, ' -> D -> 6, [ -> A -> 1
+  IJ = 49, DA = 61
+  reverse subtraction(IJ, DA) = 61 - 49 = 12
+  Encoding result: 1 2 : 1 -> [, 2 -> \ -> [\
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{]@'[}
+The answer in \boxed is
+\boxed{[\}

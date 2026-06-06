@@ -1,47 +1,43 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【&`*'&】 = 【&&@`】
-  input: 【&】【`】【*】【'】【&】
-  left:【&】【`】
-  operator: 【*】
-  right:【'】【&】
-  output: 【&】【&】【@】【`】
-  concatenation: 【&】【`】【'】【&】 mismatch
-  reverse concatenation: 【'】【&】【&】【`】 mismatch
-  operator: 【*】unknown
+First, let me assign letters to each symbol:
+& -> A
+` -> B
+' -> C
+@ -> D
+} -> E
+! -> F
+{ -> G
+? -> H
+- -> I
+< -> J
+Operators:
+* -> x
+- -> y
++ -> z
 
-【&}*}&】 = 【!{}】
-  input: 【&】【}】【*】【}】【&】
-  left:【&】【}】
-  operator: 【*】
-  right:【}】【&】
-  output: 【!】【{】【}】
-  concatenation: 【&】【}】【}】【&】 mismatch
-  reverse concatenation: 【}】【&】【&】【}】 mismatch
-  operator: 【*】unknown
+Converting examples to letter form:
 
-【'?-{&】 = 【-<!】
-  input: 【'】【?】【-】【{】【&】
-  left:【'】【?】
-  operator: 【-】
-  right:【{】【&】
-  output: 【-】【<】【!】
-  concatenation: 【'】【?】【{】【&】 mismatch
-  reverse concatenation: 【{】【&】【'】【?】 mismatch
-  operator: 【-】unknown
+  「&`*'&」 = 「&&@`」:
+    input:  & ` * ' & : & -> A, ` -> B, * -> x, ' -> C, & -> A -> AB x CA
+    output: & & @ ` : & -> A, & -> A, @ -> D, ` -> B -> AADB
 
-Question【'{+@`】
-  input: 【'】【{】【+】【@】【`】
-  left:【'】【{】
-  operator:【+】
-  right:【@】【`】
+  「&}*}&」 = 「!{}」:
+    input:  & } * } & : & -> A, } -> E, * -> x, } -> E, & -> A -> AE x EA
+    output: ! { } : ! -> F, { -> G, } -> E -> FGE
 
-The question operator is 【+】, which is unknown.
-As the question operator is unknown, we default to concatenation.
+  「'?-{&」 = 「-<!」:
+    input:  ' ? - { & : ' -> C, ? -> H, - -> y, { -> G, & -> A -> CH y GA
+    output: - < ! : - -> I, < -> J, ! -> F -> IJF
 
-  concatenation(【'】【{】, 【@】【`】) = 【'】【{】【@】【`】
-  output: 【'{@`】-> 【{'{@`}】
+The question operator z does not appear in the examples.
+When the operator cannot be determined, the default transformation is concatenation.
+
+Converting question "'{+@`": -> CG z DB
+Applying to CG z DB:
+  concatenation(CG, DB) = CG || DB = CGDB
+  Converting back: C G D B : C -> ', G -> {, D -> @, B -> ` -> '{@`
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{'{@`}
+The answer in \boxed is
+\boxed{'{@`}

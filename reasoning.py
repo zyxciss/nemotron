@@ -43,8 +43,35 @@ REASONING_DIR = Path(__file__).parent / "reasoning"
 INVESTIGATIONS_DIR = Path(__file__).parent / "investigations"
 TRAIN_CSV = Path(__file__).parent / "train.csv"
 TRAIN_ORDER_PATH = Path(__file__).parent / "train_order.txt"
+TRAIN_ORDER_FULL_PATH = Path(__file__).parent / "train_order.full.txt"
 TRAIN_COT_CSV = Path(__file__).parent / "train_cot.csv"
 COT_DIR = Path(__file__).parent / "cot"
+# The 0.86 baseline layout directory holds the canonical per-category row count
+# (gravity=1055, numeral=730, unit_conversion=1070, cipher=1656, ...). We cap
+# ONLY the easy/over-abundant categories so they can't flood the corpus; hard
+# categories (cryptarithm_*, equation_*, bit_manipulation) flow freely so the
+# new solves reach training at full strength.
+CAP_CATEGORIES = {"cipher", "gravity", "numeral", "unit_conversion"}
+BASELINE_LAYOUT_DIR = Path(__file__).parent / "training" / "sft" / "04-08-16-14"
+BASELINE_INDEX = BASELINE_LAYOUT_DIR / "logprobs" / "index.jsonl"
+
+
+def _baseline_per_category_cap() -> dict[str, int]:
+    """Per-category row count from the 0.86 layout, filtered to CAP_CATEGORIES."""
+    if not BASELINE_INDEX.exists():
+        return {}
+    from collections import Counter
+
+    c: Counter = Counter()
+    for line in BASELINE_INDEX.read_text().splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        rec = json.loads(line)
+        cat = rec.get("category", "")
+        if cat in CAP_CATEGORIES:
+            c[cat] += 1
+    return dict(c)
 
 INVESTIGATION_CATEGORIES: set[str] = {
     "cryptarithm_deduce",
@@ -271,15 +298,47 @@ def _strip_suffix(pid_with_suffix: str) -> str:
     return re.sub(r"-[a-z]\d+$", "", pid_with_suffix)
 
 
-def _write_train_cot_csv(existing: dict[str, dict]) -> None:
-    """Write train_cot.csv in the deterministic stratified-shuffle training order.
+def _assemble_cot(base_id: str, answers: dict[str, str]) -> tuple[str, str] | None:
+    """Return (generated_cot, source) for a base id, or None if unavailable.
 
-    `generated_cot` is sourced from cot/<base_id>.txt — the *frozen* completion
-    text the original 04-08-16-14 LoRA was trained on (recovered by decoding
-    its token files). The current reasoners produce a longer, restructured CoT
-    that, when used as training data, drops the trained model's score from
-    ~0.85 to ~0.66 (bit_manipulation collapses from 88% to 4%). Falls back to
-    reasoning/<id>.txt if a frozen CoT is missing for a given id.
+    Prefers the *frozen* cot/<base_id>.txt (the golden completion the 0.86 LoRA
+    trained on); otherwise wraps the current reasoning/<base_id>.txt with the
+    </think> + boxed-answer suffix. source is "frozen" or "reasoning".
+    """
+    frozen_path = COT_DIR / f"{base_id}.txt"
+    if frozen_path.exists():
+        return frozen_path.read_text(), "frozen"
+    reasoning_path = REASONING_DIR / f"{base_id}.txt"
+    if not reasoning_path.exists():
+        return None
+    reasoning_text = reasoning_path.read_text().rstrip("\n")
+    boxed_matches = re.findall(r"\\boxed\{([^}]*)\}", reasoning_text)
+    reasoning_answer = boxed_matches[-1] if boxed_matches else answers.get(base_id, "")
+    return f"{reasoning_text}\n</think>\n\\boxed{{{reasoning_answer}}}", "reasoning"
+
+
+def _write_train_cot_csv(existing: dict[str, dict]) -> None:
+    """Write train_cot.csv: the frozen 0.86 corpus PLUS new solves, category-balanced.
+
+    The first block replays train_order.txt — the deterministic stratified-shuffle
+    order (with upsampling duplicates) used to train the 0.86 LoRA — sourcing each
+    completion from the *frozen* cot/<base_id>.txt where it exists. Existing frozen
+    CoTs are never replaced (the current reasoners produce different text that, when
+    swapped in wholesale, drops the score ~0.85->0.66), so the proven baseline is
+    preserved byte-for-byte. The curated order is also how we recover the per-
+    category balance that produced 0.86: hard/scarce categories are oversampled,
+    easy/abundant ones are undersampled.
+
+    The second block subsamples every rule_found problem NOT already in train_order
+    to top up each category up to its CURATED count. This is how freshly-solved
+    problems (e.g. the extended cryptarithm / equation solvers) reach training
+    WITHOUT flooding easy categories and re-creating the corpus-balance trap that
+    caps the leaderboard at 0.85. If a category's curated count already exceeds its
+    new-solve count, no extra rows are added (no downsampling of curated entries).
+
+    The effective row order is written to train_order.full.txt so corpus.py can name
+    the token directories 1:1. Both outputs are regenerated from scratch on every
+    run, so the step is idempotent.
     """
     if not TRAIN_ORDER_PATH.exists():
         print(
@@ -305,54 +364,101 @@ def _write_train_cot_csv(existing: dict[str, dict]) -> None:
         for line in TRAIN_ORDER_PATH.read_text().splitlines()
         if line.strip()
     ]
+    order_base: set[str] = {_strip_suffix(x) for x in order}
+
+    # Per-category curated count = the per-category cap for new solves. The curated
+    # baseline deliberately over/under-samples categories to produce the 0.86 mix.
+    curated_per_cat: dict[str, int] = {}
+    for suffixed in order:
+        base_id = _strip_suffix(suffixed)
+        cat = existing.get(base_id, {}).get("category", "")
+        curated_per_cat[cat] = curated_per_cat.get(cat, 0) + 1
+    # The 0.86 baseline layout directory is the canonical cap source — it has
+    # the row counts the LoRA was actually trained on, and is more durable than
+    # the train_order-stratified view (which can drift if categories churn).
+    baseline_cap = _baseline_per_category_cap()
+    cat_cap = {**curated_per_cat, **baseline_cap}
+    if baseline_cap:
+        print(
+            f"Per-category cap from {BASELINE_LAYOUT_DIR.name}: {baseline_cap}"
+        )
+
+    # New solves per category, sorted deterministically.
+    new_by_cat: dict[str, list[str]] = {}
+    for base_id, entry in existing.items():
+        if entry.get("status") != "rule_found":
+            continue
+        if base_id in order_base:
+            continue
+        if base_id not in prompts:
+            continue
+        cat = entry.get("category", "")
+        new_by_cat.setdefault(cat, []).append(base_id)
+    for cat in new_by_cat:
+        new_by_cat[cat].sort()
 
     rows_written = 0
     frozen_hits = 0
     fallback_hits = 0
     skipped = 0
+    new_added_per_cat: dict[str, int] = {}
+    effective_order: list[str] = []
+
+    def _emit(writer, suffixed_id: str, base_id: str) -> None:
+        nonlocal rows_written, frozen_hits, fallback_hits, skipped
+        result = _assemble_cot(base_id, answers)
+        if result is None:
+            skipped += 1
+            return
+        generated_cot, source = result
+        if source == "frozen":
+            frozen_hits += 1
+        else:
+            fallback_hits += 1
+        category = existing.get(base_id, {}).get("category", "")
+        writer.writerow(
+            [
+                base_id,
+                prompts.get(base_id, ""),
+                answers.get(base_id, ""),
+                category,
+                generated_cot,
+            ]
+        )
+        effective_order.append(suffixed_id)
+        rows_written += 1
+
     with TRAIN_COT_CSV.open("w", encoding="utf-8-sig", newline="") as out:
         writer = csv.writer(out)
         writer.writerow(["id", "prompt", "answer", "type", "generated_cot"])
-        for pid_with_suffix in tqdm(order, desc="train_cot.csv"):
-            base_id = _strip_suffix(pid_with_suffix)
+        for pid_with_suffix in tqdm(order, desc="train_cot.csv (curated)"):
+            _emit(writer, pid_with_suffix, _strip_suffix(pid_with_suffix))
+        # Top up each category up to its cap, deterministic order. The cap is
+        # the 0.86 baseline per-category row count (loaded from
+        # training/sft/04-08-16-14/logprobs/index.jsonl), so easy categories
+        # like gravity/numeral/unit_conversion can't grow past the original
+        # 1055/730/1070 even when many new solves exist.
+        for cat in sorted(new_by_cat):
+            cap = cat_cap.get(cat, curated_per_cat.get(cat, 0))
+            for base_id in tqdm(
+                new_by_cat[cat], desc=f"train_cot.csv (new/{cat})", leave=False
+            ):
+                if new_added_per_cat.get(cat, 0) >= cap:
+                    break
+                _emit(writer, base_id, base_id)
+                new_added_per_cat[cat] = new_added_per_cat.get(cat, 0) + 1
 
-            frozen_path = COT_DIR / f"{base_id}.txt"
-            if frozen_path.exists():
-                generated_cot = frozen_path.read_text()
-                frozen_hits += 1
-            else:
-                reasoning_path = REASONING_DIR / f"{base_id}.txt"
-                if not reasoning_path.exists():
-                    skipped += 1
-                    continue
-                reasoning_text = reasoning_path.read_text().rstrip("\n")
-                boxed_matches = re.findall(r"\\boxed\{([^}]*)\}", reasoning_text)
-                reasoning_answer = (
-                    boxed_matches[-1] if boxed_matches else answers.get(base_id, "")
-                )
-                generated_cot = (
-                    f"{reasoning_text}\n</think>\n\\boxed{{{reasoning_answer}}}"
-                )
-                fallback_hits += 1
-
-            entry = existing.get(base_id, {})
-            category = entry.get("category", "")
-            writer.writerow(
-                [
-                    base_id,
-                    prompts.get(base_id, ""),
-                    answers.get(base_id, ""),
-                    category,
-                    generated_cot,
-                ]
-            )
-            rows_written += 1
+    TRAIN_ORDER_FULL_PATH.write_text("\n".join(effective_order) + "\n")
 
     print(f"\nWrote {rows_written} rows to {TRAIN_COT_CSV.name}")
-    print(f"  from cot/ (frozen): {frozen_hits}")
-    print(f"  from reasoning/ (fallback): {fallback_hits}")
+    print(f"  from cot/ (frozen):         {frozen_hits}")
+    print(f"  from reasoning/ (current):  {fallback_hits}")
+    print("  per-category new top-ups (capped at curated count):")
+    for cat in sorted(new_added_per_cat):
+        print(f"    {cat:28s} +{new_added_per_cat[cat]}")
+    print(f"  effective order written to: {TRAIN_ORDER_FULL_PATH.name}")
     if skipped:
-        print(f"Skipped {skipped} train_order entries with no frozen CoT or reasoning")
+        print(f"Skipped {skipped} ids with no frozen CoT or reasoning")
 
 
 if __name__ == "__main__":

@@ -33,7 +33,39 @@ from transformers import AutoTokenizer  # type: ignore[import-untyped]
 
 TRAIN_COT_CSV = Path(__file__).parent / "train_cot.csv"
 TRAIN_ORDER_PATH = Path(__file__).parent / "train_order.txt"
+# Effective order emitted by reasoning.py: the curated train_order plus every
+# newly-solved problem appended. Preferred over train_order.txt so freshly-solved
+# problems are tokenized into the corpus too.
+TRAIN_ORDER_FULL_PATH = Path(__file__).parent / "train_order.full.txt"
 TOKENIZER_PATH = Path(__file__).parent / "tokenizer.json"
+
+# The 0.86 baseline layout directory captures the original per-category mix
+# (gravity=1055, numeral=730, unit_conversion=1070, cipher=1656, etc.). We cap
+# ONLY the easy/over-abundant categories so they can't flood the corpus and re-
+# create the corpus-balance trap. Hard categories (cryptarithm_*, equation_*,
+# bit_manipulation) are NOT capped — the whole point of this work is to let the
+# new cryptarithm and equation_numeric solves reach training at full strength.
+CAP_CATEGORIES = {"cipher", "gravity", "numeral", "unit_conversion"}
+BASELINE_LAYOUT_DIR = Path(__file__).parent / "training" / "sft" / "04-08-16-14"
+BASELINE_INDEX = BASELINE_LAYOUT_DIR / "logprobs" / "index.jsonl"
+
+
+def _baseline_per_category_cap() -> dict[str, int]:
+    """Per-category row count from the 0.86 layout directory. Returns {} if absent."""
+    if not BASELINE_INDEX.exists():
+        return {}
+    from collections import Counter
+
+    c: Counter = Counter()
+    for line in BASELINE_INDEX.read_text().splitlines():
+        line = line.strip()
+        if not line:
+            continue
+        rec = json.loads(line)
+        cat = rec.get("category", "")
+        if cat in CAP_CATEGORIES:
+            c[cat] += 1
+    return dict(c)
 
 OUTPUT_ROOT = Path(__file__).parent / "training" / "sft" / "nemotron"
 TOKENS_DIR = OUTPUT_ROOT / "tokens"
@@ -67,15 +99,16 @@ def _load_rows() -> list[Row]:
         raise FileNotFoundError(
             f"Missing {TRAIN_COT_CSV.name}; run `uv run reasoning.py` first."
         )
-    if not TRAIN_ORDER_PATH.exists():
+    order_path = (
+        TRAIN_ORDER_FULL_PATH if TRAIN_ORDER_FULL_PATH.exists() else TRAIN_ORDER_PATH
+    )
+    if not order_path.exists():
         raise FileNotFoundError(
-            f"Missing {TRAIN_ORDER_PATH.name}; this captures the training shuffle order."
+            f"Missing {order_path.name}; this captures the training row order."
         )
 
     suffixed_ids = [
-        line.strip()
-        for line in TRAIN_ORDER_PATH.read_text().splitlines()
-        if line.strip()
+        line.strip() for line in order_path.read_text().splitlines() if line.strip()
     ]
 
     with TRAIN_COT_CSV.open(encoding="utf-8-sig", newline="") as f:
@@ -164,16 +197,36 @@ def main() -> None:
     tokenizer = Tokenizer.from_file(str(TOKENIZER_PATH))
     chat_tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME, trust_remote_code=True)
 
+    # Per-category cap from the 0.86 baseline layout. If the file is missing
+    # (fresh checkout without the legacy 04-08-16-14 run), fall back to no cap.
+    cat_cap = _baseline_per_category_cap()
+    if cat_cap:
+        print(
+            f"Per-category cap from {BASELINE_LAYOUT_DIR.name}/logprobs/index.jsonl: {cat_cap}"
+        )
+
     _reset_output_dirs()
 
     total_unmasked = 0
     total_masked = 0
     cat_unmasked: dict[str, int] = {}
     cat_count: dict[str, int] = {}
+    cat_dropped: dict[str, int] = {}
     index_entries: list[dict] = []
     n = len(rows)
 
     for step_global, row in enumerate(tqdm(rows, desc="corpus")):
+        # Only apply the cap to categories that actually have one (the easy/over-
+        # abundant ones — cipher, gravity, numeral, unit_conversion). Hard
+        # categories (cryptarithm_*, equation_*, bit_manipulation) have no cap
+        # and all rows pass through.
+        cap = cat_cap.get(row.category)
+        if cap is not None and cat_count.get(row.category, 0) >= cap:
+            # Per-category cap reached; skip this row to keep the category mix
+            # exactly the same as the 0.86 baseline (easy categories are
+            # undersampled, hard categories are not flooded).
+            cat_dropped[row.category] = cat_dropped.get(row.category, 0) + 1
+            continue
         tokens, mask = _encode_row(row, tokenizer, chat_tokenizer)
         num_loss = sum(mask)
         num_pad = len(mask) - num_loss
@@ -249,6 +302,12 @@ def main() -> None:
     print()
     for cat in sorted(cat_count):
         print(f"  {cat}: {cat_count[cat]} runs, {cat_unmasked[cat]:,} unmasked tokens")
+    if cat_dropped:
+        print()
+        print("Per-category rows DROPPED to enforce the 0.86 per-category cap:")
+        for cat in sorted(cat_dropped):
+            cap = cat_cap.get(cat, "no cap")
+            print(f"  {cat:28s} dropped={cat_dropped[cat]}  cap={cap}")
 
 
 if __name__ == "__main__":

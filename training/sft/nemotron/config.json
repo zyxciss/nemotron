@@ -27,9 +27,9 @@
   "micro_batch_size": 16,
   "time": "nemotron",
   "stats": {
-    "num_examples": 7946,
-    "total_masked_tokens": 1304046,
-    "total_unmasked_tokens": 27041359,
-    "total_steps": 249
+    "num_examples": 9991,
+    "total_masked_tokens": 1314154,
+    "total_unmasked_tokens": 27130554,
+    "total_steps": 313
   }
 }

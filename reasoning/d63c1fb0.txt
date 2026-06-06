@@ -1,66 +1,53 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【""+:|】 = 【"":|】
-  input: 【"】【"】【+】【:】【|】
-  left:【"】【"】
-  operator: 【+】
-  right:【:】【|】
-  output: 【"】【"】【:】【|】
-  concatenation: 【"】【"】【:】【|】 match
-  reverse concatenation: 【:】【|】【"】【"】 mismatch
-  operator: 【+】concatenation
+First, let me assign letters to each symbol:
+" -> A
+: -> B
+| -> C
+? -> D
+< -> E
+> -> F
+& -> G
+{ -> H
+% -> I
+Operators:
++ -> x
+- -> y
 
-【?<+<>】 = 【?<<>】
-  input: 【?】【<】【+】【<】【>】
-  left:【?】【<】
-  operator: 【+】
-  right:【<】【>】
-  output: 【?】【<】【<】【>】
-  concatenation: 【?】【<】【<】【>】 match
-  reverse concatenation: 【<】【>】【?】【<】 mismatch
-  operator: 【+】concatenation
+Converting examples to letter form:
 
-【??-:&】 = 【|?】
-  input: 【?】【?】【-】【:】【&】
-  left:【?】【?】
-  operator: 【-】
-  right:【:】【&】
-  output: 【|】【?】
-  concatenation: 【?】【?】【:】【&】 mismatch
-  reverse concatenation: 【:】【&】【?】【?】 mismatch
-  operator: 【-】unknown
+  「""+:|」 = 「"":|」:
+    input:  " " + : | : " -> A, " -> A, + -> x, : -> B, | -> C -> AA x BC
+    output: " " : | : " -> A, " -> A, : -> B, | -> C -> AABC
 
-【?&+>{】 = 【?&>{】
-  input: 【?】【&】【+】【>】【{】
-  left:【?】【&】
-  operator: 【+】
-  right:【>】【{】
-  output: 【?】【&】【>】【{】
-  concatenation: 【?】【&】【>】【{】 match
-  reverse concatenation: 【>】【{】【?】【&】 mismatch
-  operator: 【+】concatenation
+  「?<+<>」 = 「?<<>」:
+    input:  ? < + < > : ? -> D, < -> E, + -> x, < -> E, > -> F -> DE x EF
+    output: ? < < > : ? -> D, < -> E, < -> E, > -> F -> DEEF
 
-【:|+%&】 = 【:|%&】
-  input: 【:】【|】【+】【%】【&】
-  left:【:】【|】
-  operator: 【+】
-  right:【%】【&】
-  output: 【:】【|】【%】【&】
-  concatenation: 【:】【|】【%】【&】 match
-  reverse concatenation: 【%】【&】【:】【|】 mismatch
-  operator: 【+】concatenation
+  「??-:&」 = 「|?」:
+    input:  ? ? - : & : ? -> D, ? -> D, - -> y, : -> B, & -> G -> DD y BG
+    output: | ? : | -> C, ? -> D -> CD
 
-Question【"|+"%】
-  input: 【"】【|】【+】【"】【%】
-  left:【"】【|】
-  operator:【+】
-  right:【"】【%】
+  「?&+>{」 = 「?&>{」:
+    input:  ? & + > { : ? -> D, & -> G, + -> x, > -> F, { -> H -> DG x FH
+    output: ? & > { : ? -> D, & -> G, > -> F, { -> H -> DGFH
 
-The question operator is 【+】, which is concatenation.
+  「:|+%&」 = 「:|%&」:
+    input:  : | + % & : : -> B, | -> C, + -> x, % -> I, & -> G -> BC x IG
+    output: : | % & : : -> B, | -> C, % -> I, & -> G -> BCIG
 
-  concatenation(【"】【|】, 【"】【%】) = 【"】【|】【"】【%】
-  output: 【"|"%】-> 【{"|"%}】
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: concatenation
+Operator y: unknown
+
+The question operator is x, which is concatenation.
+
+Converting question ""|+"%": " | + " % : " -> A, | -> C, + -> x, " -> A, % -> I -> AC x AI
+
+Applying to AC x AI:
+  concatenation(AC, AI) = AC || AI = ACAI
+  Converting back: A C A I : A -> ", C -> |, A -> ", I -> % -> "|"%
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{"|"%}
+The answer in \boxed is
+\boxed{"|"%}

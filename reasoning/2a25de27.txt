@@ -1,67 +1,58 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【">-"?】 = 【?】
-  input: 【"】【>】【-】【"】【?】
-  left:【"】【>】
-  operator: 【-】
-  right:【"】【?】
-  output: 【?】
-  concatenation: 【"】【>】【"】【?】 mismatch
-  reverse concatenation: 【"】【?】【"】【>】 mismatch
-  operator: 【-】unknown
+First, let me assign letters to each symbol:
+" -> A
+> -> B
+? -> C
+% -> D
+' -> E
+^ -> F
+\ -> G
+{ -> H
+! -> I
+` -> J
+Operators:
+- -> x
++ -> y
+* -> z
 
-【%'+'^】 = 【?\】
-  input: 【%】【'】【+】【'】【^】
-  left:【%】【'】
-  operator: 【+】
-  right:【'】【^】
-  output: 【?】【\】
-  concatenation: 【%】【'】【'】【^】 mismatch
-  reverse concatenation: 【'】【^】【%】【'】 mismatch
-  operator: 【+】unknown
+Converting examples to letter form:
 
-【'?+{^】 = 【!>】
-  input: 【'】【?】【+】【{】【^】
-  left:【'】【?】
-  operator: 【+】
-  right:【{】【^】
-  output: 【!】【>】
-  concatenation: 【'】【?】【{】【^】 mismatch
-  reverse concatenation: 【{】【^】【'】【?】 mismatch
-  operator: 【+】unknown
+  「">-"?」 = 「?」:
+    input:  " > - " ? : " -> A, > -> B, - -> x, " -> A, ? -> C -> AB x AC
+    output: ? : ? -> C -> C
 
-【'{*?>】 = 【%\`?】
-  input: 【'】【{】【*】【?】【>】
-  left:【'】【{】
-  operator: 【*】
-  right:【?】【>】
-  output: 【%】【\】【`】【?】
-  concatenation: 【'】【{】【?】【>】 mismatch
-  reverse concatenation: 【?】【>】【'】【{】 mismatch
-  operator: 【*】unknown
+  「%'+'^」 = 「?\」:
+    input:  % ' + ' ^ : % -> D, ' -> E, + -> y, ' -> E, ^ -> F -> DE y EF
+    output: ? \ : ? -> C, \ -> G -> CG
 
-【!>+{{】 = 【^>{】
-  input: 【!】【>】【+】【{】【{】
-  left:【!】【>】
-  operator: 【+】
-  right:【{】【{】
-  output: 【^】【>】【{】
-  concatenation: 【!】【>】【{】【{】 mismatch
-  reverse concatenation: 【{】【{】【!】【>】 mismatch
-  operator: 【+】unknown
+  「'?+{^」 = 「!>」:
+    input:  ' ? + { ^ : ' -> E, ? -> C, + -> y, { -> H, ^ -> F -> EC y HF
+    output: ! > : ! -> I, > -> B -> IB
 
-Question【{!+!`】
-  input: 【{】【!】【+】【!】【`】
-  left:【{】【!】
-  operator:【+】
-  right:【!】【`】
+  「'{*?>」 = 「%\`?」:
+    input:  ' { * ? > : ' -> E, { -> H, * -> z, ? -> C, > -> B -> EH z CB
+    output: % \ ` ? : % -> D, \ -> G, ` -> J, ? -> C -> DGJC
 
-The question operator is 【+】, which is unknown.
-As the question operator is unknown, we default to concatenation.
+  「!>+{{」 = 「^>{」:
+    input:  ! > + { { : ! -> I, > -> B, + -> y, { -> H, { -> H -> IB y HH
+    output: ^ > { : ^ -> F, > -> B, { -> H -> FBH
 
-  concatenation(【{】【!】, 【!】【`】) = 【{】【!】【!】【`】
-  output: 【{!!`】-> 【{{!!`}】
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator z: multiplication minus one
+Operator y: addition
+Operator x: reverse subtraction
+
+The question operator is y, which is addition.
+
+Converting question "{!+!`": { ! + ! ` : { -> H, ! -> I, + -> y, ! -> I, ` -> J -> HI y IJ
+
+Applying to HI y IJ:
+  Digit values from the bijection: { -> H -> 2, ! -> I -> 8, ! -> I -> 8, ` -> J -> 7
+  HI = 28, IJ = 87
+  addition(HI, IJ) = 28 + 87 = 115
+  Encoding result: 1 1 5 : 1 -> ^, 5 -> ' -> ^^'
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{{!!`}
+The answer in \boxed is
+\boxed{^^'}

@@ -1,46 +1,46 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【&!-][】 = 【`】
-  input: 【&】【!】【-】【]】【[】
-  left:【&】【!】
-  operator: 【-】
-  right:【]】【[】
-  output: 【`】
-  concatenation: 【&】【!】【]】【[】 mismatch
-  reverse concatenation: 【]】【[】【&】【!】 mismatch
-  operator: 【-】unknown
+First, let me assign letters to each symbol:
+& -> A
+! -> B
+] -> C
+[ -> D
+` -> E
+| -> F
+{ -> G
+> -> H
+Operators:
+- -> x
+* -> y
++ -> z
 
-【]!*!|】 = 【!|`】
-  input: 【]】【!】【*】【!】【|】
-  left:【]】【!】
-  operator: 【*】
-  right:【!】【|】
-  output: 【!】【|】【`】
-  concatenation: 【]】【!】【!】【|】 mismatch
-  reverse concatenation: 【!】【|】【]】【!】 mismatch
-  operator: 【*】unknown
+Converting examples to letter form:
 
-【`{+>]】 = 【>]`{】
-  input: 【`】【{】【+】【>】【]】
-  left:【`】【{】
-  operator: 【+】
-  right:【>】【]】
-  output: 【>】【]】【`】【{】
-  concatenation: 【`】【{】【>】【]】 mismatch
-  reverse concatenation: 【>】【]】【`】【{】 match
-  operator: 【+】reverse concatenation
+  「&!-][」 = 「`」:
+    input:  & ! - ] [ : & -> A, ! -> B, - -> x, ] -> C, [ -> D -> AB x CD
+    output: ` : ` -> E -> E
 
-Question【>>+|>】
-  input: 【>】【>】【+】【|】【>】
-  left:【>】【>】
-  operator:【+】
-  right:【|】【>】
+  「]!*!|」 = 「!|`」:
+    input:  ] ! * ! | : ] -> C, ! -> B, * -> y, ! -> B, | -> F -> CB y BF
+    output: ! | ` : ! -> B, | -> F, ` -> E -> BFE
 
-The question operator is 【+】, which is reverse concatenation.
+  「`{+>]」 = 「>]`{」:
+    input:  ` { + > ] : ` -> E, { -> G, + -> z, > -> H, ] -> C -> EG z HC
+    output: > ] ` { : > -> H, ] -> C, ` -> E, { -> G -> HCEG
 
-  reverse concatenation(【>】【>】, 【|】【>】) = 【|】【>】【>】【>】
-  output: 【|>>>】-> 【{|>>>}】
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: unknown
+Operator z: reverse concatenation
+Operator x: unknown
+
+The question operator is z, which is reverse concatenation.
+
+Converting question ">>+|>": > > + | > : > -> H, > -> H, + -> z, | -> F, > -> H -> HH z FH
+
+Applying to HH z FH:
+  reverse concatenation(HH, FH) = FH || HH = FHHH
+  Converting back: F H H H : F -> |, H -> >, H -> >, H -> > -> |>>>
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{|>>>}
+The answer in \boxed is
+\boxed{|>>>}

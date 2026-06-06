@@ -1,57 +1,54 @@
 We need to infer the transformation rule from the examples.
-I will put my final answer inside \boxed{}.
 
-【??+%'】 = 【##】
-  input: 【?】【?】【+】【%】【'】
-  left:【?】【?】
-  operator: 【+】
-  right:【%】【'】
-  output: 【#】【#】
-  concatenation: 【?】【?】【%】【'】 mismatch
-  reverse concatenation: 【%】【'】【?】【?】 mismatch
-  operator: 【+】unknown
+First, let me assign letters to each symbol:
+? -> A
+% -> B
+' -> C
+# -> D
+( -> E
+: -> F
+@ -> G
+| -> H
+{ -> I
+) -> J
+Operators:
++ -> x
+* -> y
+- -> z
 
-【'(+?:】 = 【(@:】
-  input: 【'】【(】【+】【?】【:】
-  left:【'】【(】
-  operator: 【+】
-  right:【?】【:】
-  output: 【(】【@】【:】
-  concatenation: 【'】【(】【?】【:】 mismatch
-  reverse concatenation: 【?】【:】【'】【(】 mismatch
-  operator: 【+】unknown
+Converting examples to letter form:
 
-【|'*#|】 = 【|{%{】
-  input: 【|】【'】【*】【#】【|】
-  left:【|】【'】
-  operator: 【*】
-  right:【#】【|】
-  output: 【|】【{】【%】【{】
-  concatenation: 【|】【'】【#】【|】 mismatch
-  reverse concatenation: 【#】【|】【|】【'】 mismatch
-  operator: 【*】unknown
+  「??+%'」 = 「##」:
+    input:  ? ? + % ' : ? -> A, ? -> A, + -> x, % -> B, ' -> C -> AA x BC
+    output: # # : # -> D, # -> D -> DD
 
-【:)-'?】 = 【{#】
-  input: 【:】【)】【-】【'】【?】
-  left:【:】【)】
-  operator: 【-】
-  right:【'】【?】
-  output: 【{】【#】
-  concatenation: 【:】【)】【'】【?】 mismatch
-  reverse concatenation: 【'】【?】【:】【)】 mismatch
-  operator: 【-】unknown
+  「'(+?:」 = 「(@:」:
+    input:  ' ( + ? : : ' -> C, ( -> E, + -> x, ? -> A, : -> F -> CE x AF
+    output: ( @ : : ( -> E, @ -> G, : -> F -> EGF
 
-Question【#'*('】
-  input: 【#】【'】【*】【(】【'】
-  left:【#】【'】
-  operator:【*】
-  right:【(】【'】
+  「|'*#|」 = 「|{%{」:
+    input:  | ' * # | : | -> H, ' -> C, * -> y, # -> D, | -> H -> HC y DH
+    output: | { % { : | -> H, { -> I, % -> B, { -> I -> HIBI
 
-The question operator is 【*】, which is unknown.
-As the question operator is unknown, we default to concatenation.
+  「:)-'?」 = 「{#」:
+    input:  : ) - ' ? : : -> F, ) -> J, - -> z, ' -> C, ? -> A -> FJ z CA
+    output: { # : { -> I, # -> D -> ID
 
-  concatenation(【#】【'】, 【(】【'】) = 【#】【'】【(】【'】
-  output: 【#'('】-> 【{#'('}】
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication
+Operator x: addition minus one
+Operator z: subtraction
+
+The question operator is y, which is multiplication.
+
+Converting question "#'*('": # ' * ( ' : # -> D, ' -> C, * -> y, ( -> E, ' -> C -> DC y EC
+
+Applying to DC y EC:
+  Digit values from the bijection: # -> D -> 9, ' -> C -> 4, ( -> E -> 1, ' -> C -> 4
+  DC = 94, EC = 14
+  multiplication(DC, EC) = 94 * 14 = 1316
+  Encoding result: 1 3 1 6 : 1 -> (, 3 -> %, 6 -> ? -> (%(?
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{#'('}
+The answer in \boxed is
+\boxed{(%(?}
