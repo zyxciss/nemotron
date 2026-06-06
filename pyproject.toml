@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "bitword-solver-rs",
     "jinja2>=3.1.6",
     "modal>=1.4.1",
     "pydantic>=2.12.1",
@@ -23,3 +24,11 @@ dev = [
 
 [tool.pytest.ini_options]
 testpaths = [".claude"]
+
+[tool.uv.workspace]
+members = [
+    "bitword_solver_rs",
+]
+
+[tool.uv.sources]
+bitword-solver-rs = { workspace = true }

@@ -10,6 +10,12 @@ resolution-markers = [
     "python_full_version < '3.14' and sys_platform != 'emscripten' and sys_platform != 'win32'",
 ]
 
+[manifest]
+members = [
+    "bitword-solver-rs",
+    "claude-code-template",
+]
+
 [[package]]
 name = "aiohappyeyeballs"
 version = "2.6.1"
@@ -173,6 +179,11 @@ sdist = { url = "https://files.pythonhosted.org/packages/9a/8e/82a0fe20a541c0314
 wheels = [
     { url = "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl", hash = "sha256:c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309", size = 67548, upload-time = "2026-03-19T14:22:23.645Z" },
 ]
+
+[[package]]
+name = "bitword-solver-rs"
+version = "0.1.0"
+source = { editable = "bitword_solver_rs" }
 
 [[package]]
 name = "blobfile"
@@ -341,6 +352,7 @@ name = "claude-code-template"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "bitword-solver-rs" },
     { name = "jinja2" },
     { name = "modal" },
     { name = "pydantic" },
@@ -359,6 +371,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "bitword-solver-rs", editable = "bitword_solver_rs" },
     { name = "jinja2", specifier = ">=3.1.6" },
     { name = "modal", specifier = ">=1.4.1" },
     { name = "pydantic", specifier = ">=2.12.1" },

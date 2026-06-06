@@ -1008,7 +1008,7 @@ def reasoning_bit_manipulation(problem: Problem) -> Optional[str]:
         return True
 
     best_answer = "".join(_evaluate_rule(question_bits, r) for r in best)
-    from reasoners.bitword_solver import per_bit_ops, solve as _ww_solve
+    from bitword_solver_rs import per_bit_ops, solve as _ww_solve
 
     ex_pairs = list(zip(inputs, outputs))
     ww_answer = _ww_solve(ex_pairs, question_bits)
