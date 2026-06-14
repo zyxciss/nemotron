@@ -167,4 +167,5 @@ Applying to 48@23:
   Result: 【72】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{72}
+The answer in \boxed is
+\boxed{72}

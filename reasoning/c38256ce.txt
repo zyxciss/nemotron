@@ -528,4 +528,5 @@ New mappings
 【(g)】->【o】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen discovers the hidden treasure}
+The answer in \boxed is
+\boxed{queen discovers the hidden treasure}

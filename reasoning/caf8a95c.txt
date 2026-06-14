@@ -421,4 +421,5 @@ New mappings
 【(h)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse writes map}
+The answer in \boxed is
+\boxed{mouse writes map}

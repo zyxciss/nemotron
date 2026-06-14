@@ -168,4 +168,5 @@ Applying to 97{23:
   Result: 【74】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{74}
+The answer in \boxed is
+\boxed{74}

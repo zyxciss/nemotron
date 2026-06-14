@@ -439,4 +439,5 @@ New mappings
 【(c)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse writes the dark treasure}
+The answer in \boxed is
+\boxed{mouse writes the dark treasure}

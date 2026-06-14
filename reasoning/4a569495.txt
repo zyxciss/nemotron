@@ -171,4 +171,5 @@ Applying to 53+04:
   Result: 【47】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{47}
+The answer in \boxed is
+\boxed{47}

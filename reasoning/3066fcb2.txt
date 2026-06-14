@@ -476,4 +476,5 @@ New mappings
 【(k)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student writes the bright puzzle}
+The answer in \boxed is
+\boxed{student writes the bright puzzle}

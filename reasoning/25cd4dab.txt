@@ -484,4 +484,5 @@ New mappings
 【(g)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight reads the golden puzzle}
+The answer in \boxed is
+\boxed{knight reads the golden puzzle}

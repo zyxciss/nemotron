@@ -782,4 +782,5 @@ Output
 7 OR-NOT53 = OR(1,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00101101}
+The answer in \boxed is
+\boxed{00101101}

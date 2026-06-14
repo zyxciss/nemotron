@@ -13,4 +13,5 @@ Applying neg_abs to 28}58:
   the result is negative, shown with the operator 【}】 -> }30
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{}30}
+The answer in \boxed is
+\boxed{}30}

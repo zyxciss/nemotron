@@ -400,4 +400,5 @@ New mappings
 【(e)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the curious student follows}
+The answer in \boxed is
+\boxed{the curious student follows}

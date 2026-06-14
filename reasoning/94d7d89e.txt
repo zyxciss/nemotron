@@ -485,4 +485,5 @@ New mappings
 【(r)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse watches the silver key}
+The answer in \boxed is
+\boxed{mouse watches the silver key}

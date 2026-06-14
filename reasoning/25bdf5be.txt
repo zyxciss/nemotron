@@ -586,4 +586,5 @@ New mappings
 【(p)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit follows the dark garden}
+The answer in \boxed is
+\boxed{rabbit follows the dark garden}

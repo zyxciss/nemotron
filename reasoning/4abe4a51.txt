@@ -463,4 +463,5 @@ New mappings
 【(o)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess watches the bright map}
+The answer in \boxed is
+\boxed{princess watches the bright map}

@@ -171,4 +171,5 @@ Applying to 55"18:
   Result: 【5544】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{5544}
+The answer in \boxed is
+\boxed{5544}

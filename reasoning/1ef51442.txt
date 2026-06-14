@@ -170,4 +170,5 @@ Applying to 94*14:
   Result: 【8002】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{8002}
+The answer in \boxed is
+\boxed{8002}

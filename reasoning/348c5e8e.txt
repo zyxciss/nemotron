@@ -457,4 +457,5 @@ New mappings
 【(w)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{king studies map}
+The answer in \boxed is
+\boxed{king studies map}

@@ -485,4 +485,5 @@ New mappings
 【(d)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the wise knight sees}
+The answer in \boxed is
+\boxed{the wise knight sees}

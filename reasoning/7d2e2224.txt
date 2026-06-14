@@ -407,4 +407,5 @@ princess discovers above palace
 Iterating over the unknown letters to see if they are in the question: no unknown letters
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess discovers above palace}
+The answer in \boxed is
+\boxed{princess discovers above palace}

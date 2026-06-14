@@ -438,4 +438,5 @@ New mappings
 【(e)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher dreams the bright puzzle}
+The answer in \boxed is
+\boxed{teacher dreams the bright puzzle}

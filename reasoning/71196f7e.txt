@@ -474,4 +474,5 @@ New mappings
 【(d)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse sees the silver book}
+The answer in \boxed is
+\boxed{mouse sees the silver book}

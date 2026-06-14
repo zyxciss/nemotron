@@ -168,4 +168,5 @@ Applying to 37*36:
   Result: 【1332】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1332}
+The answer in \boxed is
+\boxed{1332}

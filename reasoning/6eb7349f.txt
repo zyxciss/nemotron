@@ -510,4 +510,5 @@ Best match: 【palace】
 【e】->【e】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight explores around palace}
+The answer in \boxed is
+\boxed{knight explores around palace}

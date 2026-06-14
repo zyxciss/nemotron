@@ -475,4 +475,5 @@ New mappings
 【(j)】->【w】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight draws the curious potion}
+The answer in \boxed is
+\boxed{knight draws the curious potion}

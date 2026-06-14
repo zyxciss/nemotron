@@ -416,4 +416,5 @@ New mappings
 【(g)】->【w】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the wise teacher creates}
+The answer in \boxed is
+\boxed{the wise teacher creates}

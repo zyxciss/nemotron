@@ -291,4 +291,5 @@ the hidden king watches
 Iterating over the unknown letters to see if they are in the question: no unknown letters
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the hidden king watches}
+The answer in \boxed is
+\boxed{the hidden king watches}

@@ -174,4 +174,5 @@ Applying to 22-27:
   Result: 【-05】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-05}
+The answer in \boxed is
+\boxed{-05}

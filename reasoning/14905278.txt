@@ -171,4 +171,5 @@ Applying to 38<56:
   Result: 【5935】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{5935}
+The answer in \boxed is
+\boxed{5935}

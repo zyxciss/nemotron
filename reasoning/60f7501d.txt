@@ -407,4 +407,5 @@ New mappings
 【(t)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the silver cat imagines}
+The answer in \boxed is
+\boxed{the silver cat imagines}

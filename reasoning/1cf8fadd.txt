@@ -116,4 +116,5 @@ Converting 51:
 Result: L I -> LI
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{LI}
+The answer in \boxed is
+\boxed{LI}

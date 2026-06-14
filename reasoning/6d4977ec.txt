@@ -418,4 +418,5 @@ New mappings
 【(t)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen dreams the dark mirror}
+The answer in \boxed is
+\boxed{queen dreams the dark mirror}

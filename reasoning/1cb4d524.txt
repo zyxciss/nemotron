@@ -173,4 +173,5 @@ Applying to 74!88:
   Result: 【6314】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6314}
+The answer in \boxed is
+\boxed{6314}

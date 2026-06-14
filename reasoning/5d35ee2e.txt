@@ -34,14 +34,21 @@ Converting examples to letter form:
     input:  [ [ - & : : [ -> I, [ -> I, - -> y, & -> A, : -> J -> II y AJ
     output: - \ / : - -> F, \ -> G, / -> E -> FGE
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: concatenation
+Operator z: addition
+Operator y: negated absolute difference
 
-Converting question "[&+[[": -> IA z II
+The question operator is z, which is addition.
+
+Converting question "[&+[[": [ & + [ [ : [ -> I, & -> A, + -> z, [ -> I, [ -> I -> IA z II
+
 Applying to IA z II:
-  concatenation(IA, II) = IA || II = IAII
-  Converting back: I A I I : I -> [, A -> &, I -> [, I -> [ -> [&[[
+  Digit values from the bijection: [ -> I -> 6, & -> A -> 1, [ -> I -> 6, [ -> I -> 6
+  IA = 61, II = 66
+  addition(IA, II) = 61 + 66 = 127
+  Encoding result: 1 2 7 : 1 -> &, 2 -> /, 7 -> { -> &/{
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{[&[[}
+\boxed{&/{}

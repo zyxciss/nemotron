@@ -671,4 +671,5 @@ New mappings
 【(g)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard follows through cave}
+The answer in \boxed is
+\boxed{wizard follows through cave}

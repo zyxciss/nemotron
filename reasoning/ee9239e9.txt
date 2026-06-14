@@ -169,4 +169,5 @@ Applying to 26*29:
   Result: 【2629】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{2629}
+The answer in \boxed is
+\boxed{2629}

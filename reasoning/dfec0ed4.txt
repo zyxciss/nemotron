@@ -168,4 +168,5 @@ Applying to 93*70:
   Result: 【9370】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9370}
+The answer in \boxed is
+\boxed{9370}

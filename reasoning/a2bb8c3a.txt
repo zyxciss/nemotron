@@ -830,4 +830,5 @@ Output
 7 I4 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00001101}
+The answer in \boxed is
+\boxed{00001101}

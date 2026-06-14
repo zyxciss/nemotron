@@ -171,4 +171,5 @@ Applying to 25*61:
   Result: 【6125】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6125}
+The answer in \boxed is
+\boxed{6125}

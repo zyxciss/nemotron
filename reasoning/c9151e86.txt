@@ -170,4 +170,5 @@ Applying to 69*31:
   Result: 【9421】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9421}
+The answer in \boxed is
+\boxed{9421}

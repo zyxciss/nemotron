@@ -69,4 +69,5 @@ Converting 19.1:
 = 20.456
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{20.456}
+The answer in \boxed is
+\boxed{20.456}

@@ -805,4 +805,5 @@ Output
 7 I0 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10010011}
+The answer in \boxed is
+\boxed{10010011}

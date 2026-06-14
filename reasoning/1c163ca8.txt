@@ -486,4 +486,5 @@ New mappings
 【(r)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{turtle draws the clever mirror}
+The answer in \boxed is
+\boxed{turtle draws the clever mirror}

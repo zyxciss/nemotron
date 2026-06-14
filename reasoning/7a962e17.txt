@@ -173,4 +173,5 @@ Applying to 77/68:
   Result: 【361】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{361}
+The answer in \boxed is
+\boxed{361}

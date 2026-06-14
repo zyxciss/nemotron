@@ -508,4 +508,5 @@ New mappings
 【(i)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{alice discovers above palace}
+The answer in \boxed is
+\boxed{alice discovers above palace}

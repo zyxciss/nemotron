@@ -441,4 +441,5 @@ New mappings
 【(j)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight studies the colorful crystal}
+The answer in \boxed is
+\boxed{knight studies the colorful crystal}

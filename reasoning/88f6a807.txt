@@ -501,4 +501,5 @@ New mappings
 【(n)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student sees near valley}
+The answer in \boxed is
+\boxed{student sees near valley}

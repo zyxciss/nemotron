@@ -470,4 +470,5 @@ New mappings
 【(x)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{dragon found mirror}
+The answer in \boxed is
+\boxed{dragon found mirror}

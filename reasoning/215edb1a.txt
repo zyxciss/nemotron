@@ -398,4 +398,5 @@ New mappings
 【(w)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the colorful princess dreams}
+The answer in \boxed is
+\boxed{the colorful princess dreams}

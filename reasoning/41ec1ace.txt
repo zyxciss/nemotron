@@ -507,4 +507,5 @@ New mappings
 【(v)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard found around garden}
+The answer in \boxed is
+\boxed{wizard found around garden}

@@ -536,4 +536,5 @@ New mappings
 【(o)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{king found the hidden key}
+The answer in \boxed is
+\boxed{king found the hidden key}

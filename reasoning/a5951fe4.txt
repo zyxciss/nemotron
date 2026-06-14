@@ -120,4 +120,5 @@ Converting 77:
 Result: L X X V I I -> LXXVII
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{LXXVII}
+The answer in \boxed is
+\boxed{LXXVII}

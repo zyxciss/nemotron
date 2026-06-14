@@ -596,4 +596,5 @@ New mappings
 【(k)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the hidden mouse explores}
+The answer in \boxed is
+\boxed{the hidden mouse explores}

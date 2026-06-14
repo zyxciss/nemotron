@@ -129,4 +129,5 @@ Converting 48.93:
 = 95.168
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{95.168}
+The answer in \boxed is
+\boxed{95.168}

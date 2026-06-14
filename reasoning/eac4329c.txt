@@ -464,4 +464,5 @@ Best match: 【mirror】
 【r】->【r】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse studies mirror}
+The answer in \boxed is
+\boxed{mouse studies mirror}

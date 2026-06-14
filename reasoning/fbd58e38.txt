@@ -267,4 +267,5 @@ bird draws near garden
 Iterating over the unknown letters to see if they are in the question: no unknown letters
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird draws near garden}
+The answer in \boxed is
+\boxed{bird draws near garden}

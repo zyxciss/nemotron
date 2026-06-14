@@ -823,4 +823,5 @@ Output
 7 AND60 = AND(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00000001}
+The answer in \boxed is
+\boxed{00000001}

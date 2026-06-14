@@ -170,4 +170,5 @@ Applying to 73*33:
   Result: 【*4】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{*4}
+The answer in \boxed is
+\boxed{*4}

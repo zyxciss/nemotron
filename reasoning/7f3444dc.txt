@@ -476,4 +476,5 @@ Best match: 【dreams】
 【s】->【s】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the golden mouse dreams}
+The answer in \boxed is
+\boxed{the golden mouse dreams}

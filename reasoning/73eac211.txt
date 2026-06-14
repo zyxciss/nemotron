@@ -533,4 +533,5 @@ New mappings
 【(d)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{king watches under cave}
+The answer in \boxed is
+\boxed{king watches under cave}

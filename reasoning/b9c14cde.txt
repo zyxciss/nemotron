@@ -566,4 +566,5 @@ Best match: 【cave】
 【e】->【e】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess found above cave}
+The answer in \boxed is
+\boxed{princess found above cave}

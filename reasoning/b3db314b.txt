@@ -411,4 +411,5 @@ New mappings
 【(d)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher imagines the secret garden}
+The answer in \boxed is
+\boxed{teacher imagines the secret garden}

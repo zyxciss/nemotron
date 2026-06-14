@@ -428,4 +428,5 @@ New mappings
 【(t)】->【u】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the mysterious rabbit reads}
+The answer in \boxed is
+\boxed{the mysterious rabbit reads}

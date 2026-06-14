@@ -173,4 +173,5 @@ Applying to 18$54:
   Result: 【71】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{71}
+The answer in \boxed is
+\boxed{71}

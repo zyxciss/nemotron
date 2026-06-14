@@ -29,14 +29,21 @@ Converting examples to letter form:
     input:  $ ] * & & : $ -> G, ] -> I, * -> x, & -> B, & -> B -> GI x BB
     output: } & & } : } -> D, & -> B, & -> B, } -> D -> DBBD
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: multiplication
+Operator z: addition minus one
+Operator y: subtraction
 
-Converting question "!!+$>": -> AA z GE
+The question operator is z, which is addition minus one.
+
+Converting question "!!+$>": ! ! + $ > : ! -> A, ! -> A, + -> z, $ -> G, > -> E -> AA z GE
+
 Applying to AA z GE:
-  concatenation(AA, GE) = AA || GE = AAGE
-  Converting back: A A G E : A -> !, A -> !, G -> $, E -> > -> !!$>
+  Digit values from the bijection: ! -> A -> 4, ! -> A -> 4, $ -> G -> 3, > -> E -> 8
+  AA = 44, GE = 38
+  addition minus one(AA, GE) = 44 + 38 - 1 = 81
+  Encoding result: 8 1 : 8 -> >, 1 -> / -> >/
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{!!$>}
+\boxed{>/}

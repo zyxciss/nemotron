@@ -172,4 +172,5 @@ Applying to 57"50:
   Result: 【107】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{107}
+The answer in \boxed is
+\boxed{107}

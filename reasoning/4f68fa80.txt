@@ -466,4 +466,5 @@ New mappings
 【(f)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard studies the wise puzzle}
+The answer in \boxed is
+\boxed{wizard studies the wise puzzle}

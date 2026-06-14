@@ -33,14 +33,21 @@ Converting examples to letter form:
     input:  # : ] : $ : # -> I, : -> H, ] -> y, : -> H, $ -> A -> IH y HA
     output: % $ : : % -> D, $ -> A, : -> H -> DAH
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator z: max mod min
+Operator y: multiplication
+Operator x: addition
 
-Converting question "\$&::": -> BA z HH
+The question operator is z, which is max mod min.
+
+Converting question "\$&::": \ $ & : : : \ -> B, $ -> A, & -> z, : -> H, : -> H -> BA z HH
+
 Applying to BA z HH:
-  concatenation(BA, HH) = BA || HH = BAHH
-  Converting back: B A H H : B -> \, A -> $, H -> :, H -> : -> \$::
+  Digit values from the bijection: \ -> B -> 8, $ -> A -> 1, : -> H -> 3, : -> H -> 3
+  BA = 81, HH = 33
+  max mod min(BA, HH) = max(81,33) mod min(81,33) = 15
+  Encoding result: 1 5 : 1 -> $, 5 -> | -> $|
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{\$::}
+\boxed{$|}

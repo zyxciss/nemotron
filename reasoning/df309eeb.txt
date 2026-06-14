@@ -175,4 +175,5 @@ Applying to 02%79:
   Result: 【77】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{77}
+The answer in \boxed is
+\boxed{77}

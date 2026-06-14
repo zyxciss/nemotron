@@ -174,4 +174,5 @@ Applying to 25*98:
   Result: 【9264】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9264}
+The answer in \boxed is
+\boxed{9264}

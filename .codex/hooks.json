@@ -1,0 +1,73 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "WebFetch",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 '/Users/zyxciss/Downloads/nemotron-2/.codex/hooks/process_hooks.py'"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 '/Users/zyxciss/Downloads/nemotron-2/.codex/hooks/process_hooks.py'"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 '/Users/zyxciss/Downloads/nemotron-2/.codex/hooks/process_hooks.py'"
+          }
+        ]
+      },
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 '/Users/zyxciss/Downloads/nemotron-2/.codex/hooks/process_hooks.py'"
+          }
+        ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 '/Users/zyxciss/Downloads/nemotron-2/.codex/hooks/process_hooks.py'"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 '/Users/zyxciss/Downloads/nemotron-2/.codex/hooks/process_hooks.py'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 '/Users/zyxciss/Downloads/nemotron-2/.codex/hooks/process_hooks.py'"
+          }
+        ]
+      }
+    ]
+  }
+}

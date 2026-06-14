@@ -37,14 +37,21 @@ Converting examples to letter form:
     input:  ^ ` + ^ [ : ^ -> C, ` -> I, + -> x, ^ -> C, [ -> F -> CI x CF
     output: ` & : ` -> I, & -> E -> IE
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication
+Operator x: addition minus one
+Operator z: reverse subtraction
 
-Converting question "??-&:": -> GG z EB
+The question operator is z, which is reverse subtraction.
+
+Converting question "??-&:": ? ? - & : : ? -> G, ? -> G, - -> z, & -> E, : -> B -> GG z EB
+
 Applying to GG z EB:
-  concatenation(GG, EB) = GG || EB = GGEB
-  Converting back: G G E B : G -> ?, G -> ?, E -> &, B -> : -> ??&:
+  Digit values from the bijection: ? -> G -> 3, ? -> G -> 3, & -> E -> 5, : -> B -> 8
+  GG = 33, EB = 58
+  reverse subtraction(GG, EB) = 58 - 33 = 25
+  Encoding result: 2 5 : 2 -> `, 5 -> & -> `&
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{??&:}
+\boxed{`&}

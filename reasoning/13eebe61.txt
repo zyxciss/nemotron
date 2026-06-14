@@ -796,4 +796,5 @@ Output
 7 AND36 = AND(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01111001}
+The answer in \boxed is
+\boxed{01111001}

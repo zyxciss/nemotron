@@ -471,4 +471,5 @@ New mappings
 【(h)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher found crystal}
+The answer in \boxed is
+\boxed{teacher found crystal}

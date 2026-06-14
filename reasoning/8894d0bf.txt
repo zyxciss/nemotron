@@ -424,4 +424,5 @@ New mappings
 【(d)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{hatter discovers puzzle}
+The answer in \boxed is
+\boxed{hatter discovers puzzle}

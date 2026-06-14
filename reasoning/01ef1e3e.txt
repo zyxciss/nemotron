@@ -38,14 +38,21 @@ Converting examples to letter form:
     input:  ^ ] * } ] : ^ -> C, ] -> F, * -> y, } -> D, ] -> F -> CF y DF
     output: ] [ ( ` : ] -> F, [ -> H, ( -> B, ` -> E -> FHBE
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication minus one
+Operator z: addition minus one
+Operator x: subtraction
 
-Converting question "''+`!": -> AA z EJ
+The question operator is z, which is addition minus one.
+
+Converting question "''+`!": ' ' + ` ! : ' -> A, ' -> A, + -> z, ` -> E, ! -> J -> AA z EJ
+
 Applying to AA z EJ:
-  concatenation(AA, EJ) = AA || EJ = AAEJ
-  Converting back: A A E J : A -> ', A -> ', E -> `, J -> ! -> ''`!
+  Digit values from the bijection: ' -> A -> 9, ' -> A -> 9, ` -> E -> 3, ! -> J -> 0
+  AA = 99, EJ = 30
+  addition minus one(AA, EJ) = 99 + 30 - 1 = 128
+  Encoding result: 1 2 8 : 1 -> [, 2 -> ], 8 -> ( -> [](
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{''`!}
+\boxed{[](}

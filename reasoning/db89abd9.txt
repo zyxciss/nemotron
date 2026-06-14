@@ -478,4 +478,5 @@ New mappings
 【(p)】->【u】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess chases through village}
+The answer in \boxed is
+\boxed{princess chases through village}

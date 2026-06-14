@@ -419,4 +419,5 @@ New mappings
 【(y)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse discovers puzzle}
+The answer in \boxed is
+\boxed{mouse discovers puzzle}

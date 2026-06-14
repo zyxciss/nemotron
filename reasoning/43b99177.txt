@@ -66,4 +66,5 @@ Converting 5.53:
 = 2.831
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{2.831}
+The answer in \boxed is
+\boxed{2.831}

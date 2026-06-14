@@ -34,14 +34,21 @@ Converting examples to letter form:
     input:  # $ + ' | : # -> H, $ -> D, + -> y, ' -> I, | -> J -> HD y IJ
     output: : : [ : : -> E, : -> E, [ -> G -> EEG
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator z: multiplication minus one
+Operator y: addition
+Operator x: absolute difference
 
-Converting question "#$*>$": -> HD z AD
+The question operator is z, which is multiplication minus one.
+
+Converting question "#$*>$": # $ * > $ : # -> H, $ -> D, * -> z, > -> A, $ -> D -> HD z AD
+
 Applying to HD z AD:
-  concatenation(HD, AD) = HD || AD = HDAD
-  Converting back: H D A D : H -> #, D -> $, A -> >, D -> $ -> #$>$
+  Digit values from the bijection: # -> H -> 3, $ -> D -> 4, > -> A -> 5, $ -> D -> 4
+  HD = 34, AD = 54
+  multiplication minus one(HD, AD) = 34 * 54 - 1 = 1835
+  Encoding result: 1 8 3 5 : 1 -> :, 8 -> |, 3 -> #, 5 -> > -> :|#>
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{#$>$}
+\boxed{:|#>}

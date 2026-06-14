@@ -120,4 +120,5 @@ Converting 33:
 Result: X X X I I I -> XXXIII
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XXXIII}
+The answer in \boxed is
+\boxed{XXXIII}

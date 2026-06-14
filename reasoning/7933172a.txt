@@ -33,14 +33,21 @@ Converting examples to letter form:
     input:  \ } { ` } : \ -> G, } -> F, { -> y, ` -> A, } -> F -> GF y AF
     output: } # : } -> F, # -> H -> FH
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator z: multiplication
+Operator x: subtraction
+Operator y: addition
 
-Converting question "%#+^`": -> IH z DA
+The question operator is z, which is multiplication.
+
+Converting question "%#+^`": % # + ^ ` : % -> I, # -> H, + -> z, ^ -> D, ` -> A -> IH z DA
+
 Applying to IH z DA:
-  concatenation(IH, DA) = IH || DA = IHDA
-  Converting back: I H D A : I -> %, H -> #, D -> ^, A -> ` -> %#^`
+  Digit values from the bijection: % -> I -> 9, # -> H -> 6, ^ -> D -> 3, ` -> A -> 2
+  IH = 96, DA = 32
+  multiplication(IH, DA) = 96 * 32 = 3072
+  Encoding result: 3 0 7 2 : 3 -> ^, 0 -> /, 7 -> &, 2 -> ` -> ^/&`
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{%#^`}
+\boxed{^/&`}

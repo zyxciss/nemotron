@@ -168,4 +168,5 @@ Applying to 42*59:
   Result: 【32】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{32}
+The answer in \boxed is
+\boxed{32}

@@ -535,4 +535,5 @@ Best match: 【silver】
 【r】->【r】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess discovers the silver map}
+The answer in \boxed is
+\boxed{princess discovers the silver map}

@@ -428,4 +428,5 @@ New mappings
 【(t)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird writes inside garden}
+The answer in \boxed is
+\boxed{bird writes inside garden}

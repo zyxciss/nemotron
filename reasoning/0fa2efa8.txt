@@ -689,4 +689,5 @@ New mappings
 【(a)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen follows the dark key}
+The answer in \boxed is
+\boxed{queen follows the dark key}

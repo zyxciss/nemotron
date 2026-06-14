@@ -691,4 +691,5 @@ Best match: 【bright】
 【t】->【t】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird found the bright map}
+The answer in \boxed is
+\boxed{bird found the bright map}

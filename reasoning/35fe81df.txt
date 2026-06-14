@@ -439,4 +439,5 @@ New mappings
 【(c)】->【q】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the wise queen creates}
+The answer in \boxed is
+\boxed{the wise queen creates}

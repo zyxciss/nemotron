@@ -121,4 +121,5 @@ d = 4.372 * 5.0176:
 = 21.936
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{21.936}
+The answer in \boxed is
+\boxed{21.936}

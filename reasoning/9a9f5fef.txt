@@ -600,4 +600,5 @@ New mappings
 【(i)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard sees the golden key}
+The answer in \boxed is
+\boxed{wizard sees the golden key}

@@ -415,4 +415,5 @@ New mappings
 【(i)】->【q】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen draws the curious message}
+The answer in \boxed is
+\boxed{queen draws the curious message}

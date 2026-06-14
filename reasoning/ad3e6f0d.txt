@@ -118,4 +118,5 @@ Converting 67:
 Result: L X V I I -> LXVII
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{LXVII}
+The answer in \boxed is
+\boxed{LXVII}

@@ -175,4 +175,5 @@ Applying to 62-47:
   Result: 【108】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{108}
+The answer in \boxed is
+\boxed{108}

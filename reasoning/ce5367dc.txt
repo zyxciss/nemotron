@@ -431,4 +431,5 @@ New mappings
 【(n)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the clever knight chases}
+The answer in \boxed is
+\boxed{the clever knight chases}

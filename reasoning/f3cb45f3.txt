@@ -408,4 +408,5 @@ New mappings
 【(c)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight writes the ancient message}
+The answer in \boxed is
+\boxed{knight writes the ancient message}

@@ -565,4 +565,5 @@ Best match: 【discovers】
 【s】->【s】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the silver king discovers}
+The answer in \boxed is
+\boxed{the silver king discovers}

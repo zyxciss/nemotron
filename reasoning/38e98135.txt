@@ -169,4 +169,5 @@ Applying to 88^57:
   Result: 【5017】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{5017}
+The answer in \boxed is
+\boxed{5017}

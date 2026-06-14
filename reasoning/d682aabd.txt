@@ -478,4 +478,5 @@ New mappings
 【(h)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the magical king creates}
+The answer in \boxed is
+\boxed{the magical king creates}

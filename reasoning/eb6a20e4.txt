@@ -389,4 +389,5 @@ New mappings
 【(b)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{dragon chases inside cave}
+The answer in \boxed is
+\boxed{dragon chases inside cave}

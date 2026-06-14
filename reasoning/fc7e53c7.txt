@@ -171,4 +171,5 @@ Applying to 77-35:
   Result: 【-42】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-42}
+The answer in \boxed is
+\boxed{-42}

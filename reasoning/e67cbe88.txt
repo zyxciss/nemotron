@@ -824,4 +824,5 @@ Output
 7 I3 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11010111}
+The answer in \boxed is
+\boxed{11010111}

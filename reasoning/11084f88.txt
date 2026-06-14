@@ -348,4 +348,5 @@ New mappings
 【(c)】->【w】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{turtle draws story}
+The answer in \boxed is
+\boxed{turtle draws story}

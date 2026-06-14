@@ -792,4 +792,5 @@ Output
 7 AND23 = AND(1,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00011110}
+The answer in \boxed is
+\boxed{00011110}

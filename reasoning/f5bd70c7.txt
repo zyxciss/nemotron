@@ -397,4 +397,5 @@ New mappings
 【(l)】->【q】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen creates above wonderland}
+The answer in \boxed is
+\boxed{queen creates above wonderland}

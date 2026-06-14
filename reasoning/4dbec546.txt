@@ -175,4 +175,5 @@ Applying to 06+65:
   Result: 【611】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{611}
+The answer in \boxed is
+\boxed{611}

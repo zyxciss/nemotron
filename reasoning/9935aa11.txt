@@ -29,14 +29,21 @@ Converting examples to letter form:
     input:  ` \ + ) ( : ` -> H, \ -> C, + -> y, ) -> I, ( -> D -> HC y ID
     output: \ # # : \ -> C, # -> E, # -> E -> CEE
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: reverse concatenation
+Operator y: multiplication
+Operator z: reverse subtraction
 
-Converting question "<`-)<": -> GH z IG
+The question operator is z, which is reverse subtraction.
+
+Converting question "<`-)<": < ` - ) < : < -> G, ` -> H, - -> z, ) -> I, < -> G -> GH z IG
+
 Applying to GH z IG:
-  concatenation(GH, IG) = GH || IG = GHIG
-  Converting back: G H I G : G -> <, H -> `, I -> ), G -> < -> <`)<
+  Digit values from the bijection: < -> G -> 4, ` -> H -> 1, ) -> I -> 2, < -> G -> 4
+  GH = 41, IG = 24
+  reverse subtraction(GH, IG) = 24 - 41 = -17
+  Encoding result: 1 7 : 1 -> `, 7 -> # -> -`#
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{<`)<}
+\boxed{-`#}

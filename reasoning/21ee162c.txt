@@ -29,14 +29,20 @@ Converting examples to letter form:
     input:  # @ * ' } : # -> A, @ -> E, * -> x, ' -> J, } -> B -> AE x JB
     output: / ' ( : / -> F, ' -> J, ( -> H -> FJH
 
-The question operator y does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: addition minus one
+Operator x: multiplication
 
-Converting question "'$)/&": -> JC y FI
+The question operator is y, which is addition minus one.
+
+Converting question "'$)/&": ' $ ) / & : ' -> J, $ -> C, ) -> y, / -> F, & -> I -> JC y FI
+
 Applying to JC y FI:
-  concatenation(JC, FI) = JC || FI = JCFI
-  Converting back: J C F I : J -> ', C -> $, F -> /, I -> & -> '$/&
+  Digit values from the bijection: ' -> J -> 1, $ -> C -> 3, / -> F -> 9, & -> I -> 0
+  JC = 13, FI = 90
+  addition minus one(JC, FI) = 13 + 90 - 1 = 102
+  Encoding result: 1 0 2 : 1 -> ', 0 -> &, 2 -> { -> '&{
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{'$/&}
+\boxed{'&{}

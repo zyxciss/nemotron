@@ -115,4 +115,5 @@ Converting 60:
 Result: L X -> LX
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{LX}
+The answer in \boxed is
+\boxed{LX}

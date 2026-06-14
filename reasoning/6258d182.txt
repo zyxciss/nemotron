@@ -400,4 +400,5 @@ New mappings
 【(t)】->【u】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher imagines under wonderland}
+The answer in \boxed is
+\boxed{teacher imagines under wonderland}

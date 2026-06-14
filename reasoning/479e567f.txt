@@ -118,4 +118,5 @@ Converting 39:
 Result: X X X IX -> XXXIX
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XXXIX}
+The answer in \boxed is
+\boxed{XXXIX}

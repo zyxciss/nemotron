@@ -12,4 +12,5 @@ Applying maxmod to 11-39 (after reversing each operand: 11->11, 39->93):
   max(11,93) mod min(11,93) = 5
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{5}
+The answer in \boxed is
+\boxed{5}

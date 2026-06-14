@@ -83,5 +83,6 @@ def reasoning_gravity(problem: Problem) -> str | None:
 
     lines.append("")
     lines.append("I will now return the answer in \\boxed{}")
-    lines.append(f"The answer in \\boxed{{–}} is \\boxed{{{boxed_answer}}}")
+    lines.append("The answer in \\boxed is")
+    lines.append(f"\\boxed{{{boxed_answer}}}")
     return "\n".join(lines)

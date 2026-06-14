@@ -93,4 +93,5 @@ Converting 14.25:
 = 13.452
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{13.452}
+The answer in \boxed is
+\boxed{13.452}

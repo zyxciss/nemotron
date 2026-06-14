@@ -117,4 +117,5 @@ Converting 30:
 Result: X X X -> XXX
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XXX}
+The answer in \boxed is
+\boxed{XXX}

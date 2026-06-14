@@ -173,4 +173,5 @@ Applying to 68?54:
   Result: 【6854】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6854}
+The answer in \boxed is
+\boxed{6854}

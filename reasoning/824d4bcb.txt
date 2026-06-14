@@ -176,4 +176,5 @@ Applying to 24:88:
   Result: 【64:】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{64:}
+The answer in \boxed is
+\boxed{64:}

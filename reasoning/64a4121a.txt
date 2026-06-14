@@ -498,4 +498,5 @@ New mappings
 【(z)】->【u】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the magical rabbit studies}
+The answer in \boxed is
+\boxed{the magical rabbit studies}

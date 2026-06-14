@@ -163,4 +163,5 @@ Converting 46.24:
 = 77.914
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{77.914}
+The answer in \boxed is
+\boxed{77.914}

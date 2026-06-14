@@ -1,0 +1,47 @@
+We need to infer the transformation rule from the examples.
+
+First, let me assign letters to each symbol:
+< -> A
+} -> B
+] -> C
+) -> D
+/ -> E
+: -> F
+{ -> G
+| -> H
+' -> I
+Operators:
++ -> x
+( -> y
+
+Converting examples to letter form:
+
+  「<}+])」 = 「/<」:
+    input:  < } + ] ) : < -> A, } -> B, + -> x, ] -> C, ) -> D -> AB x CD
+    output: / < : / -> E, < -> A -> EA
+
+  「:]+/{」 = 「</」:
+    input:  : ] + / { : : -> F, ] -> C, + -> x, / -> E, { -> G -> FC x EG
+    output: < / : < -> A, / -> E -> AE
+
+  「||+]<」 = 「:」:
+    input:  | | + ] < : | -> H, | -> H, + -> x, ] -> C, < -> A -> HH x CA
+    output: : : : -> F -> F
+
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication
+Operator x: reverse subtraction
+
+The question operator is y, which is multiplication.
+
+Converting question "<'(})": < ' ( } ) : < -> A, ' -> I, ( -> y, } -> B, ) -> D -> AI y BD
+
+Applying to AI y BD:
+  Digit values from the bijection: < -> A -> 2, ' -> I -> 5, } -> B -> 1, ) -> D -> 3
+  AI = 25, BD = 13
+  multiplication(AI, BD) = 25 * 13 = 325
+  Encoding result: 3 2 5 : 3 -> ), 2 -> <, 5 -> ' -> )<'
+
+I will now return the answer in \boxed{}
+The answer in \boxed is
+\boxed{)<'}

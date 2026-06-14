@@ -167,4 +167,5 @@ Applying to 33*27:
   Result: 【2733】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{2733}
+The answer in \boxed is
+\boxed{2733}

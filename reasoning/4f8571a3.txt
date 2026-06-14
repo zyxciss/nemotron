@@ -547,4 +547,5 @@ New mappings
 【(j)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{king follows through village}
+The answer in \boxed is
+\boxed{king follows through village}

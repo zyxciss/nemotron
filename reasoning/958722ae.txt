@@ -463,4 +463,5 @@ New mappings
 【(m)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse writes the clever story}
+The answer in \boxed is
+\boxed{mouse writes the clever story}

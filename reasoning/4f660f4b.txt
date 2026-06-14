@@ -171,4 +171,5 @@ Applying to 76[86:
   Result: 【6554】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6554}
+The answer in \boxed is
+\boxed{6554}

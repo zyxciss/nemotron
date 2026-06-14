@@ -118,4 +118,5 @@ Converting 23:
 Result: X X I I I -> XXIII
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XXIII}
+The answer in \boxed is
+\boxed{XXIII}

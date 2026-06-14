@@ -511,4 +511,5 @@ New mappings
 【(a)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess creates above cave}
+The answer in \boxed is
+\boxed{princess creates above cave}

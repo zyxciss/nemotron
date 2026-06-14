@@ -167,4 +167,5 @@ Applying to 14{79:
   Result: 【7793】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{7793}
+The answer in \boxed is
+\boxed{7793}

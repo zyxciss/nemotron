@@ -172,4 +172,5 @@ Applying to 79*64:
   Result: 【6479】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6479}
+The answer in \boxed is
+\boxed{6479}

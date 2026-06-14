@@ -582,4 +582,5 @@ New mappings
 【(h)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the mysterious dragon follows}
+The answer in \boxed is
+\boxed{the mysterious dragon follows}

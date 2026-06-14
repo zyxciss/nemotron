@@ -470,4 +470,5 @@ New mappings
 【(m)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher reads the clever key}
+The answer in \boxed is
+\boxed{teacher reads the clever key}

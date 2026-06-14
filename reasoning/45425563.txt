@@ -474,4 +474,5 @@ New mappings
 【(d)】->【w】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the hidden hatter writes}
+The answer in \boxed is
+\boxed{the hidden hatter writes}

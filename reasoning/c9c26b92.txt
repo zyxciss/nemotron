@@ -171,4 +171,5 @@ Applying to 24*63:
   Result: 【2151】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{2151}
+The answer in \boxed is
+\boxed{2151}

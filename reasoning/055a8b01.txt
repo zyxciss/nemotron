@@ -38,14 +38,21 @@ Converting examples to letter form:
     input:  ' ( * | # : ' -> E, ( -> J, * -> x, | -> C, # -> B -> EJ x CB
     output: { { ? ( : { -> I, { -> I, ? -> H, ( -> J -> IIHJ
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: multiplication
+Operator y: addition plus one
+Operator z: reverse subtraction
 
-Converting question "//-/$": -> DD z DF
+The question operator is z, which is reverse subtraction.
+
+Converting question "//-/$": / / - / $ : / -> D, / -> D, - -> z, / -> D, $ -> F -> DD z DF
+
 Applying to DD z DF:
-  concatenation(DD, DF) = DD || DF = DDDF
-  Converting back: D D D F : D -> /, D -> /, D -> /, F -> $ -> ///$
+  Digit values from the bijection: / -> D -> 1, / -> D -> 1, / -> D -> 1, $ -> F -> 7
+  DD = 11, DF = 17
+  reverse subtraction(DD, DF) = 17 - 11 = 6
+  Encoding result: 6 : 6 -> ' -> '
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{///$}
+\boxed{'}

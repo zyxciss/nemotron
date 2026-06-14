@@ -549,4 +549,5 @@ Best match: 【found】
 【d】->【d】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the golden wizard found}
+The answer in \boxed is
+\boxed{the golden wizard found}

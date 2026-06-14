@@ -170,4 +170,5 @@ Applying to 95*68:
   Result: 【5705】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{5705}
+The answer in \boxed is
+\boxed{5705}

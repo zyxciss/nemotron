@@ -535,4 +535,5 @@ New mappings
 【(r)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{hatter follows the clever message}
+The answer in \boxed is
+\boxed{hatter follows the clever message}

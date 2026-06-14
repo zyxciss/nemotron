@@ -171,4 +171,5 @@ Applying to 32$97:
   Result: 【3104】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3104}
+The answer in \boxed is
+\boxed{3104}

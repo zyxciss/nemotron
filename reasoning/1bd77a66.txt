@@ -581,4 +581,5 @@ New mappings
 【(y)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard draws the hidden book}
+The answer in \boxed is
+\boxed{wizard draws the hidden book}

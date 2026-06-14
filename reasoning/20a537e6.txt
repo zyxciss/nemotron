@@ -479,4 +479,5 @@ New mappings
 【(t)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard draws through cave}
+The answer in \boxed is
+\boxed{wizard draws through cave}

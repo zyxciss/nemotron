@@ -434,4 +434,5 @@ New mappings
 【(v)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{hatter studies key}
+The answer in \boxed is
+\boxed{hatter studies key}

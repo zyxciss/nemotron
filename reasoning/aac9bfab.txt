@@ -418,4 +418,5 @@ New mappings
 【(f)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the bright student reads}
+The answer in \boxed is
+\boxed{the bright student reads}

@@ -441,4 +441,5 @@ New mappings
 【(x)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{turtle sees beyond wonderland}
+The answer in \boxed is
+\boxed{turtle sees beyond wonderland}

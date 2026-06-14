@@ -795,4 +795,5 @@ Output
 7 NOT0 = NOT(0) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10100011}
+The answer in \boxed is
+\boxed{10100011}

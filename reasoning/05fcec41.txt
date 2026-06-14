@@ -105,4 +105,5 @@ Converting 10.0:
 = 16.200
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{16.200}
+The answer in \boxed is
+\boxed{16.200}

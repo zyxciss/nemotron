@@ -438,4 +438,5 @@ New mappings
 【(n)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight found castle}
+The answer in \boxed is
+\boxed{knight found castle}

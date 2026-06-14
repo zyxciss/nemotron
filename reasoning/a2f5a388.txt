@@ -471,4 +471,5 @@ New mappings
 【(c)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat reads potion}
+The answer in \boxed is
+\boxed{cat reads potion}

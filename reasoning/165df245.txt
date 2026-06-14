@@ -372,4 +372,5 @@ New mappings
 【(m)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat draws garden}
+The answer in \boxed is
+\boxed{cat draws garden}

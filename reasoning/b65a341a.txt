@@ -487,4 +487,5 @@ New mappings
 【(d)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the golden cat discovers}
+The answer in \boxed is
+\boxed{the golden cat discovers}

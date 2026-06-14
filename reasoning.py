@@ -393,6 +393,8 @@ def _write_train_cot_csv(existing: dict[str, dict]) -> None:
         if base_id not in prompts:
             continue
         cat = entry.get("category", "")
+        if cat in {"gravity", "numeral", "unit_conversion"}:
+            continue
         new_by_cat.setdefault(cat, []).append(base_id)
     for cat in new_by_cat:
         new_by_cat[cat].sort()
@@ -428,25 +430,61 @@ def _write_train_cot_csv(existing: dict[str, dict]) -> None:
         effective_order.append(suffixed_id)
         rows_written += 1
 
+    unique_baseline_per_cat: dict[str, int] = {}
+    for base_id in order_base:
+        frozen_path = COT_DIR / f"{base_id}.txt"
+        if frozen_path.exists():
+            cat = existing.get(base_id, {}).get("category", "")
+            if cat:
+                unique_baseline_per_cat[cat] = unique_baseline_per_cat.get(cat, 0) + 1
+
+    dup_ratios: dict[str, float] = {}
+    for cat, total_runs in curated_per_cat.items():
+        unique_cnt = unique_baseline_per_cat.get(cat, 0)
+        if unique_cnt > 0:
+            dup_ratios[cat] = total_runs / unique_cnt
+        else:
+            dup_ratios[cat] = 1.0
+
+    import random
+    rng = random.Random(42)
+
     with TRAIN_COT_CSV.open("w", encoding="utf-8-sig", newline="") as out:
         writer = csv.writer(out)
         writer.writerow(["id", "prompt", "answer", "type", "generated_cot"])
         for pid_with_suffix in tqdm(order, desc="train_cot.csv (curated)"):
             _emit(writer, pid_with_suffix, _strip_suffix(pid_with_suffix))
-        # Top up each category up to its cap, deterministic order. The cap is
-        # the 0.86 baseline per-category row count (loaded from
-        # training/sft/04-08-16-14/logprobs/index.jsonl), so easy categories
-        # like gravity/numeral/unit_conversion can't grow past the original
-        # 1055/730/1070 even when many new solves exist.
+        # Top up each category up to its cap, deterministic order. Easy categories
+        # like gravity/numeral/unit_conversion can't grow past their cap, while
+        # hard categories are oversampled to match their baseline ratio and flow freely.
         for cat in sorted(new_by_cat):
-            cap = cat_cap.get(cat, curated_per_cat.get(cat, 0))
+            if cat in CAP_CATEGORIES:
+                cap = cat_cap.get(cat, curated_per_cat.get(cat, 0))
+            else:
+                cap = 999999  # hard categories flow freely
+            ratio = dup_ratios.get(cat, 1.0)
+            if cat in {"cryptarithm_deduce", "cryptarithm_guess", "equation_numeric_guess"}:
+                ratio = min(ratio, 3.0)
             for base_id in tqdm(
                 new_by_cat[cat], desc=f"train_cot.csv (new/{cat})", leave=False
             ):
                 if new_added_per_cat.get(cat, 0) >= cap:
                     break
-                _emit(writer, base_id, base_id)
-                new_added_per_cat[cat] = new_added_per_cat.get(cat, 0) + 1
+                # Probabilistic duplication to match the float ratio on average
+                base_dup = int(ratio)
+                prob = ratio - base_dup
+                dup = base_dup + (1 if rng.random() < prob else 0)
+                dup = max(1, dup)
+
+                for d_idx in range(dup):
+                    if d_idx == 0:
+                        suffixed_id = base_id
+                    elif d_idx == 1:
+                        suffixed_id = f"{base_id}-p0"
+                    else:
+                        suffixed_id = f"{base_id}-d{d_idx - 2}"
+                    _emit(writer, suffixed_id, base_id)
+                new_added_per_cat[cat] = new_added_per_cat.get(cat, 0) + dup
 
     TRAIN_ORDER_FULL_PATH.write_text("\n".join(effective_order) + "\n")
 

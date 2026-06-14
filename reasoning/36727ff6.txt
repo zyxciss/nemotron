@@ -390,4 +390,5 @@ New mappings
 【(r)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse explores the secret puzzle}
+The answer in \boxed is
+\boxed{mouse explores the secret puzzle}

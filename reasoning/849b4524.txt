@@ -389,4 +389,5 @@ New mappings
 【(f)】->【w】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse watches treasure}
+The answer in \boxed is
+\boxed{mouse watches treasure}

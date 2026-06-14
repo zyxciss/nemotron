@@ -169,4 +169,5 @@ Applying to 39*11:
   Result: 【3201】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3201}
+The answer in \boxed is
+\boxed{3201}

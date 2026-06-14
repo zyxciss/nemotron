@@ -484,4 +484,5 @@ New mappings
 【(p)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student watches the silver garden}
+The answer in \boxed is
+\boxed{student watches the silver garden}

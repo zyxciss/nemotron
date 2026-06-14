@@ -483,4 +483,5 @@ New mappings
 【(f)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher dreams beyond wonderland}
+The answer in \boxed is
+\boxed{teacher dreams beyond wonderland}

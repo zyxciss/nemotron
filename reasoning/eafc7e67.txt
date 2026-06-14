@@ -168,4 +168,5 @@ Applying to 85*67:
   Result: 【9044】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9044}
+The answer in \boxed is
+\boxed{9044}

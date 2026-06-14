@@ -474,4 +474,5 @@ New mappings
 【(y)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the secret knight dreams}
+The answer in \boxed is
+\boxed{the secret knight dreams}

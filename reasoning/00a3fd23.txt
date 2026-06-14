@@ -429,4 +429,5 @@ New mappings
 【(t)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard watches through library}
+The answer in \boxed is
+\boxed{wizard watches through library}

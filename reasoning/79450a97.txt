@@ -443,4 +443,5 @@ New mappings
 【(c)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student creates beyond school}
+The answer in \boxed is
+\boxed{student creates beyond school}

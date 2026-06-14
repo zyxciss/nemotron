@@ -475,4 +475,5 @@ New mappings
 【(g)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher studies the dark forest}
+The answer in \boxed is
+\boxed{teacher studies the dark forest}

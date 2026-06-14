@@ -173,4 +173,5 @@ Applying to 07*14:
   Result: 【0782】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{0782}
+The answer in \boxed is
+\boxed{0782}

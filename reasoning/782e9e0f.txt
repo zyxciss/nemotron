@@ -400,4 +400,5 @@ New mappings
 【(y)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit creates the colorful puzzle}
+The answer in \boxed is
+\boxed{rabbit creates the colorful puzzle}

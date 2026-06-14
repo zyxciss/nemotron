@@ -568,4 +568,5 @@ Best match: 【mirror】
 【r】->【r】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse draws the mysterious mirror}
+The answer in \boxed is
+\boxed{mouse draws the mysterious mirror}

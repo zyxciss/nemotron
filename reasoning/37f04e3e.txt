@@ -168,4 +168,5 @@ Applying to 85}05:
   Result: 【0092】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{0092}
+The answer in \boxed is
+\boxed{0092}

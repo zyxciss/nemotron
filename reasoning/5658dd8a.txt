@@ -484,4 +484,5 @@ New mappings
 【(t)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit writes beyond forest}
+The answer in \boxed is
+\boxed{rabbit writes beyond forest}

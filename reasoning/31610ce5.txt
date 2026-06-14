@@ -484,4 +484,5 @@ New mappings
 【(f)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird studies the bright castle}
+The answer in \boxed is
+\boxed{bird studies the bright castle}

@@ -34,14 +34,21 @@ Converting examples to letter form:
     input:  : # + : : : : -> J, # -> I, + -> x, : -> J, : -> J -> JI x JJ
     output: ( ] ' : ( -> H, ] -> E, ' -> D -> HED
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication
+Operator x: addition minus one
+Operator z: subtraction
 
-Converting question "[?-:[": -> GA z JG
+The question operator is z, which is subtraction.
+
+Converting question "[?-:[": [ ? - : [ : [ -> G, ? -> A, - -> z, : -> J, [ -> G -> GA z JG
+
 Applying to GA z JG:
-  concatenation(GA, JG) = GA || JG = GAJG
-  Converting back: G A J G : G -> [, A -> ?, J -> :, G -> [ -> [?:[
+  Digit values from the bijection: [ -> G -> 3, ? -> A -> 2, : -> J -> 8, [ -> G -> 3
+  GA = 32, JG = 83
+  subtraction(GA, JG) = 32 - 83 = -51
+  Encoding result: 5 1 : 5 -> \, 1 -> ( -> -\(
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{[?:[}
+\boxed{-\(}

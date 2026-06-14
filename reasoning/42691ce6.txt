@@ -554,4 +554,5 @@ New mappings
 【(q)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard found the secret potion}
+The answer in \boxed is
+\boxed{wizard found the secret potion}

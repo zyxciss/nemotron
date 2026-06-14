@@ -500,4 +500,5 @@ New mappings
 【(f)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen follows the strange door}
+The answer in \boxed is
+\boxed{queen follows the strange door}

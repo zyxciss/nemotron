@@ -476,4 +476,5 @@ New mappings
 【(b)】->【w】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess writes treasure}
+The answer in \boxed is
+\boxed{princess writes treasure}

@@ -119,4 +119,5 @@ Converting 36:
 Result: X X X V I -> XXXVI
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XXXVI}
+The answer in \boxed is
+\boxed{XXXVI}

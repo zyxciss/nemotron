@@ -581,4 +581,5 @@ Best match: 【clever】
 【r】->【r】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess dreams the clever puzzle}
+The answer in \boxed is
+\boxed{princess dreams the clever puzzle}

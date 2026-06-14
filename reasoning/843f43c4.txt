@@ -392,4 +392,5 @@ New mappings
 【(g)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the curious princess chases}
+The answer in \boxed is
+\boxed{the curious princess chases}

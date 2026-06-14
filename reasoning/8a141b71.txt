@@ -483,4 +483,5 @@ New mappings
 【(s)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{king reads above castle}
+The answer in \boxed is
+\boxed{king reads above castle}

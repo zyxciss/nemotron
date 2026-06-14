@@ -687,4 +687,5 @@ Best match: 【wonderland】
 【d】->【d】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen draws through wonderland}
+The answer in \boxed is
+\boxed{queen draws through wonderland}

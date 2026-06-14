@@ -440,4 +440,5 @@ New mappings
 【(m)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the curious princess found}
+The answer in \boxed is
+\boxed{the curious princess found}

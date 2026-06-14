@@ -586,4 +586,5 @@ New mappings
 【(w)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{turtle discovers the dark key}
+The answer in \boxed is
+\boxed{turtle discovers the dark key}

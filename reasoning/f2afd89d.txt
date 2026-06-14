@@ -171,4 +171,5 @@ Applying to 84*24:
   Result: 【6102】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6102}
+The answer in \boxed is
+\boxed{6102}

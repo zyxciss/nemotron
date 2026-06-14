@@ -171,4 +171,5 @@ Applying to 38&90:
   Result: 【52】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{52}
+The answer in \boxed is
+\boxed{52}

@@ -380,4 +380,5 @@ New mappings
 【(o)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the golden hatter chases}
+The answer in \boxed is
+\boxed{the golden hatter chases}

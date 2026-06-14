@@ -445,4 +445,5 @@ New mappings
 【(h)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard chases near garden}
+The answer in \boxed is
+\boxed{wizard chases near garden}

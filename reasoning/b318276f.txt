@@ -567,4 +567,5 @@ New mappings
 【(p)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen follows near palace}
+The answer in \boxed is
+\boxed{queen follows near palace}

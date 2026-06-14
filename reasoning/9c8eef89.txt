@@ -173,4 +173,5 @@ Applying to 36"48:
   Result: 【1728】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1728}
+The answer in \boxed is
+\boxed{1728}

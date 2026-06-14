@@ -464,4 +464,5 @@ New mappings
 【(g)】->【q】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen dreams around wonderland}
+The answer in \boxed is
+\boxed{queen dreams around wonderland}

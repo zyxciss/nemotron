@@ -821,4 +821,5 @@ Output
 7 OR-NOT50 = OR(0,NOT(1)) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00111010}
+The answer in \boxed is
+\boxed{00111010}

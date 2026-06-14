@@ -171,4 +171,5 @@ Applying to 39[64:
   Result: 【3964】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3964}
+The answer in \boxed is
+\boxed{3964}

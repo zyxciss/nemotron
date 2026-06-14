@@ -566,4 +566,5 @@ New mappings
 【(s)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher discovers map}
+The answer in \boxed is
+\boxed{teacher discovers map}

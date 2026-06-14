@@ -506,4 +506,5 @@ Best match: 【book】
 【k】->【k】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit follows the secret book}
+The answer in \boxed is
+\boxed{rabbit follows the secret book}

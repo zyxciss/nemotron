@@ -34,14 +34,21 @@ Converting examples to letter form:
     input:  % { # ` } : % -> G, { -> H, # -> y, ` -> I, } -> F -> GH y IF
     output: : ` : : -> B, ` -> I -> BI
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: subtraction
+Operator z: multiplication
+Operator x: addition minus one
 
-Converting question "'!>{?": -> JA z HD
+The question operator is z, which is multiplication.
+
+Converting question "'!>{?": ' ! > { ? : ' -> J, ! -> A, > -> z, { -> H, ? -> D -> JA z HD
+
 Applying to JA z HD:
-  concatenation(JA, HD) = JA || HD = JAHD
-  Converting back: J A H D : J -> ', A -> !, H -> {, D -> ? -> '!{?
+  Digit values from the bijection: ' -> J -> 4, ! -> A -> 9, { -> H -> 3, ? -> D -> 0
+  JA = 49, HD = 30
+  multiplication(JA, HD) = 49 * 30 = 1470
+  Encoding result: 1 4 7 0 : 1 -> :, 4 -> ', 7 -> %, 0 -> ? -> :'%?
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{'!{?}
+\boxed{:'%?}

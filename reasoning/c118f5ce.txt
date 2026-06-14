@@ -476,4 +476,5 @@ New mappings
 【(w)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher chases the colorful key}
+The answer in \boxed is
+\boxed{teacher chases the colorful key}

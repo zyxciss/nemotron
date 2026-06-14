@@ -176,4 +176,5 @@ Applying to 71-45:
   Result: 【-73】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-73}
+The answer in \boxed is
+\boxed{-73}

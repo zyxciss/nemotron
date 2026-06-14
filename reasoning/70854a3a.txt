@@ -166,4 +166,5 @@ Converting 46.19:
 = 86.606
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{86.606}
+The answer in \boxed is
+\boxed{86.606}

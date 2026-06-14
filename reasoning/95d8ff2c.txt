@@ -172,4 +172,5 @@ Applying to 88"96:
   Result: 【651】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{651}
+The answer in \boxed is
+\boxed{651}

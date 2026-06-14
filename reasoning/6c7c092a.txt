@@ -572,4 +572,5 @@ Best match: 【tower】
 【r】->【r】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard draws in tower}
+The answer in \boxed is
+\boxed{wizard draws in tower}

@@ -432,4 +432,5 @@ New mappings
 【(v)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit follows in island}
+The answer in \boxed is
+\boxed{rabbit follows in island}

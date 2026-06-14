@@ -451,4 +451,5 @@ New mappings
 【(t)】->【w】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the hidden dragon follows}
+The answer in \boxed is
+\boxed{the hidden dragon follows}

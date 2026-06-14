@@ -172,4 +172,5 @@ Applying to 22+39:
   Result: 【3922】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3922}
+The answer in \boxed is
+\boxed{3922}

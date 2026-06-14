@@ -539,4 +539,5 @@ Best match: 【writes】
 【s】->【s】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard writes the secret mirror}
+The answer in \boxed is
+\boxed{wizard writes the secret mirror}

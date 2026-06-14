@@ -169,4 +169,5 @@ Applying to 26-39:
   Result: 【13】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{13}
+The answer in \boxed is
+\boxed{13}

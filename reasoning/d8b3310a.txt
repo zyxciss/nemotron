@@ -170,4 +170,5 @@ Applying to 63-45:
   Result: 【5491】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{5491}
+The answer in \boxed is
+\boxed{5491}

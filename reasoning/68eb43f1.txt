@@ -469,4 +469,5 @@ New mappings
 【(g)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse dreams the colorful map}
+The answer in \boxed is
+\boxed{mouse dreams the colorful map}

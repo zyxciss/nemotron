@@ -381,4 +381,5 @@ New mappings
 【(a)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the curious princess creates}
+The answer in \boxed is
+\boxed{the curious princess creates}

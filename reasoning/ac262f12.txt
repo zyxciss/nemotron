@@ -169,4 +169,5 @@ Applying to 19*92:
   Result: 【8362】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{8362}
+The answer in \boxed is
+\boxed{8362}

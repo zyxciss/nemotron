@@ -577,4 +577,5 @@ New mappings
 【(o)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the clever hatter imagines}
+The answer in \boxed is
+\boxed{the clever hatter imagines}

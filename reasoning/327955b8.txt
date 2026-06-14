@@ -434,4 +434,5 @@ New mappings
 【(m)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the wise princess draws}
+The answer in \boxed is
+\boxed{the wise princess draws}

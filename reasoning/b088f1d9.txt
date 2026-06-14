@@ -510,4 +510,5 @@ New mappings
 【(a)】->【w】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the hidden mouse draws}
+The answer in \boxed is
+\boxed{the hidden mouse draws}

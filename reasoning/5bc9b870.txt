@@ -175,4 +175,5 @@ Applying to 24<48:
   Result: 【621】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{621}
+The answer in \boxed is
+\boxed{621}

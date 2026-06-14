@@ -39,14 +39,21 @@ Converting examples to letter form:
     input:  | | + | } : | -> F, | -> F, + -> y, | -> F, } -> D -> FF y FD
     output: ! : [ : ! -> G, : -> B, [ -> E -> GBE
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator z: multiplication minus one
+Operator y: addition minus one
+Operator x: subtraction
 
-Converting question ">!*|{": -> CG z FJ
+The question operator is z, which is multiplication minus one.
+
+Converting question ">!*|{": > ! * | { : > -> C, ! -> G, * -> z, | -> F, { -> J -> CG z FJ
+
 Applying to CG z FJ:
-  concatenation(CG, FJ) = CG || FJ = CGFJ
-  Converting back: C G F J : C -> >, G -> !, F -> |, J -> { -> >!|{
+  Digit values from the bijection: > -> C -> 3, ! -> G -> 1, | -> F -> 7, { -> J -> 8
+  CG = 31, FJ = 78
+  multiplication minus one(CG, FJ) = 31 * 78 - 1 = 2417
+  Encoding result: 2 4 1 7 : 2 -> ", 4 -> :, 1 -> !, 7 -> | -> ":!|
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{>!|{}
+\boxed{":!|}

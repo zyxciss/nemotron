@@ -176,4 +176,5 @@ Applying to 65!68:
   Result: 【03!】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{03!}
+The answer in \boxed is
+\boxed{03!}

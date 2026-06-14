@@ -830,4 +830,5 @@ Output
 7 AND50 = AND(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00001001}
+The answer in \boxed is
+\boxed{00001001}

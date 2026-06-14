@@ -171,4 +171,5 @@ Applying to 79-36:
   Result: 【43】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{43}
+The answer in \boxed is
+\boxed{43}

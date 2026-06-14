@@ -490,4 +490,5 @@ New mappings
 【(n)】->【o】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen explores the hidden secret}
+The answer in \boxed is
+\boxed{queen explores the hidden secret}

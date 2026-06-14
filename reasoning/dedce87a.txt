@@ -558,4 +558,5 @@ New mappings
 【(j)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard dreams puzzle}
+The answer in \boxed is
+\boxed{wizard dreams puzzle}

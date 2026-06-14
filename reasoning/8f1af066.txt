@@ -34,14 +34,21 @@ Converting examples to letter form:
     input:  | | + | [ : | -> J, | -> J, + -> y, | -> J, [ -> B -> JJ y JB
     output: | | | [ : | -> J, | -> J, | -> J, [ -> B -> JJJB
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: multiplication plus one
+Operator y: concatenation
+Operator z: reverse subtraction
 
-Converting question "$`-!`": -> FD z GD
+The question operator is z, which is reverse subtraction.
+
+Converting question "$`-!`": $ ` - ! ` : $ -> F, ` -> D, - -> z, ! -> G, ` -> D -> FD z GD
+
 Applying to FD z GD:
-  concatenation(FD, GD) = FD || GD = FDGD
-  Converting back: F D G D : F -> $, D -> `, G -> !, D -> ` -> $`!`
+  Digit values from the bijection: $ -> F -> 6, ` -> D -> 4, ! -> G -> 2, ` -> D -> 4
+  FD = 64, GD = 24
+  reverse subtraction(FD, GD) = 24 - 64 = -40
+  Encoding result: 4 0 : 4 -> `, 0 -> [ -> -`[
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{$`!`}
+\boxed{-`[}

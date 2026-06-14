@@ -175,4 +175,5 @@ Applying to 36)12:
   Result: 【24】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{24}
+The answer in \boxed is
+\boxed{24}

@@ -72,4 +72,5 @@ Converting 18.1:
 = 19.077
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{19.077}
+The answer in \boxed is
+\boxed{19.077}

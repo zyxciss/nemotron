@@ -116,4 +116,5 @@ Converting 20:
 Result: X X -> XX
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XX}
+The answer in \boxed is
+\boxed{XX}

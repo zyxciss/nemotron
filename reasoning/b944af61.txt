@@ -479,4 +479,5 @@ New mappings
 【(s)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{alice explores the dark forest}
+The answer in \boxed is
+\boxed{alice explores the dark forest}

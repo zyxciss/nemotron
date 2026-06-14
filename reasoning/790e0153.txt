@@ -833,4 +833,5 @@ Output
 7 NOT3 = NOT(0) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11101011}
+The answer in \boxed is
+\boxed{11101011}

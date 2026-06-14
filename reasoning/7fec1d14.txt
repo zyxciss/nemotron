@@ -834,4 +834,5 @@ Output
 7 OR13 = OR(0,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00101010}
+The answer in \boxed is
+\boxed{00101010}

@@ -170,4 +170,5 @@ Applying to 75-38:
   Result: 【62】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{62}
+The answer in \boxed is
+\boxed{62}

@@ -586,4 +586,5 @@ New mappings
 【(c)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the dark princess writes}
+The answer in \boxed is
+\boxed{the dark princess writes}

@@ -119,4 +119,5 @@ Converting 68:
 Result: L X V I I I -> LXVIII
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{LXVIII}
+The answer in \boxed is
+\boxed{LXVIII}

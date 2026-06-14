@@ -457,4 +457,5 @@ New mappings
 【(r)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student discovers the mysterious castle}
+The answer in \boxed is
+\boxed{student discovers the mysterious castle}

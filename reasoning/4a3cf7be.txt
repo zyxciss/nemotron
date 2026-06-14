@@ -160,4 +160,5 @@ Converting 12.03:
 = 8.144
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{8.144}
+The answer in \boxed is
+\boxed{8.144}

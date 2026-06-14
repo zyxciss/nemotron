@@ -785,4 +785,5 @@ Output
 7 XOR24 = XOR(1,0) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11011011}
+The answer in \boxed is
+\boxed{11011011}

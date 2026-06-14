@@ -382,4 +382,5 @@ New mappings
 【(c)】->【n】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the hidden hatter creates}
+The answer in \boxed is
+\boxed{the hidden hatter creates}

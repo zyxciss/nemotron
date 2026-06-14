@@ -454,4 +454,5 @@ New mappings
 【(f)】->【n】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher found the silver book}
+The answer in \boxed is
+\boxed{teacher found the silver book}

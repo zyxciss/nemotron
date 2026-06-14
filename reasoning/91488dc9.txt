@@ -168,4 +168,5 @@ Applying to 34?31:
   Result: 【3431】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3431}
+The answer in \boxed is
+\boxed{3431}

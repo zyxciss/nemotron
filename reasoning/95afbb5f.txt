@@ -175,4 +175,5 @@ Applying to 97}47:
   Result: 【4560】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4560}
+The answer in \boxed is
+\boxed{4560}

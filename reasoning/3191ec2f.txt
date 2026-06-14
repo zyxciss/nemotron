@@ -519,4 +519,5 @@ New mappings
 【(v)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher creates the mysterious garden}
+The answer in \boxed is
+\boxed{teacher creates the mysterious garden}

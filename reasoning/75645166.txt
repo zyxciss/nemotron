@@ -168,4 +168,5 @@ Applying to 35<94:
   Result: 【7952】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{7952}
+The answer in \boxed is
+\boxed{7952}

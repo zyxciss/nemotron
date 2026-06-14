@@ -350,4 +350,5 @@ New mappings
 【(p)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard writes map}
+The answer in \boxed is
+\boxed{wizard writes map}

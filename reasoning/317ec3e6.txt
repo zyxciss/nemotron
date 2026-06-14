@@ -168,4 +168,5 @@ Applying to 18-86:
   Result: 【14】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{14}
+The answer in \boxed is
+\boxed{14}

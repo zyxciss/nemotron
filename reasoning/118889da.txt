@@ -170,4 +170,5 @@ Applying to 66{56:
   Result: 【10】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10}
+The answer in \boxed is
+\boxed{10}

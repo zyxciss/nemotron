@@ -30,14 +30,21 @@ Converting examples to letter form:
     input:  ' ? - { & : ' -> C, ? -> H, - -> y, { -> G, & -> A -> CH y GA
     output: - < ! : - -> I, < -> J, ! -> F -> IJF
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: multiplication
+Operator z: addition minus one
+Operator y: reverse subtraction
 
-Converting question "'{+@`": -> CG z DB
+The question operator is z, which is addition minus one.
+
+Converting question "'{+@`": ' { + @ ` : ' -> C, { -> G, + -> z, @ -> D, ` -> B -> CG z DB
+
 Applying to CG z DB:
-  concatenation(CG, DB) = CG || DB = CGDB
-  Converting back: C G D B : C -> ', G -> {, D -> @, B -> ` -> '{@`
+  Digit values from the bijection: ' -> C -> 9, { -> G -> 7, @ -> D -> 8, ` -> B -> 3
+  CG = 97, DB = 83
+  addition minus one(CG, DB) = 97 + 83 - 1 = 179
+  Encoding result: 1 7 9 : 1 -> &, 7 -> {, 9 -> ' -> &{'
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{'{@`}
+\boxed{&{'}

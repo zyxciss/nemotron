@@ -89,4 +89,5 @@ Converting 22.32:
 = 31.069
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{31.069}
+The answer in \boxed is
+\boxed{31.069}

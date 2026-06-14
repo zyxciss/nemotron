@@ -168,4 +168,5 @@ Applying to 66%31:
   Result: 【87】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{87}
+The answer in \boxed is
+\boxed{87}

@@ -118,4 +118,5 @@ Converting 48:
 Result: XL V I I I -> XLVIII
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XLVIII}
+The answer in \boxed is
+\boxed{XLVIII}

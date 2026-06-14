@@ -178,4 +178,5 @@ d = 3.527 * 1.1025:
 = 3.888
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3.888}
+The answer in \boxed is
+\boxed{3.888}

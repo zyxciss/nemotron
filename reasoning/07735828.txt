@@ -88,4 +88,5 @@ Converting 7.7:
 = 4.650
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4.650}
+The answer in \boxed is
+\boxed{4.650}

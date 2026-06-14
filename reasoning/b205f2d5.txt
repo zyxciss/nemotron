@@ -390,4 +390,5 @@ New mappings
 【(z)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the bright king follows}
+The answer in \boxed is
+\boxed{the bright king follows}

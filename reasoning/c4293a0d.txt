@@ -492,4 +492,5 @@ New mappings
 【(m)】->【w】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the colorful hatter writes}
+The answer in \boxed is
+\boxed{the colorful hatter writes}

@@ -39,10 +39,15 @@ Converting examples to letter form:
     input:  | @ - @ | : | -> H, @ -> G, - -> y, @ -> G, | -> H -> HG y GH
     output: - $ : - -> K, $ -> A -> KA
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: multiplication
+Operator z: concatenation
+Operator y: negated absolute difference
 
-Converting question ""(+@"": -> IC z GI
+The question operator is z, which is concatenation.
+
+Converting question ""(+@"": " ( + @ " : " -> I, ( -> C, + -> z, @ -> G, " -> I -> IC z GI
+
 Applying to IC z GI:
   concatenation(IC, GI) = IC || GI = ICGI
   Converting back: I C G I : I -> ", C -> (, G -> @, I -> " -> "(@"

@@ -471,4 +471,5 @@ New mappings
 【(x)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{hatter sees beyond valley}
+The answer in \boxed is
+\boxed{hatter sees beyond valley}

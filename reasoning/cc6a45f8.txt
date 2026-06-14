@@ -122,4 +122,5 @@ Converting 22.12:
 = 27.937
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{27.937}
+The answer in \boxed is
+\boxed{27.937}

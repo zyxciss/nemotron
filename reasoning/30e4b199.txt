@@ -34,14 +34,21 @@ Converting examples to letter form:
     input:  : ' < { / : : -> B, ' -> J, < -> y, { -> G, / -> A -> BJ y GA
     output: | @ ' ' : | -> E, @ -> D, ' -> J, ' -> J -> EDJJ
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: max mod min
+Operator y: multiplication
+Operator z: addition
 
-Converting question "@@\&&": -> DD z II
+The question operator is z, which is addition.
+
+Converting question "@@\&&": @ @ \ & & : @ -> D, @ -> D, \ -> z, & -> I, & -> I -> DD z II
+
 Applying to DD z II:
-  concatenation(DD, II) = DD || II = DDII
-  Converting back: D D I I : D -> @, D -> @, I -> &, I -> & -> @@&&
+  Digit values from the bijection: @ -> D -> 3, @ -> D -> 3, & -> I -> 8, & -> I -> 8
+  DD = 33, II = 88
+  addition(DD, II) = 33 + 88 = 121
+  Encoding result: 1 2 1 : 1 -> |, 2 -> : -> |:|
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{@@&&}
+\boxed{|:|}

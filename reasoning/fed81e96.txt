@@ -467,4 +467,5 @@ New mappings
 【(i)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit watches the clever potion}
+The answer in \boxed is
+\boxed{rabbit watches the clever potion}

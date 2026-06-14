@@ -387,4 +387,5 @@ New mappings
 【(t)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student explores the secret puzzle}
+The answer in \boxed is
+\boxed{student explores the secret puzzle}

@@ -169,4 +169,5 @@ Applying to 43+75:
   Result: 【19】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{19}
+The answer in \boxed is
+\boxed{19}

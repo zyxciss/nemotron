@@ -372,4 +372,5 @@ teacher sees the dark castle
 Iterating over the unknown letters to see if they are in the question: no unknown letters
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher sees the dark castle}
+The answer in \boxed is
+\boxed{teacher sees the dark castle}

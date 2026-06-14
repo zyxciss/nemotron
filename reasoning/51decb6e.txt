@@ -533,4 +533,5 @@ New mappings
 【(h)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard studies the curious mirror}
+The answer in \boxed is
+\boxed{wizard studies the curious mirror}

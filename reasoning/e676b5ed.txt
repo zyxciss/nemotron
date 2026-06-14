@@ -461,4 +461,5 @@ New mappings
 【(s)】->【o】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{turtle reads around island}
+The answer in \boxed is
+\boxed{turtle reads around island}

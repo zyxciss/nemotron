@@ -117,4 +117,5 @@ Converting 16.1:
 = 26.194
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{26.194}
+The answer in \boxed is
+\boxed{26.194}

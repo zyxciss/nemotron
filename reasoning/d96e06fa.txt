@@ -629,4 +629,5 @@ New mappings
 【(r)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the silver student found}
+The answer in \boxed is
+\boxed{the silver student found}

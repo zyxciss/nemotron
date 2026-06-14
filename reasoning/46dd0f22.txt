@@ -824,4 +824,5 @@ Output
 7 AND50 = AND(0,0) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01010000}
+The answer in \boxed is
+\boxed{01010000}

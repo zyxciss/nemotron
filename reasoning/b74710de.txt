@@ -429,4 +429,5 @@ New mappings
 【(u)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the ancient student discovers}
+The answer in \boxed is
+\boxed{the ancient student discovers}

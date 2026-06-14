@@ -520,4 +520,5 @@ New mappings
 【(s)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher found inside library}
+The answer in \boxed is
+\boxed{teacher found inside library}

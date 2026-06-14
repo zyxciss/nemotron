@@ -789,4 +789,5 @@ Output
 7 I2 = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00100000}
+The answer in \boxed is
+\boxed{00100000}

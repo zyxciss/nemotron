@@ -172,4 +172,5 @@ Applying to 68/36:
   Result: 【104】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{104}
+The answer in \boxed is
+\boxed{104}

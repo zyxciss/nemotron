@@ -175,4 +175,5 @@ Applying to 71:95:
   Result: 【3001】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3001}
+The answer in \boxed is
+\boxed{3001}

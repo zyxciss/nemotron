@@ -173,4 +173,5 @@ Applying to 45*89:
   Result: 【2925】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{2925}
+The answer in \boxed is
+\boxed{2925}

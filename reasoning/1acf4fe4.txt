@@ -114,4 +114,5 @@ Converting 50:
 Result: L -> L
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{L}
+The answer in \boxed is
+\boxed{L}

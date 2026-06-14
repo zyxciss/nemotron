@@ -174,4 +174,5 @@ Applying to 46}03:
   Result: 【1291】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1291}
+The answer in \boxed is
+\boxed{1291}

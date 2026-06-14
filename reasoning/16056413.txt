@@ -587,4 +587,5 @@ New mappings
 【(j)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{hatter creates beyond palace}
+The answer in \boxed is
+\boxed{hatter creates beyond palace}

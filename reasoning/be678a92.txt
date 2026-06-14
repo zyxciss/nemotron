@@ -795,4 +795,5 @@ Output
 7 I1 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11100011}
+The answer in \boxed is
+\boxed{11100011}

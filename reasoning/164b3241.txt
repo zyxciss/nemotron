@@ -168,4 +168,5 @@ Applying to 12&41:
   Result: 【52】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{52}
+The answer in \boxed is
+\boxed{52}

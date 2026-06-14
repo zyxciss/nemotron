@@ -386,4 +386,5 @@ New mappings
 【(u)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard found mirror}
+The answer in \boxed is
+\boxed{wizard found mirror}

@@ -167,4 +167,5 @@ Applying to 17!32:
   Result: 【4361】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4361}
+The answer in \boxed is
+\boxed{4361}

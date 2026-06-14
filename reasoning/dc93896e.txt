@@ -29,14 +29,21 @@ Converting examples to letter form:
     input:  < & - ! / : < -> B, & -> H, - -> x, ! -> D, / -> F -> BH x DF
     output: - [ / : - -> I, [ -> E, / -> F -> IEF
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: concatenation
+Operator z: addition plus one
+Operator x: subtraction
 
-Converting question "?<+//": -> GB z FF
+The question operator is z, which is addition plus one.
+
+Converting question "?<+//": ? < + / / : ? -> G, < -> B, + -> z, / -> F, / -> F -> GB z FF
+
 Applying to GB z FF:
-  concatenation(GB, FF) = GB || FF = GBFF
-  Converting back: G B F F : G -> ?, B -> <, F -> /, F -> / -> ?<//
+  Digit values from the bijection: ? -> G -> 5, < -> B -> 2, / -> F -> 9, / -> F -> 9
+  GB = 52, FF = 99
+  addition plus one(GB, FF) = 52 + 99 + 1 = 152
+  Encoding result: 1 5 2 : 1 -> [, 5 -> ?, 2 -> < -> [?<
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{?<//}
+\boxed{[?<}

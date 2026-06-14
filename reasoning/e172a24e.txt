@@ -86,4 +86,5 @@ Converting 48.77:
 = 52.525
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{52.525}
+The answer in \boxed is
+\boxed{52.525}

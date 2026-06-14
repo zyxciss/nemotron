@@ -170,4 +170,5 @@ Applying to 26+46:
   Result: 【521】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{521}
+The answer in \boxed is
+\boxed{521}

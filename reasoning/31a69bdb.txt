@@ -117,4 +117,5 @@ Converting 43:
 Result: XL I I I -> XLIII
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XLIII}
+The answer in \boxed is
+\boxed{XLIII}

@@ -37,14 +37,21 @@ Converting examples to letter form:
     input:  @ ) * ] ' : @ -> I, ) -> H, * -> y, ] -> B, ' -> F -> IH y BF
     output: @ ) ] ' : @ -> I, ) -> H, ] -> B, ' -> F -> IHBF
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: concatenation
+Operator x: addition
+Operator z: subtraction
 
-Converting question "@]-$(": -> IB z EG
+The question operator is z, which is subtraction.
+
+Converting question "@]-$(": @ ] - $ ( : @ -> I, ] -> B, - -> z, $ -> E, ( -> G -> IB z EG
+
 Applying to IB z EG:
-  concatenation(IB, EG) = IB || EG = IBEG
-  Converting back: I B E G : I -> @, B -> ], E -> $, G -> ( -> @]$(
+  Digit values from the bijection: @ -> I -> 3, ] -> B -> 2, $ -> E -> 1, ( -> G -> 6
+  IB = 32, EG = 16
+  subtraction(IB, EG) = 32 - 16 = 16
+  Encoding result: 1 6 : 1 -> $, 6 -> ( -> $(
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{@]$(}
+\boxed{$(}

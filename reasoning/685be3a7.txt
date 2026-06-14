@@ -29,14 +29,20 @@ Converting examples to letter form:
     input:  ` < * ` | : ` -> F, < -> G, * -> x, ` -> F, | -> A -> FG x FA
     output: $ | & ! : $ -> E, | -> A, & -> C, ! -> I -> EACI
 
-The question operator y does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: multiplication
+Operator y: addition plus one
 
-Converting question "!?+`:": -> IB y FJ
+The question operator is y, which is addition plus one.
+
+Converting question "!?+`:": ! ? + ` : : ! -> I, ? -> B, + -> y, ` -> F, : -> J -> IB y FJ
+
 Applying to IB y FJ:
-  concatenation(IB, FJ) = IB || FJ = IBFJ
-  Converting back: I B F J : I -> !, B -> ?, F -> `, J -> : -> !?`:
+  Digit values from the bijection: ! -> I -> 8, ? -> B -> 0, ` -> F -> 6, : -> J -> 3
+  IB = 80, FJ = 63
+  addition plus one(IB, FJ) = 80 + 63 + 1 = 144
+  Encoding result: 1 4 4 : 1 -> >, 4 -> $ -> >$$
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{!?`:}
+\boxed{>$$}

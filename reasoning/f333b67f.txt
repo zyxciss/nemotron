@@ -173,4 +173,5 @@ Applying to 48<51:
   Result: 【100】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{100}
+The answer in \boxed is
+\boxed{100}

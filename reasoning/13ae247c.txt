@@ -393,4 +393,5 @@ New mappings
 【(v)】->【d】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher draws secret}
+The answer in \boxed is
+\boxed{teacher draws secret}

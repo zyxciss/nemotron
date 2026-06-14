@@ -442,4 +442,5 @@ New mappings
 【(f)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess studies around forest}
+The answer in \boxed is
+\boxed{princess studies around forest}

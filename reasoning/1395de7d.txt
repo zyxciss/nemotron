@@ -382,4 +382,5 @@ New mappings
 【(l)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird chases the wise puzzle}
+The answer in \boxed is
+\boxed{bird chases the wise puzzle}

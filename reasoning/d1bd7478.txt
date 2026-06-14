@@ -171,4 +171,5 @@ Applying to 37:67:
   Result: 【3】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3}
+The answer in \boxed is
+\boxed{3}

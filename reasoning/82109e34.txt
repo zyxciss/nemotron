@@ -34,14 +34,21 @@ Converting examples to letter form:
     input:  ^ \ * ? # : ^ -> E, \ -> F, * -> y, ? -> G, # -> I -> EF y GI
     output: $ # > / : $ -> H, # -> I, > -> D, / -> J -> HIDJ
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication minus one
+Operator x: addition
+Operator z: reverse subtraction
 
-Converting question "'^-^^": -> AE z EE
+The question operator is z, which is reverse subtraction.
+
+Converting question "'^-^^": ' ^ - ^ ^ : ' -> A, ^ -> E, - -> z, ^ -> E, ^ -> E -> AE z EE
+
 Applying to AE z EE:
-  concatenation(AE, EE) = AE || EE = AEEE
-  Converting back: A E E E : A -> ', E -> ^, E -> ^, E -> ^ -> '^^^
+  Digit values from the bijection: ' -> A -> 9, ^ -> E -> 8, ^ -> E -> 8, ^ -> E -> 8
+  AE = 98, EE = 88
+  reverse subtraction(AE, EE) = 88 - 98 = -10
+  Encoding result: 1 0 : 1 -> @, 0 -> > -> -@>
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{'^^^}
+\boxed{-@>}

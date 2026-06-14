@@ -117,4 +117,5 @@ Converting 69:
 Result: L X IX -> LXIX
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{LXIX}
+The answer in \boxed is
+\boxed{LXIX}

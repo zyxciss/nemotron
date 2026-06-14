@@ -169,4 +169,5 @@ Applying to 99\73:
   Result: 【9973】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9973}
+The answer in \boxed is
+\boxed{9973}

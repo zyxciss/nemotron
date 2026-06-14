@@ -170,4 +170,5 @@ Applying to 82>63:
   Result: 【46】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{46}
+The answer in \boxed is
+\boxed{46}

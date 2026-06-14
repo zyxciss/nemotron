@@ -168,4 +168,5 @@ Applying to 55+43:
   Result: 【98】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{98}
+The answer in \boxed is
+\boxed{98}

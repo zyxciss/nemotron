@@ -171,4 +171,5 @@ Applying to 32+88:
   Result: 【111】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{111}
+The answer in \boxed is
+\boxed{111}

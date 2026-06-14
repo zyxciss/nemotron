@@ -362,4 +362,5 @@ New mappings
 【(t)】->【c】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student dreams castle}
+The answer in \boxed is
+\boxed{student dreams castle}

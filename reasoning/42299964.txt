@@ -125,4 +125,5 @@ Converting 45.13:
 = 83.264
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{83.264}
+The answer in \boxed is
+\boxed{83.264}

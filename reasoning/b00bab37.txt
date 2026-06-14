@@ -481,4 +481,5 @@ New mappings
 【(q)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight follows in castle}
+The answer in \boxed is
+\boxed{knight follows in castle}

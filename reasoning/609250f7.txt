@@ -368,4 +368,5 @@ New mappings
 【(i)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{dragon chases the secret story}
+The answer in \boxed is
+\boxed{dragon chases the secret story}

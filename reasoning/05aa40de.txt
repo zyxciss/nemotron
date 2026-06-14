@@ -543,4 +543,5 @@ New mappings
 【(e)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen draws in valley}
+The answer in \boxed is
+\boxed{queen draws in valley}

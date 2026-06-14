@@ -173,4 +173,5 @@ Applying to 74+19:
   Result: 【831】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{831}
+The answer in \boxed is
+\boxed{831}

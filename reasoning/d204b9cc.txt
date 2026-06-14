@@ -173,4 +173,5 @@ Applying to 75)57:
   Result: 【231】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{231}
+The answer in \boxed is
+\boxed{231}

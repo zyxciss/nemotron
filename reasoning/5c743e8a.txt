@@ -174,4 +174,5 @@ Applying to 27(65:
   Result: 【1755】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1755}
+The answer in \boxed is
+\boxed{1755}

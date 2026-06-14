@@ -397,4 +397,5 @@ New mappings
 【(q)】->【q】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the wise queen writes}
+The answer in \boxed is
+\boxed{the wise queen writes}

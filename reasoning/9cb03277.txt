@@ -173,4 +173,5 @@ Applying to 52!78:
   Result: 【26】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{26}
+The answer in \boxed is
+\boxed{26}

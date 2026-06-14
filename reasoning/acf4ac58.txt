@@ -454,4 +454,5 @@ New mappings
 【(s)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird found treasure}
+The answer in \boxed is
+\boxed{bird found treasure}

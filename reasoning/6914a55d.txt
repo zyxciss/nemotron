@@ -436,4 +436,5 @@ New mappings
 【(p)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{king chases the bright door}
+The answer in \boxed is
+\boxed{king chases the bright door}

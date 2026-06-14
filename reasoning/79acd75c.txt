@@ -170,4 +170,5 @@ Applying to 99)23:
   Result: 【8613】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{8613}
+The answer in \boxed is
+\boxed{8613}

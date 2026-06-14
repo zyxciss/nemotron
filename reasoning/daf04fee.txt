@@ -799,4 +799,5 @@ Output
 7 NOT6 = NOT(0) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11111111}
+The answer in \boxed is
+\boxed{11111111}

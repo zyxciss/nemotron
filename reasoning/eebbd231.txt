@@ -114,4 +114,5 @@ Converting 7.24:
 = 5.712
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{5.712}
+The answer in \boxed is
+\boxed{5.712}

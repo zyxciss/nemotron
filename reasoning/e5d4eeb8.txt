@@ -173,4 +173,5 @@ Applying to 92*09:
   Result: 【1162】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1162}
+The answer in \boxed is
+\boxed{1162}

@@ -422,4 +422,5 @@ New mappings
 【(q)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight discovers near library}
+The answer in \boxed is
+\boxed{knight discovers near library}

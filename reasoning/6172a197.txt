@@ -127,4 +127,5 @@ Converting 18.95:
 = 23.270
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{23.270}
+The answer in \boxed is
+\boxed{23.270}

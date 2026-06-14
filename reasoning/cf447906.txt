@@ -841,4 +841,5 @@ Output
 7 OR-NOT14 = OR(1,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10000111}
+The answer in \boxed is
+\boxed{10000111}

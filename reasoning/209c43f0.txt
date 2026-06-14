@@ -171,4 +171,5 @@ Applying to 18^84:
   Result: 【101】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{101}
+The answer in \boxed is
+\boxed{101}

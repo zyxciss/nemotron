@@ -173,4 +173,5 @@ Applying to 32+24:
   Result: 【2432】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{2432}
+The answer in \boxed is
+\boxed{2432}

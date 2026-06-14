@@ -168,4 +168,5 @@ Applying to 63:88:
   Result: 【5543】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{5543}
+The answer in \boxed is
+\boxed{5543}

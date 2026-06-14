@@ -535,4 +535,5 @@ New mappings
 【(e)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess explores inside village}
+The answer in \boxed is
+\boxed{princess explores inside village}

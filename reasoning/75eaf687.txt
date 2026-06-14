@@ -171,4 +171,5 @@ Applying to 79'82:
   Result: 【96】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{96}
+The answer in \boxed is
+\boxed{96}

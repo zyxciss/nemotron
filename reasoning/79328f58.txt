@@ -573,4 +573,5 @@ Best match: 【bright】
 【t】->【t】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird imagines the bright mirror}
+The answer in \boxed is
+\boxed{bird imagines the bright mirror}

@@ -510,4 +510,5 @@ New mappings
 【(n)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the bright princess creates}
+The answer in \boxed is
+\boxed{the bright princess creates}

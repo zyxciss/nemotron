@@ -175,4 +175,5 @@ Applying to 96*36:
   Result: 【7434】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{7434}
+The answer in \boxed is
+\boxed{7434}

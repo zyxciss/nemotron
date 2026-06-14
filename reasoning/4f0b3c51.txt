@@ -486,4 +486,5 @@ New mappings
 【(a)】->【q】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen draws the strange castle}
+The answer in \boxed is
+\boxed{queen draws the strange castle}

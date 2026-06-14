@@ -610,4 +610,5 @@ New mappings
 【(e)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the hidden wizard found}
+The answer in \boxed is
+\boxed{the hidden wizard found}

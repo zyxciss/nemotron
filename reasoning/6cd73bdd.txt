@@ -172,4 +172,5 @@ Applying to 37{28:
   Result: 【6895】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6895}
+The answer in \boxed is
+\boxed{6895}

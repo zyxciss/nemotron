@@ -477,4 +477,5 @@ New mappings
 【(v)】->【o】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess reads above cave}
+The answer in \boxed is
+\boxed{princess reads above cave}

@@ -172,4 +172,5 @@ Applying to 45*18:
   Result: 【4734】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4734}
+The answer in \boxed is
+\boxed{4734}

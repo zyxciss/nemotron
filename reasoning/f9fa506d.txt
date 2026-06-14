@@ -379,4 +379,5 @@ New mappings
 【(c)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher creates story}
+The answer in \boxed is
+\boxed{teacher creates story}

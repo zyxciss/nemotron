@@ -117,4 +117,5 @@ Converting 96:
 Result: XC V I -> XCVI
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XCVI}
+The answer in \boxed is
+\boxed{XCVI}

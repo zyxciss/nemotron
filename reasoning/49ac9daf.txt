@@ -171,4 +171,5 @@ Applying to 64*52:
   Result: 【27】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{27}
+The answer in \boxed is
+\boxed{27}

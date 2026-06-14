@@ -532,4 +532,5 @@ New mappings
 【(b)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard explores the bright secret}
+The answer in \boxed is
+\boxed{wizard explores the bright secret}

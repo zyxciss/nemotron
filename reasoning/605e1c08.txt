@@ -169,4 +169,5 @@ Applying to 10"20:
   Result: 【1020】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1020}
+The answer in \boxed is
+\boxed{1020}

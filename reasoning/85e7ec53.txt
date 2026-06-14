@@ -402,4 +402,5 @@ New mappings
 【(c)】->【d】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{turtle studies near school}
+The answer in \boxed is
+\boxed{turtle studies near school}

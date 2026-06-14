@@ -170,4 +170,5 @@ Applying to 28`55:
   Result: 【0154】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{0154}
+The answer in \boxed is
+\boxed{0154}

@@ -476,4 +476,5 @@ New mappings
 【(a)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the silver knight dreams}
+The answer in \boxed is
+\boxed{the silver knight dreams}

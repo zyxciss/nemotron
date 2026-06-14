@@ -171,4 +171,5 @@ Applying to 89-21:
   Result: 【68】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{68}
+The answer in \boxed is
+\boxed{68}

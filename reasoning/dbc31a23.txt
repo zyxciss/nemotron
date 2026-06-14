@@ -105,4 +105,5 @@ d = 3.612 * 7.7841:
 = 28.116
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{28.116}
+The answer in \boxed is
+\boxed{28.116}

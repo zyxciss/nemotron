@@ -376,4 +376,5 @@ New mappings
 【(u)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student writes story}
+The answer in \boxed is
+\boxed{student writes story}

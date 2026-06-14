@@ -478,4 +478,5 @@ New mappings
 【(v)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard sees inside tower}
+The answer in \boxed is
+\boxed{wizard sees inside tower}

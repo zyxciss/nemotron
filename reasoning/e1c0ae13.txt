@@ -173,4 +173,5 @@ Applying to 92`54:
   Result: 【4968】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4968}
+The answer in \boxed is
+\boxed{4968}

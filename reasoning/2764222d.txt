@@ -508,4 +508,5 @@ New mappings
 【(c)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird draws the wise story}
+The answer in \boxed is
+\boxed{bird draws the wise story}

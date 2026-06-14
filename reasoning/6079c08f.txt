@@ -503,4 +503,5 @@ New mappings
 【(f)】->【u】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard chases the hidden puzzle}
+The answer in \boxed is
+\boxed{wizard chases the hidden puzzle}

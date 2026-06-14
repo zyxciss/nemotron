@@ -175,4 +175,5 @@ Applying to 78*16:
   Result: 【8035】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{8035}
+The answer in \boxed is
+\boxed{8035}

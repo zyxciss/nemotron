@@ -549,4 +549,5 @@ New mappings
 【(n)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat explores the colorful key}
+The answer in \boxed is
+\boxed{cat explores the colorful key}

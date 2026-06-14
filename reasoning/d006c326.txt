@@ -519,4 +519,5 @@ New mappings
 【(h)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{alice explores beyond cave}
+The answer in \boxed is
+\boxed{alice explores beyond cave}

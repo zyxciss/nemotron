@@ -171,4 +171,5 @@ Applying to 06-71:
   Result: 【-34】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-34}
+The answer in \boxed is
+\boxed{-34}

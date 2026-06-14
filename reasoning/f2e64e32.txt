@@ -521,4 +521,5 @@ New mappings
 【(z)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{dragon writes the colorful puzzle}
+The answer in \boxed is
+\boxed{dragon writes the colorful puzzle}

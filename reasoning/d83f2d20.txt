@@ -115,4 +115,5 @@ Converting 6:
 Result: V I -> VI
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{VI}
+The answer in \boxed is
+\boxed{VI}

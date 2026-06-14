@@ -479,4 +479,5 @@ Best match: 【golden】
 【n】->【n】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student follows the golden castle}
+The answer in \boxed is
+\boxed{student follows the golden castle}

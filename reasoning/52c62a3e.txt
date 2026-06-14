@@ -174,4 +174,5 @@ Applying to 92*12:
   Result: 【1292】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1292}
+The answer in \boxed is
+\boxed{1292}

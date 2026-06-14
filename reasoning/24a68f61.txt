@@ -848,4 +848,5 @@ Output
 7 XOR12 = XOR(0,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{10010001}
+The answer in \boxed is
+\boxed{10010001}

@@ -173,4 +173,5 @@ Applying to 78]15:
   Result: 【1171】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1171}
+The answer in \boxed is
+\boxed{1171}

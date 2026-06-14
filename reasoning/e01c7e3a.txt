@@ -172,4 +172,5 @@ d = 8.32 * 3.61:
 = 30.035
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{30.035}
+The answer in \boxed is
+\boxed{30.035}

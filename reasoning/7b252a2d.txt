@@ -70,4 +70,5 @@ Converting 7.13:
 = 5.012
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{5.012}
+The answer in \boxed is
+\boxed{5.012}

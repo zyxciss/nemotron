@@ -173,4 +173,5 @@ Applying to 46!85:
   Result: 【3910】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3910}
+The answer in \boxed is
+\boxed{3910}

@@ -359,4 +359,5 @@ New mappings
 【(c)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the golden knight studies}
+The answer in \boxed is
+\boxed{the golden knight studies}

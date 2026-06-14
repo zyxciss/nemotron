@@ -481,4 +481,5 @@ Best match: 【ocean】
 【n】->【n】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{king creates around ocean}
+The answer in \boxed is
+\boxed{king creates around ocean}

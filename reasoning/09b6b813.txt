@@ -683,4 +683,5 @@ New mappings
 【(n)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard watches the silver puzzle}
+The answer in \boxed is
+\boxed{wizard watches the silver puzzle}

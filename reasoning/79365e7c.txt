@@ -460,4 +460,5 @@ New mappings
 【(x)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the colorful turtle dreams}
+The answer in \boxed is
+\boxed{the colorful turtle dreams}

@@ -51,4 +51,5 @@ Converting 9.04:
 = 9.953
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9.953}
+The answer in \boxed is
+\boxed{9.953}

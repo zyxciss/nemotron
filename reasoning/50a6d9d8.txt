@@ -447,4 +447,5 @@ New mappings
 【(x)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the silver bird explores}
+The answer in \boxed is
+\boxed{the silver bird explores}

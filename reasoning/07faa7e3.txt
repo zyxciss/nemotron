@@ -427,4 +427,5 @@ New mappings
 【(a)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the secret bird follows}
+The answer in \boxed is
+\boxed{the secret bird follows}

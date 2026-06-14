@@ -489,4 +489,5 @@ New mappings
 【(f)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit dreams the hidden map}
+The answer in \boxed is
+\boxed{rabbit dreams the hidden map}

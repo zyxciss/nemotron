@@ -453,4 +453,5 @@ New mappings
 【(p)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the mysterious wizard found}
+The answer in \boxed is
+\boxed{the mysterious wizard found}

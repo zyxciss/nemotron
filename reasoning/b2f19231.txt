@@ -410,4 +410,5 @@ New mappings
 【(c)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess imagines the golden garden}
+The answer in \boxed is
+\boxed{princess imagines the golden garden}

@@ -498,4 +498,5 @@ New mappings
 【(y)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{hatter found the curious book}
+The answer in \boxed is
+\boxed{hatter found the curious book}

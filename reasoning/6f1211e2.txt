@@ -171,4 +171,5 @@ Applying to 45*67:
   Result: 【6745】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6745}
+The answer in \boxed is
+\boxed{6745}

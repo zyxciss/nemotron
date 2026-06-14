@@ -580,4 +580,5 @@ Best match: 【school】
 【l】->【l】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight explores inside school}
+The answer in \boxed is
+\boxed{knight explores inside school}

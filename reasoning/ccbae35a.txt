@@ -98,4 +98,5 @@ Converting 29.58:
 = 48.718
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{48.718}
+The answer in \boxed is
+\boxed{48.718}

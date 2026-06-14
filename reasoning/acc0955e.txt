@@ -490,4 +490,5 @@ New mappings
 【(i)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird dreams the dark treasure}
+The answer in \boxed is
+\boxed{bird dreams the dark treasure}

@@ -547,4 +547,5 @@ New mappings
 【(e)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight creates under palace}
+The answer in \boxed is
+\boxed{knight creates under palace}

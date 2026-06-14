@@ -388,4 +388,5 @@ New mappings
 【(b)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher discovers near palace}
+The answer in \boxed is
+\boxed{teacher discovers near palace}

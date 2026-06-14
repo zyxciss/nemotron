@@ -174,4 +174,5 @@ Applying to 14<51:
   Result: 【65】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{65}
+The answer in \boxed is
+\boxed{65}

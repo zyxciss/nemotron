@@ -391,4 +391,5 @@ New mappings
 【(k)】->【o】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight studies the wise book}
+The answer in \boxed is
+\boxed{knight studies the wise book}

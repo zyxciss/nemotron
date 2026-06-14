@@ -435,4 +435,5 @@ New mappings
 【(g)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat studies the golden message}
+The answer in \boxed is
+\boxed{cat studies the golden message}

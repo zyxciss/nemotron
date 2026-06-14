@@ -807,4 +807,5 @@ Output
 7 OR13 = OR(1,1) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11000111}
+The answer in \boxed is
+\boxed{11000111}

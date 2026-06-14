@@ -478,4 +478,5 @@ New mappings
 【(c)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird imagines above castle}
+The answer in \boxed is
+\boxed{bird imagines above castle}

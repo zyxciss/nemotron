@@ -370,4 +370,5 @@ New mappings
 【(v)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher dreams puzzle}
+The answer in \boxed is
+\boxed{teacher dreams puzzle}

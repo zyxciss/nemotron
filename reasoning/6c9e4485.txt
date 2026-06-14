@@ -174,4 +174,5 @@ Applying to 28%34:
   Result: 【6253】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6253}
+The answer in \boxed is
+\boxed{6253}

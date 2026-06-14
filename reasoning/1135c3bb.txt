@@ -493,4 +493,5 @@ New mappings
 【(j)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird creates above castle}
+The answer in \boxed is
+\boxed{bird creates above castle}

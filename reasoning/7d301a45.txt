@@ -488,4 +488,5 @@ New mappings
 【(x)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{king reads around castle}
+The answer in \boxed is
+\boxed{king reads around castle}

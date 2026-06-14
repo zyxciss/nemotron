@@ -173,4 +173,5 @@ Applying to 31}82:
   Result: 【3182】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3182}
+The answer in \boxed is
+\boxed{3182}

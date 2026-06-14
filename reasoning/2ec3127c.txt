@@ -429,4 +429,5 @@ New mappings
 【(g)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat found the dark treasure}
+The answer in \boxed is
+\boxed{cat found the dark treasure}

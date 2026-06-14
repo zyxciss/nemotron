@@ -39,14 +39,21 @@ Converting examples to letter form:
     input:  $ / - } / : $ -> D, / -> I, - -> x, } -> A, / -> I -> DI x AI
     output: - % ) : - -> H, % -> E, ) -> F -> HEF
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator z: multiplication plus one
+Operator y: addition plus one
+Operator x: subtraction
 
-Converting question "<%*]\": -> CE z JK
+The question operator is z, which is multiplication plus one.
+
+Converting question "<%*]\": < % * ] \ : < -> C, % -> E, * -> z, ] -> J, \ -> K -> CE z JK
+
 Applying to CE z JK:
-  concatenation(CE, JK) = CE || JK = CEJK
-  Converting back: C E J K : C -> <, E -> %, J -> ], K -> \ -> <%]\
+  Digit values from the bijection: < -> C -> 4, % -> E -> 3, ] -> J -> 9, \ -> K -> 1
+  CE = 43, JK = 91
+  multiplication plus one(CE, JK) = 43 * 91 + 1 = 3914
+  Encoding result: 3 9 1 4 : 3 -> %, 9 -> ], 1 -> \, 4 -> < -> %]\<
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{<%]\}
+\boxed{%]\<}

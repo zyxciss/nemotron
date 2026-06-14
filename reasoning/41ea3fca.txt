@@ -406,4 +406,5 @@ New mappings
 【(r)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse creates puzzle}
+The answer in \boxed is
+\boxed{mouse creates puzzle}

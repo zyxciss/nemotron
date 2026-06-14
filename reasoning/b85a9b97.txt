@@ -388,4 +388,5 @@ New mappings
 【(p)】->【q】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen follows near island}
+The answer in \boxed is
+\boxed{queen follows near island}

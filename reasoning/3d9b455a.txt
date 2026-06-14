@@ -398,4 +398,5 @@ New mappings
 【(p)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the golden dragon writes}
+The answer in \boxed is
+\boxed{the golden dragon writes}

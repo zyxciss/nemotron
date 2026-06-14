@@ -157,4 +157,5 @@ Converting 36.83:
 = 65.999
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{65.999}
+The answer in \boxed is
+\boxed{65.999}

@@ -534,4 +534,5 @@ New mappings
 【(b)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard creates the golden crystal}
+The answer in \boxed is
+\boxed{wizard creates the golden crystal}

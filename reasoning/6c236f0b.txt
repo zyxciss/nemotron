@@ -526,4 +526,5 @@ New mappings
 【(h)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher dreams the clever puzzle}
+The answer in \boxed is
+\boxed{teacher dreams the clever puzzle}

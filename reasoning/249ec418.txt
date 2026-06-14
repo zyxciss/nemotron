@@ -374,4 +374,5 @@ New mappings
 【(i)】->【w】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the wise teacher reads}
+The answer in \boxed is
+\boxed{the wise teacher reads}

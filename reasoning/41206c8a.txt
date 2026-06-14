@@ -395,4 +395,5 @@ New mappings
 【(p)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the curious knight imagines}
+The answer in \boxed is
+\boxed{the curious knight imagines}

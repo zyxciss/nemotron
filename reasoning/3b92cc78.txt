@@ -815,4 +815,5 @@ Output
 7 I5 = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{00101001}
+The answer in \boxed is
+\boxed{00101001}

@@ -376,4 +376,5 @@ New mappings
 【(s)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the hidden king draws}
+The answer in \boxed is
+\boxed{the hidden king draws}

@@ -172,4 +172,5 @@ Applying to 95%05:
   Result: 【0592】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{0592}
+The answer in \boxed is
+\boxed{0592}

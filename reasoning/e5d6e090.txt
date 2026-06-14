@@ -29,14 +29,21 @@ Converting examples to letter form:
     input:  [ | * # > : [ -> A, | -> G, * -> y, # -> I, > -> E -> AG y IE
     output: | < & : | -> G, < -> H, & -> C -> GHC
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication plus one
+Operator z: addition
+Operator x: absolute difference
 
-Converting question "@@+><": -> FF z EH
+The question operator is z, which is addition.
+
+Converting question "@@+><": @ @ + > < : @ -> F, @ -> F, + -> z, > -> E, < -> H -> FF z EH
+
 Applying to FF z EH:
-  concatenation(FF, EH) = FF || EH = FFEH
-  Converting back: F F E H : F -> @, F -> @, E -> >, H -> < -> @@><
+  Digit values from the bijection: @ -> F -> 3, @ -> F -> 3, > -> E -> 7, < -> H -> 0
+  FF = 33, EH = 70
+  addition(FF, EH) = 33 + 70 = 103
+  Encoding result: 1 0 3 : 1 -> #, 0 -> <, 3 -> @ -> #<@
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{@@><}
+\boxed{#<@}

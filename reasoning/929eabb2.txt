@@ -426,4 +426,5 @@ New mappings
 【(o)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{dragon writes the ancient book}
+The answer in \boxed is
+\boxed{dragon writes the ancient book}

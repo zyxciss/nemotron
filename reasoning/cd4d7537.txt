@@ -573,4 +573,5 @@ New mappings
 【(b)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the wise king imagines}
+The answer in \boxed is
+\boxed{the wise king imagines}

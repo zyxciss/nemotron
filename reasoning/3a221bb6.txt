@@ -433,4 +433,5 @@ New mappings
 【(s)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student explores under castle}
+The answer in \boxed is
+\boxed{student explores under castle}

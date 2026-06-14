@@ -501,4 +501,5 @@ New mappings
 【(e)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the dark wizard explores}
+The answer in \boxed is
+\boxed{the dark wizard explores}

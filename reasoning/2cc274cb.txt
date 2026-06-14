@@ -174,4 +174,5 @@ Applying to 21+68:
   Result: 【6821】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6821}
+The answer in \boxed is
+\boxed{6821}

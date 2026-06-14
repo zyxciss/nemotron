@@ -470,4 +470,5 @@ New mappings
 【(h)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight writes potion}
+The answer in \boxed is
+\boxed{knight writes potion}

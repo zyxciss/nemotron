@@ -130,4 +130,5 @@ d = 8.246 * 12.3201:
 = 101.591
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{101.591}
+The answer in \boxed is
+\boxed{101.591}

@@ -435,4 +435,5 @@ New mappings
 【(t)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{king writes the curious puzzle}
+The answer in \boxed is
+\boxed{king writes the curious puzzle}

@@ -437,4 +437,5 @@ New mappings
 【(e)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse explores under island}
+The answer in \boxed is
+\boxed{mouse explores under island}

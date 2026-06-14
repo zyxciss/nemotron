@@ -591,4 +591,5 @@ Best match: 【colorful】
 【l】->【l】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit found the colorful message}
+The answer in \boxed is
+\boxed{rabbit found the colorful message}

@@ -171,4 +171,5 @@ Applying to 61*08:
   Result: 【0861】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{0861}
+The answer in \boxed is
+\boxed{0861}

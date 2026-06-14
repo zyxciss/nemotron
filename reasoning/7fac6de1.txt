@@ -406,4 +406,5 @@ New mappings
 【(l)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student discovers near village}
+The answer in \boxed is
+\boxed{student discovers near village}

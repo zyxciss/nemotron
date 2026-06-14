@@ -530,4 +530,5 @@ New mappings
 【(z)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{turtle watches the mysterious garden}
+The answer in \boxed is
+\boxed{turtle watches the mysterious garden}

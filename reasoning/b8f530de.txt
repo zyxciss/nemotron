@@ -530,4 +530,5 @@ New mappings
 【(j)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the silver queen imagines}
+The answer in \boxed is
+\boxed{the silver queen imagines}

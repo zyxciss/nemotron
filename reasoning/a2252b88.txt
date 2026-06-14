@@ -172,4 +172,5 @@ Applying to 66^73:
   Result: 【2442】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{2442}
+The answer in \boxed is
+\boxed{2442}

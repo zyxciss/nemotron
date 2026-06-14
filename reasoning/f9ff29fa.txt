@@ -173,4 +173,5 @@ Applying to 23*98:
   Result: 【8482】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{8482}
+The answer in \boxed is
+\boxed{8482}

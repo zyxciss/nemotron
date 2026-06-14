@@ -397,4 +397,5 @@ New mappings
 【(q)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student explores around village}
+The answer in \boxed is
+\boxed{student explores around village}

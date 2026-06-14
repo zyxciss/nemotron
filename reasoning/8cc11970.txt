@@ -366,4 +366,5 @@ New mappings
 【(a)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher explores inside cave}
+The answer in \boxed is
+\boxed{teacher explores inside cave}

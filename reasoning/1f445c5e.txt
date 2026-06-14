@@ -172,4 +172,5 @@ Applying to 34?46:
   Result: 【1564】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1564}
+The answer in \boxed is
+\boxed{1564}

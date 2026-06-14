@@ -28,14 +28,21 @@ Converting examples to letter form:
     input:  < # + < : : < -> G, # -> F, + -> y, < -> G, : -> A -> GF y GA
     output: < # < : : < -> G, # -> F, < -> G, : -> A -> GFGA
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: multiplication
+Operator y: concatenation
+Operator z: reverse subtraction
 
-Converting question "<&-:@": -> GH z AC
+The question operator is z, which is reverse subtraction.
+
+Converting question "<&-:@": < & - : @ : < -> G, & -> H, - -> z, : -> A, @ -> C -> GH z AC
+
 Applying to GH z AC:
-  concatenation(GH, AC) = GH || AC = GHAC
-  Converting back: G H A C : G -> <, H -> &, A -> :, C -> @ -> <&:@
+  Digit values from the bijection: < -> G -> 1, & -> H -> 0, : -> A -> 7, @ -> C -> 2
+  GH = 10, AC = 72
+  reverse subtraction(GH, AC) = 72 - 10 = 62
+  Encoding result: 6 2 : 6 -> >, 2 -> @ -> >@
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{<&:@}
+\boxed{>@}

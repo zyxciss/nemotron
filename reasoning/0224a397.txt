@@ -375,4 +375,5 @@ New mappings
 【(q)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen sees the hidden book}
+The answer in \boxed is
+\boxed{queen sees the hidden book}

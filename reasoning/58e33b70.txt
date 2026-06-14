@@ -532,4 +532,5 @@ New mappings
 【(a)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard chases the magical key}
+The answer in \boxed is
+\boxed{wizard chases the magical key}

@@ -492,4 +492,5 @@ New mappings
 【(v)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse explores beyond wonderland}
+The answer in \boxed is
+\boxed{mouse explores beyond wonderland}

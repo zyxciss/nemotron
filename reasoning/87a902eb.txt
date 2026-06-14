@@ -168,4 +168,5 @@ Applying to 75*31:
   Result: 【047】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{047}
+The answer in \boxed is
+\boxed{047}

@@ -465,4 +465,5 @@ New mappings
 【(f)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the hidden wizard discovers}
+The answer in \boxed is
+\boxed{the hidden wizard discovers}

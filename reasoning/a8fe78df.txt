@@ -423,4 +423,5 @@ New mappings
 【(z)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the clever student explores}
+The answer in \boxed is
+\boxed{the clever student explores}

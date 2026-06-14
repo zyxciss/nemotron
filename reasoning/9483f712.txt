@@ -393,4 +393,5 @@ New mappings
 【(e)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student imagines the clever crystal}
+The answer in \boxed is
+\boxed{student imagines the clever crystal}

@@ -572,4 +572,5 @@ New mappings
 【(y)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{turtle studies the clever book}
+The answer in \boxed is
+\boxed{turtle studies the clever book}

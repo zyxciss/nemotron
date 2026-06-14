@@ -171,4 +171,5 @@ Applying to 64*15:
   Result: 【7432】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{7432}
+The answer in \boxed is
+\boxed{7432}

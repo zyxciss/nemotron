@@ -418,4 +418,5 @@ New mappings
 【(n)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird imagines castle}
+The answer in \boxed is
+\boxed{bird imagines castle}

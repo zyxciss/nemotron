@@ -173,4 +173,5 @@ Applying to 17!28:
   Result: 【3285】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3285}
+The answer in \boxed is
+\boxed{3285}

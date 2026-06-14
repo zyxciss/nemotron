@@ -400,4 +400,5 @@ New mappings
 【(n)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the secret knight creates}
+The answer in \boxed is
+\boxed{the secret knight creates}

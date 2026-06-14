@@ -491,4 +491,5 @@ New mappings
 【(e)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{turtle follows the secret mirror}
+The answer in \boxed is
+\boxed{turtle follows the secret mirror}

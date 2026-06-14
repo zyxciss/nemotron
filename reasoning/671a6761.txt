@@ -595,4 +595,5 @@ New mappings
 【(x)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit found the mysterious key}
+The answer in \boxed is
+\boxed{rabbit found the mysterious key}

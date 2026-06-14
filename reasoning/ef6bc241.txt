@@ -174,4 +174,5 @@ Applying to 73$29:
   Result: 【$55】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{$55}
+The answer in \boxed is
+\boxed{$55}

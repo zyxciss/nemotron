@@ -119,4 +119,5 @@ Converting 31:
 Result: X X X I -> XXXI
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XXXI}
+The answer in \boxed is
+\boxed{XXXI}

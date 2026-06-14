@@ -488,4 +488,5 @@ New mappings
 【(z)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{dragon imagines the colorful crystal}
+The answer in \boxed is
+\boxed{dragon imagines the colorful crystal}

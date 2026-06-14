@@ -489,4 +489,5 @@ New mappings
 【(i)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen studies potion}
+The answer in \boxed is
+\boxed{queen studies potion}

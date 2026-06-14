@@ -468,4 +468,5 @@ New mappings
 【(o)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the colorful wizard chases}
+The answer in \boxed is
+\boxed{the colorful wizard chases}

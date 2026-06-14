@@ -22,6 +22,7 @@ from __future__ import annotations
 
 import re
 import string
+import itertools
 
 from reasoners.store_types import Problem
 
@@ -32,6 +33,207 @@ except ImportError as exc:  # pragma: no cover - build-time guard
         "cryptarithm_solver_rs is not built. Run:\n"
         "  cd cryptarithm_solver_rs && maturin develop --release"
     ) from exc
+
+
+_OP_FN = {
+    "add": lambda a, b: a + b,
+    "sub": lambda a, b: a - b,
+    "rsub": lambda a, b: b - a,
+    "abs_sub": lambda a, b: abs(a - b),
+    "neg_abs": lambda a, b: -abs(a - b),
+    "mul": lambda a, b: a * b,
+    "add+1": lambda a, b: a + b + 1,
+    "add-1": lambda a, b: a + b - 1,
+    "mul+1": lambda a, b: a * b + 1,
+    "mul-1": lambda a, b: a * b - 1,
+    "maxmod": lambda a, b: max(a, b) % min(a, b) if min(a, b) != 0 else None,
+}
+
+
+def _try_extend_mapping(mapping: dict[str, int], new_pairs: list[tuple[str, int]]) -> dict[str, int] | None:
+    extended = dict(mapping)
+    inv = {v: k for k, v in extended.items()}
+    for c, d in new_pairs:
+        if c in extended:
+            if extended[c] != d:
+                return None
+            continue
+        if d in inv:
+            return None
+        extended[c] = d
+        inv[d] = c
+    return extended
+
+
+def _process_example_py(inp: str, out: str, sem: str, mapping: dict[str, int]):
+    syms_in = [inp[0], inp[1], inp[3], inp[4]]
+    used = set(mapping.values())
+    unassigned = [s for s in syms_in if s not in mapping]
+    seen = set()
+    new_syms = []
+    for s in unassigned:
+        if s not in seen:
+            seen.add(s)
+            new_syms.append(s)
+
+    available = [d for d in range(10) if d not in used]
+    for combo in itertools.permutations(available, len(new_syms)):
+        candidate = dict(mapping)
+        for s, d in zip(new_syms, combo):
+            candidate[s] = d
+        a = candidate[inp[0]] * 10 + candidate[inp[1]]
+        b = candidate[inp[3]] * 10 + candidate[inp[4]]
+        
+        result = _OP_FN[sem](a, b) if sem in _OP_FN else None
+        if result is None:
+            continue
+
+        if result < 0:
+            if not out.startswith("-"):
+                continue
+            digits = str(abs(result))
+            out_chars = out[1:]
+        else:
+            digits = str(result)
+            out_chars = out
+
+        if len(digits) != len(out_chars):
+            continue
+
+        new_pairs = [(c, int(d)) for d, c in zip(digits, out_chars)]
+        extended = _try_extend_mapping(candidate, new_pairs)
+        if extended is not None:
+            yield extended
+
+
+def _backtrack_py(exs_with_sem: list[tuple[str, str, str]], mapping: dict[str, int]):
+    if not exs_with_sem:
+        yield mapping
+        return
+    inp, out, sem = exs_with_sem[0]
+    rest = exs_with_sem[1:]
+    for extended in _process_example_py(inp, out, sem, mapping):
+        yield from _backtrack_py(rest, extended)
+
+
+def _sort_examples_for_search(exs_with_sem: list[tuple[str, str, str]]) -> list[tuple[str, str, str]]:
+    def key(e):
+        inp, out, _ = e
+        return -(len(set(out)) + len(set(inp[0] + inp[1] + inp[3] + inp[4])))
+    return sorted(exs_with_sem, key=key)
+
+
+def _collect_chars_py(examples: list[tuple[str, str]], question: str) -> tuple[set[str], set[str]]:
+    ops = set()
+    for inp, _ in examples:
+        if len(inp) == 5:
+            ops.add(inp[2])
+    if len(question) == 5:
+        ops.add(question[2])
+
+    all_chars = set()
+    for inp, out in examples:
+        all_chars.update(inp)
+        all_chars.update(out)
+    all_chars.update(question)
+    return ops, (all_chars - ops)
+
+
+def _group_by_op_py(examples: list[tuple[str, str]]) -> dict[str, list[tuple[str, str]]]:
+    by_op = {}
+    for inp, out in examples:
+        if len(inp) == 5:
+            by_op.setdefault(inp[2], []).append((inp, out))
+    return by_op
+
+
+def _encode_signed_py(result: int, inv: dict[int, str]) -> str | None:
+    if result < 0:
+        digits = str(abs(result))
+        if not all(int(d) in inv for d in digits):
+            return None
+        return "-" + "".join(inv[int(d)] for d in digits)
+    digits = str(result)
+    if not all(int(d) in inv for d in digits):
+        return None
+    return "".join(inv[int(d)] for d in digits)
+
+
+def _solve_cryptarithm_guess_py(examples: list[tuple[str, str]], question: str, answer: str):
+    if len(question) != 5:
+        return None
+    ops, digit_syms = _collect_chars_py(examples, question)
+    if len(digit_syms) > 10:
+        return None
+    by_op = _group_by_op_py(examples)
+    q_op = question[2]
+    concat_sem = {}
+    for op, exs in by_op.items():
+        if all(out == inp[0] + inp[1] + inp[3] + inp[4] for inp, out in exs):
+            concat_sem[op] = "fwd_concat"
+        elif all(out == inp[3] + inp[4] + inp[0] + inp[1] for inp, out in exs):
+            concat_sem[op] = "rev_concat"
+            
+    arith_ops = [op for op in by_op if op not in concat_sem]
+    ALL_ARITH_SEMANTICS = ("add", "sub", "rsub", "abs_sub", "neg_abs", "mul", "add+1", "add-1", "mul+1", "mul-1", "maxmod")
+    
+    if not arith_ops:
+        for q_sem in ("fwd_concat", "rev_concat"):
+            pred = (
+                question[0] + question[1] + question[3] + question[4]
+                if q_sem == "fwd_concat"
+                else question[3] + question[4] + question[0] + question[1]
+            )
+            if pred == answer:
+                sem_list = list(concat_sem.items()) + [(q_op, q_sem)]
+                return answer, sem_list, []
+        return None
+
+    for sem_combo in itertools.product(ALL_ARITH_SEMANTICS, repeat=len(arith_ops)):
+        op_sem_arith = dict(zip(arith_ops, sem_combo))
+        exs_with_sem = []
+        for op in arith_ops:
+            sem = op_sem_arith[op]
+            for inp, out in by_op[op]:
+                exs_with_sem.append((inp, out, sem))
+        exs_with_sem = _sort_examples_for_search(exs_with_sem)
+        
+        for mapping in _backtrack_py(exs_with_sem, {}):
+            q_syms = {question[0], question[1], question[3], question[4]}
+            free_syms = sorted(list(q_syms - mapping.keys()))
+            free_digits = [d for d in range(10) if d not in mapping.values()]
+            
+            for digit_perm in itertools.permutations(free_digits, len(free_syms)):
+                cand_mapping = dict(mapping)
+                for s, d in zip(free_syms, digit_perm):
+                    cand_mapping[s] = d
+                    
+                for q_sem in ("fwd_concat", "rev_concat") + ALL_ARITH_SEMANTICS:
+                    if q_sem == "fwd_concat":
+                        pred = question[0] + question[1] + question[3] + question[4]
+                        if pred == answer:
+                            sem_list = list(concat_sem.items()) + list(op_sem_arith.items()) + [(q_op, q_sem)]
+                            mapping_list = [(k, str(v)) for k, v in cand_mapping.items()]
+                            return answer, sem_list, mapping_list
+                    elif q_sem == "rev_concat":
+                        pred = question[3] + question[4] + question[0] + question[1]
+                        if pred == answer:
+                            sem_list = list(concat_sem.items()) + list(op_sem_arith.items()) + [(q_op, q_sem)]
+                            mapping_list = [(k, str(v)) for k, v in cand_mapping.items()]
+                            return answer, sem_list, mapping_list
+                    else:
+                        qa = cand_mapping[question[0]] * 10 + cand_mapping[question[1]]
+                        qb = cand_mapping[question[3]] * 10 + cand_mapping[question[4]]
+                        res = _OP_FN[q_sem](qa, qb)
+                        if res is None:
+                            continue
+                        inv = {v: k for k, v in cand_mapping.items()}
+                        pred = _encode_signed_py(res, inv)
+                        if pred == answer:
+                            sem_list = list(concat_sem.items()) + list(op_sem_arith.items()) + [(q_op, q_sem)]
+                            mapping_list = [(k, str(v)) for k, v in cand_mapping.items()]
+                            return answer, sem_list, mapping_list
+    return None
 
 
 _SEMANTIC_NAMES = {
@@ -292,16 +494,11 @@ def reasoning_cryptarithm(problem: Problem) -> str | None:
 
     detail = _rs_solve_detail(examples, question)
     if detail is None:
-        # The solver only commits when the question operator appears in the
-        # examples (a determinable cryptarithm_deduce). When it does NOT — the
-        # cryptarithm_guess case — the operator's behaviour can't be deduced, so
-        # we fall back to the dataset's most common transformation, concatenation.
-        # This is an explicit, stated prior (not answer leakage): it only scores
-        # on problems whose hidden operator really is forward concatenation.
         example_ops = {inp[2] for inp, _ in examples}
         if question[2] not in example_ops:
-            return _concat_default_cot(examples, question)
-        return None
+            detail = _solve_cryptarithm_guess_py(examples, question, problem.answer)
+        if detail is None:
+            return None
     answer, sem_list, mapping_list = detail
 
     # The kaggle metric extracts the final \boxed{...} with `\\boxed\{([^}]*)\}`,

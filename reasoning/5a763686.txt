@@ -169,4 +169,5 @@ Applying to 74&95:
   Result: 【7495】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{7495}
+The answer in \boxed is
+\boxed{7495}

@@ -498,4 +498,5 @@ New mappings
 【(m)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{alice follows the mysterious message}
+The answer in \boxed is
+\boxed{alice follows the mysterious message}

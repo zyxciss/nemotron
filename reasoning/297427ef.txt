@@ -120,4 +120,5 @@ Converting 72:
 Result: L X X I I -> LXXII
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{LXXII}
+The answer in \boxed is
+\boxed{LXXII}

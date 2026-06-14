@@ -38,14 +38,21 @@ Converting examples to letter form:
     input:  ( ] * { ? : ( -> J, ] -> A, * -> x, { -> C, ? -> H -> JA x CH
     output: ' % ` ` : ' -> B, % -> D, ` -> G, ` -> G -> BDGG
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator x: multiplication
+Operator y: concatenation
+Operator z: subtraction
 
-Converting question "@`-](": -> EG z AJ
+The question operator is z, which is subtraction.
+
+Converting question "@`-](": @ ` - ] ( : @ -> E, ` -> G, - -> z, ] -> A, ( -> J -> EG z AJ
+
 Applying to EG z AJ:
-  concatenation(EG, AJ) = EG || AJ = EGAJ
-  Converting back: E G A J : E -> @, G -> `, A -> ], J -> ( -> @`](
+  Digit values from the bijection: @ -> E -> 7, ` -> G -> 4, ] -> A -> 6, ( -> J -> 3
+  EG = 74, AJ = 63
+  subtraction(EG, AJ) = 74 - 63 = 11
+  Encoding result: 1 1 : 1 -> ' -> ''
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{@`](}
+\boxed{''}

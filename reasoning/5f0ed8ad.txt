@@ -495,4 +495,5 @@ New mappings
 【(l)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{bird follows the silver key}
+The answer in \boxed is
+\boxed{bird follows the silver key}

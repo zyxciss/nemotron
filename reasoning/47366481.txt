@@ -441,4 +441,5 @@ New mappings
 【(c)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat reads puzzle}
+The answer in \boxed is
+\boxed{cat reads puzzle}

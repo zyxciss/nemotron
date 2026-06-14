@@ -483,4 +483,5 @@ Best match: 【rabbit】
 【t】->【t】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the bright rabbit reads}
+The answer in \boxed is
+\boxed{the bright rabbit reads}

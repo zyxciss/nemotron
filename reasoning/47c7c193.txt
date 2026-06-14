@@ -568,4 +568,5 @@ Best match: 【book】
 【k】->【k】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{hatter writes the bright book}
+The answer in \boxed is
+\boxed{hatter writes the bright book}

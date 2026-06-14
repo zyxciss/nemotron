@@ -174,4 +174,5 @@ Applying to 26-40:
   Result: 【2640】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{2640}
+The answer in \boxed is
+\boxed{2640}

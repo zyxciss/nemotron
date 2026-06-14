@@ -785,4 +785,5 @@ Output
 7 OR-NOT40 = OR(1,NOT(1)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{11011111}
+The answer in \boxed is
+\boxed{11011111}

@@ -474,4 +474,5 @@ Best match: 【knight】
 【t】->【t】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the dark knight draws}
+The answer in \boxed is
+\boxed{the dark knight draws}

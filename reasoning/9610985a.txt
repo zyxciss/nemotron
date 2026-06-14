@@ -171,4 +171,5 @@ Applying to 64-42:
   Result: 【-22】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{-22}
+The answer in \boxed is
+\boxed{-22}

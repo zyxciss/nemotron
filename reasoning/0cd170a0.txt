@@ -172,4 +172,5 @@ Applying to 98^14:
   Result: 【9814】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9814}
+The answer in \boxed is
+\boxed{9814}

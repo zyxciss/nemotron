@@ -403,4 +403,5 @@ New mappings
 【(a)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{hatter discovers the bright door}
+The answer in \boxed is
+\boxed{hatter discovers the bright door}

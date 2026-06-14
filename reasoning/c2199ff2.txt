@@ -173,4 +173,5 @@ Applying to 37(79:
   Result: 【1807】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1807}
+The answer in \boxed is
+\boxed{1807}

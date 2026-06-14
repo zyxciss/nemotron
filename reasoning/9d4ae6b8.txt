@@ -169,4 +169,5 @@ Applying to 51-35:
   Result: 【16】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{16}
+The answer in \boxed is
+\boxed{16}

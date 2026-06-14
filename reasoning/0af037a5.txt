@@ -507,4 +507,5 @@ New mappings
 【(y)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student studies near valley}
+The answer in \boxed is
+\boxed{student studies near valley}

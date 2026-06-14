@@ -119,4 +119,5 @@ Converting 27:
 Result: X X V I I -> XXVII
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{XXVII}
+The answer in \boxed is
+\boxed{XXVII}

@@ -357,4 +357,5 @@ New mappings
 【(y)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat follows mirror}
+The answer in \boxed is
+\boxed{cat follows mirror}

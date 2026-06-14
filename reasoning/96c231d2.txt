@@ -386,4 +386,5 @@ New mappings
 【(p)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard draws crystal}
+The answer in \boxed is
+\boxed{wizard draws crystal}

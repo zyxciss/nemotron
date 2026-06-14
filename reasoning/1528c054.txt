@@ -498,4 +498,5 @@ New mappings
 【(d)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student found the silver crystal}
+The answer in \boxed is
+\boxed{student found the silver crystal}

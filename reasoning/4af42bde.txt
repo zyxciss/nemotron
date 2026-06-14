@@ -520,4 +520,5 @@ Best match: 【garden】
 【n】->【n】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat found the magical garden}
+The answer in \boxed is
+\boxed{cat found the magical garden}

@@ -520,4 +520,5 @@ New mappings
 【(d)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit draws the silver secret}
+The answer in \boxed is
+\boxed{rabbit draws the silver secret}

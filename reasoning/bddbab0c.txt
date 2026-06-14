@@ -411,4 +411,5 @@ New mappings
 【(v)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard follows garden}
+The answer in \boxed is
+\boxed{wizard follows garden}

@@ -30,14 +30,21 @@ Converting examples to letter form:
     input:  \ ? < \ > : \ -> G, ? -> D, < -> x, \ -> G, > -> H -> GD x GH
     output: " | | : " -> E, | -> I, | -> I -> EII
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication
+Operator x: addition plus one
+Operator z: subtraction
 
-Converting question "?){|$": -> DJ z IB
+The question operator is z, which is subtraction.
+
+Converting question "?){|$": ? ) { | $ : ? -> D, ) -> J, { -> z, | -> I, $ -> B -> DJ z IB
+
 Applying to DJ z IB:
-  concatenation(DJ, IB) = DJ || IB = DJIB
-  Converting back: D J I B : D -> ?, J -> ), I -> |, B -> $ -> ?)|$
+  Digit values from the bijection: ? -> D -> 8, ) -> J -> 0, | -> I -> 3, $ -> B -> 2
+  DJ = 80, IB = 32
+  subtraction(DJ, IB) = 80 - 32 = 48
+  Encoding result: 4 8 : 4 -> >, 8 -> ? -> >?
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{?)|$}
+\boxed{>?}

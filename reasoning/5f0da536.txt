@@ -441,4 +441,5 @@ New mappings
 【(i)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the colorful king reads}
+The answer in \boxed is
+\boxed{the colorful king reads}

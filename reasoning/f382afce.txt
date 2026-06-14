@@ -149,4 +149,5 @@ d = 9.264 * 1.00:
 = 9.264
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9.264}
+The answer in \boxed is
+\boxed{9.264}

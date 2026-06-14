@@ -388,4 +388,5 @@ New mappings
 【(h)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{alice reads the golden treasure}
+The answer in \boxed is
+\boxed{alice reads the golden treasure}

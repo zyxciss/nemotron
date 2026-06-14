@@ -114,4 +114,5 @@ Converting 10:
 Result: X -> X
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{X}
+The answer in \boxed is
+\boxed{X}

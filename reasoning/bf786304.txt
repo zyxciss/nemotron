@@ -166,4 +166,5 @@ d = 8.508 * 17.1396:
 = 145.823
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{145.823}
+The answer in \boxed is
+\boxed{145.823}

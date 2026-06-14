@@ -437,4 +437,5 @@ New mappings
 【(n)】->【z】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the magical wizard reads}
+The answer in \boxed is
+\boxed{the magical wizard reads}

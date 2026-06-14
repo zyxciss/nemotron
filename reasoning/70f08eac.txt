@@ -828,4 +828,5 @@ Output
 7 XOR35 = XOR(1,1) = 0
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01011000}
+The answer in \boxed is
+\boxed{01011000}

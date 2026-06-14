@@ -168,4 +168,5 @@ Applying to 91+04:
   Result: 【06】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{06}
+The answer in \boxed is
+\boxed{06}

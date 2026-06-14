@@ -111,4 +111,5 @@ Converting 9.16:
 = 6.311
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6.311}
+The answer in \boxed is
+\boxed{6.311}

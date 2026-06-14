@@ -30,10 +30,15 @@ Converting examples to letter form:
     input:  ' % + ' ) : ' -> E, % -> F, + -> x, ' -> E, ) -> H -> EF x EH
     output: : : : : -> I, : -> I -> II
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator z: concatenation
+Operator x: addition plus one
+Operator y: subtraction
 
-Converting question "'\*%"": -> EA z FJ
+The question operator is z, which is concatenation.
+
+Converting question "'\*%"": ' \ * % " : ' -> E, \ -> A, * -> z, % -> F, " -> J -> EA z FJ
+
 Applying to EA z FJ:
   concatenation(EA, FJ) = EA || FJ = EAFJ
   Converting back: E A F J : E -> ', A -> \, F -> %, J -> " -> '\%"

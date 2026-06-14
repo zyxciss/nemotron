@@ -517,4 +517,5 @@ New mappings
 【(c)】->【m】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat studies the silver message}
+The answer in \boxed is
+\boxed{cat studies the silver message}

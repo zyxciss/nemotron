@@ -424,4 +424,5 @@ New mappings
 【(s)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{knight chases secret}
+The answer in \boxed is
+\boxed{knight chases secret}

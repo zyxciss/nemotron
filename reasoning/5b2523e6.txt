@@ -34,14 +34,21 @@ Converting examples to letter form:
     input:  ? $ + : ! : ? -> A, $ -> I, + -> x, : -> E, ! -> G -> AI x EG
     output: > < : > -> B, < -> F -> BF
 
-The question operator z does not appear in the examples.
-When the operator cannot be determined, the default transformation is concatenation.
+Each input is 5 characters: two symbol-digits, an operator, two more symbol-digits.
+Operator y: multiplication minus one
+Operator x: addition minus one
+Operator z: subtraction
 
-Converting question "><-\$": -> BF z JI
+The question operator is z, which is subtraction.
+
+Converting question "><-\$": > < - \ $ : > -> B, < -> F, - -> z, \ -> J, $ -> I -> BF z JI
+
 Applying to BF z JI:
-  concatenation(BF, JI) = BF || JI = BFJI
-  Converting back: B F J I : B -> >, F -> <, J -> \, I -> $ -> ><\$
+  Digit values from the bijection: > -> B -> 9, < -> F -> 8, \ -> J -> 7, $ -> I -> 6
+  BF = 98, JI = 76
+  subtraction(BF, JI) = 98 - 76 = 22
+  Encoding result: 2 2 : 2 -> & -> &&
 
 I will now return the answer in \boxed{}
 The answer in \boxed is
-\boxed{><\$}
+\boxed{&&}

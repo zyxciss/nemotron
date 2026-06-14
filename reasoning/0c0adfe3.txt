@@ -430,4 +430,5 @@ New mappings
 【(n)】->【u】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard discovers through village}
+The answer in \boxed is
+\boxed{wizard discovers through village}

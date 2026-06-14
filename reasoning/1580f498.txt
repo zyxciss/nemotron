@@ -173,4 +173,5 @@ Applying to 05*19:
   Result: 【1554】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{1554}
+The answer in \boxed is
+\boxed{1554}

@@ -171,4 +171,5 @@ Applying to 45%92:
   Result: 【6651】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{6651}
+The answer in \boxed is
+\boxed{6651}

@@ -395,4 +395,5 @@ the curious wizard sees
 Iterating over the unknown letters to see if they are in the question: no unknown letters
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the curious wizard sees}
+The answer in \boxed is
+\boxed{the curious wizard sees}

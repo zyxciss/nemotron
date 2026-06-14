@@ -492,4 +492,5 @@ New mappings
 【(f)】->【y】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{dragon chases the clever story}
+The answer in \boxed is
+\boxed{dragon chases the clever story}

@@ -173,4 +173,5 @@ Applying to 25"13:
   Result: 【"12】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{"12}
+The answer in \boxed is
+\boxed{"12}

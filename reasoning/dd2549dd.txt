@@ -391,4 +391,5 @@ New mappings
 【(f)】->【b】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{rabbit watches inside garden}
+The answer in \boxed is
+\boxed{rabbit watches inside garden}

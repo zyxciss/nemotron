@@ -172,4 +172,5 @@ Applying to 74-03:
   Result: 【71】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{71}
+The answer in \boxed is
+\boxed{71}

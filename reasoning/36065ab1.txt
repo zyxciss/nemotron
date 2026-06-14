@@ -651,4 +651,5 @@ Best match: 【curious】
 【s】->【s】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{mouse studies the curious door}
+The answer in \boxed is
+\boxed{mouse studies the curious door}

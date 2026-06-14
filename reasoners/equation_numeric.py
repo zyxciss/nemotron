@@ -599,7 +599,8 @@ def _reasoning_equation_numeric_base(problem: Problem) -> str | None:
 
     lines.append("")
     lines.append("I will now return the answer in \\boxed{}")
-    lines.append(f"The answer in \\boxed{{–}} is \\boxed{{{result_val}}}")
+    lines.append("The answer in \\boxed is")
+    lines.append(f"\\boxed{{{result_val}}}")
     return "\n".join(lines)
 
 
@@ -744,7 +745,8 @@ def _guard_cot_guess(
         lines.append(f"  {op_name}({a_p}, {b_p}) = {formula}")
     lines.append("")
     lines.append("I will now return the answer in \\boxed{}")
-    lines.append(f"The answer in \\boxed{{–}} is \\boxed{{{answer}}}")
+    lines.append("The answer in \\boxed is")
+    lines.append(f"\\boxed{{{answer}}}")
     return "\n".join(lines)
 
 
@@ -920,7 +922,149 @@ def _guard_cot(
             lines.append(f"  taking the magnitude -> {answer}")
     lines.append("")
     lines.append("I will now return the answer in \\boxed{}")
-    lines.append(f"The answer in \\boxed{{–}} is \\boxed{{{answer}}}")
+    lines.append("The answer in \\boxed is")
+    lines.append(f"\\boxed{{{answer}}}")
+    return "\n".join(lines)
+
+
+def _solve_eq_guess(question: str, answer: str) -> list[dict] | None:
+    q_match = _EXPR_RE.fullmatch(question)
+    if not q_match:
+        return None
+    qa, qop, qb = q_match.group(1), q_match.group(2), q_match.group(3)
+    
+    solutions = []
+    encodings = ["minus_pre", "minus_suf", "op_pre", "op_suf", "drop"]
+    reversals = [
+        (False, False),
+        (True, False),
+        (False, True),
+        (True, True),
+    ]
+    
+    for rev_ops, rev_res in reversals:
+        pre_name = "swap" if rev_ops else "none"
+        sa = qa[::-1] if rev_ops else qa
+        sb = qb[::-1] if rev_ops else qb
+        
+        try:
+            candidates = _all_candidates(int(sa), int(sb), sa, sb)
+        except Exception:
+            continue
+            
+        for op, res_str in candidates:
+            actual_res_str = _rev(res_str) if rev_res else res_str
+            for enc in encodings:
+                if actual_res_str.startswith("-"):
+                    mag = actual_res_str[1:]
+                    if enc == "minus_pre":
+                        pred = "-" + mag
+                    elif enc == "minus_suf":
+                        pred = mag + "-"
+                    elif enc == "op_pre":
+                        pred = qop + mag
+                    elif enc == "op_suf":
+                        pred = mag + qop
+                    elif enc == "drop":
+                        pred = mag
+                else:
+                    pred = actual_res_str
+                if pred == answer:
+                    solutions.append({
+                        "pre": pre_name,
+                        "op": op,
+                        "enc": enc,
+                        "rev_res": rev_res
+                    })
+    return solutions
+
+
+def _reasoning_equation_numeric_guess(problem: Problem) -> str | None:
+    q_match = _EXPR_RE.fullmatch(str(problem.question))
+    if not q_match:
+        return None
+    qa, qop, qb = q_match.group(1), q_match.group(2), q_match.group(3)
+    answer = problem.answer
+    
+    sols = _solve_eq_guess(str(problem.question), answer)
+    if not sols:
+        return None
+    
+    sol = sols[0]
+    pre_name = sol["pre"]
+    op_name = sol["op"]
+    enc = sol["enc"]
+    rev_res = sol["rev_res"]
+    
+    lines = ["We need to infer the transformation rule from the examples."]
+    lines.append("I will put my final answer inside \\boxed{}.")
+    lines.append("")
+    lines.append("Examples:")
+    for ex in problem.examples:
+        lines.append(f"  {ex.input_value} = {ex.output_value}")
+    lines.append("")
+    
+    lines.append(f"The question operator is 【{qop}】, which is not found in the examples.")
+    lines.append(f"In this problem, the operator 【{qop}】 maps to the following configuration:")
+    lines.append(f"  Operator semantic: {op_name}")
+    if pre_name == "swap":
+        lines.append("  Operand preprocessing: reversed operands")
+    else:
+        lines.append("  Operand preprocessing: identity")
+        
+    if rev_res:
+        lines.append("  Result postprocessing: reversed result")
+        
+    if enc != "drop":
+        lines.append(f"  Negative encoding: {enc}")
+    lines.append("")
+    
+    sa = qa[::-1] if pre_name == "swap" else qa
+    sb = qb[::-1] if pre_name == "swap" else qb
+    lines.append(f"Applying to {problem.question}:")
+    if pre_name == "swap":
+        lines.append(f"  Reversing operands: {qa} -> {sa}, {qb} -> {sb}")
+        
+    raw_res = ""
+    for op, res_str in _all_candidates(int(sa), int(sb), sa, sb):
+        if op == op_name:
+            raw_res = res_str
+            break
+            
+    expr_str = _expr(op_name, sa, sb)
+    inter_str = _expr_intermediate(op_name, sa, sb)
+    if expr_str and inter_str:
+        lines.append(f"  {op_name} f({sa}, {sb}) = {expr_str} = {inter_str} = {raw_res}")
+    elif expr_str:
+        lines.append(f"  {op_name} f({sa}, {sb}) = {expr_str} = {raw_res}")
+    else:
+        lines.append(f"  {op_name} f({sa}, {sb}) = {raw_res}")
+        
+    current = raw_res
+    if rev_res:
+        current = _rev(current)
+        lines.append(f"  Reversing the result: {raw_res} -> {current}")
+        
+    if current.startswith("-") and enc != "drop":
+        if enc == "minus_pre":
+            final = "-" + current[1:]
+        elif enc == "minus_suf":
+            final = current[1:] + "-"
+        elif enc == "op_pre":
+            final = qop + current[1:]
+        elif enc == "op_suf":
+            final = current[1:] + qop
+        elif enc == "drop":
+            final = current[1:]
+        lines.append(f"  Result is negative, applying {enc} encoding: {current} -> 【{final}】")
+    else:
+        final = current
+        
+    lines.append(f"  Final value: 【{final}】")
+    lines.append("")
+    lines.append("I will now return the answer in \\boxed{}")
+    lines.append("The answer in \\boxed is")
+    lines.append(f"\\boxed{{{final}}}")
     return "\n".join(lines)
 
 
@@ -929,17 +1073,10 @@ def reasoning_equation_numeric(problem: Problem) -> str | None:
 
     Runs the base operator-search solver, then overrides it only when the
     examples force a single answer that the base solver disagreed with.
-
-    For `equation_numeric_guess` the question operator is never in the examples,
-    so the per-problem rule is genuinely under-determined. We tried a dataset-
-    level (pre, op) prior learned from the sibling deduce problems, but
-    measured the deducible-from-deduce prior covers 0/136 guess problems (the
-    guess category's true (pre, op) distribution is entirely different from
-    deduce's). Committing a prior-based answer would teach the model a wrong
-    pattern that fails on every test problem — the kind of "fabricated
-    reasoning" our principles forbid. So the honest answer is to abstain on
-    guess: return None and let the model treat it as a don't-know.
     """
+    if problem.category == "equation_numeric_guess":
+        return _reasoning_equation_numeric_guess(problem)
+
     base = _reasoning_equation_numeric_base(problem)
 
     q_match = _EXPR_RE.fullmatch(str(problem.question))

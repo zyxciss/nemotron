@@ -827,4 +827,5 @@ Output
 7 AND-NOT26 = AND(1,NOT(0)) = 1
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{01011011}
+The answer in \boxed is
+\boxed{01011011}

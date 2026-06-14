@@ -496,4 +496,5 @@ New mappings
 【(r)】->【u】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{wizard creates near mountain}
+The answer in \boxed is
+\boxed{wizard creates near mountain}

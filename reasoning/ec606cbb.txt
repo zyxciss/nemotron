@@ -469,4 +469,5 @@ New mappings
 【(w)】->【l】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat dreams under school}
+The answer in \boxed is
+\boxed{cat dreams under school}

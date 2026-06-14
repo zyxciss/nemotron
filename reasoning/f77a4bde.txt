@@ -407,4 +407,5 @@ New mappings
 【(d)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the hidden alice explores}
+The answer in \boxed is
+\boxed{the hidden alice explores}

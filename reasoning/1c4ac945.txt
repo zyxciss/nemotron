@@ -487,4 +487,5 @@ New mappings
 【(l)】->【v】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen sees beyond village}
+The answer in \boxed is
+\boxed{queen sees beyond village}

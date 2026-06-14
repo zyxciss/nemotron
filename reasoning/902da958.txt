@@ -168,4 +168,5 @@ Applying to 38/48:
   Result: 【761】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{761}
+The answer in \boxed is
+\boxed{761}

@@ -486,4 +486,5 @@ New mappings
 【(v)】->【u】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher creates treasure}
+The answer in \boxed is
+\boxed{teacher creates treasure}

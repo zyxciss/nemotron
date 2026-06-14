@@ -175,4 +175,5 @@ Applying to 30-64:
   Result: 【3064】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{3064}
+The answer in \boxed is
+\boxed{3064}

@@ -170,4 +170,5 @@ Applying to 41-15:
   Result: 【9】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{9}
+The answer in \boxed is
+\boxed{9}

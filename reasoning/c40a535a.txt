@@ -461,4 +461,5 @@ New mappings
 【(h)】->【q】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{queen dreams the mysterious mirror}
+The answer in \boxed is
+\boxed{queen dreams the mysterious mirror}

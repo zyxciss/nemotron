@@ -446,4 +446,5 @@ New mappings
 【(i)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{princess found near mountain}
+The answer in \boxed is
+\boxed{princess found near mountain}

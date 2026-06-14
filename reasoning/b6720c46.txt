@@ -508,4 +508,5 @@ New mappings
 【(o)】->【p】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the colorful princess draws}
+The answer in \boxed is
+\boxed{the colorful princess draws}

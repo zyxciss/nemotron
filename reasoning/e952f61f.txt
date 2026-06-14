@@ -173,4 +173,5 @@ Applying to 50$94:
   Result: 【4699】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{4699}
+The answer in \boxed is
+\boxed{4699}

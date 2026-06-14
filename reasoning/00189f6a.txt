@@ -493,4 +493,5 @@ New mappings
 【(k)】->【k】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{cat imagines book}
+The answer in \boxed is
+\boxed{cat imagines book}

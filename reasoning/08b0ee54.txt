@@ -499,4 +499,5 @@ New mappings
 【(v)】->【f】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{alice found under mountain}
+The answer in \boxed is
+\boxed{alice found under mountain}

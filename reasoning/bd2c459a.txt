@@ -481,4 +481,5 @@ New mappings
 【(v)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the ancient teacher explores}
+The answer in \boxed is
+\boxed{the ancient teacher explores}

@@ -471,4 +471,5 @@ Best match: 【inside】
 【e】->【e】same
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student draws inside cave}
+The answer in \boxed is
+\boxed{student draws inside cave}

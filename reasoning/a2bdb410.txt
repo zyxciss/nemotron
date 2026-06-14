@@ -427,4 +427,5 @@ New mappings
 【(j)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{teacher explores garden}
+The answer in \boxed is
+\boxed{teacher explores garden}

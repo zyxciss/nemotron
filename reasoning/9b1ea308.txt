@@ -171,4 +171,5 @@ Applying to 99|36:
   Result: 【261】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{261}
+The answer in \boxed is
+\boxed{261}

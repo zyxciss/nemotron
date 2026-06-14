@@ -587,4 +587,5 @@ New mappings
 【(u)】->【x】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{the secret queen explores}
+The answer in \boxed is
+\boxed{the secret queen explores}

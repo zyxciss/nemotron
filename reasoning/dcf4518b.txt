@@ -414,4 +414,5 @@ New mappings
 【(s)】->【g】
 
 I will now return the answer in \boxed{}
-The answer in \boxed{–} is \boxed{student imagines the silver forest}
+The answer in \boxed is
+\boxed{student imagines the silver forest}
